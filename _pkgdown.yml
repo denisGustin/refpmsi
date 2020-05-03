@@ -1,3 +1,4 @@
+reference:
 navbar:
   structure:
   left:
@@ -7,4 +8,4 @@ navbar:
   - articles
   - tutorials
   - news
-right: github
+  right: github
