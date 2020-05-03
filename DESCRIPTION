@@ -1,0 +1,14 @@
+Package: refpmsi
+Type: Package
+Title: Referentiels PMSI
+Version: 0.0.0.9000
+Authors@R: person("denis", "GUSTIN", email = "dgustin@lespmsi.com", role = c("aut", "cre"))
+Description: Acces aux referentiels open source PMSI
+Depends: R (>= 3.5.0)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Imports: 
+    dplyr, magrittr, tibble, jsonlite
+URL: https://denisgustin.github.io/refpmsi/
