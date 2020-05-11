@@ -1,1 +1,17 @@
 destination: docs
+
+navbar:
+  title: "refpmsi"
+  left:
+    - icon: fa-home fa-lg
+      href: index.html
+    - text: Référentiels PMSI
+      href: articles/liste_ref.html
+    - text: Fonctions refpmsi
+      href: articles/fonctions_refpmsi.html
+    - text: Articles
+      menu:
+      - text: CIM-10 FR à usage PMSI
+        href: articles/cim.html
+    - text: News
+      href: articles/news.html

@@ -8,7 +8,7 @@
 #' @param periodepmsi = liste des annees pmsi
 #' @param chemin = chemin du package refpmsi::
 #'
-#' @return refpmsi_tbl = le referentiel selectionne au format tibble
+#' @return refpmsi_tbl = tibble du referentiel
 #' @export
 
 refpmsi <- function(referentiel, periodepmsi = '', chemin = path.package("refpmsi")) {
@@ -21,8 +21,8 @@ refpmsi <- function(referentiel, periodepmsi = '', chemin = path.package("refpms
     refpmsi_tbl <- chemin %>%
       paste0("/referentiels/", referentiel, ".json.gz") %>%
       jsonlite::read_json(simplifyVector = TRUE) %>%
-      tibble::as_tibble() %>%
-      dplyr::filter(anpmsi %in% as.character(periodepmsi))
+      dplyr::filter(anpmsi %in% as.character(periodepmsi)) %>%
+      tibble::as_tibble()
   }
   return(refpmsi_tbl)
 }
@@ -35,16 +35,15 @@ refpmsi <- function(referentiel, periodepmsi = '', chemin = path.package("refpms
 #' @importFrom jsonlite read_json
 #' @param chemin = chemin du package refpmsi::
 #'
-#' @return liste_refpmsi_tbl = tableau des referentiels PMSI en tibble
+#' @return liste_refpmsi_tbl = tibble des referentiels PMSI
 #' @export
 
 liste_refpmsi <- function(chemin = path.package("refpmsi")) {
   liste_refpmsi_tbl <- chemin %>%
     paste0("/referentiels/liste_refpmsi.json.gz") %>%
     jsonlite::read_json(simplifyVector = TRUE) %>%
-    dplyr::arrange(code_refpmsi) %>%
+    dplyr::arrange(refpmsi) %>%
     tibble::as_tibble()
   return(liste_refpmsi_tbl)
 }
-
 

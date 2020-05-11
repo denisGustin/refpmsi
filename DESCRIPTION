@@ -1,7 +1,7 @@
 Package: refpmsi
 Type: Package
 Title: Referentiels PMSI
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: person("denis", "GUSTIN", email = "dgustin@lespmsi.com", role = c("aut", "cre"))
 Description: Acces aux referentiels open source PMSI
 Depends: R (>= 3.5.0)
@@ -11,4 +11,9 @@ LazyData: true
 RoxygenNote: 6.1.1
 Imports: 
     dplyr, magrittr, tibble, jsonlite
-URL: https://denisgustin.github.io/refpmsi/
+URL: https://github.com/DenisGUSTIN/refpmsi
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+BugReports: https://github.com/DenisGUSTIN/refpmsi/issues

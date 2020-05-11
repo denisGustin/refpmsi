@@ -15,7 +15,7 @@ refpmsi(referentiel, periodepmsi = "",
 \item{chemin}{= chemin du package refpmsi::}
 }
 \value{
-refpmsi_tbl = le referentiel selectionne au format tibble
+refpmsi_tbl = tibble du referentiel
 }
 \description{
 refpmsi
