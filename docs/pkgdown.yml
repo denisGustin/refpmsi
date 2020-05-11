@@ -1,6 +1,10 @@
 pandoc: 2.7.2
 pkgdown: 1.5.1
 pkgdown_sha: ~
-articles: []
-last_built: 2020-05-03T13:12Z
+articles:
+  cim: cim.html
+  fonctions_refpmsi: fonctions_refpmsi.html
+  liste_ref: liste_ref.html
+  news: news.html
+last_built: 2020-05-11T13:21Z
 

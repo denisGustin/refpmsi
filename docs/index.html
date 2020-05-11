@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">refpmsi</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -39,15 +39,40 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="articles/liste_ref.html">Référentiels PMSI</a>
+</li>
+<li>
+  <a href="articles/fonctions_refpmsi.html">Fonctions refpmsi</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="articles/cim.html">CIM-10 FR à usage PMSI</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="articles/news.html">News</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/DenisGUSTIN/refpmsi/">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -63,17 +88,43 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#refpmsi" class="anchor"></a>refpmsi</h1></div>
 <p>Package de référentiels PMSI</p>
+<p>55 référentiels disponibles : <a href="http://www.google.fr">voir la liste</a></p>
+<p>Mise à jour : 7 mai 2020</p>
+<p><a href="http://www.lespmsi.com">Etre tenu au courant des mises à jour et ajout de référentiels PMSI</a></p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>A venir</p>
-<p>…</p>
+<p>Le téléchargement du package <code>refpmsi</code> se fait à partir de Github, à l’aide du package <code>devtools</code></p>
+<div class="sourceCode" id="cb1"><pre class="r"><span class="co"># install.packages("devtools")</span>
+<span class="co"># library("devtools")</span>
+
+<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"denisGustin/refpmsi"</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"refpmsi"</span>)</pre></div>
+</div>
+<div id="exemples-dutilisation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#exemples-dutilisation" class="anchor"></a>Exemples d’utilisation</h2>
+<p>Voir <a href="http://www.google.fr">exemples d’utilisation du référentiel CIM-10 FR à usage PMSI</a></p>
+</div>
+<div id="fonctions-du-package" class="section level2">
+<h2 class="hasAnchor">
+<a href="#fonctions-du-package" class="anchor"></a>Fonctions du package</h2>
+<p>Voir <a href="http://www.google.fr">Fonctions refpmsi</a></p>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div class="license">
+    <div class="links">
+<h2>Links</h2>
+<ul class="list-unstyled">
+<li>Browse source code at <br><a href="https://github.com/DenisGUSTIN/refpmsi/">https://​github.com/​DenisGUSTIN/​refpmsi/​</a>
+</li>
+<li>Report a bug at <br><a href="https://github.com/DenisGUSTIN/refpmsi/issues">https://​github.com/​DenisGUSTIN/​refpmsi/​issues</a>
+</li>
+</ul>
+</div>
+<div class="license">
 <h2>License</h2>
 <ul class="list-unstyled">
 <li><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></li>
