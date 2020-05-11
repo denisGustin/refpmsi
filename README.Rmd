@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 
 Package de référentiels PMSI  
 
-55 référentiels disponibles : [voir la liste](https://denisgustin.github.io/refpmsi/docs/articles/liste_ref.html)  
+55 référentiels disponibles : [voir la liste](https://denisgustin.github.io/refpmsi/articles/liste_ref.html)  
 
 Mise à jour : 7 mai 2020  
 
@@ -41,8 +41,8 @@ library("refpmsi")
 
 ## Exemples d'utilisation  
 
-Voir [exemples d'utilisation du référentiel CIM-10 FR à usage PMSI](https://denisgustin.github.io/refpmsi/docs/articles/cim.html)
+Voir [exemples d'utilisation du référentiel CIM-10 FR à usage PMSI](https://denisgustin.github.io/refpmsi/articles/cim.html)
 
 ## Fonctions du package  
 
-Voir [Fonctions refpmsi](https://denisgustin.github.io/refpmsi/docs/articles/fonctions_refpmsi.html)
+Voir [Fonctions refpmsi](https://denisgustin.github.io/refpmsi/articles/fonctions_refpmsi.html)
