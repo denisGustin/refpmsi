@@ -11,9 +11,9 @@ LazyData: true
 RoxygenNote: 6.1.1
 Imports: 
     dplyr, magrittr, tibble, jsonlite
-URL: https://github.com/DenisGUSTIN/refpmsi
+URL: https://github.com/denisGustin/refpmsi
 Suggests: 
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-BugReports: https://github.com/DenisGUSTIN/refpmsi/issues
+BugReports: https://github.com/denisGustin/refpmsi/issues
