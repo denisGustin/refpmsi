@@ -6,7 +6,7 @@
 Package de référentiels PMSI
 
 55 référentiels disponibles : [voir la
-liste](https://github.com/denisGustin/refpmsi/docs/articles/liste_ref.html)
+liste](https://denisgustin.github.io/refpmsi/docs/articles/liste_ref.html)
 
 Mise à jour : 7 mai 2020
 
@@ -29,9 +29,9 @@ library("refpmsi")
 ## Exemples d’utilisation
 
 Voir [exemples d’utilisation du référentiel CIM-10 FR à usage
-PMSI](https://github.com/denisGustin/refpmsi/docs/articles/cim.html)
+PMSI](https://denisgustin.github.io/refpmsi/docs/articles/cim.html)
 
 ## Fonctions du package
 
 Voir [Fonctions
-refpmsi](https://github.com/denisGustin/refpmsi/docs/articles/fonctions_refpmsi.html)
+refpmsi](https://denisgustin.github.io/refpmsi/docs/articles/fonctions_refpmsi.html)
