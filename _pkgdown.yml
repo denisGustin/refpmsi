@@ -4,7 +4,7 @@ navbar:
   title: "refpmsi"
   left:
     - icon: fa-home fa-lg
-      href: index.html
+      href: README.md
     - text: Référentiels PMSI
       href: articles/liste_ref.html
     - text: Fonctions refpmsi
