@@ -1,0 +1,19 @@
+---
+title: "News"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{News}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Version 1.0.0  
+
+7 mai 2020 : mise en ligne de 1ere version du package refpmsi

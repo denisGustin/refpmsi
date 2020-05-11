@@ -1,0 +1,38 @@
+---
+title: "Liste des référentiels"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Liste des référentiels}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo = FALSE}
+library(refpmsi)
+library(DT)
+```
+
+55 référentiels  
+
+Mise à jour : 7 mai 2020  
+  
+  
+
+```{r liste_refpmsi, echo = FALSE}
+
+refpmsi::liste_refpmsi() %>% 
+  DT::datatable(escape = F, rownames = F,
+                options = list(language = list(search = 'Rechercher :',
+                                           info = "Page _PAGE_ sur _PAGES_"),
+                               pageLength = 60,
+                               dom = 'ft'))
+
+```
+

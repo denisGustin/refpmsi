@@ -1,0 +1,65 @@
+---
+title: "Fonctions refpmsi"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Fonctions refpmsi}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(refpmsi)
+```
+
+Le package `refpmsi` comprend 2 fonctions :  **`refpmsi()`** et **`liste_refpmsi()`**
+
+## `refpmsi()`
+
+**`refpmsi()`** charge un référentiel PMSI appelé dans un 1er argument
+
+```{r fonction_refpmsi, eval = FALSE}
+# récupération du référentiel des ICR
+icr <- refpmsi::refpmsi("ccam_icr")
+head(icr)
+```
+```{r fonction_refpmsi_2, echo = FALSE}
+icr <- refpmsi::refpmsi("ccam_icr")
+head(icr)
+```
+
+Pour les référentiels annualisés au sens PMSI (CIM-10, GHM, GHS, GME, GMT, OVALIDE, CSARR, ...), sélection des années via un 2eme argument.
+
+```{r fonction_refpmsi_annualise, eval = FALSE}
+# exemples avec le référentiel CIM-10 FR à usage PMSI
+# sélection d'une année
+cim_2019 <- refpmsi::refpmsi("cim",2019)
+
+# sélection de plusieurs années successives
+cim_2018_2020 <- refpmsi::refpmsi("cim",2018:2020)
+
+# sélection de plusieurs années via un vecteur
+cim_2019_2020 <- refpmsi::refpmsi("cim",c("2019","2020"))
+
+```
+
+## `liste_refpmsi()` 
+
+**`liste_refpmsi()`** charge la liste des référentiels.
+
+```{r fonction_liste_refpmsi, eval = FALSE}
+# récupération du référentiel des ICR
+liste_ref <- refpmsi::liste_refpmsi()
+head(liste_ref)
+```
+```{r fonction_liste_refpmsi_2, echo = FALSE}
+liste_ref <- refpmsi::liste_refpmsi()
+head(liste_ref)
+```
+

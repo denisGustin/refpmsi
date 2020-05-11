@@ -1,0 +1,197 @@
+---
+title: "CIM-10 FR à usage PMSI"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{cim}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
+library("refpmsi")
+library("dplyr")
+```
+
+Intitulé du référentiel : **cim**
+
+Mise à jour : 7 mai 2020  
+
+Ce référentiel annualisé au sens PMSI comprend 10 variables et 206 961 lignes.  
+
+Son chargement complet en local et/ou sa visualisation dans R Studio peuvent être longs. Il est recommandé de ne charger que la ou les années utiles.  
+  
+## Variables  
+
+**code** = code CIM-10  
+**lib_cim** = libellé CIM-10 long  
+**tmco** = type MCO/HAD :  
+0 Pas de restriction particulière (valeur par défaut)  
+1 Diagnostic interdit en DP et DR - Autorisé ailleurs  
+2 Diagnostic interdit en DP et DR - Cause externe de morbidité  
+3 Diagnostic interdit en DP, DR et DA - Catégories et sous-catégories non vides ou code père interdit  
+4 Diagnostic interdit en DP – Autorisé ailleurs  
+**tpsy** = type PSY  
+0 Pas de restriction particulière (valeur par défaut)  
+1 Diagnostic interdit en DP (Code imprécis, Séquelles, Cause externe de morbidités…)  
+3 Diagnostic interdit en DP et DA - Catégories et sous-catégories non vides ou code père interdit (et supprimé)  
+**pssr** = profil SSR  
+digit 1 : code autorisé en finalité principale de prise en charge ? (O : oui, N : non)  
+digit 2 : code autorisé en manifestation morbide principale ? (O : oui, N : non)  
+digit 3 : code autorisé en affection étiologique ? (O : oui, N : non)  
+digit 4 : code autorisé en DAS ? (O : oui, N : non)  
+**actif** = 
+1 : code actif dans l'année PMSI  
+0 : code inactif dans l'année PMSI  
+**chapitre** = chapitre CIM-10 du code CIM-10  
+**groupe** = groupe de catégories dans lequel s'insère le code CIM-10  
+**categorie** = 3 premières positions du code CIM-10  
+**anpmsi** = année PMSI de 2016 à 2020
+
+## Sources  
+
+[Nomenclature CIM-10 : Fichier nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/456) (ATIH)  
+
+[CIM-10 FR à usage PMSI 2020 (version du 17 avril 2020)](https://www.atih.sante.fr/sites/default/files/public/content/3706/cim-10fr_2020_actualisation_pmsi_10-04-2020.pdf)(ATIH)
+
+## Exemples
+
+### Chargement de la CIM-10 des années 2019 et 2020
+
+```{r cim_chargement, eval = FALSE}
+# Chargement de la CIM-10 des années 2019 et 2020
+cim_2019_2020 <- refpmsi::refpmsi("cim",2019:2020)
+head(cim_2019_2010)
+```
+
+```{r cim_chargement_affichage, echo = FALSE}
+cim_2019_2020 <- refpmsi::refpmsi("cim",2019:2020)
+head(cim_2019_2020)
+```
+
+### Association du libellé CIM-10 aux DP
+
+Soit le jeu de données `jeu_dp` composé de 10 codes DP de RSS avec l'année PMSI de leur RSS associé : 
+
+```{r cim_jeu_association_libelle, echo = FALSE}
+jeu_dp <- tibble(no_rss = seq(1:10),
+                            dp_rss = c("I501","Z491","H251","Z380",
+                                       "S7200","S0600","R074",
+                                       "J441","K358","R53+0"),
+                            annee_rss = sample(c("2019","2020"),10,replace = TRUE))
+jeu_dp
+```
+
+
+```{r cim_association_libelle, eval = FALSE}
+# chargement de la CIM-10 2019 et 2020
+cim_2019_2020 <- refpmsi::refpmsi("cim",2019:2020)
+
+# association à chaque DP du libellé CIM-10 correspondant au DP et à son année PMSI
+jeu_dp_libelle <- jeu_dp %>% 
+  dplyr::left_join(cim_2019_2020 %>% dplyr::select(code,lib_cim,anpmsi),
+                   by = c("dp_rss" = "code", "annee_rss" = "anpmsi"))
+jeu_dp_libelle
+```
+
+
+```{r cim_association_libelle_eval, echo = FALSE}
+# chargement de la CIM-10 2019 et 2020
+cim_2019_2020 <- refpmsi::refpmsi("cim",2019:2020)
+
+# association à chaque DP du libellé CIM-10 correspondant au DP et à son année PMSI
+jeu_dp_libelle <- jeu_dp %>% 
+  dplyr::left_join(cim_2019_2020 %>% dplyr::select(code,lib_cim,anpmsi),
+                   by = c("dp_rss" = "code", "annee_rss" = "anpmsi"))
+jeu_dp_libelle
+```
+
+### Case mix par chapitre CIM-10 
+
+Avec le jeu de données `jeu_dp` de l'exemple précédent composé de 10 DP.  
+
+```{r case_mix_chapitre, eval = FALSE}
+# chargement de la CIM-10 2019 et 2020
+cim_2019_2020 <- refpmsi::refpmsi("cim",2019:2020)
+
+# association à chaque DP de son numéro de chapitre et de son libellé CIM-10 correspondant à l'année PMSI de son RSS
+dp_chapitre <- jeu_dp %>% 
+  dplyr::left_join(cim_2019_2020 %>% 
+                     dplyr::select(code, lib_cim,chapitre,anpmsi),
+                                    by = c("dp_rss" = "code",
+                                           "annee_rss" = "anpmsi"))
+# association des libellés de chapitre CIM-10 aux numéros de chapitre CIM-10 via le référentiel "cim_chapitre" en ne retenant que les 2 variables qui nous intéressent : "num" et "libelle"
+chapitre_cim <- refpmsi::refpmsi("cim_chapitre") %>% dplyr::select(num,libelle)
+
+dp_chapitre <- dp_chapitre %>% 
+  dplyr::left_join(chapitre_cim, by = c("chapitre" = "num")) %>% 
+  # renommage de la variable libelle pour plus de clarté
+  dplyr::rename(lib_chapitre = libelle) %>% 
+  # regroupement par chapitre
+  dplyr::group_by(chapitre,lib_chapitre) %>% 
+  # calcul du nombre de DP par chapitre et liste des DP par chapitre
+  dplyr::summarise(n_dp = n(),
+                   liste_dp = paste0(dp_rss, collapse = " ")) %>% 
+  # tri descendant sur le nombre de DP par chapitre
+  dplyr::arrange(desc(n_dp))
+dp_chapitre
+```
+
+
+```{r case_mix_chapitre_eval, echo = FALSE}
+dp_chapitre <- jeu_dp %>% 
+  dplyr::left_join(cim_2019_2020 %>% 
+                     dplyr::select(code, lib_cim,chapitre,anpmsi),
+                                    by = c("dp_rss" = "code",
+                                           "annee_rss" = "anpmsi"))
+chapitre_cim <- refpmsi::refpmsi("cim_chapitre") %>% dplyr::select(num,libelle)
+
+dp_chapitre <- dp_chapitre %>% 
+  dplyr::left_join(chapitre_cim, by = c("chapitre" = "num")) %>% 
+  dplyr::rename(lib_chapitre = libelle) %>% 
+  dplyr::group_by(chapitre,lib_chapitre) %>% 
+  dplyr::summarise(n_dp = n(),
+                   liste_dp = paste0(dp_rss, collapse = " ")) %>% 
+  dplyr::arrange(desc(n_dp))
+dp_chapitre
+```
+
+
+### Repérage des DAS interdits en DP et DR
+
+Soit le jeu de données `jeu_das` composé de 10 codes DAS avec l'année PMSI de leur RSS associé : 
+
+```{r jeu_das_interdits_dp_dr, echo = FALSE}
+jeu_das <- tibble(no_rss = seq(1:10),
+                            das = c("Z370","I10","P040","F1725",
+                                       "G473","W189","R600",
+                                       "N178","B952","D638"),
+                            annee_rss = sample(c("2019","2020"),10,replace = TRUE))
+jeu_das
+```
+
+
+```{r das_interdits_dp_dr, eval = FALSE}
+# chargement de la CIM-10 2019 et 2020
+cim_2019_2020 <- refpmsi::refpmsi("cim",2019:2020)
+
+# association à chaque DAS de son type MCO et de son libellé CIM-10, correspondant à son année PMSI
+# filtre sur les types MCO 1 "Diagnostic interdit en DP et DR - Autorisé ailleurs" et 2 "Diagnostic interdit en DP et DR - Cause externe de morbidité" 
+das_interdit_dp_dr <- jeu_das %>% 
+  dplyr::left_join(cim_2019_2020 %>% dplyr::select(code,lib_cim,tmco,anpmsi),
+                   by = c("das" = "code", "annee_rss" = "anpmsi")) %>% dplyr::filter(tmco %in% c(1,2))
+das_interdit_dp_dr
+```
+
+```{r das_interdits_dp_dr_eval, echo = FALSE}
+das_interdit_dp_dr <- jeu_das %>% 
+  dplyr::left_join(cim_2019_2020 %>%     dplyr::select(code,lib_cim,tmco,anpmsi),
+                   by = c("das" = "code", "annee_rss" = "anpmsi"))%>% dplyr::filter(tmco %in% c(1,2))
+das_interdit_dp_dr
+```
