@@ -4,7 +4,8 @@ pkgdown_sha: ~
 articles:
   cim: cim.html
   fonctions_refpmsi: fonctions_refpmsi.html
+  ghm: ghm.html
   liste_ref: liste_ref.html
   news: news.html
-last_built: 2020-05-11T18:14Z
+last_built: 2020-05-26T07:51Z
 

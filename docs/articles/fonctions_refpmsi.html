@@ -95,14 +95,13 @@
 
     
     
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">refpmsi</span>)</pre></body></html></div>
 <p>Le package <code>refpmsi</code> comprend 2 fonctions : <strong><code><a href="../reference/refpmsi.html">refpmsi()</a></code></strong> et <strong><code><a href="../reference/liste_refpmsi.html">liste_refpmsi()</a></code></strong></p>
 <div id="refpmsi" class="section level2">
 <h2 class="hasAnchor">
 <a href="#refpmsi" class="anchor"></a><code>refpmsi()</code>
 </h2>
 <p><strong><code><a href="../reference/refpmsi.html">refpmsi()</a></code></strong> charge un référentiel PMSI appelé dans un 1er argument</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="co"># récupération du référentiel des ICR</span>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="co"># récupération du référentiel des ICR</span>
 <span class="no">icr</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ccam_icr"</span>)
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">icr</span>)</pre></body></html></div>
 <pre><code>#&gt; # A tibble: 6 x 8
@@ -116,7 +115,7 @@
 #&gt; 6 AAFA~     0        1         427             340 1     &lt;NA&gt;       
 #&gt; # ... with 1 more variable: extension &lt;chr&gt;</code></pre>
 <p>Pour les référentiels annualisés au sens PMSI (CIM-10, GHM, GHS, GME, GMT, OVALIDE, CSARR, …), sélection des années via un 2eme argument.</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="co"># exemples avec le référentiel CIM-10 FR à usage PMSI</span>
+<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="co"># exemples avec le référentiel CIM-10 FR à usage PMSI</span>
 <span class="co"># sélection d'une année</span>
 <span class="no">cim_2019</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>)
 
@@ -131,7 +130,7 @@
 <a href="#liste_refpmsi" class="anchor"></a><code>liste_refpmsi()</code>
 </h2>
 <p><strong><code><a href="../reference/liste_refpmsi.html">liste_refpmsi()</a></code></strong> charge la liste des référentiels.</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="co"># récupération du référentiel des ICR</span>
+<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="co"># affichage de la liste documentée des référentiels du package refpmsi::</span>
 <span class="no">liste_ref</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span>()
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">liste_ref</span>)</pre></body></html></div>
 <pre><code>#&gt; # A tibble: 6 x 4
@@ -143,6 +142,12 @@
 #&gt; 4 ccam_cla~ Actes CCAM classants~ code CCAM, activité,~ "Fichier R_AAP_PMS~
 #&gt; 5 ccam_cma~ Actes CCAM CMA SSR    code acte CCAM, libe~ "Manuel des GME (V~
 #&gt; 6 ccam_cod~ Système de codificat~ code codification, l~ "CCAM FR à usage P~</code></pre>
+<p>Pour ne charger que la liste des intitulés des référentiels.</p>
+<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="co"># affichage uniquement des intitulés des référentiels</span>
+<span class="no">liste_ref</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span>()$<span class="no">refpmsi</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">liste_ref</span>)</pre></body></html></div>
+<pre><code>#&gt; [1] "atu"               "autorisation_mco"  "autorisation_ssr" 
+#&gt; [4] "ccam_classant"     "ccam_cma_ssr"      "ccam_codification"</code></pre>
 </div>
   </div>
 
