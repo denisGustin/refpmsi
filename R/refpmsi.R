@@ -1,31 +1,36 @@
 #' refpmsi
 #'
-#' @import magrittr
+#' @import magrittr rlang
 #' @importFrom dplyr filter
 #' @importFrom tibble as_tibble
 #' @importFrom jsonlite read_json
+#'
 #' @param referentiel = intitule du referentiel pmsi
 #' @param periodepmsi = liste des annees pmsi
 #' @param chemin = chemin du package refpmsi::
 #'
-#' @return refpmsi_tbl = tibble du referentiel
+#' @return refpmsi_tbl = referentiel en tibble
 #' @export
 
-refpmsi <- function(referentiel, periodepmsi = '', chemin = path.package("refpmsi")) {
-  if (FALSE || periodepmsi == ""){
+refpmsi <- function(referentiel = "", periodepmsi = "", chemin = path.package("refpmsi")) {
+
+  referentiel <- rlang::quo_name(rlang::enquo(referentiel))
+
+  chemin <- chemin %>%
+    paste0("/referentiels/", referentiel, ".json.gz")
+
+  if(!file.exists(chemin)) {
+    refpmsi_tbl <- "Référentiel inexistant"
+  }
+  else {
     refpmsi_tbl <- chemin %>%
-      paste0("/referentiels/", referentiel, ".json.gz") %>%
       jsonlite::read_json(simplifyVector = TRUE) %>%
-      tibble::as_tibble()
-  } else {
-    refpmsi_tbl <- chemin %>%
-      paste0("/referentiels/", referentiel, ".json.gz") %>%
-      jsonlite::read_json(simplifyVector = TRUE) %>%
-      dplyr::filter(anpmsi %in% as.character(periodepmsi)) %>%
+      {if (periodepmsi == "" || !("anpmsi" %in% colnames(.))) . else dplyr::filter(., anpmsi %in% as.character(periodepmsi)) } %>%
       tibble::as_tibble()
   }
   return(refpmsi_tbl)
 }
+
 
 #' liste_refpmsi
 #'
@@ -35,15 +40,19 @@ refpmsi <- function(referentiel, periodepmsi = '', chemin = path.package("refpms
 #' @importFrom jsonlite read_json
 #' @param chemin = chemin du package refpmsi::
 #'
-#' @return liste_refpmsi_tbl = tibble des referentiels PMSI
+#' @return liste_refpmsi_tbl = liste des referentiels PMSI en tibble
 #' @export
 
 liste_refpmsi <- function(chemin = path.package("refpmsi")) {
+
+  chemin <- chemin %>%
+    paste0("/referentiels/liste_refpmsi.json.gz")
+
   liste_refpmsi_tbl <- chemin %>%
-    paste0("/referentiels/liste_refpmsi.json.gz") %>%
     jsonlite::read_json(simplifyVector = TRUE) %>%
     dplyr::arrange(refpmsi) %>%
     tibble::as_tibble()
+
   return(liste_refpmsi_tbl)
 }
 

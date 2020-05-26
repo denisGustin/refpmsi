@@ -54,7 +54,7 @@ cim_2019_2020 <- refpmsi::refpmsi("cim",c("2019","2020"))
 **`liste_refpmsi()`** charge la liste des référentiels.
 
 ```{r fonction_liste_refpmsi, eval = FALSE}
-# récupération du référentiel des ICR
+# affichage de la liste documentée des référentiels du package refpmsi::
 liste_ref <- refpmsi::liste_refpmsi()
 head(liste_ref)
 ```
@@ -63,3 +63,14 @@ liste_ref <- refpmsi::liste_refpmsi()
 head(liste_ref)
 ```
 
+Pour ne charger que la liste des intitulés des référentiels. 
+
+```{r selection_referentiels, eval = FALSE}
+# affichage uniquement des intitulés des référentiels
+liste_ref <- refpmsi::liste_refpmsi()$refpmsi
+head(liste_ref)
+```
+```{r selection_referentiels_2, echo = FALSE}
+liste_ref <- refpmsi::liste_refpmsi()$refpmsi
+head(liste_ref)
+```

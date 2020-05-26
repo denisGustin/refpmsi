@@ -67,7 +67,7 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)
 ```{r cim_chargement, eval = FALSE}
 # Chargement de la CIM-10 des années 2019 et 2020
 cim_2019_2020 <- refpmsi::refpmsi("cim",2019:2020)
-head(cim_2019_2010)
+head(cim_2019_2020)
 ```
 
 ```{r cim_chargement_affichage, echo = FALSE}
@@ -126,15 +126,13 @@ dp_chapitre <- jeu_dp %>%
                      dplyr::select(code, lib_cim,chapitre,anpmsi),
                                     by = c("dp_rss" = "code",
                                            "annee_rss" = "anpmsi"))
-# association des libellés de chapitre CIM-10 aux numéros de chapitre CIM-10 via le référentiel "cim_chapitre" en ne retenant que les 2 variables qui nous intéressent : "num" et "libelle"
-chapitre_cim <- refpmsi::refpmsi("cim_chapitre") %>% dplyr::select(num,libelle)
+# association des libellés de chapitre CIM-10 aux numéros de chapitre CIM-10 via le référentiel "cim_chapitre" en ne retenant que les 2 variables qui nous intéressent : "num_chapitre_cim" et "lib_chapitre_cim"
+chapitre_cim <- refpmsi::refpmsi("cim_chapitre") %>% dplyr::select(num_chapitre_cim,lib_chapitre_cim)
 
 dp_chapitre <- dp_chapitre %>% 
-  dplyr::left_join(chapitre_cim, by = c("chapitre" = "num")) %>% 
-  # renommage de la variable libelle pour plus de clarté
-  dplyr::rename(lib_chapitre = libelle) %>% 
+  dplyr::left_join(chapitre_cim, by = c("chapitre" = "num_chapitre_cim")) %>% 
   # regroupement par chapitre
-  dplyr::group_by(chapitre,lib_chapitre) %>% 
+  dplyr::group_by(chapitre,lib_chapitre_cim) %>% 
   # calcul du nombre de DP par chapitre et liste des DP par chapitre
   dplyr::summarise(n_dp = n(),
                    liste_dp = paste0(dp_rss, collapse = " ")) %>% 
@@ -150,12 +148,11 @@ dp_chapitre <- jeu_dp %>%
                      dplyr::select(code, lib_cim,chapitre,anpmsi),
                                     by = c("dp_rss" = "code",
                                            "annee_rss" = "anpmsi"))
-chapitre_cim <- refpmsi::refpmsi("cim_chapitre") %>% dplyr::select(num,libelle)
+chapitre_cim <- refpmsi::refpmsi("cim_chapitre") %>% dplyr::select(num_chapitre_cim,lib_chapitre_cim)
 
 dp_chapitre <- dp_chapitre %>% 
-  dplyr::left_join(chapitre_cim, by = c("chapitre" = "num")) %>% 
-  dplyr::rename(lib_chapitre = libelle) %>% 
-  dplyr::group_by(chapitre,lib_chapitre) %>% 
+  dplyr::left_join(chapitre_cim, by = c("chapitre" = "num_chapitre_cim")) %>% 
+  dplyr::group_by(chapitre,lib_chapitre_cim) %>% 
   dplyr::summarise(n_dp = n(),
                    liste_dp = paste0(dp_rss, collapse = " ")) %>% 
   dplyr::arrange(desc(n_dp))

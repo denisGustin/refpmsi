@@ -23,7 +23,7 @@ Package de référentiels PMSI
 
 55 référentiels disponibles : [voir la liste](https://denisgustin.github.io/refpmsi/articles/liste_ref.html)  
 
-Mise à jour : 7 mai 2020  
+Mise à jour : 20 mai 2020  
 
 [Etre tenu au courant des mises à jour et ajout de référentiels PMSI](http://www.lespmsi.com/r-et-pmsi/)
 
