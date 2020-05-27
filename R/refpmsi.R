@@ -27,7 +27,7 @@ refpmsi <- function(referentiel = "", periodepmsi = "", chemin = path.package("r
   else {
     refpmsi_tbl <- chemin %>%
       jsonlite::read_json(simplifyVector = TRUE) %>%
-      {if (periodepmsi == "") .
+      {if (dplyr::first(periodepmsi == "")) .
         else {
           if (!("anpmsi" %in% colnames(.))) . else dplyr::filter(., .$anpmsi %in% as.character(periodepmsi)) }
       } %>%
