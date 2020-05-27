@@ -22,12 +22,12 @@ refpmsi <- function(referentiel = "", periodepmsi = "", chemin = path.package("r
     paste0("/referentiels/", referentiel, ".json.gz")
 
   if(!file.exists(chemin)) {
-    refpmsi_tbl <- "R\\u00e9f\\u00e9rentiel inexistant"
+    refpmsi_tbl <- "Referentiel inexistant"
   }
   else {
     refpmsi_tbl <- chemin %>%
       jsonlite::read_json(simplifyVector = TRUE) %>%
-      {if (periodepmsi == "" | !("anpmsi" %in% colnames(.))) . else dplyr::filter(., anpmsi %in% as.character(periodepmsi)) } %>%
+      {if (periodepmsi == "" || !("anpmsi" %in% colnames(.))) . else dplyr::filter(., .$anpmsi %in% as.character(periodepmsi)) } %>%
       tibble::as_tibble()
   }
   return(refpmsi_tbl)
