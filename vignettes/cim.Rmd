@@ -46,7 +46,7 @@ digit 1 : code autorisé en finalité principale de prise en charge ? (O : oui, 
 digit 2 : code autorisé en manifestation morbide principale ? (O : oui, N : non)  
 digit 3 : code autorisé en affection étiologique ? (O : oui, N : non)  
 digit 4 : code autorisé en DAS ? (O : oui, N : non)  
-**actif** = 
+**actif** =  
 1 : code actif dans l'année PMSI  
 0 : code inactif dans l'année PMSI  
 **chapitre** = chapitre CIM-10 du code CIM-10  
@@ -58,7 +58,7 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)
 
 [Nomenclature CIM-10 : Fichier nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/456) (ATIH)  
 
-[CIM-10 FR à usage PMSI 2020 (version du 17 avril 2020)](https://www.atih.sante.fr/sites/default/files/public/content/3706/cim-10fr_2020_actualisation_pmsi_10-04-2020.pdf)(ATIH)
+[CIM-10 FR à usage PMSI 2020 - version du 17 avril 2020](https://www.atih.sante.fr/sites/default/files/public/content/3706/cim-10fr_2020_actualisation_pmsi_10-04-2020.pdf) (ATIH)
 
 ## Exemples
 

@@ -1,9 +1,11 @@
 #' refpmsi
 #'
-#' @import magrittr rlang
+#' @import magrittr
 #' @importFrom dplyr filter
 #' @importFrom tibble as_tibble
 #' @importFrom jsonlite read_json
+#' @importFrom rlang quo_name
+#' @importFrom rlang enquo
 #'
 #' @param referentiel = intitule du referentiel pmsi
 #' @param periodepmsi = liste des annees pmsi
@@ -20,12 +22,12 @@ refpmsi <- function(referentiel = "", periodepmsi = "", chemin = path.package("r
     paste0("/referentiels/", referentiel, ".json.gz")
 
   if(!file.exists(chemin)) {
-    refpmsi_tbl <- "Référentiel inexistant"
+    refpmsi_tbl <- "R\\u00e9f\\u00e9rentiel inexistant"
   }
   else {
     refpmsi_tbl <- chemin %>%
       jsonlite::read_json(simplifyVector = TRUE) %>%
-      {if (periodepmsi == "" || !("anpmsi" %in% colnames(.))) . else dplyr::filter(., anpmsi %in% as.character(periodepmsi)) } %>%
+      {if (periodepmsi == "" | !("anpmsi" %in% colnames(.))) . else dplyr::filter(., anpmsi %in% as.character(periodepmsi)) } %>%
       tibble::as_tibble()
   }
   return(refpmsi_tbl)

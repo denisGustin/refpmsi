@@ -4,7 +4,7 @@
 \alias{refpmsi}
 \title{refpmsi}
 \usage{
-refpmsi(referentiel, periodepmsi = "",
+refpmsi(referentiel = "", periodepmsi = "",
   chemin = path.package("refpmsi"))
 }
 \arguments{
@@ -15,7 +15,7 @@ refpmsi(referentiel, periodepmsi = "",
 \item{chemin}{= chemin du package refpmsi::}
 }
 \value{
-refpmsi_tbl = tibble du referentiel
+refpmsi_tbl = referentiel en tibble
 }
 \description{
 refpmsi

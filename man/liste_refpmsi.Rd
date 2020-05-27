@@ -10,7 +10,7 @@ liste_refpmsi(chemin = path.package("refpmsi"))
 \item{chemin}{= chemin du package refpmsi::}
 }
 \value{
-liste_refpmsi_tbl = tibble des referentiels PMSI
+liste_refpmsi_tbl = liste des referentiels PMSI en tibble
 }
 \description{
 liste_refpmsi

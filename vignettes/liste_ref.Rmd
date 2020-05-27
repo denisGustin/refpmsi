@@ -25,7 +25,7 @@ Mise à jour : 7 mai 2020
   
   
 
-```{r liste_refpmsi, echo = FALSE}
+```{r liste_refpmsi, echo = FALSE, warning = FALSE}
 
 refpmsi::liste_refpmsi() %>% 
   DT::datatable(escape = F, rownames = F,

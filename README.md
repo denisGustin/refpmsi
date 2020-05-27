@@ -28,8 +28,11 @@ library("refpmsi")
 
 ## Exemples d’utilisation
 
-Voir [exemples d’utilisation du référentiel CIM-10 FR à usage
+[Utilisation des référentiels CIM-10 FR à usage
 PMSI](https://denisgustin.github.io/refpmsi/articles/cim.html)
+
+[Utilisation des référentiels GHM, GHS, regroupement GHM, OVALIDE
+MCO](https://denisgustin.github.io/refpmsi/articles/ghm.html)
 
 ## Fonctions du package
 
