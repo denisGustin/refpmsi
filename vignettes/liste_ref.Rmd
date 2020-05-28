@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup, echo = FALSE}
+```{r setup, echo = FALSE, warning = FALSE}
 library(refpmsi)
 library(DT)
 ```

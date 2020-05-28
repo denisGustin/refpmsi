@@ -13,5 +13,7 @@ navbar:
       menu:
       - text: CIM-10 FR à usage PMSI
         href: articles/cim.html
+      - text: GHM
+        href: articles/ghm.html
     - text: News
       href: articles/news.html
