@@ -85,7 +85,7 @@
 
       
 
-      </header><div class="row">
+      </header><script src="fonctions_refpmsi_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Fonctions refpmsi</h1>
@@ -108,15 +108,14 @@
 <span class="no">icr</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ccam_icr"</span>)
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">icr</span>)</pre></body></html></div>
 <pre><code>#&gt; # A tibble: 6 x 8
-#&gt;   code  phase activite ICE_salarie ICR_non_salarie type  commentaire
-#&gt;   &lt;chr&gt; &lt;int&gt;    &lt;int&gt;       &lt;int&gt;           &lt;int&gt; &lt;chr&gt; &lt;chr&gt;      
-#&gt; 1 AAFA~     0        1         655             503 1     &lt;NA&gt;       
-#&gt; 2 AAFA~     0        1         415             232 1     &lt;NA&gt;       
-#&gt; 3 AAFA~     0        1         762             579 1     &lt;NA&gt;       
-#&gt; 4 AAFA~     0        1         894             673 1     &lt;NA&gt;       
-#&gt; 5 AAFA~     0        1         473             260 1     &lt;NA&gt;       
-#&gt; 6 AAFA~     0        1         427             340 1     &lt;NA&gt;       
-#&gt; # ... with 1 more variable: extension &lt;chr&gt;</code></pre>
+#&gt;   code    phase activite ICE_salarie ICR_non_salarie type  commentaire extension
+#&gt;   &lt;chr&gt;   &lt;int&gt;    &lt;int&gt;       &lt;int&gt;           &lt;int&gt; &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;    
+#&gt; 1 AAFA001     0        1         655             503 1     &lt;NA&gt;        &lt;NA&gt;     
+#&gt; 2 AAFA002     0        1         415             232 1     &lt;NA&gt;        &lt;NA&gt;     
+#&gt; 3 AAFA003     0        1         762             579 1     &lt;NA&gt;        &lt;NA&gt;     
+#&gt; 4 AAFA004     0        1         894             673 1     &lt;NA&gt;        &lt;NA&gt;     
+#&gt; 5 AAFA005     0        1         473             260 1     &lt;NA&gt;        &lt;NA&gt;     
+#&gt; 6 AAFA006     0        1         427             340 1     &lt;NA&gt;        &lt;NA&gt;</code></pre>
 <p>Pour les référentiels annualisés au sens PMSI (CIM-10, GHM, GHS, GME, GMT, OVALIDE, CSARR, …), sélection des années via un 2eme argument.</p>
 <div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="co"># exemples avec le référentiel CIM-10 FR à usage PMSI</span>
 <span class="co"># sélection d'une année</span>
@@ -137,14 +136,14 @@
 <span class="no">liste_ref</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span>()
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">liste_ref</span>)</pre></body></html></div>
 <pre><code>#&gt; # A tibble: 6 x 4
-#&gt;   refpmsi   libelle               variables             source             
-#&gt;   &lt;chr&gt;     &lt;chr&gt;                 &lt;chr&gt;                 &lt;chr&gt;              
-#&gt; 1 atu       "Médicament en Autor~ code UCD 7, code UCD~ "Liste ATU et Post~
-#&gt; 2 autorisa~ Autorisations MCO     code autorisation, l~ "GENRSA M3 2020\nV~
-#&gt; 3 autorisa~ Autorisations SSR     code autorisation, l~ "GENRHA (M03 2020)~
-#&gt; 4 ccam_cla~ Actes CCAM classants~ code CCAM, activité,~ "Fichier R_AAP_PMS~
-#&gt; 5 ccam_cma~ Actes CCAM CMA SSR    code acte CCAM, libe~ "Manuel des GME (V~
-#&gt; 6 ccam_cod~ Système de codificat~ code codification, l~ "CCAM FR à usage P~</code></pre>
+#&gt;   refpmsi    libelle                variables               source              
+#&gt;   &lt;chr&gt;      &lt;chr&gt;                  &lt;chr&gt;                   &lt;chr&gt;               
+#&gt; 1 atu        "Médicament en Autori~ code UCD 7, code UCD 1~ "Liste ATU et Post-~
+#&gt; 2 autorisat~ "Autorisations MCO"    code autorisation, lib~ "GENRSA M3 2020\nVe~
+#&gt; 3 autorisat~ "Autorisations SSR"    code autorisation, lib~ "GENRHA (M03 2020)\~
+#&gt; 4 ccam_clas~ "Actes CCAM classants~ code CCAM, activité, p~ "Fichier R_AAP_PMSI~
+#&gt; 5 ccam_cma_~ "Actes CCAM CMA SSR"   code acte CCAM, libell~ "Manuel des GME (Vo~
+#&gt; 6 ccam_codi~ "Système de codificat~ code codification, lib~ "CCAM FR à usage PM~</code></pre>
 <p>Pour ne charger que la liste des intitulés des référentiels.</p>
 <div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="co"># affichage uniquement des intitulés des référentiels</span>
 <span class="no">liste_ref</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span>()$<span class="no">refpmsi</span>
@@ -155,6 +154,7 @@
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+
         <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
     </nav>
 </div>

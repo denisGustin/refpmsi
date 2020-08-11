@@ -1,4 +1,4 @@
-pandoc: 2.7.2
+pandoc: 2.7.3
 pkgdown: 1.5.1
 pkgdown_sha: ~
 articles:
@@ -7,5 +7,5 @@ articles:
   ghm: ghm.html
   liste_ref: liste_ref.html
   news: news.html
-last_built: 2020-05-28T08:42Z
+last_built: 2020-08-07T23:23Z
 

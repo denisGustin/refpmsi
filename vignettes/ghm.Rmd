@@ -22,15 +22,35 @@ library("stringr")
 
 Le package `refpmsi` comprend 9 référentiels liés aux GHM et GHS.  
 
+## CMD  
+
+Intitulé du référentiel : **cmd**  
+
+MaJ : 10 août 2020  
+
+Référentiel des libellés des CMD (Catégories Majeures de Diagnostics)  
+
+### Variables  
+
+```{r var cmd, echo = FALSE}
+
+refpmsi::refpmsi("cmd") %>% dplyr::glimpse()
+
+```
+
+### Source  
+
+[Manuel de groupage GHM 2020 - Volume 1](https://solidarites-sante.gouv.fr/fichiers/bos/2020/sts_20200005_0001_p000.pdf) (ATIH)
+
 ## GHS DGF
 
 Intitulé du référentiel : **ghs_dgf**
 
-Mise à jour : 27 mai 2020.  
+MaJ : 27 mai 2020.  
 
 Référentiel des GHS et GHM du secteur ex-DGF.  
 
-Ce référentiel, annualisé au sens du PMSI MCO, comprend 11 variables et 13 756 lignes.  
+Ce référentiel, annualisé au sens du PMSI MCO.  
 
 Il est recommandé de ne charger que les années PMSI utiles.  
   
@@ -47,6 +67,12 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **exh** = tarif journalier EXH (EXtrême Haut)  
 **anpmsi** = année PMSI de 2016 à 2020  
 **ghs_intermediaire** = code du GHS intermédiaire correspondant au GHS de la ligne s'il existe (valable à partir de 2020)  
+
+```{r var ghm dgf, echo = FALSE}
+
+refpmsi::refpmsi("ghs_dgf") %>% dplyr::glimpse()
+
+```
 
 ### Sources  
 
@@ -61,7 +87,7 @@ Mise à jour : 7 mai 2020.
 
 Référentiel des GHS et GHM du secteur ex-OQN.  
 
-Ce référentiel, annualisé au sens du PMSI MCO, comprend 11 variables et 10 832 lignes.  
+Ce référentiel, annualisé au sens du PMSI MCO.  
 
 Il est recommandé de ne charger que les années PMSI utiles.  
   
@@ -79,6 +105,14 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **anpmsi** = année PMSI de 2016 à 2020  
 **ghs_intermediaire** = code du GHS intermédiaire correspondant au GHS de la ligne s'il existe (valable à partir de 2020)  
 
+
+```{r var ghm oqn, echo = FALSE}
+
+refpmsi::refpmsi("ghs_oqn") %>% dplyr::glimpse()
+
+```
+
+
 ### Sources  
 
 [Arrêté tarifaire MCO](https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000041663256) (Ministère de la Santé - Arrêté 2020)  
@@ -92,7 +126,7 @@ Mise à jour : 7 mai 2020.
 
 Référentiel des regroupements des GHM en DA (Domaine d'Activité), GA (Groupe d'Activité) et GP (Groupe de Planification).  
 
-Ce référentiel, annualisé au sens du PMSI MCO, comprend 12 variables et 12 964 lignes.  
+Ce référentiel, annualisé au sens du PMSI MCO.  
 
 Il est recommandé de ne charger que les années PMSI utiles.  
   
@@ -111,6 +145,14 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **da_gp_ga** = concaténation des codes DA, GP et GA du GHM  
 **anpmsi** = année PMSI de 2016 à 2020  
 
+
+```{r var ghm_regroupement, echo = FALSE}
+
+refpmsi::refpmsi("ghm_regroupement") %>% dplyr::glimpse()
+
+```
+
+
 ### Sources  
 
 [Regroupements des GHM](https://www.atih.sante.fr/regroupements-des-ghm-en-v2019) (ATIH)  
@@ -123,8 +165,6 @@ Mise à jour : 7 mai 2020.
 
 Libellés des DA (Domaine d'Activité), GA (Groupe d'Activité) et GP (Groupe de Planification).  
 
-Ce référentiel comprend 3 variables et 327 lignes.  
-
 Il n'est pas annualisé. Il comprend tous les DA, GA et GP depuis 2016.  
   
 ### Variables  
@@ -132,6 +172,14 @@ Il n'est pas annualisé. Il comprend tous les DA, GA et GP depuis 2016.
 **type** = type de regroupement GHM (da,ga,gp)  
 **code** = code regroupement  
 **libelle** = libellé du code regroupement  
+
+
+```{r var ghm_regroupement_lib, echo = FALSE}
+
+refpmsi::refpmsi("ghm_regroupement_lib") %>% dplyr::glimpse()
+
+```
+
 
 ### Sources  
 
@@ -143,11 +191,13 @@ Intitulé du référentiel : **rghm_regroupement**
 
 Mise à jour : 7 mai 2020.  
 
-Référentiel des regroupements des GHM en DA (Domaine d'Activité), GA (Groupe d'Activité) et GP (Groupe de Planification).  
+Référentiel des regroupements des racines de GHM en DA (Domaine d'Activité), GA (Groupe d'Activité) et GP (Groupe de Planification).  
 
-Ce référentiel, annualisé au sens du PMSI MCO, comprend 12 variables et 3 340 lignes.  
+Ce référentiel, annualisé au sens du PMSI MCO.  
 
 Il est recommandé de ne charger que les années PMSI utiles.  
+
+Ce référentiel peut être utilisé pour récupérer les libellés des racines de GHM par année PMSI.  
   
 ### Variables  
 
@@ -164,6 +214,14 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **da_gp_ga** = concaténation des codes DA, GP et GA de la racine GHM    
 **anpmsi** = année PMSI de 2016 à 2020  
 
+
+```{r var rghm_regroupement, echo = FALSE}
+
+refpmsi::refpmsi("rghm_regroupement") %>% dplyr::glimpse()
+
+```
+
+
 ### Sources  
 
 [Regroupements des racines de GHM](https://www.atih.sante.fr/regroupements-des-ghm-en-v2019) (ATIH) 
@@ -176,7 +234,7 @@ Mise à jour : 7 mai 2020.
 
 Informations issues des tables de référence OVALIDE MCO, GHMINFO_exDGF. Les informations redondantes avec d'autres référentiels de `refpmsi::` ne sont pas reprises (exemples : cma, bb, bh, ...)
 
-Ce référentiel, annualisé au sens du PMSI MCO, comprend 11 variables et 10 374 lignes.  
+Ce référentiel, annualisé au sens du PMSI MCO.  
 
 Il est recommandé de ne charger que les années PMSI utiles.  
   
@@ -193,6 +251,12 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **pctcma4** = pourcentage de séjours de niveau 4 par sous-cmd (sous-cmd = 3 premières positions des GHM)  
 **pctautres** = pourcentage de séjours avec un DA autres (.8)  
 **anpmsi** = année PMSI de 2016 à 2019  
+
+```{r var ovalide_ghminfo_dgf, echo = FALSE}
+
+refpmsi::refpmsi("ovalide_ghminfo_dgf") %>% dplyr::glimpse()
+
+```
 
 ### Sources  
 
@@ -207,7 +271,7 @@ Mise à jour : 7 mai 2020.
 
 Informations issues des tables de référence OVALIDE MCO, GHMINFO_exOQN. Les informations redondantes avec d'autres référentiels de `refpmsi::` ne sont pas reprises (exemples : cma, bb, bh, ...)
 
-Ce référentiel, annualisé au sens du PMSI MCO, comprend 11 variables et 10 374 lignes.  
+Ce référentiel, annualisé au sens du PMSI MCO.  
 
 Il est recommandé de ne charger que les années PMSI utiles.  
   
@@ -225,6 +289,13 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **pctautres** = pourcentage de séjours avec un DA autres (.8)  
 **anpmsi** = année PMSI de 2016 à 2019  
 
+```{r var ovalide_ghminfo_oqn, echo = FALSE}
+
+refpmsi::refpmsi("ovalide_ghminfo_oqn") %>% dplyr::glimpse()
+
+```
+
+
 ### Sources  
 
 [OVALIDE MCO - Tables de référence](https://www.atih.sante.fr/ovalide-mco-2019) (ATIH) 
@@ -238,7 +309,7 @@ Mise à jour : 7 mai 2020.
 
 Informations issues des tables de référence OVALIDE MCO, RacineINFO_exDGF.  
 
-Ce référentiel, annualisé au sens du PMSI MCO, comprend 12 variables et 2 672 lignes.  
+Ce référentiel, annualisé au sens du PMSI MCO.  
 
 Il est recommandé de ne charger que les années PMSI utiles.  
   
@@ -257,6 +328,14 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **pctapp** = pourcentage de séjours dans la racine apparentée  
 **anpmsi** = année PMSI de 2016 à 2019  
 
+
+```{r var ovalide_racineinfo_dgf, echo = FALSE}
+
+refpmsi::refpmsi("ovalide_racineinfo_dgf") %>% dplyr::glimpse()
+
+```
+
+
 ### Sources  
 
 [OVALIDE MCO - Tables de référence](https://www.atih.sante.fr/ovalide-mco-2019) (ATIH) 
@@ -270,11 +349,11 @@ Mise à jour : 7 mai 2020.
 
 Informations issues des tables de référence OVALIDE MCO, RacineINFO_exOQN. 
 
-Ce référentiel, annualisé au sens du PMSI MCO, comprend 12 variables et 2 672 lignes.  
+Ce référentiel, annualisé au sens du PMSI MCO.  
 
 Il est recommandé de ne charger que les années PMSI utiles.  
   
-### Variables  
+### Variables du référentiel  
 
 **racine** = code racine GHM  
 **pctdc** = taux de décès national  
@@ -288,6 +367,13 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **app** = racine apparentée à la racine GHM  
 **pctapp** = pourcentage de séjours dans la racine apparentée  
 **anpmsi** = année PMSI de 2016 à 2019  
+
+```{r var ovalide_racineinfo_oqn, echo = FALSE}
+
+refpmsi::refpmsi("ovalide_racineinfo_oqn") %>% dplyr::glimpse()
+
+```
+
 
 ### Sources  
 
@@ -315,7 +401,7 @@ ghs_2019_2020
 Soit le jeu de données artificiel `jeu_ghm` composé de 15 RUM représentant 10 séjours.  
 
 ```{r ghm_jeu_libelle, echo = FALSE}
-jeu_ghm <- tibble(no_rum = c(rep(1,10),1,2,1,2,3),
+jeu_ghm <- tibble::tibble(no_rum = c(rep(1,10),1,2,1,2,3),
                  no_rss = c(seq(1:10),11,11,12,12,12),
                  ghm = c("06K02Z","08C321","04M053","05M092",
                          "06M12T","04M053","20Z041",
@@ -471,8 +557,7 @@ sej_ghs_plein_intermediaire <- jeu_ghm %>%
 sej_ghs_plein_intermediaire
 ```
 
-Dans un second temps, on repère les séjours dégradés via leur GHS intermédiaire. 
-
+Dans un second temps, on repère les séjours dégradés via leur GHS intermédiaire.   
 ```{r ghs_intermediaire, eval = FALSE}
 sej_ghs_intermediaire <- jeu_ghm %>% 
   dplyr::filter(annee_rss == 2020) %>% 

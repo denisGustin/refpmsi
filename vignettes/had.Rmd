@@ -1,0 +1,100 @@
+---
+title: "HAD"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{HAD}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo = FALSE, message = FALSE}
+library(refpmsi)
+library(dplyr)
+```
+
+## HAD
+
+Intitulé du référentiel : **had**
+
+Mise à jour : 7 août 2020.  
+
+Liste des codes et libellés correspondant des natures du séjour, des types de lieu de domicile et des MPC (modes de prises en charge : MPP, MPA, MPD)  
+
+### Variables  
+
+```{r had, echo = FALSE}
+
+refpmsi::refpmsi("had") %>% dplyr::glimpse()
+
+```
+
+### Source  
+
+[Guide méthodologie PMSI HAD 2020](https://www.atih.sante.fr/sites/default/files/public/content/3732/guide-methodo-had-2020_version_provisoire_2_erratum.pdf)  
+
+## GHT DGF
+
+Intitulé du référentiel : **ght_dgf**
+
+Mise à jour : 7 août 2020.  
+
+Liste des GHT DGF avec leur tarif pour les années PMSI 2016 à 2020
+
+### Variables  
+
+```{r ght_dgf, echo = FALSE}
+
+refpmsi::refpmsi("ght_dgf") %>% dplyr::glimpse()
+
+```
+
+### Source  
+
+[Tarifs HAD (ATIH)](https://www.atih.sante.fr/tarifs-mco-et-had)  
+
+## GHT OQN
+
+Intitulé du référentiel : **ght_oqn**
+
+Mise à jour : 7 août 2020.  
+
+Liste des GHT OQN avec leur tarif pour les années PMSI 2016 à 2020
+
+### Variables  
+
+```{r ght_oqn, echo = FALSE}
+
+refpmsi::refpmsi("ght_oqn") %>% dplyr::glimpse()
+
+```
+
+### Source  
+
+[Tarifs HAD (ATIH)](https://www.atih.sante.fr/tarifs-mco-et-had)  
+
+## Modes d'entrée, modes de sortie, provenance et destination HAD
+
+Intitulé du référentiel : **me_ms_had**
+
+Mise à jour : 7 août 2020.  
+
+Liste des codes et libellés correspondant des modes d'entrée, sortie, provenance et destination en HAD
+
+### Variables  
+
+```{r me_ms_had, echo = FALSE}
+
+refpmsi::refpmsi("ght_oqn") %>% dplyr::glimpse()
+
+```
+
+### Source  
+
+[Guide méthodologie PMSI HAD 2020](https://www.atih.sante.fr/sites/default/files/public/content/3732/guide-methodo-had-2020_version_provisoire_2_erratum.pdf)  

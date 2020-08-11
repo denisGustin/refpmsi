@@ -1,0 +1,132 @@
+---
+title: "Dénombrements base nationale MCO"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Dénombrements base nationale MCO}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo = FALSE, message = FALSE}
+library(refpmsi)
+library(dplyr)
+```
+
+## Répartition du nombre de réalisations selon les codes diagnostics (DP, DR ou DAS)
+
+Intitulé du référentiel : **base_mco_diag**
+
+Mise à jour : 7 août 2020.  
+
+### Variables  
+
+**diag** = code diagnostic (DP, DR ou DAS) codé au moins une fois nationalement  
+**nb_sejsea** = nombre de séjours et séances dans lesquels est codé au moins 1 fois le diagnostic.  
+*Cas particulier des séjours de la CMD 28 "Séances" non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c'est le le nombre de séances qui est pris en compte.*  
+**decile** = décile du nombre de séjours et séances avec le diagnostic codé par rapport au nombre total de séjours et séances dans la base nationale. Variable calculée  
+
+```{r base mco diag, echo = FALSE}
+
+refpmsi::refpmsi("base_mco_diag") %>% dplyr::glimpse()
+
+```
+
+### Source  
+[Denombrement base nationale PMSI MCO 2019 (ATIH)](https://www.atih.sante.fr/sites/default/files/public/content/3832/denombrement_2019.xlsx)  
+
+
+## Répartition du nombre de réalisations selon les actes CCAM
+
+Intitulé du référentiel : **base_mco_ccam**
+
+Mise à jour : 7 août 2020.  
+
+### Variables  
+
+**acte** = acte CCAM codé au moins une fois nationalement  
+**phase** = code phase de l'acte  
+**activite** = code activité de l'acte  
+**ext** = extention PMSI  
+**nb_sejsea** = nombre de séjours et séances dans lesquels est codé au moins 1 fois le quadruplet (acte, phase, activité, extension PMSI).  
+*Cas particulier des séjours de la CMD 28 "Séances" non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c'est le le nombre de séances qui est pris en compte.*  
+**decile** = décile du nombre de séjours et séances avec l'acte CCAM codé par rapport au nombre total de séjours et séances dans la base nationale. Variable calculée  
+
+```{r base mco ccam, echo = FALSE}
+
+refpmsi::refpmsi("base_mco_ccam") %>% dplyr::glimpse()
+
+```
+
+### Source  
+[Denombrement base nationale PMSI MCO 2019 (ATIH)](https://www.atih.sante.fr/sites/default/files/public/content/3832/denombrement_2019.xlsx)  
+
+
+## Répartition du nombre de réalisations selon les GHS
+
+Intitulé du référentiel : **base_mco_ghs**
+
+Mise à jour : 7 août 2020.  
+
+### Variables  
+
+**ghs** = code GHS  
+**ghm** = code GHM correspondant au GHS  
+**lib_ghm** = libellé du GHM  
+**nb_sejsea** = nombre de séjours et séances groupés dans le GHS  
+**decile** = décile du nombre de séjours et séances groupés dans le GHS par rapport au nombre total de séjours et séances dans la base nationale. Variable calculée  
+
+```{r base mco ghs, echo = FALSE}
+
+refpmsi::refpmsi("base_mco_ghs") %>% dplyr::glimpse()
+
+```
+
+### Source  
+[Denombrement base nationale PMSI MCO 2019 (ATIH)](https://www.atih.sante.fr/sites/default/files/public/content/3832/denombrement_2019.xlsx)  
+
+
+## Open CCAM 2019
+
+Intitulé du référentiel : **open_ccam**
+
+Mise à jour : 7 août 2020.  
+
+### Variables  
+
+**acte** = acte CCAM codé au moins une fois nationalement  
+**phase** = code phase de l'acte  
+**nb_sejsea** = nombre de séjours et séances dans lesquels est codé au moins 1 fois le quadruplet (acte, phase, activité, extension PMSI).  
+*Cas particulier des séjours de la CMD 28 "Séances" non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c'est le le nombre de séances qui est pris en compte.  
+Lorsque le nombre de séjours/séances est inférieur à 11, l’information ne figure pas dans OpenCCAM.*  
+**nb_actes** = nombre de réalisations de l’acte CCAM au cours de l’ensemble des séjours et séances  
+**dms_globale** = durée moyenne des séjours au cours desquels l’acte a été réalisé en nombre de nuitées (dms_globale). La durée des séances est par convention 0  
+**nb_sej_0_nuit** = nombre de séjours ambulatoires (= séjours de 0 nuit + les séances)  
+*Lorsque le nombre de séjours ambulatoires pour un acte est inférieur à 11, l'acte concerné est exclu.  
+**nb_acte_ambu** = nombre de réalisations de l’acte au cours des séjours ambulatoires et des séances  
+
+Commentaire : les actes CCAM correspondent aux actes avec activité = 1, sauf les actes de la hiérarchie 18.01 (= les gestes d'anesthésie complémentaire) et quelques autres pour lesquels c'est l'activité 4 qui est prise en compte (voir exemple "Comparaison openCCAM et dénombrement des actes CCAM dans la base nationale MCO" ci-dessous)
+
+```{r base mco open_ccam, echo = FALSE}
+
+refpmsi::refpmsi("open_ccam") %>% dplyr::glimpse()
+
+```
+
+### Source  
+[Open CCAM 2019 (ATIH)](https://www.scansante.fr/open-ccam/open-ccam-2019)  
+
+
+
+## Exemples  
+
+
+### Comparaison Open CCAM et dénombrement des actes CCAM dans la base nationale MCO  
+
+### 

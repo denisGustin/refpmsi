@@ -85,7 +85,7 @@
 
       
 
-      </header><div class="row">
+      </header><script src="ghm_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>GHM, GHS, regroupements GHM, OVALIDE MCO</h1>
@@ -321,28 +321,28 @@
 
 <span class="co"># association à chaque GHM de son libellé correspondant à l'année PMSI de son séjour et à son GHS associé</span>
 <span class="no">jeu_ghm_libelle</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(<span class="no">ghm_2019_2020</span> <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">ghm_2019_2020</span> <span class="kw">%&gt;%</span>
                    <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ghs</span>,<span class="no">libelle</span>,<span class="no">anpmsi</span>),
                    <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"ghs"</span> <span class="kw">=</span> <span class="st">"ghs"</span>, <span class="st">"annee_rss"</span> <span class="kw">=</span> <span class="st">"anpmsi"</span>))
 <span class="no">jeu_ghm_libelle</span></pre></body></html></div>
 <pre><code>#&gt; # A tibble: 15 x 8
-#&gt;    no_rum no_rss ghm    dp_rum    jp ghs   annee_rss libelle               
-#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;                 
-#&gt;  1      1      1 06K02Z D122       0 2119  2020      Endoscopies digestive~
-#&gt;  2      1      2 08C321 S8220      3 2808  2019      Interventions sur la ~
-#&gt;  3      1      3 04M053 J181      10 1144  2019      Pneumonies et pleurés~
-#&gt;  4      1      4 05M092 I5001      7 1754  2020      Insuffisances cardiaq~
-#&gt;  5      1      5 06M12T R104       0 2200  2020      Douleurs abdominales,~
-#&gt;  6      1      6 04M053 J181       0 1144  2019      Pneumonies et pleurés~
-#&gt;  7      1      7 20Z041 F102      29 7267  2019      Ethylisme avec dépend~
-#&gt;  8      1      8 08K041 S730       2 3033  2020      Tractions continues e~
-#&gt;  9      1      9 01M201 S0600      3 268   2019      Commotions cérébrales~
-#&gt; 10      1     10 06M12T R104       0 2206  2020      Douleurs abdominales,~
-#&gt; 11      1     11 05M092 I5009      2 1754  2019      Insuffisances cardiaq~
-#&gt; 12      2     11 05M092 I472       1 1754  2019      Insuffisances cardiaq~
-#&gt; 13      1     12 04M053 J189       2 1144  2020      Pneumonies et pleurés~
-#&gt; 14      2     12 04M053 J960      11 1144  2020      Pneumonies et pleurés~
-#&gt; 15      3     12 04M053 J189      11 1144  2020      Pneumonies et pleurés~</code></pre>
+#&gt;    no_rum no_rss ghm    dp_rum    jp ghs   annee_rss libelle                    
+#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;                      
+#&gt;  1      1      1 06K02Z D122       0 2119  2020      Endoscopies digestives thé~
+#&gt;  2      1      2 08C321 S8220      3 2808  2019      Interventions sur la jambe~
+#&gt;  3      1      3 04M053 J181      10 1144  2019      Pneumonies et pleurésies b~
+#&gt;  4      1      4 05M092 I5001      7 1754  2020      Insuffisances cardiaques e~
+#&gt;  5      1      5 06M12T R104       0 2200  2020      Douleurs abdominales, très~
+#&gt;  6      1      6 04M053 J181       0 1144  2019      Pneumonies et pleurésies b~
+#&gt;  7      1      7 20Z041 F102      29 7267  2019      Ethylisme avec dépendance,~
+#&gt;  8      1      8 08K041 S730       2 3033  2020      Tractions continues et réd~
+#&gt;  9      1      9 01M201 S0600      3 268   2019      Commotions cérébrales, niv~
+#&gt; 10      1     10 06M12T R104       0 2206  2020      Douleurs abdominales, très~
+#&gt; 11      1     11 05M092 I5009      2 1754  2019      Insuffisances cardiaques e~
+#&gt; 12      2     11 05M092 I472       1 1754  2019      Insuffisances cardiaques e~
+#&gt; 13      1     12 04M053 J189       2 1144  2020      Pneumonies et pleurésies b~
+#&gt; 14      2     12 04M053 J960      11 1144  2020      Pneumonies et pleurésies b~
+#&gt; 15      3     12 04M053 J189      11 1144  2020      Pneumonies et pleurésies b~</code></pre>
 </div>
 <div id="association-dms-nationale-aux-séjours" class="section level3">
 <h3 class="hasAnchor">
@@ -355,7 +355,7 @@
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ghm</span>,<span class="no">dms</span>,<span class="no">anpmsi</span>)
 
 <span class="no">jeu_ghm_dms</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(<span class="no">dms_nat</span>, <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"ghm"</span> <span class="kw">=</span> <span class="st">"ghm"</span>)) <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">dms_nat</span>, <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"ghm"</span> <span class="kw">=</span> <span class="st">"ghm"</span>)) <span class="kw">%&gt;%</span>
 <span class="co"># création variable ecart_dms</span>
 <span class="co">## variable jp est un integer, dms est un double : le résultat sera un double</span>
 <span class="co"># création variable ratio_ecart_dms : pour les cas jp = 0, ce ratio est NA</span>
@@ -363,40 +363,40 @@
                 <span class="kw">ratio_ecart_dms</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span>(<span class="no">jp</span> <span class="kw">!=</span> <span class="fl">0L</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="no">jp</span>/<span class="no">dms</span>,<span class="fl">2</span>), <span class="fl">NA_real_</span>))
 <span class="no">jeu_ghm_dms</span> <span class="kw">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw">n</span> <span class="kw">=</span> <span class="fl">15</span>, <span class="kw">width</span> <span class="kw">=</span> <span class="fl">Inf</span>)</pre></body></html></div>
 <pre><code>#&gt; # A tibble: 15 x 11
-#&gt;    no_rum no_rss ghm    dp_rum    jp ghs   annee_rss    dms anpmsi
-#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt; 
-#&gt;  1      1      1 06K02Z D122       0 2119  2020       0.124 2019  
-#&gt;  2      1      2 08C321 S8220      3 2808  2019       3.19  2019  
-#&gt;  3      1      3 04M053 J181      10 1144  2019      11.3   2019  
-#&gt;  4      1      4 05M092 I5001      7 1754  2020       8.04  2019  
-#&gt;  5      1      5 06M12T R104       0 2200  2020       0.582 2019  
-#&gt;  6      1      6 04M053 J181       0 1144  2019      11.3   2019  
-#&gt;  7      1      7 20Z041 F102      29 7267  2019       9.07  2019  
-#&gt;  8      1      8 08K041 S730       2 3033  2020       5.14  2019  
-#&gt;  9      1      9 01M201 S0600      3 268   2019       0.694 2019  
-#&gt; 10      1     10 06M12T R104       0 2206  2020       0.582 2019  
-#&gt; 11      1     11 05M092 I5009      2 1754  2019       8.04  2019  
-#&gt; 12      2     11 05M092 I472       1 1754  2019       8.04  2019  
-#&gt; 13      1     12 04M053 J189       2 1144  2020      11.3   2019  
-#&gt; 14      2     12 04M053 J960      11 1144  2020      11.3   2019  
-#&gt; 15      3     12 04M053 J189      11 1144  2020      11.3   2019  
-#&gt;    ecart_dms ratio_ecart_dms
-#&gt;        &lt;dbl&gt;           &lt;dbl&gt;
-#&gt;  1    -0.124           NA   
-#&gt;  2    -0.195            0.94
-#&gt;  3    -1.30             0.89
-#&gt;  4    -1.04             0.87
-#&gt;  5    -0.582           NA   
-#&gt;  6   -11.3             NA   
-#&gt;  7    19.9              3.2 
-#&gt;  8    -3.14             0.39
-#&gt;  9     2.31             4.32
-#&gt; 10    -0.582           NA   
-#&gt; 11    -6.04             0.25
-#&gt; 12    -7.04             0.12
-#&gt; 13    -9.30             0.18
-#&gt; 14    -0.296            0.97
-#&gt; 15    -0.296            0.97</code></pre>
+#&gt;    no_rum no_rss ghm    dp_rum    jp ghs   annee_rss    dms anpmsi ecart_dms
+#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;
+#&gt;  1      1      1 06K02Z D122       0 2119  2020       0.124 2019      -0.124
+#&gt;  2      1      2 08C321 S8220      3 2808  2019       3.19  2019      -0.195
+#&gt;  3      1      3 04M053 J181      10 1144  2019      11.3   2019      -1.30 
+#&gt;  4      1      4 05M092 I5001      7 1754  2020       8.04  2019      -1.04 
+#&gt;  5      1      5 06M12T R104       0 2200  2020       0.582 2019      -0.582
+#&gt;  6      1      6 04M053 J181       0 1144  2019      11.3   2019     -11.3  
+#&gt;  7      1      7 20Z041 F102      29 7267  2019       9.07  2019      19.9  
+#&gt;  8      1      8 08K041 S730       2 3033  2020       5.14  2019      -3.14 
+#&gt;  9      1      9 01M201 S0600      3 268   2019       0.694 2019       2.31 
+#&gt; 10      1     10 06M12T R104       0 2206  2020       0.582 2019      -0.582
+#&gt; 11      1     11 05M092 I5009      2 1754  2019       8.04  2019      -6.04 
+#&gt; 12      2     11 05M092 I472       1 1754  2019       8.04  2019      -7.04 
+#&gt; 13      1     12 04M053 J189       2 1144  2020      11.3   2019      -9.30 
+#&gt; 14      2     12 04M053 J960      11 1144  2020      11.3   2019      -0.296
+#&gt; 15      3     12 04M053 J189      11 1144  2020      11.3   2019      -0.296
+#&gt;    ratio_ecart_dms
+#&gt;              &lt;dbl&gt;
+#&gt;  1           NA   
+#&gt;  2            0.94
+#&gt;  3            0.89
+#&gt;  4            0.87
+#&gt;  5           NA   
+#&gt;  6           NA   
+#&gt;  7            3.2 
+#&gt;  8            0.39
+#&gt;  9            4.32
+#&gt; 10           NA   
+#&gt; 11            0.25
+#&gt; 12            0.12
+#&gt; 13            0.18
+#&gt; 14            0.97
+#&gt; 15            0.97</code></pre>
 <p>Enfin, on peut filtrer les séjours qui ont une DS &gt;= 2,5 x la DMS nationale de leur GHM pour repérer des séjours, à priori, particulièrement longs.</p>
 <div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="no">sej_2.5_dms</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm_dms</span> <span class="kw">%&gt;%</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">ratio_ecart_dms</span> <span class="kw">&gt;=</span> <span class="fl">2.5</span>)
@@ -416,7 +416,7 @@
 <a href="#case-mix-en-da-domaine-dactivit%C3%A9-des-s%C3%A9jours" class="anchor"></a>Case mix en DA (Domaine d’Activité) des séjours</h3>
 <div class="sourceCode" id="cb10"><html><body><pre class="r"><span class="no">case_mix_da</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
   <span class="co"># rattachement des codes DA aux séjours</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(<span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghm_regroupement"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>) <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghm_regroupement"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>) <span class="kw">%&gt;%</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ghm</span>,<span class="no">da</span>,<span class="no">libelle_da</span>,<span class="no">anpmsi</span>),
                 <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"ghm"</span><span class="kw">=</span> <span class="st">"ghm"</span>, <span class="st">"annee_rss"</span> <span class="kw">=</span> <span class="st">"anpmsi"</span>)) <span class="kw">%&gt;%</span>
   <span class="co"># regroupement en DA</span>
@@ -425,16 +425,17 @@
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span>(<span class="kw">n_rum</span> <span class="kw">=</span> <span class="fu">n</span>(),
                    <span class="kw">n_sej</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/n_distinct.html">n_distinct</a></span>(<span class="no">no_rss</span>))
 <span class="no">case_mix_da</span></pre></body></html></div>
-<pre><code>#&gt; # A tibble: 6 x 4
+<pre><code>#&gt; `summarise()` regrouping output by 'da' (override with `.groups` argument)
+#&gt; # A tibble: 6 x 4
 #&gt; # Groups:   da [6]
-#&gt;   da    libelle_da                                              n_rum n_sej
-#&gt;   &lt;chr&gt; &lt;chr&gt;                                                   &lt;int&gt; &lt;int&gt;
-#&gt; 1 D01   Digestif                                                    3     3
-#&gt; 2 D02   Orthopédie traumatologie                                    2     2
-#&gt; 3 D05   Système nerveux (hors cathétérismes vasculaires diagno~     1     1
-#&gt; 4 D07   Cardio-vasculaire (hors cathétérismes vasculaires diag~     3     2
-#&gt; 5 D09   Pneumologie                                                 5     3
-#&gt; 6 D23   Toxicologie, Intoxications, Alcool                          1     1</code></pre>
+#&gt;   da    libelle_da                                                   n_rum n_sej
+#&gt;   &lt;chr&gt; &lt;chr&gt;                                                        &lt;int&gt; &lt;int&gt;
+#&gt; 1 D01   Digestif                                                         3     3
+#&gt; 2 D02   Orthopédie traumatologie                                         2     2
+#&gt; 3 D05   Système nerveux (hors cathétérismes vasculaires diagnostiqu~     1     1
+#&gt; 4 D07   Cardio-vasculaire (hors cathétérismes vasculaires diagnosti~     3     2
+#&gt; 5 D09   Pneumologie                                                      5     3
+#&gt; 6 D23   Toxicologie, Intoxications, Alcool                               1     1</code></pre>
 </div>
 <div id="séjours-et-gradation-des-prises-en-charge-ambulatoires" class="section level3">
 <h3 class="hasAnchor">
@@ -443,7 +444,7 @@
 <div class="sourceCode" id="cb12"><html><body><pre class="r"><span class="no">sej_ghs_plein_intermediaire</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
   <span class="co"># filtre sur l'année 2020, seule concernée dans notre data set</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">annee_rss</span> <span class="kw">==</span> <span class="fl">2020</span>) <span class="kw">%&gt;%</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(<span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_dgf"</span>,<span class="fl">2020</span>) <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_dgf"</span>,<span class="fl">2020</span>) <span class="kw">%&gt;%</span>
                      <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ghs</span>,<span class="no">ghs_intermediaire</span>,<span class="no">anpmsi</span>),
                    <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"ghs"</span> <span class="kw">=</span> <span class="st">"ghs"</span>, <span class="st">"annee_rss"</span> <span class="kw">=</span> <span class="st">"anpmsi"</span>)) <span class="kw">%&gt;%</span>
   <span class="co"># filtre sur les séjours pour lesquels le GHS a un GHS intermédiaire associé</span>
@@ -459,7 +460,7 @@
 <div class="sourceCode" id="cb14"><html><body><pre class="r"><span class="no">sej_ghs_intermediaire</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">annee_rss</span> <span class="kw">==</span> <span class="fl">2020</span>) <span class="kw">%&gt;%</span>
   <span class="co"># dplyr::inner_join ne va retenir que les séjours pour lesquels le GHS est un GHS intermédiaire</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/join.html">inner_join</a></span>(<span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_dgf"</span>,<span class="fl">2020</span>) <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span>(<span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_dgf"</span>,<span class="fl">2020</span>) <span class="kw">%&gt;%</span>
                      <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ghs_intermediaire</span>,<span class="no">anpmsi</span>),
                    <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"ghs"</span> <span class="kw">=</span> <span class="st">"ghs_intermediaire"</span>, <span class="st">"annee_rss"</span> <span class="kw">=</span> <span class="st">"anpmsi"</span>)) <span class="kw">%&gt;%</span>
 <span class="no">sej_ghs_intermediaire</span></pre></body></html></div>
@@ -472,6 +473,7 @@
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+
         <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
     </nav>
 </div>

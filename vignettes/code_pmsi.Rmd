@@ -1,0 +1,74 @@
+---
+title: "Code PMSI"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Code PMSI}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo = FALSE, message = FALSE}
+library(refpmsi)
+library(dplyr)
+library(stringr)
+```
+
+## Ajout de positions à gauche  
+
+De nombreux codages PMSI sont habituellement sur 2 positions (CMD, CM, numéro de chapitre CIM-10, ...).  
+
+Ces derniers, selon les sources de données et les traitements effectués, peuvent se retrouver codés sur 1 position sans le 0 à gauche (ex : CMD 1 au lieu du CMD 01 attendue).  
+
+On peut alors vouloir rétablir le 0 à gauche.  
+
+La fonction [str_pad()](https://stringr.tidyverse.org/reference/str_pad.html) du package stringr:: du tidyverse est particulièrement adaptée.  
+
+```{r str_pad, eval = FALSE}
+cmd_01 <- "1" # cmd_01 is character
+cmd_01 <- stringr::str_pad(cmd_01, width = 2, side = "left", pad = "0")
+# width = nombre voulu de positions. Ici width = 2
+# side = left car on veut ajouter le 0 à gauche
+# pad = "0" = le motif que l'on souhaite ajouter
+cmd_01
+```
+```{r str_pad, eval = TRUE, echo = FALSE}
+```
+
+Remarque : on voit là l'intérêt de toujours travailler en character pour ces codages.
+
+## Suppression de positions à gauche  
+
+Plusieurs variables sortent souvent des fichiers PMSI de production avec des 0 à gauche.  
+
+Exemple avec le nombre de DAS sur 2 positions dans chaque RUM : on récupère ainsi "08" pour 8 DAS dans le RUM.  
+
+On peut souhaiter nettoyer ces 0 à gauche pour les traitements.
+
+Plusieurs approches sont possibles. Nous privilégions celle avec la fonction [str_remove()](https://stringr.tidyverse.org/reference/str_remove.html) du package stringr: du tidyverse.  
+
+```{r str_remove, eval = FALSE}
+nDA <- "08"
+nDA <- stringr::str_remove(nDA, pattern = "^0+")
+# "^0+" est une expression régulière (regex) qui repère tous les 0 à gauche
+nDA
+```
+```{r str_remove, eval = TRUE, echo = FALSE}
+```
+
+Si on souhaite juste transformer la donnée en integer, on peut faire un simple as.integer()  
+
+```{r str_remove_2, eval = FALSE}
+nDA <- "08"
+as.integer(nDA)
+```
+```{r str_remove_2, eval = TRUE, echo = FALSE}
+```
+
+Mais pour nettoyer des NAS ou des numéro d'UM c'est bien l'approche avec **stringr::str_remove()** qui conviendra et qui conserva la donnée en character.  

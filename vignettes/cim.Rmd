@@ -60,6 +60,13 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)
 
 [CIM-10 FR à usage PMSI 2020 - version du 17 avril 2020](https://www.atih.sante.fr/sites/default/files/public/content/3706/cim-10fr_2020_actualisation_pmsi_10-04-2020.pdf) (ATIH)
 
+```{r var cim10, echo = FALSE}
+
+refpmsi::refpmsi("cim") %>% dplyr::glimpse()
+
+```
+
+
 ## Exemples
 
 ### Chargement de la CIM-10 des années 2019 et 2020

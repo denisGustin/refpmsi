@@ -85,7 +85,7 @@
 
       
 
-      </header><div class="row">
+      </header><script src="cim_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>CIM-10 FR à usage PMSI</h1>
@@ -137,14 +137,14 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 <span class="no">cim_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">cim_2019_2020</span>)</pre></body></html></div>
 <pre><code>#&gt; # A tibble: 6 x 10
-#&gt;   code   tmco pssr   tpsy lib_cim    actif categorie chapitre groupe anpmsi
-#&gt;   &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt; 
-#&gt; 1 A00       3 NNNN      3 Choléra        1 A00       1        A00-A~ 2020  
-#&gt; 2 A000      0 NOOO      0 Choléra à~     1 A00       1        A00-A~ 2020  
-#&gt; 3 A001      0 NOOO      0 Choléra à~     1 A00       1        A00-A~ 2020  
-#&gt; 4 A009      0 NOOO      0 Choléra, ~     1 A00       1        A00-A~ 2020  
-#&gt; 5 A01       3 NNNN      3 Fièvres t~     1 A01       1        A00-A~ 2020  
-#&gt; 6 A010      0 NOOO      0 Fièvre ty~     1 A01       1        A00-A~ 2020</code></pre>
+#&gt;   code   tmco pssr   tpsy lib_cim         actif categorie chapitre groupe anpmsi
+#&gt;   &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;           &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt; 
+#&gt; 1 A00       3 NNNN      3 Choléra             1 A00       1        A00-A~ 2020  
+#&gt; 2 A000      0 NOOO      0 Choléra à Vibr~     1 A00       1        A00-A~ 2020  
+#&gt; 3 A001      0 NOOO      0 Choléra à Vibr~     1 A00       1        A00-A~ 2020  
+#&gt; 4 A009      0 NOOO      0 Choléra, sans ~     1 A00       1        A00-A~ 2020  
+#&gt; 5 A01       3 NNNN      3 Fièvres typhoï~     1 A01       1        A00-A~ 2020  
+#&gt; 6 A010      0 NOOO      0 Fièvre typhoïde     1 A01       1        A00-A~ 2020</code></pre>
 </div>
 <div id="association-du-libellé-cim-10-aux-dp" class="section level3">
 <h3 class="hasAnchor">
@@ -154,36 +154,36 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 #&gt;    no_rss dp_rss annee_rss
 #&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;    
 #&gt;  1      1 I501   2019     
-#&gt;  2      2 Z491   2020     
-#&gt;  3      3 H251   2019     
+#&gt;  2      2 Z491   2019     
+#&gt;  3      3 H251   2020     
 #&gt;  4      4 Z380   2020     
-#&gt;  5      5 S7200  2020     
-#&gt;  6      6 S0600  2020     
-#&gt;  7      7 R074   2019     
+#&gt;  5      5 S7200  2019     
+#&gt;  6      6 S0600  2019     
+#&gt;  7      7 R074   2020     
 #&gt;  8      8 J441   2019     
 #&gt;  9      9 K358   2020     
-#&gt; 10     10 R53+0  2019</code></pre>
+#&gt; 10     10 R53+0  2020</code></pre>
 <div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2019 et 2020</span>
 <span class="no">cim_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
 
 <span class="co"># association à chaque DP du libellé CIM-10 correspondant au DP et à son année PMSI</span>
 <span class="no">jeu_dp_libelle</span> <span class="kw">&lt;-</span> <span class="no">jeu_dp</span> <span class="kw">%&gt;%</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(<span class="no">cim_2019_2020</span> <span class="kw">%&gt;%</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">code</span>,<span class="no">lib_cim</span>,<span class="no">anpmsi</span>),
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">cim_2019_2020</span> <span class="kw">%&gt;%</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">code</span>,<span class="no">lib_cim</span>,<span class="no">anpmsi</span>),
                    <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"dp_rss"</span> <span class="kw">=</span> <span class="st">"code"</span>, <span class="st">"annee_rss"</span> <span class="kw">=</span> <span class="st">"anpmsi"</span>))
 <span class="no">jeu_dp_libelle</span></pre></body></html></div>
 <pre><code>#&gt; # A tibble: 10 x 4
-#&gt;    no_rss dp_rss annee_rss lib_cim                                         
-#&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;                                           
-#&gt;  1      1 I501   2019      Insuffisance ventriculaire gauche               
-#&gt;  2      2 Z491   2020      Dialyse extra-corporelle                        
-#&gt;  3      3 H251   2019      Cataracte sénile nucléaire                      
-#&gt;  4      4 Z380   2020      Enfant unique, né à l'hôpital                   
-#&gt;  5      5 S7200  2020      Fracture fermée du col du fémur                 
-#&gt;  6      6 S0600  2020      Commotion cérébrale, sans plaie intracrânienne  
-#&gt;  7      7 R074   2019      Douleur thoracique, sans précision              
-#&gt;  8      8 J441   2019      Maladie pulmonaire obstructive chronique avec é~
-#&gt;  9      9 K358   2020      Appendicites aigües, autres et non précisées    
-#&gt; 10     10 R53+0  2019      Altération [baisse] de l'état général</code></pre>
+#&gt;    no_rss dp_rss annee_rss lib_cim                                              
+#&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;                                                
+#&gt;  1      1 I501   2019      Insuffisance ventriculaire gauche                    
+#&gt;  2      2 Z491   2019      Dialyse extra-corporelle                             
+#&gt;  3      3 H251   2020      Cataracte sénile nucléaire                           
+#&gt;  4      4 Z380   2020      Enfant unique, né à l'hôpital                        
+#&gt;  5      5 S7200  2019      Fracture fermée du col du fémur                      
+#&gt;  6      6 S0600  2019      Commotion cérébrale, sans plaie intracrânienne       
+#&gt;  7      7 R074   2020      Douleur thoracique, sans précision                   
+#&gt;  8      8 J441   2019      Maladie pulmonaire obstructive chronique avec épisod~
+#&gt;  9      9 K358   2020      Appendicites aigües, autres et non précisées         
+#&gt; 10     10 R53+0  2020      Altération [baisse] de l'état général</code></pre>
 </div>
 <div id="case-mix-par-chapitre-cim-10" class="section level3">
 <h3 class="hasAnchor">
@@ -194,7 +194,7 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 
 <span class="co"># association à chaque DP de son numéro de chapitre et de son libellé CIM-10 correspondant à l'année PMSI de son RSS</span>
 <span class="no">dp_chapitre</span> <span class="kw">&lt;-</span> <span class="no">jeu_dp</span> <span class="kw">%&gt;%</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(<span class="no">cim_2019_2020</span> <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">cim_2019_2020</span> <span class="kw">%&gt;%</span>
                      <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">code</span>, <span class="no">lib_cim</span>,<span class="no">chapitre</span>,<span class="no">anpmsi</span>),
                                     <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"dp_rss"</span> <span class="kw">=</span> <span class="st">"code"</span>,
                                            <span class="st">"annee_rss"</span> <span class="kw">=</span> <span class="st">"anpmsi"</span>))
@@ -202,7 +202,7 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 <span class="no">chapitre_cim</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim_chapitre"</span>) <span class="kw">%&gt;%</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">num_chapitre_cim</span>,<span class="no">lib_chapitre_cim</span>)
 
 <span class="no">dp_chapitre</span> <span class="kw">&lt;-</span> <span class="no">dp_chapitre</span> <span class="kw">%&gt;%</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(<span class="no">chapitre_cim</span>, <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"chapitre"</span> <span class="kw">=</span> <span class="st">"num_chapitre_cim"</span>)) <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">chapitre_cim</span>, <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"chapitre"</span> <span class="kw">=</span> <span class="st">"num_chapitre_cim"</span>)) <span class="kw">%&gt;%</span>
   <span class="co"># regroupement par chapitre</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span>(<span class="no">chapitre</span>,<span class="no">lib_chapitre_cim</span>) <span class="kw">%&gt;%</span>
   <span class="co"># calcul du nombre de DP par chapitre et liste des DP par chapitre</span>
@@ -211,17 +211,18 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
   <span class="co"># tri descendant sur le nombre de DP par chapitre</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span>(<span class="fu">desc</span>(<span class="no">n_dp</span>))
 <span class="no">dp_chapitre</span></pre></body></html></div>
-<pre><code>#&gt; # A tibble: 7 x 4
+<pre><code>#&gt; `summarise()` regrouping output by 'chapitre' (override with `.groups` argument)
+#&gt; # A tibble: 7 x 4
 #&gt; # Groups:   chapitre [7]
-#&gt;   chapitre lib_chapitre_cim                                  n_dp liste_dp 
-#&gt;   &lt;chr&gt;    &lt;chr&gt;                                            &lt;int&gt; &lt;chr&gt;    
-#&gt; 1 18       Symptômes, signes et résultats anormaux d'exame~     2 R074 R53~
-#&gt; 2 19       Lésions traumatiques, empoisonnements et certai~     2 S7200 S0~
-#&gt; 3 21       Facteurs influant sur l'état de santé et motifs~     2 Z491 Z380
-#&gt; 4 10       Maladies de l'appareil respiratoire                  1 J441     
-#&gt; 5 11       Maladies de l'appareil digestif                      1 K358     
-#&gt; 6 7        Maladies de l'œil et de ses annexes                  1 H251     
-#&gt; 7 9        Maladies de l'appareil circulatoire                  1 I501</code></pre>
+#&gt;   chapitre lib_chapitre_cim                                       n_dp liste_dp 
+#&gt;   &lt;chr&gt;    &lt;chr&gt;                                                 &lt;int&gt; &lt;chr&gt;    
+#&gt; 1 18       Symptômes, signes et résultats anormaux d'examens cl~     2 R074 R53~
+#&gt; 2 19       Lésions traumatiques, empoisonnements et certaines a~     2 S7200 S0~
+#&gt; 3 21       Facteurs influant sur l'état de santé et motifs de r~     2 Z491 Z380
+#&gt; 4 10       Maladies de l'appareil respiratoire                       1 J441     
+#&gt; 5 11       Maladies de l'appareil digestif                           1 K358     
+#&gt; 6 7        Maladies de l'œil et de ses annexes                       1 H251     
+#&gt; 7 9        Maladies de l'appareil circulatoire                       1 I501</code></pre>
 </div>
 <div id="repérage-des-das-interdits-en-dp-et-dr" class="section level3">
 <h3 class="hasAnchor">
@@ -232,10 +233,10 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 #&gt;     &lt;int&gt; &lt;chr&gt; &lt;chr&gt;    
 #&gt;  1      1 Z370  2020     
 #&gt;  2      2 I10   2020     
-#&gt;  3      3 P040  2019     
+#&gt;  3      3 P040  2020     
 #&gt;  4      4 F1725 2020     
-#&gt;  5      5 G473  2020     
-#&gt;  6      6 W189  2019     
+#&gt;  5      5 G473  2019     
+#&gt;  6      6 W189  2020     
 #&gt;  7      7 R600  2020     
 #&gt;  8      8 N178  2020     
 #&gt;  9      9 B952  2019     
@@ -246,20 +247,21 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 <span class="co"># association à chaque DAS de son type MCO et de son libellé CIM-10, correspondant à son année PMSI</span>
 <span class="co"># filtre sur les types MCO 1 "Diagnostic interdit en DP et DR - Autorisé ailleurs" et 2 "Diagnostic interdit en DP et DR - Cause externe de morbidité" </span>
 <span class="no">das_interdit_dp_dr</span> <span class="kw">&lt;-</span> <span class="no">jeu_das</span> <span class="kw">%&gt;%</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(<span class="no">cim_2019_2020</span> <span class="kw">%&gt;%</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">code</span>,<span class="no">lib_cim</span>,<span class="no">tmco</span>,<span class="no">anpmsi</span>),
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">cim_2019_2020</span> <span class="kw">%&gt;%</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">code</span>,<span class="no">lib_cim</span>,<span class="no">tmco</span>,<span class="no">anpmsi</span>),
                    <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"das"</span> <span class="kw">=</span> <span class="st">"code"</span>, <span class="st">"annee_rss"</span> <span class="kw">=</span> <span class="st">"anpmsi"</span>)) <span class="kw">%&gt;%</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">tmco</span> <span class="kw">%in%</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">1</span>,<span class="fl">2</span>))
 <span class="no">das_interdit_dp_dr</span></pre></body></html></div>
 <pre><code>#&gt; # A tibble: 3 x 5
-#&gt;   no_rss das   annee_rss lib_cim                                       tmco
-#&gt;    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;                                        &lt;int&gt;
-#&gt; 1      1 Z370  2020      Naissance unique, enfant vivant                  1
-#&gt; 2      6 W189  2019      Autre chute de plain-pied, lieu sans précis~     2
-#&gt; 3      9 B952  2019      Streptocoques, groupe D, et entérocoques, c~     1</code></pre>
+#&gt;   no_rss das   annee_rss lib_cim                                            tmco
+#&gt;    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;                                             &lt;int&gt;
+#&gt; 1      1 Z370  2020      Naissance unique, enfant vivant                       1
+#&gt; 2      6 W189  2020      Autre chute de plain-pied, lieu sans précision        2
+#&gt; 3      9 B952  2019      Streptocoques, groupe D, et entérocoques, cause ~     1</code></pre>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+
         <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
     </nav>
 </div>
