@@ -63,6 +63,9 @@
       <a href="../articles/ghm.html">GHM</a>
     </li>
     <li>
+      <a href="../articles/base_mco.html">Base MCO</a>
+    </li>
+    <li>
       <a href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a>
     </li>
   </ul>
@@ -171,16 +174,16 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 <pre><code>#&gt; # A tibble: 10 x 3
 #&gt;    no_rss dp_rss annee_rss
 #&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;    
-#&gt;  1      1 I501   2019     
-#&gt;  2      2 Z491   2019     
-#&gt;  3      3 H251   2019     
-#&gt;  4      4 Z380   2019     
-#&gt;  5      5 S7200  2019     
-#&gt;  6      6 S0600  2020     
+#&gt;  1      1 I501   2020     
+#&gt;  2      2 Z491   2020     
+#&gt;  3      3 H251   2020     
+#&gt;  4      4 Z380   2020     
+#&gt;  5      5 S7200  2020     
+#&gt;  6      6 S0600  2019     
 #&gt;  7      7 R074   2020     
 #&gt;  8      8 J441   2019     
 #&gt;  9      9 K358   2020     
-#&gt; 10     10 R53+0  2019</code></pre>
+#&gt; 10     10 R53+0  2020</code></pre>
 <div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2019 et 2020</span>
 <span class="no">cim_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
 
@@ -192,16 +195,16 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 <pre><code>#&gt; # A tibble: 10 x 4
 #&gt;    no_rss dp_rss annee_rss lib_cim                                              
 #&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;                                                
-#&gt;  1      1 I501   2019      Insuffisance ventriculaire gauche                    
-#&gt;  2      2 Z491   2019      Dialyse extra-corporelle                             
-#&gt;  3      3 H251   2019      Cataracte sénile nucléaire                           
-#&gt;  4      4 Z380   2019      Enfant unique, né à l'hôpital                        
-#&gt;  5      5 S7200  2019      Fracture fermée du col du fémur                      
-#&gt;  6      6 S0600  2020      Commotion cérébrale, sans plaie intracrânienne       
+#&gt;  1      1 I501   2020      Insuffisance ventriculaire gauche                    
+#&gt;  2      2 Z491   2020      Dialyse extra-corporelle                             
+#&gt;  3      3 H251   2020      Cataracte sénile nucléaire                           
+#&gt;  4      4 Z380   2020      Enfant unique, né à l'hôpital                        
+#&gt;  5      5 S7200  2020      Fracture fermée du col du fémur                      
+#&gt;  6      6 S0600  2019      Commotion cérébrale, sans plaie intracrânienne       
 #&gt;  7      7 R074   2020      Douleur thoracique, sans précision                   
 #&gt;  8      8 J441   2019      Maladie pulmonaire obstructive chronique avec épisod~
 #&gt;  9      9 K358   2020      Appendicites aigües, autres et non précisées         
-#&gt; 10     10 R53+0  2019      Altération [baisse] de l'état général</code></pre>
+#&gt; 10     10 R53+0  2020      Altération [baisse] de l'état général</code></pre>
 </div>
 <div id="case-mix-par-chapitre-cim-10" class="section level3">
 <h3 class="hasAnchor">
@@ -249,15 +252,15 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 <pre><code>#&gt; # A tibble: 10 x 3
 #&gt;    no_rss das   annee_rss
 #&gt;     &lt;int&gt; &lt;chr&gt; &lt;chr&gt;    
-#&gt;  1      1 Z370  2020     
+#&gt;  1      1 Z370  2019     
 #&gt;  2      2 I10   2019     
 #&gt;  3      3 P040  2020     
-#&gt;  4      4 F1725 2020     
+#&gt;  4      4 F1725 2019     
 #&gt;  5      5 G473  2020     
-#&gt;  6      6 W189  2019     
+#&gt;  6      6 W189  2020     
 #&gt;  7      7 R600  2020     
-#&gt;  8      8 N178  2019     
-#&gt;  9      9 B952  2019     
+#&gt;  8      8 N178  2020     
+#&gt;  9      9 B952  2020     
 #&gt; 10     10 D638  2020</code></pre>
 <div class="sourceCode" id="cb10"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2019 et 2020</span>
 <span class="no">cim_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
@@ -271,9 +274,9 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 <pre><code>#&gt; # A tibble: 3 x 5
 #&gt;   no_rss das   annee_rss lib_cim                                            tmco
 #&gt;    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;                                             &lt;int&gt;
-#&gt; 1      1 Z370  2020      Naissance unique, enfant vivant                       1
-#&gt; 2      6 W189  2019      Autre chute de plain-pied, lieu sans précision        2
-#&gt; 3      9 B952  2019      Streptocoques, groupe D, et entérocoques, cause ~     1</code></pre>
+#&gt; 1      1 Z370  2019      Naissance unique, enfant vivant                       1
+#&gt; 2      6 W189  2020      Autre chute de plain-pied, lieu sans précision        2
+#&gt; 3      9 B952  2020      Streptocoques, groupe D, et entérocoques, cause ~     1</code></pre>
 </div>
 </div>
   </div>

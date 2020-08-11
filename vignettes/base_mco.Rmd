@@ -121,12 +121,3 @@ refpmsi::refpmsi("open_ccam") %>% dplyr::glimpse()
 
 ### Source  
 [Open CCAM 2019 (ATIH)](https://www.scansante.fr/open-ccam/open-ccam-2019)  
-
-
-
-## Exemples  
-
-
-### Comparaison Open CCAM et dénombrement des actes CCAM dans la base nationale MCO  
-
-### 

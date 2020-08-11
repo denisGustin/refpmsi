@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 
 ### 3 août 2020 - Spécialités pharmaceutiques SSR  
 Ajout du référentiel **spe_pharma_ssr** : spécialités pharmaceutiques SSR version 2017 et version 2020  
+[Article "Spécialités pharmaceutiques SSR"](https://denisgustin.github.io/refpmsi/articles/specialites_pharmaceutiques_ssr.html)
 
 ### 26 juillet 2020 - Dénombrements base nationale PMSI SSR 2019  
 Ajout de référentiels issus de dénombrements de la base nationale PMSI SSR 2019 (ATIH)  
@@ -30,6 +31,8 @@ Ajout de référentiels issus de dénombrements de la base nationale PMSI MCO 20
 **base_mco_ccam** : nombre de séjours ou séances par acte CCAM  
 **base_mco_diag** : nombre de séjours ou séances par diagnostic (DP, DR ou DAS)    
 **base_mco_ghs** : nombre de séjours ou séances par GHS  
+
+[Article "Dénombrements base nationale MCO"](https://denisgustin.github.io/refpmsi/articles/base_mco.html)
 
 ### 24 juillet 2020 - open CCAM 2019  
 Ajout du référentiel **open_ccam** : par acte CCAM de la base nationale PMSI MCO 2019, nombre d'actes CCAM, nombre de séjours ou séances, nombre d'actes ambulatoires, nombre de séjours 0 nuit  
