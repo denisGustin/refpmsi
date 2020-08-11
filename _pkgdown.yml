@@ -15,9 +15,9 @@ navbar:
         href: articles/cim.html
       - text: GHM
         href: articles/ghm.html
-      - text: Spécialités pharmaceutiques SSR
+      - text: Specialites pharmaceutiques SSR
         href: articles/specialites_pharmaceutiques_ssr.html
-    - text: Code PMSI
-        href: articles/code_pmsi.html
+    - text: Code
+      href: articles/code_pmsi.html
     - text: News
       href: articles/news.html

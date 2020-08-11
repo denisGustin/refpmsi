@@ -2,10 +2,15 @@ pandoc: 2.7.3
 pkgdown: 1.5.1
 pkgdown_sha: ~
 articles:
+  base_mco: base_mco.html
+  base_ssr: base_ssr.html
   cim: cim.html
+  code_pmsi: code_pmsi.html
   fonctions_refpmsi: fonctions_refpmsi.html
   ghm: ghm.html
+  had: had.html
   liste_ref: liste_ref.html
   news: news.html
-last_built: 2020-08-07T23:23Z
+  specialites_pharmaceutiques_ssr: specialites_pharmaceutiques_ssr.html
+last_built: 2020-08-11T02:35Z
 
