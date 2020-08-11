@@ -62,7 +62,13 @@
     <li>
       <a href="../articles/ghm.html">GHM</a>
     </li>
+    <li>
+      <a href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a>
+    </li>
   </ul>
+</li>
+<li>
+  <a href="../articles/code_pmsi.html">Code PMSI</a>
 </li>
 <li>
   <a href="../articles/news.html">News</a>
@@ -136,20 +142,20 @@
 <span class="no">liste_ref</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span>()
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">liste_ref</span>)</pre></body></html></div>
 <pre><code>#&gt; # A tibble: 6 x 4
-#&gt;   refpmsi    libelle                variables               source              
-#&gt;   &lt;chr&gt;      &lt;chr&gt;                  &lt;chr&gt;                   &lt;chr&gt;               
-#&gt; 1 atu        "Médicament en Autori~ code UCD 7, code UCD 1~ "Liste ATU et Post-~
-#&gt; 2 autorisat~ "Autorisations MCO"    code autorisation, lib~ "GENRSA M3 2020\nVe~
-#&gt; 3 autorisat~ "Autorisations SSR"    code autorisation, lib~ "GENRHA (M03 2020)\~
-#&gt; 4 ccam_clas~ "Actes CCAM classants~ code CCAM, activité, p~ "Fichier R_AAP_PMSI~
-#&gt; 5 ccam_cma_~ "Actes CCAM CMA SSR"   code acte CCAM, libell~ "Manuel des GME (Vo~
-#&gt; 6 ccam_codi~ "Système de codificat~ code codification, lib~ "CCAM FR à usage PM~</code></pre>
+#&gt;   refpmsi    libelle                 variables                 source           
+#&gt;   &lt;chr&gt;      &lt;chr&gt;                   &lt;chr&gt;                     &lt;chr&gt;            
+#&gt; 1 atu        "Médicament en Autoris~ code UCD 7, code UCD 13,~ "Liste ATU et Po~
+#&gt; 2 autorisat~ "Autorisations MCO"     code autorisation, libel~ "GENRSA M3 2020\~
+#&gt; 3 autorisat~ "Autorisations SSR"     code autorisation, libel~ "GENRHA (M03 202~
+#&gt; 4 base_mco_~ "Dénombrement variable~ acte CCAM,phase, activit~ "ATIH\nVersion20~
+#&gt; 5 base_mco_~ "Dénombrement variable~ diagnostics CIM-10 (DP, ~ "ATIH\nVersion20~
+#&gt; 6 base_mco_~ "Dénombrement variable~ code GHS, code GHM, libe~ "ATIH\nVersion20~</code></pre>
 <p>Pour ne charger que la liste des intitulés des référentiels.</p>
 <div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="co"># affichage uniquement des intitulés des référentiels</span>
 <span class="no">liste_ref</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span>()$<span class="no">refpmsi</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">liste_ref</span>)</pre></body></html></div>
-<pre><code>#&gt; [1] "atu"               "autorisation_mco"  "autorisation_ssr" 
-#&gt; [4] "ccam_classant"     "ccam_cma_ssr"      "ccam_codification"</code></pre>
+<pre><code>#&gt; [1] "atu"              "autorisation_mco" "autorisation_ssr" "base_mco_ccam"   
+#&gt; [5] "base_mco_diag"    "base_mco_ghs"</code></pre>
 </div>
   </div>
 

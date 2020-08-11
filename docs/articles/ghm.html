@@ -62,7 +62,13 @@
     <li>
       <a href="../articles/ghm.html">GHM</a>
     </li>
+    <li>
+      <a href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a>
+    </li>
   </ul>
+</li>
+<li>
+  <a href="../articles/code_pmsi.html">Code PMSI</a>
 </li>
 <li>
   <a href="../articles/news.html">News</a>
@@ -99,18 +105,51 @@
     
     
 <p>Le package <code>refpmsi</code> comprend 9 référentiels liés aux GHM et GHS.</p>
+<div id="cmd" class="section level2">
+<h2 class="hasAnchor">
+<a href="#cmd" class="anchor"></a>CMD</h2>
+<p>Intitulé du référentiel : <strong>cmd</strong></p>
+<p>MaJ : 10 août 2020</p>
+<p>Référentiel des libellés des CMD (Catégories Majeures de Diagnostics)</p>
+<div id="variables" class="section level3">
+<h3 class="hasAnchor">
+<a href="#variables" class="anchor"></a>Variables</h3>
+<pre><code>#&gt; Rows: 28
+#&gt; Columns: 2
+#&gt; $ cmd     &lt;chr&gt; "01", "02", "03", "04", "05", "06", "07", "08", "09", "10",...
+#&gt; $ lib_cmd &lt;chr&gt; "Affections du système nerveux", "Affections de l'oeil", "A...</code></pre>
+</div>
+<div id="source" class="section level3">
+<h3 class="hasAnchor">
+<a href="#source" class="anchor"></a>Source</h3>
+<p><a href="https://solidarites-sante.gouv.fr/fichiers/bos/2020/sts_20200005_0001_p000.pdf">Manuel de groupage GHM 2020 - Volume 1</a> (ATIH)</p>
+</div>
+</div>
 <div id="ghs-dgf" class="section level2">
 <h2 class="hasAnchor">
 <a href="#ghs-dgf" class="anchor"></a>GHS DGF</h2>
 <p>Intitulé du référentiel : <strong>ghs_dgf</strong></p>
-<p>Mise à jour : 27 mai 2020.</p>
+<p>MaJ : 27 mai 2020.</p>
 <p>Référentiel des GHS et GHM du secteur ex-DGF.</p>
-<p>Ce référentiel, annualisé au sens du PMSI MCO, comprend 11 variables et 13 756 lignes.</p>
+<p>Ce référentiel, annualisé au sens du PMSI MCO.</p>
 <p>Il est recommandé de ne charger que les années PMSI utiles.</p>
-<div id="variables" class="section level3">
+<div id="variables-1" class="section level3">
 <h3 class="hasAnchor">
-<a href="#variables" class="anchor"></a>Variables</h3>
+<a href="#variables-1" class="anchor"></a>Variables</h3>
 <p><strong>ghs</strong> = code GHS<br><strong>ghm</strong> = code GHM<br><strong>libelle</strong> = libellé du GHM<br><strong>bb</strong> = borne basse<br><strong>bh</strong> = borne haute<br><strong>tarif_ghs</strong> = tarif du GHS<br><strong>forfait_exb</strong> = forfait EXB (valeurs uniquement en 2016)<br><strong>exb</strong> = tarif journalier EXB (EXtrême Bas)<br><strong>exh</strong> = tarif journalier EXH (EXtrême Haut)<br><strong>anpmsi</strong> = année PMSI de 2016 à 2020<br><strong>ghs_intermediaire</strong> = code du GHS intermédiaire correspondant au GHS de la ligne s’il existe (valable à partir de 2020)</p>
+<pre><code>#&gt; Rows: 13,756
+#&gt; Columns: 11
+#&gt; $ ghs               &lt;chr&gt; "22", "23", "24", "25", "65", "26", "66", "27", "...
+#&gt; $ ghm               &lt;chr&gt; "01C031", "01C032", "01C033", "01C034", "01C041",...
+#&gt; $ libelle           &lt;chr&gt; "Craniotomies pour traumatisme, âge supérieur à 1...
+#&gt; $ bb                &lt;int&gt; 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 12, 12, 0, 0, 0, 1...
+#&gt; $ bh                &lt;int&gt; 11, 19, 64, 124, 12, 12, 20, 20, 43, 43, 105, 105...
+#&gt; $ tarif_ghs         &lt;dbl&gt; 3459.52, 6142.83, 11084.59, 15021.14, 11978.53, 5...
+#&gt; $ forfait_exb       &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0...
+#&gt; $ exb               &lt;dbl&gt; 0.00, 0.00, 0.00, 374.91, 0.00, 0.00, 0.00, 0.00,...
+#&gt; $ exh               &lt;dbl&gt; 102.32, 84.55, 65.60, 278.27, 125.49, 125.49, 94....
+#&gt; $ anpmsi            &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", "2020", "...
+#&gt; $ ghs_intermediaire &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N...</code></pre>
 </div>
 <div id="sources" class="section level3">
 <h3 class="hasAnchor">
@@ -124,12 +163,25 @@
 <p>Intitulé du référentiel : <strong>ghs_oqn</strong></p>
 <p>Mise à jour : 7 mai 2020.</p>
 <p>Référentiel des GHS et GHM du secteur ex-OQN.</p>
-<p>Ce référentiel, annualisé au sens du PMSI MCO, comprend 11 variables et 10 832 lignes.</p>
+<p>Ce référentiel, annualisé au sens du PMSI MCO.</p>
 <p>Il est recommandé de ne charger que les années PMSI utiles.</p>
-<div id="variables-1" class="section level3">
+<div id="variables-2" class="section level3">
 <h3 class="hasAnchor">
-<a href="#variables-1" class="anchor"></a>Variables</h3>
+<a href="#variables-2" class="anchor"></a>Variables</h3>
 <p><strong>ghs</strong> = code GHS<br><strong>ghm</strong> = code GHM<br><strong>libelle</strong> = libellé du GHM<br><strong>bb</strong> = borne basse<br><strong>bh</strong> = borne haute<br><strong>tarif_ghs</strong> = tarif du GHS<br><strong>forfait_exb</strong> = forfait EXB (valeurs uniquement en 2016)<br><strong>exb</strong> = tarif journalier EXB (EXtrême Bas)<br><strong>exh</strong> = tarif journalier EXH (EXtrême Haut)<br><strong>anpmsi</strong> = année PMSI de 2016 à 2020<br><strong>ghs_intermediaire</strong> = code du GHS intermédiaire correspondant au GHS de la ligne s’il existe (valable à partir de 2020)</p>
+<pre><code>#&gt; Rows: 10,832
+#&gt; Columns: 11
+#&gt; $ ghs               &lt;chr&gt; "22", "23", "24", "25", "26", "65", "27", "66", "...
+#&gt; $ ghm               &lt;chr&gt; "01C031", "01C032", "01C033", "01C034", "01C041",...
+#&gt; $ libelle           &lt;chr&gt; "Craniotomies pour traumatisme, âge supérieur à 1...
+#&gt; $ bb                &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 18, 0, 0, 0, 6,...
+#&gt; $ bh                &lt;int&gt; 0, 24, 0, 0, 13, 13, 31, 31, 47, 47, 110, 110, 8,...
+#&gt; $ tarif_ghs         &lt;dbl&gt; 1587.85, 3023.01, 7492.85, 10771.80, 2554.57, 939...
+#&gt; $ forfait_exb       &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0...
+#&gt; $ exb               &lt;dbl&gt; 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0...
+#&gt; $ exh               &lt;dbl&gt; 0.00, 238.41, 0.00, 0.00, 83.36, 83.36, 76.04, 76...
+#&gt; $ anpmsi            &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", "2020", "...
+#&gt; $ ghs_intermediaire &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N...</code></pre>
 </div>
 <div id="sources-1" class="section level3">
 <h3 class="hasAnchor">
@@ -143,12 +195,26 @@
 <p>Intitulé du référentiel : <strong>ghm_regroupement</strong></p>
 <p>Mise à jour : 7 mai 2020.</p>
 <p>Référentiel des regroupements des GHM en DA (Domaine d’Activité), GA (Groupe d’Activité) et GP (Groupe de Planification).</p>
-<p>Ce référentiel, annualisé au sens du PMSI MCO, comprend 12 variables et 12 964 lignes.</p>
+<p>Ce référentiel, annualisé au sens du PMSI MCO.</p>
 <p>Il est recommandé de ne charger que les années PMSI utiles.</p>
-<div id="variables-2" class="section level3">
+<div id="variables-3" class="section level3">
 <h3 class="hasAnchor">
-<a href="#variables-2" class="anchor"></a>Variables</h3>
+<a href="#variables-3" class="anchor"></a>Variables</h3>
 <p><strong>ghm</strong> = code GHM<br><strong>libelle_ghm</strong> = libellé du GHM<br><strong>aso</strong> = code ASO du GHM (Activité de SOins)<br><strong>da</strong> = code DA du GHM<br><strong>libelle_da</strong> = libellé du DA<br><strong>gp</strong> = code GP du GHM<br><strong>libelle_gp</strong> = libellé du GP<br><strong>ga</strong> = code GA du GHM<br><strong>libelle_ga</strong> = libellé du GA<br><strong>da_gp</strong> = concaténation des codes DA et GP du GHM<br><strong>da_gp_ga</strong> = concaténation des codes DA, GP et GA du GHM<br><strong>anpmsi</strong> = année PMSI de 2016 à 2020</p>
+<pre><code>#&gt; Rows: 12,964
+#&gt; Columns: 12
+#&gt; $ ghm         &lt;chr&gt; "01C031", "01C032", "01C033", "01C034", "01C041", "01C0...
+#&gt; $ libelle_ghm &lt;chr&gt; "Craniotomies pour traumatisme, âge supérieur à 17 ans,...
+#&gt; $ aso         &lt;chr&gt; "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", ...
+#&gt; $ da          &lt;chr&gt; "D05", "D05", "D05", "D05", "D05", "D05", "D05", "D05",...
+#&gt; $ libelle_da  &lt;chr&gt; "Système nerveux (hors cathétérismes vasculaires diagno...
+#&gt; $ gp          &lt;chr&gt; "C02", "C02", "C02", "C02", "C02", "C02", "C02", "C02",...
+#&gt; $ libelle_gp  &lt;chr&gt; "Chirurgie du rachis, Neuro-chirurgie", "Chirurgie du r...
+#&gt; $ ga          &lt;chr&gt; "G043", "G043", "G043", "G043", "G044", "G044", "G044",...
+#&gt; $ libelle_ga  &lt;chr&gt; "Chirurgies SNC trauma", "Chirurgies SNC trauma", "Chir...
+#&gt; $ da_gp       &lt;chr&gt; "D05C02", "D05C02", "D05C02", "D05C02", "D05C02", "D05C...
+#&gt; $ da_gp_ga    &lt;chr&gt; "D05C02G043", "D05C02G043", "D05C02G043", "D05C02G043",...
+#&gt; $ anpmsi      &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", "2020", "2020",...</code></pre>
 </div>
 <div id="sources-2" class="section level3">
 <h3 class="hasAnchor">
@@ -162,12 +228,16 @@
 <p>Intitulé du référentiel : <strong>ghm_regroupement_lib</strong></p>
 <p>Mise à jour : 7 mai 2020.</p>
 <p>Libellés des DA (Domaine d’Activité), GA (Groupe d’Activité) et GP (Groupe de Planification).</p>
-<p>Ce référentiel comprend 3 variables et 327 lignes.</p>
 <p>Il n’est pas annualisé. Il comprend tous les DA, GA et GP depuis 2016.</p>
-<div id="variables-3" class="section level3">
+<div id="variables-4" class="section level3">
 <h3 class="hasAnchor">
-<a href="#variables-3" class="anchor"></a>Variables</h3>
+<a href="#variables-4" class="anchor"></a>Variables</h3>
 <p><strong>type</strong> = type de regroupement GHM (da,ga,gp)<br><strong>code</strong> = code regroupement<br><strong>libelle</strong> = libellé du code regroupement</p>
+<pre><code>#&gt; Rows: 327
+#&gt; Columns: 3
+#&gt; $ type    &lt;chr&gt; "da", "da", "da", "da", "da", "da", "da", "da", "da", "da",...
+#&gt; $ code    &lt;chr&gt; "D01", "D02", "D03", "D04", "D05", "D06", "D07", "D09", "D1...
+#&gt; $ libelle &lt;chr&gt; "Digestif", "Orthopédie traumatologie", "Traumatismes multi...</code></pre>
 </div>
 <div id="sources-3" class="section level3">
 <h3 class="hasAnchor">
@@ -180,13 +250,28 @@
 <a href="#regroupements-des-racines-de-ghm" class="anchor"></a>Regroupements des racines de GHM</h2>
 <p>Intitulé du référentiel : <strong>rghm_regroupement</strong></p>
 <p>Mise à jour : 7 mai 2020.</p>
-<p>Référentiel des regroupements des GHM en DA (Domaine d’Activité), GA (Groupe d’Activité) et GP (Groupe de Planification).</p>
-<p>Ce référentiel, annualisé au sens du PMSI MCO, comprend 12 variables et 3 340 lignes.</p>
+<p>Référentiel des regroupements des racines de GHM en DA (Domaine d’Activité), GA (Groupe d’Activité) et GP (Groupe de Planification).</p>
+<p>Ce référentiel, annualisé au sens du PMSI MCO.</p>
 <p>Il est recommandé de ne charger que les années PMSI utiles.</p>
-<div id="variables-4" class="section level3">
+<p>Ce référentiel peut être utilisé pour récupérer les libellés des racines de GHM par année PMSI.</p>
+<div id="variables-5" class="section level3">
 <h3 class="hasAnchor">
-<a href="#variables-4" class="anchor"></a>Variables</h3>
+<a href="#variables-5" class="anchor"></a>Variables</h3>
 <p><strong>rghm</strong> = code racine GHM<br><strong>libelle_rghm</strong> = libellé de la racine GHM<br><strong>aso</strong> = code ASO du GHM (Activité de SOins)<br><strong>da</strong> = code DA de la racine GHM<br><strong>libelle_da</strong> = libellé du DA<br><strong>gp</strong> = code GP de la racine GHM<br><strong>libelle_gp</strong> = libellé du GP<br><strong>ga</strong> = code GA de la racine GHM<br><strong>libelle_ga</strong> = libellé du GA<br><strong>da_gp</strong> = concaténation des codes DA et GP de la racine GHM<br><strong>da_gp_ga</strong> = concaténation des codes DA, GP et GA de la racine GHM<br><strong>anpmsi</strong> = année PMSI de 2016 à 2020</p>
+<pre><code>#&gt; Rows: 3,340
+#&gt; Columns: 12
+#&gt; $ rghm         &lt;chr&gt; "01C03", "01C04", "01C05", "01C06", "01C08", "01C09", ...
+#&gt; $ libelle_rghm &lt;chr&gt; "Craniotomies pour traumatisme, âge supérieur à 17 ans...
+#&gt; $ aso          &lt;chr&gt; "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C",...
+#&gt; $ da           &lt;chr&gt; "D05", "D05", "D05", "D07", "D26", "D05", "D05", "D05"...
+#&gt; $ libelle_da   &lt;chr&gt; "Système nerveux (hors cathétérismes vasculaires diagn...
+#&gt; $ gp           &lt;chr&gt; "C02", "C02", "C02", "C14", "C25", "C03", "C03", "C02"...
+#&gt; $ libelle_gp   &lt;chr&gt; "Chirurgie du rachis, Neuro-chirurgie", "Chirurgie du ...
+#&gt; $ ga           &lt;chr&gt; "G043", "G044", "G041", "G074", "G179", "G045", "G045"...
+#&gt; $ libelle_ga   &lt;chr&gt; "Chirurgies SNC trauma", "Chirurgies SNC hors trauma (...
+#&gt; $ da_gp        &lt;chr&gt; "D05C02", "D05C02", "D05C02", "D07C14", "D26C25", "D05...
+#&gt; $ da_gp_ga     &lt;chr&gt; "D05C02G043", "D05C02G044", "D05C02G041", "D07C14G074"...
+#&gt; $ anpmsi       &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", "2020", "2020"...</code></pre>
 </div>
 <div id="sources-4" class="section level3">
 <h3 class="hasAnchor">
@@ -200,12 +285,25 @@
 <p>Intitulé du référentiel : <strong>ovalide_ghminfo_dgf</strong></p>
 <p>Mise à jour : 7 mai 2020.</p>
 <p>Informations issues des tables de référence OVALIDE MCO, GHMINFO_exDGF. Les informations redondantes avec d’autres référentiels de <code>refpmsi::</code> ne sont pas reprises (exemples : cma, bb, bh, …)</p>
-<p>Ce référentiel, annualisé au sens du PMSI MCO, comprend 11 variables et 10 374 lignes.</p>
+<p>Ce référentiel, annualisé au sens du PMSI MCO.</p>
 <p>Il est recommandé de ne charger que les années PMSI utiles.</p>
-<div id="variables-5" class="section level3">
+<div id="variables-6" class="section level3">
 <h3 class="hasAnchor">
-<a href="#variables-5" class="anchor"></a>Variables</h3>
+<a href="#variables-6" class="anchor"></a>Variables</h3>
 <p><strong>ghm</strong> = code GHM<br><strong>tghm</strong> = type du GHM (C : chirurgical; M : médical; X : autre)<br><strong>dms</strong> = durée moyenne de séjour nationale<br><strong>pctdc</strong> = taux de décès national<br><strong>mage</strong> = age moyen<br><strong>pctcourt</strong> = pourcentage de séjours courts (parmi les séjours de durée &gt; 1 jour). Durée d’un séjour court = borne basse ou borne basse +1<br><strong>pvalo</strong> = code GHS du GHS le plus valorisé dans les GHM multi-GHS<br><strong>pctpvalo</strong> = taux de séjours aux GHS plus élevés<br><strong>pctcma4</strong> = pourcentage de séjours de niveau 4 par sous-cmd (sous-cmd = 3 premières positions des GHM)<br><strong>pctautres</strong> = pourcentage de séjours avec un DA autres (.8)<br><strong>anpmsi</strong> = année PMSI de 2016 à 2019</p>
+<pre><code>#&gt; Rows: 10,374
+#&gt; Columns: 11
+#&gt; $ ghm       &lt;chr&gt; "01C031", "01C032", "01C033", "01C034", "01C041", "01C042...
+#&gt; $ tghm      &lt;chr&gt; "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C...
+#&gt; $ dms       &lt;dbl&gt; 3.9518, 7.4803, 13.4511, 36.1200, 5.1628, 8.1411, 13.8155...
+#&gt; $ pctdc     &lt;dbl&gt; 0.1278, 0.0441, 0.0701, 0.1922, 0.0295, 0.0158, 0.0451, 0...
+#&gt; $ mage      &lt;dbl&gt; 60.0449, 67.1604, 69.8612, 57.9942, 56.1312, 57.5704, 60....
+#&gt; $ pctcourt  &lt;dbl&gt; 0.0000, 0.0000, 0.0000, 0.0403, 0.0000, 0.0000, 0.0000, 0...
+#&gt; $ pvalo     &lt;chr&gt; "22", "23", "24", "25", "65", "66", "67", "68", "30", "31...
+#&gt; $ pctpvalo  &lt;dbl&gt; 1.0000, 1.0000, 1.0000, 1.0000, NA, 0.0166, 0.0016, NA, 1...
+#&gt; $ pctcma4   &lt;dbl&gt; 0.1217, 0.1217, 0.1217, 0.1217, 0.1217, 0.1217, 0.1217, 0...
+#&gt; $ pctautres &lt;dbl&gt; 0.1902, 0.1902, 0.1902, 0.1902, 0.1902, 0.1902, 0.1902, 0...
+#&gt; $ anpmsi    &lt;chr&gt; "2019", "2019", "2019", "2019", "2019", "2019", "2019", "...</code></pre>
 </div>
 <div id="sources-5" class="section level3">
 <h3 class="hasAnchor">
@@ -219,12 +317,25 @@
 <p>Intitulé du référentiel : <strong>ovalide_ghminfo_oqn</strong></p>
 <p>Mise à jour : 7 mai 2020.</p>
 <p>Informations issues des tables de référence OVALIDE MCO, GHMINFO_exOQN. Les informations redondantes avec d’autres référentiels de <code>refpmsi::</code> ne sont pas reprises (exemples : cma, bb, bh, …)</p>
-<p>Ce référentiel, annualisé au sens du PMSI MCO, comprend 11 variables et 10 374 lignes.</p>
+<p>Ce référentiel, annualisé au sens du PMSI MCO.</p>
 <p>Il est recommandé de ne charger que les années PMSI utiles.</p>
-<div id="variables-6" class="section level3">
+<div id="variables-7" class="section level3">
 <h3 class="hasAnchor">
-<a href="#variables-6" class="anchor"></a>Variables</h3>
+<a href="#variables-7" class="anchor"></a>Variables</h3>
 <p><strong>ghm</strong> = code GHM<br><strong>tghm</strong> = type du GHM (C : chirurgical; M : médical; X : autre)<br><strong>dms</strong> = durée moyenne de séjour nationale<br><strong>pctdc</strong> = taux de décès national<br><strong>mage</strong> = age moyen<br><strong>pctcourt</strong> = pourcentage de séjours courts (parmi les séjours de durée &gt; 1 jour). Durée d’un séjour court = borne basse ou borne basse +1<br><strong>pvalo</strong> = code GHS du GHS le plus valorisé dans les GHM multi-GHS<br><strong>pctpvalo</strong> = taux de séjours aux GHS plus élevés<br><strong>pctcma4</strong> = pourcentage de séjours de niveau 4 par sous-cmd (sous-cmd = 3 premières positions des GHM)<br><strong>pctautres</strong> = pourcentage de séjours avec un DA autres (.8)<br><strong>anpmsi</strong> = année PMSI de 2016 à 2019</p>
+<pre><code>#&gt; Rows: 10,374
+#&gt; Columns: 11
+#&gt; $ ghm       &lt;chr&gt; "01C031", "01C032", "01C033", "01C034", "01C041", "01C042...
+#&gt; $ tghm      &lt;chr&gt; "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C...
+#&gt; $ dms       &lt;dbl&gt; 5.3485, 10.2537, 20.6296, 33.4444, 6.5662, 9.5507, 17.314...
+#&gt; $ pctdc     &lt;dbl&gt; 0.0000, 0.0000, 0.1111, 0.1667, 0.0084, 0.0095, 0.0654, 0...
+#&gt; $ mage      &lt;dbl&gt; 67.2576, 74.5075, 74.4815, 64.5556, 61.4000, 64.2267, 63....
+#&gt; $ pctcourt  &lt;dbl&gt; 0.0000, 0.0000, 0.0000, 0.0602, 0.0000, 0.0000, 0.0000, 0...
+#&gt; $ pvalo     &lt;chr&gt; "0022", "0023", "0024", "0025", "0065", "0066", "0067", "...
+#&gt; $ pctpvalo  &lt;dbl&gt; 1.0000, 1.0000, 1.0000, 1.0000, NA, NA, NA, NA, 1.0000, 1...
+#&gt; $ pctcma4   &lt;dbl&gt; 0.0196, 0.0196, 0.0196, 0.0196, 0.0196, 0.0196, 0.0196, 0...
+#&gt; $ pctautres &lt;dbl&gt; 0.2007, 0.2007, 0.2007, 0.2007, 0.2007, 0.2007, 0.2007, 0...
+#&gt; $ anpmsi    &lt;chr&gt; "2019", "2019", "2019", "2019", "2019", "2019", "2019", "...</code></pre>
 </div>
 <div id="sources-6" class="section level3">
 <h3 class="hasAnchor">
@@ -238,12 +349,26 @@
 <p>Intitulé du référentiel : <strong>ovalide_racineinfo_dgf</strong></p>
 <p>Mise à jour : 7 mai 2020.</p>
 <p>Informations issues des tables de référence OVALIDE MCO, RacineINFO_exDGF.</p>
-<p>Ce référentiel, annualisé au sens du PMSI MCO, comprend 12 variables et 2 672 lignes.</p>
+<p>Ce référentiel, annualisé au sens du PMSI MCO.</p>
 <p>Il est recommandé de ne charger que les années PMSI utiles.</p>
-<div id="variables-7" class="section level3">
+<div id="variables-8" class="section level3">
 <h3 class="hasAnchor">
-<a href="#variables-7" class="anchor"></a>Variables</h3>
+<a href="#variables-8" class="anchor"></a>Variables</h3>
 <p><strong>racine</strong> = code racine GHM<br><strong>pctdc</strong> = taux de décès national<br><strong>conf</strong> = confirmation de codage nécessaire pour la racine GHM (1 : OUI ; 0 : NON)<br><strong>age2</strong> = effet de l’âge pour les moins de 2 ans (1 : OUI ; 0 : NON)<br><strong>age69</strong> = effet de l’âge pour les plus de 69 / 79 ans (1-3 : OUI pour les plus de 69 ans ; 2-4-6 : OUI pour les plus de 79 ans ; 0 : NON)<br><strong>pctcma2</strong> = pourcentage de séjours de niveau 2 dans la racine GHM<br><strong>pctcma3</strong> = pourcentage de séjours de niveau 2 dans la racine GHM<br><strong>pctexb</strong> = pourcentage de séjours en dessous de la borne basse<br><strong>pctssacte</strong> = taux de séjours de 0 jours sans acte<br><strong>app</strong> = racine apparentée à la racine GHM<br><strong>pctapp</strong> = pourcentage de séjours dans la racine apparentée<br><strong>anpmsi</strong> = année PMSI de 2016 à 2019</p>
+<pre><code>#&gt; Rows: 2,672
+#&gt; Columns: 12
+#&gt; $ racine    &lt;chr&gt; "01C03", "01C04", "01C05", "01C06", "01C08", "01C09", "01...
+#&gt; $ pctdc     &lt;dbl&gt; 0.0925, 0.0526, 0.0139, 0.0064, 0.0075, 0.0026, NA, 0.019...
+#&gt; $ conf      &lt;int&gt; 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 3, 3, ...
+#&gt; $ age2      &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+#&gt; $ age69     &lt;int&gt; 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 2, 3, 3, ...
+#&gt; $ pctcma2   &lt;dbl&gt; 0.6967, 0.5829, 0.4294, 0.3803, 0.2420, 0.2099, 0.1622, 0...
+#&gt; $ pctcma3   &lt;dbl&gt; 0.3626, 0.2791, 0.2161, 0.0986, 0.0813, 0.0433, 0.0137, 0...
+#&gt; $ pctexb    &lt;dbl&gt; 0.0196, 0.0183, 0.0123, 0.0011, 0.0029, 0.0000, 0.0000, 0...
+#&gt; $ pctssacte &lt;dbl&gt; 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0...
+#&gt; $ anpmsi    &lt;chr&gt; "2019", "2019", "2019", "2019", "2019", "2019", "2019", "...
+#&gt; $ app       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, "XXXXX", "01C11", NA, NA, "01...
+#&gt; $ pctapp    &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, 0.3168, NA, NA, 0.2715, N...</code></pre>
 </div>
 <div id="sources-7" class="section level3">
 <h3 class="hasAnchor">
@@ -257,12 +382,26 @@
 <p>Intitulé du référentiel : <strong>ovalide_racineinfo_oqn</strong></p>
 <p>Mise à jour : 7 mai 2020.</p>
 <p>Informations issues des tables de référence OVALIDE MCO, RacineINFO_exOQN.</p>
-<p>Ce référentiel, annualisé au sens du PMSI MCO, comprend 12 variables et 2 672 lignes.</p>
+<p>Ce référentiel, annualisé au sens du PMSI MCO.</p>
 <p>Il est recommandé de ne charger que les années PMSI utiles.</p>
-<div id="variables-8" class="section level3">
+<div id="variables-du-référentiel" class="section level3">
 <h3 class="hasAnchor">
-<a href="#variables-8" class="anchor"></a>Variables</h3>
+<a href="#variables-du-r%C3%A9f%C3%A9rentiel" class="anchor"></a>Variables du référentiel</h3>
 <p><strong>racine</strong> = code racine GHM<br><strong>pctdc</strong> = taux de décès national<br><strong>conf</strong> = confirmation de codage nécessaire pour la racine GHM (1 : OUI ; 0 : NON)<br><strong>age2</strong> = effet de l’âge pour les moins de 2 ans (1 : OUI ; 0 : NON)<br><strong>age69</strong> = effet de l’âge pour les plus de 69 / 79 ans (1-3 : OUI pour les plus de 69 ans ; 2-4-6 : OUI pour les plus de 79 ans ; 0 : NON)<br><strong>pctcma2</strong> = pourcentage de séjours de niveau 2 dans la racine GHM<br><strong>pctcma3</strong> = pourcentage de séjours de niveau 2 dans la racine GHM<br><strong>pctexb</strong> = pourcentage de séjours en dessous de la borne basse<br><strong>pctssacte</strong> = taux de séjours de 0 jours sans acte<br><strong>app</strong> = racine apparentée à la racine GHM<br><strong>pctapp</strong> = pourcentage de séjours dans la racine apparentée<br><strong>anpmsi</strong> = année PMSI de 2016 à 2019</p>
+<pre><code>#&gt; Rows: 2,672
+#&gt; Columns: 12
+#&gt; $ racine    &lt;chr&gt; "01C03", "01C04", "01C05", "01C06", "01C08", "01C09", "01...
+#&gt; $ pctdc     &lt;dbl&gt; 0.0351, 0.0269, 0.0023, 0.0032, 0.0055, NA, NA, NA, NA, N...
+#&gt; $ conf      &lt;int&gt; 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 3, 3, ...
+#&gt; $ age2      &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+#&gt; $ age69     &lt;int&gt; 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 2, 3, 3, ...
+#&gt; $ pctcma2   &lt;dbl&gt; 0.4533, 0.4198, 0.2040, 0.2552, 0.1129, 0.0000, 0.0350, N...
+#&gt; $ pctcma3   &lt;dbl&gt; 0.1477, 0.1532, 0.0780, 0.0420, 0.0151, 0.0000, 0.0105, N...
+#&gt; $ pctexb    &lt;dbl&gt; 0.0000, 0.0146, 0.0007, 0.0011, 0.0000, 0.0000, 0.0000, N...
+#&gt; $ pctssacte &lt;dbl&gt; 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, N...
+#&gt; $ anpmsi    &lt;chr&gt; "2019", "2019", "2019", "2019", "2019", "2019", "2019", "...
+#&gt; $ app       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, "XXXXX", "01C11", NA, NA, "01...
+#&gt; $ pctapp    &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, 0.0000, NA, NA, 0.1494, N...</code></pre>
 </div>
 <div id="sources-8" class="section level3">
 <h3 class="hasAnchor">
@@ -276,7 +415,7 @@
 <div id="chargement-du-référentiel-des-ghs-dgf-des-années-2019-et-2020" class="section level3">
 <h3 class="hasAnchor">
 <a href="#chargement-du-r%C3%A9f%C3%A9rentiel-des-ghs-dgf-des-ann%C3%A9es-2019-et-2020" class="anchor"></a>Chargement du référentiel des GHS DGF des années 2019 et 2020</h3>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="co"># Chargement du référentiel des GHS-GHM DGF des années 2019 et 2020</span>
+<div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="co"># Chargement du référentiel des GHS-GHM DGF des années 2019 et 2020</span>
 <span class="no">ghs_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_dgf"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
 <span class="no">ghs_2019_2020</span></pre></body></html></div>
 <pre><code>#&gt; # A tibble: 5,681 x 11
@@ -316,7 +455,7 @@
 #&gt; 13      1     12 04M053 J189       2 1144  2020     
 #&gt; 14      2     12 04M053 J960      11 1144  2020     
 #&gt; 15      3     12 04M053 J189      11 1144  2020</code></pre>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="co"># chargement des GHM DGF 2019 et 2020</span>
+<div class="sourceCode" id="cb14"><html><body><pre class="r"><span class="co"># chargement des GHM DGF 2019 et 2020</span>
 <span class="no">ghm_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_dgf"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
 
 <span class="co"># association à chaque GHM de son libellé correspondant à l'année PMSI de son séjour et à son GHS associé</span>
@@ -349,7 +488,7 @@
 <a href="#association-dms-nationale-aux-s%C3%A9jours" class="anchor"></a>Association DMS nationale aux séjours</h3>
 <p>Dans un premier temps, on rattache les DMS nationales issues d’OVALIDE MCO à chaque séjour.</p>
 <p>Puis on compare la DS des séjours avec ces DMS nationales pour les séjours pour lesquels cela a un sens (séjours avec une DS &gt; 0).</p>
-<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="co"># chargement des DMS nationales correspondant à l'année 2019</span>
+<div class="sourceCode" id="cb16"><html><body><pre class="r"><span class="co"># chargement des DMS nationales correspondant à l'année 2019</span>
 <span class="co">## Au 20 mai 2020, l'ATIH n'a pas encore publié les tables OVALIDE MCO 2020 : on utilise les DMS nationales 2019 pour les séjours 2020.</span>
 <span class="no">dms_nat</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ovalide_ghminfo_dgf"</span>,<span class="fl">2019</span>) <span class="kw">%&gt;%</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ghm</span>,<span class="no">dms</span>,<span class="no">anpmsi</span>)
@@ -398,7 +537,7 @@
 #&gt; 14            0.97
 #&gt; 15            0.97</code></pre>
 <p>Enfin, on peut filtrer les séjours qui ont une DS &gt;= 2,5 x la DMS nationale de leur GHM pour repérer des séjours, à priori, particulièrement longs.</p>
-<div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="no">sej_2.5_dms</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm_dms</span> <span class="kw">%&gt;%</span>
+<div class="sourceCode" id="cb18"><html><body><pre class="r"><span class="no">sej_2.5_dms</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm_dms</span> <span class="kw">%&gt;%</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">ratio_ecart_dms</span> <span class="kw">&gt;=</span> <span class="fl">2.5</span>)
 <span class="no">sej_2.5_dms</span> <span class="kw">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw">width</span> <span class="kw">=</span> <span class="fl">Inf</span>)</pre></body></html></div>
 <pre><code>#&gt; # A tibble: 2 x 11
@@ -414,7 +553,7 @@
 <div id="case-mix-en-da-domaine-dactivité-des-séjours" class="section level3">
 <h3 class="hasAnchor">
 <a href="#case-mix-en-da-domaine-dactivit%C3%A9-des-s%C3%A9jours" class="anchor"></a>Case mix en DA (Domaine d’Activité) des séjours</h3>
-<div class="sourceCode" id="cb10"><html><body><pre class="r"><span class="no">case_mix_da</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
+<div class="sourceCode" id="cb20"><html><body><pre class="r"><span class="no">case_mix_da</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
   <span class="co"># rattachement des codes DA aux séjours</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghm_regroupement"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>) <span class="kw">%&gt;%</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ghm</span>,<span class="no">da</span>,<span class="no">libelle_da</span>,<span class="no">anpmsi</span>),
@@ -441,7 +580,7 @@
 <h3 class="hasAnchor">
 <a href="#s%C3%A9jours-et-gradation-des-prises-en-charge-ambulatoires" class="anchor"></a>Séjours et gradation des prises en charge ambulatoires</h3>
 <p>Dans un premier temps, on repère les séjours avec un GHS plein susceptible d’être concerné, en indiquant le GHS intermédiaire correspondant.</p>
-<div class="sourceCode" id="cb12"><html><body><pre class="r"><span class="no">sej_ghs_plein_intermediaire</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
+<div class="sourceCode" id="cb22"><html><body><pre class="r"><span class="no">sej_ghs_plein_intermediaire</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
   <span class="co"># filtre sur l'année 2020, seule concernée dans notre data set</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">annee_rss</span> <span class="kw">==</span> <span class="fl">2020</span>) <span class="kw">%&gt;%</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_dgf"</span>,<span class="fl">2020</span>) <span class="kw">%&gt;%</span>
@@ -457,7 +596,7 @@
 #&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;            
 #&gt; 1      1      5 06M12T R104       0 2200  2020      2206</code></pre>
 <p>Dans un second temps, on repère les séjours dégradés via leur GHS intermédiaire.</p>
-<div class="sourceCode" id="cb14"><html><body><pre class="r"><span class="no">sej_ghs_intermediaire</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
+<div class="sourceCode" id="cb24"><html><body><pre class="r"><span class="no">sej_ghs_intermediaire</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">annee_rss</span> <span class="kw">==</span> <span class="fl">2020</span>) <span class="kw">%&gt;%</span>
   <span class="co"># dplyr::inner_join ne va retenir que les séjours pour lesquels le GHS est un GHS intermédiaire</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span>(<span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_dgf"</span>,<span class="fl">2020</span>) <span class="kw">%&gt;%</span>

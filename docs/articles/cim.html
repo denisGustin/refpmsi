@@ -62,7 +62,13 @@
     <li>
       <a href="../articles/ghm.html">GHM</a>
     </li>
+    <li>
+      <a href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a>
+    </li>
   </ul>
+</li>
+<li>
+  <a href="../articles/code_pmsi.html">Code PMSI</a>
 </li>
 <li>
   <a href="../articles/news.html">News</a>
@@ -126,6 +132,18 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 <a href="#sources" class="anchor"></a>Sources</h2>
 <p><a href="https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/456">Nomenclature CIM-10 : Fichier nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY</a> (ATIH)</p>
 <p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3706/cim-10fr_2020_actualisation_pmsi_10-04-2020.pdf">CIM-10 FR à usage PMSI 2020 - version du 17 avril 2020</a> (ATIH)</p>
+<pre><code>#&gt; Rows: 206,961
+#&gt; Columns: 10
+#&gt; $ code      &lt;chr&gt; "A00", "A000", "A001", "A009", "A01", "A010", "A011", "A0...
+#&gt; $ tmco      &lt;int&gt; 3, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, ...
+#&gt; $ pssr      &lt;chr&gt; "NNNN", "NOOO", "NOOO", "NOOO", "NNNN", "NOOO", "NOOO", "...
+#&gt; $ tpsy      &lt;int&gt; 3, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, ...
+#&gt; $ lib_cim   &lt;chr&gt; "Choléra", "Choléra à Vibrio cholerae 01, biovar cholerae...
+#&gt; $ actif     &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+#&gt; $ categorie &lt;chr&gt; "A00", "A00", "A00", "A00", "A01", "A01", "A01", "A01", "...
+#&gt; $ chapitre  &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1...
+#&gt; $ groupe    &lt;chr&gt; "A00-A09", "A00-A09", "A00-A09", "A00-A09", "A00-A09", "A...
+#&gt; $ anpmsi    &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", "2020", "2020", "...</code></pre>
 </div>
 <div id="exemples" class="section level2">
 <h2 class="hasAnchor">
@@ -133,7 +151,7 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 <div id="chargement-de-la-cim-10-des-années-2019-et-2020" class="section level3">
 <h3 class="hasAnchor">
 <a href="#chargement-de-la-cim-10-des-ann%C3%A9es-2019-et-2020" class="anchor"></a>Chargement de la CIM-10 des années 2019 et 2020</h3>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="co"># Chargement de la CIM-10 des années 2019 et 2020</span>
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="co"># Chargement de la CIM-10 des années 2019 et 2020</span>
 <span class="no">cim_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">cim_2019_2020</span>)</pre></body></html></div>
 <pre><code>#&gt; # A tibble: 6 x 10
@@ -155,15 +173,15 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 #&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;    
 #&gt;  1      1 I501   2019     
 #&gt;  2      2 Z491   2019     
-#&gt;  3      3 H251   2020     
-#&gt;  4      4 Z380   2020     
+#&gt;  3      3 H251   2019     
+#&gt;  4      4 Z380   2019     
 #&gt;  5      5 S7200  2019     
-#&gt;  6      6 S0600  2019     
+#&gt;  6      6 S0600  2020     
 #&gt;  7      7 R074   2020     
 #&gt;  8      8 J441   2019     
 #&gt;  9      9 K358   2020     
-#&gt; 10     10 R53+0  2020</code></pre>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2019 et 2020</span>
+#&gt; 10     10 R53+0  2019</code></pre>
+<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2019 et 2020</span>
 <span class="no">cim_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
 
 <span class="co"># association à chaque DP du libellé CIM-10 correspondant au DP et à son année PMSI</span>
@@ -176,20 +194,20 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 #&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;                                                
 #&gt;  1      1 I501   2019      Insuffisance ventriculaire gauche                    
 #&gt;  2      2 Z491   2019      Dialyse extra-corporelle                             
-#&gt;  3      3 H251   2020      Cataracte sénile nucléaire                           
-#&gt;  4      4 Z380   2020      Enfant unique, né à l'hôpital                        
+#&gt;  3      3 H251   2019      Cataracte sénile nucléaire                           
+#&gt;  4      4 Z380   2019      Enfant unique, né à l'hôpital                        
 #&gt;  5      5 S7200  2019      Fracture fermée du col du fémur                      
-#&gt;  6      6 S0600  2019      Commotion cérébrale, sans plaie intracrânienne       
+#&gt;  6      6 S0600  2020      Commotion cérébrale, sans plaie intracrânienne       
 #&gt;  7      7 R074   2020      Douleur thoracique, sans précision                   
 #&gt;  8      8 J441   2019      Maladie pulmonaire obstructive chronique avec épisod~
 #&gt;  9      9 K358   2020      Appendicites aigües, autres et non précisées         
-#&gt; 10     10 R53+0  2020      Altération [baisse] de l'état général</code></pre>
+#&gt; 10     10 R53+0  2019      Altération [baisse] de l'état général</code></pre>
 </div>
 <div id="case-mix-par-chapitre-cim-10" class="section level3">
 <h3 class="hasAnchor">
 <a href="#case-mix-par-chapitre-cim-10" class="anchor"></a>Case mix par chapitre CIM-10</h3>
 <p>Avec le jeu de données <code>jeu_dp</code> de l’exemple précédent composé de 10 DP.</p>
-<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2019 et 2020</span>
+<div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2019 et 2020</span>
 <span class="no">cim_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
 
 <span class="co"># association à chaque DP de son numéro de chapitre et de son libellé CIM-10 correspondant à l'année PMSI de son RSS</span>
@@ -232,16 +250,16 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 #&gt;    no_rss das   annee_rss
 #&gt;     &lt;int&gt; &lt;chr&gt; &lt;chr&gt;    
 #&gt;  1      1 Z370  2020     
-#&gt;  2      2 I10   2020     
+#&gt;  2      2 I10   2019     
 #&gt;  3      3 P040  2020     
 #&gt;  4      4 F1725 2020     
-#&gt;  5      5 G473  2019     
-#&gt;  6      6 W189  2020     
+#&gt;  5      5 G473  2020     
+#&gt;  6      6 W189  2019     
 #&gt;  7      7 R600  2020     
-#&gt;  8      8 N178  2020     
+#&gt;  8      8 N178  2019     
 #&gt;  9      9 B952  2019     
-#&gt; 10     10 D638  2019</code></pre>
-<div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2019 et 2020</span>
+#&gt; 10     10 D638  2020</code></pre>
+<div class="sourceCode" id="cb10"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2019 et 2020</span>
 <span class="no">cim_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
 
 <span class="co"># association à chaque DAS de son type MCO et de son libellé CIM-10, correspondant à son année PMSI</span>
@@ -254,7 +272,7 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>actif</strong> =
 #&gt;   no_rss das   annee_rss lib_cim                                            tmco
 #&gt;    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;                                             &lt;int&gt;
 #&gt; 1      1 Z370  2020      Naissance unique, enfant vivant                       1
-#&gt; 2      6 W189  2020      Autre chute de plain-pied, lieu sans précision        2
+#&gt; 2      6 W189  2019      Autre chute de plain-pied, lieu sans précision        2
 #&gt; 3      9 B952  2019      Streptocoques, groupe D, et entérocoques, cause ~     1</code></pre>
 </div>
 </div>

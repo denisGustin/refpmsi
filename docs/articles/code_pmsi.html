@@ -5,13 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>News • refpmsi</title>
+<title>Code PMSI • refpmsi</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="News">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Code PMSI">
 <meta property="og:description" content="refpmsi">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -91,54 +91,60 @@
 
       
 
-      </header><script src="news_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="code_pmsi_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>News</h1>
+      <h1 data-toc-skip>Code PMSI</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/denisGustin/refpmsi/blob/master/vignettes/news.Rmd"><code>vignettes/news.Rmd</code></a></small>
-      <div class="hidden name"><code>news.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/denisGustin/refpmsi/blob/master/vignettes/code_pmsi.Rmd"><code>vignettes/code_pmsi.Rmd</code></a></small>
+      <div class="hidden name"><code>code_pmsi.Rmd</code></div>
 
     </div>
 
     
     
-<div id="août-2020---spécialités-pharmaceutiques-ssr" class="section level3">
-<h3 class="hasAnchor">
-<a href="#ao%C3%BBt-2020---sp%C3%A9cialit%C3%A9s-pharmaceutiques-ssr" class="anchor"></a>3 août 2020 - Spécialités pharmaceutiques SSR</h3>
-<p>Ajout du référentiel <strong>spe_pharma_ssr</strong> : spécialités pharmaceutiques SSR version 2017 et version 2020</p>
+<div id="ajout-de-positions-à-gauche" class="section level2">
+<h2 class="hasAnchor">
+<a href="#ajout-de-positions-%C3%A0-gauche" class="anchor"></a>Ajout de positions à gauche</h2>
+<p>De nombreux codages PMSI sont habituellement sur 2 positions (CMD, CM, numéro de chapitre CIM-10, …).</p>
+<p>Ces derniers, selon les sources de données et les traitements effectués, peuvent se retrouver codés sur 1 position sans le 0 à gauche (ex : CMD 1 au lieu du CMD 01 attendue).</p>
+<p>On peut alors vouloir rétablir le 0 à gauche.</p>
+<p>La fonction <a href="https://stringr.tidyverse.org/reference/str_pad.html">str_pad()</a> du package stringr:: du tidyverse est particulièrement adaptée.</p>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="no">cmd_01</span> <span class="kw">&lt;-</span> <span class="st">"1"</span> <span class="co"># cmd_01 is character</span>
+<span class="no">cmd_01</span> <span class="kw">&lt;-</span> <span class="kw pkg">stringr</span><span class="kw ns">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_pad.html">str_pad</a></span>(<span class="no">cmd_01</span>, <span class="kw">width</span> <span class="kw">=</span> <span class="fl">2</span>, <span class="kw">side</span> <span class="kw">=</span> <span class="st">"left"</span>, <span class="kw">pad</span> <span class="kw">=</span> <span class="st">"0"</span>)
+<span class="co"># width = nombre voulu de positions. Ici width = 2</span>
+<span class="co"># side = left car on veut ajouter le 0 à gauche</span>
+<span class="co"># pad = "0" = le motif que l'on souhaite ajouter</span>
+<span class="no">cmd_01</span></pre></body></html></div>
+<pre><code>#&gt; [1] "01"</code></pre>
+<p>Remarque : on voit là l’intérêt de toujours travailler en character pour ces codages.</p>
 </div>
-<div id="juillet-2020---dénombrements-base-nationale-pmsi-ssr-2019" class="section level3">
-<h3 class="hasAnchor">
-<a href="#juillet-2020---d%C3%A9nombrements-base-nationale-pmsi-ssr-2019" class="anchor"></a>26 juillet 2020 - Dénombrements base nationale PMSI SSR 2019</h3>
-<p>Ajout de référentiels issus de dénombrements de la base nationale PMSI SSR 2019 (ATIH)<br><strong>base_ssr_mp</strong> : nombre de séjours ou séances par MMP<br><strong>base_ssr_ae</strong> : nombre de séjours ou séances par AE<br><strong>base_ssr_das</strong> : nombre de séjours ou séances par DAS<br><strong>base_ssr_csarr</strong> : nombre de séjours ou séances par acte CSARR<br><strong>base_ssr_ccam</strong> : nombre de séjours ou séances par acte CCAM</p>
-</div>
-<div id="juillet-2020---dénombrements-base-nationale-pmsi-mco-2019" class="section level3">
-<h3 class="hasAnchor">
-<a href="#juillet-2020---d%C3%A9nombrements-base-nationale-pmsi-mco-2019" class="anchor"></a>25 juillet 2020 - Dénombrements base nationale PMSI MCO 2019</h3>
-<p>Ajout de référentiels issus de dénombrements de la base nationale PMSI MCO 2019 (ATIH)<br><strong>base_mco_ccam</strong> : nombre de séjours ou séances par acte CCAM<br><strong>base_mco_diag</strong> : nombre de séjours ou séances par diagnostic (DP, DR ou DAS)<br><strong>base_mco_ghs</strong> : nombre de séjours ou séances par GHS</p>
-</div>
-<div id="juillet-2020---open-ccam-2019" class="section level3">
-<h3 class="hasAnchor">
-<a href="#juillet-2020---open-ccam-2019" class="anchor"></a>24 juillet 2020 - open CCAM 2019</h3>
-<p>Ajout du référentiel <strong>open_ccam</strong> : par acte CCAM de la base nationale PMSI MCO 2019, nombre d’actes CCAM, nombre de séjours ou séances, nombre d’actes ambulatoires, nombre de séjours 0 nuit</p>
-</div>
-<div id="juillet-2020---référentiels-had" class="section level3">
-<h3 class="hasAnchor">
-<a href="#juillet-2020---r%C3%A9f%C3%A9rentiels-had" class="anchor"></a>7 juillet 2020 - Référentiels HAD</h3>
-<p>Ajout de référentiels PMSI HAD<br><strong>ght_oqn</strong> : tarifs GHT OQN (de 2016 à 2020)<br><strong>ght_dgf</strong> : tarifs GHT DGF (de 2016 à 2020)<br><strong>me_ms_had</strong> : codes et libellés des modes d’entrée, sortie, provenance et destination en HAD<br><strong>had</strong> : codes et libellés des natures du séjour, types de lieu de domicile et des modes de prises en charge (MPP, MPA, MPD)</p>
-</div>
-<div id="mai-2020---version-1-0-0" class="section level3">
-<h3 class="hasAnchor">
-<a href="#mai-2020---version-1-0-0" class="anchor"></a>7 mai 2020 - Version 1.0.0</h3>
-<p>Mise en ligne de la 1ere version du package refpmsi</p>
+<div id="suppression-de-positions-à-gauche" class="section level2">
+<h2 class="hasAnchor">
+<a href="#suppression-de-positions-%C3%A0-gauche" class="anchor"></a>Suppression de positions à gauche</h2>
+<p>Plusieurs variables sortent souvent des fichiers PMSI de production avec des 0 à gauche.</p>
+<p>Exemple avec le nombre de DAS sur 2 positions dans chaque RUM : on récupère ainsi “08” pour 8 DAS dans le RUM.</p>
+<p>On peut souhaiter nettoyer ces 0 à gauche pour les traitements.</p>
+<p>Plusieurs approches sont possibles. Nous privilégions celle avec la fonction <a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove()</a> du package stringr: du tidyverse.</p>
+<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="no">nDA</span> <span class="kw">&lt;-</span> <span class="st">"08"</span>
+<span class="no">nDA</span> <span class="kw">&lt;-</span> <span class="kw pkg">stringr</span><span class="kw ns">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_remove.html">str_remove</a></span>(<span class="no">nDA</span>, <span class="kw">pattern</span> <span class="kw">=</span> <span class="st">"^0+"</span>)
+<span class="co"># "^0+" est une expression régulière (regex) qui repère tous les 0 à gauche</span>
+<span class="no">nDA</span></pre></body></html></div>
+<pre><code>#&gt; [1] "8"</code></pre>
+<p>Si on souhaite juste transformer la donnée en integer, on peut faire un simple as.integer()</p>
+<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="no">nDA</span> <span class="kw">&lt;-</span> <span class="st">"08"</span>
+<span class="fu"><a href="https://rdrr.io/r/base/integer.html">as.integer</a></span>(<span class="no">nDA</span>)</pre></body></html></div>
+<pre><code>#&gt; [1] 8</code></pre>
+<p>Mais pour nettoyer des NAS ou des numéro d’UM c’est bien l’approche avec <strong>stringr::str_remove()</strong> qui conviendra et qui conserva la donnée en character.</p>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 
