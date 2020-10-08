@@ -4,7 +4,7 @@
 #' @importFrom dplyr filter
 #' @importFrom tibble as_tibble
 #' @importFrom jsonlite read_json
-#' @importFrom rlang quo_name
+#' @importFrom rlang as_name
 #' @importFrom rlang enquo
 #'
 #' @param referentiel = intitule du referentiel pmsi
@@ -16,7 +16,7 @@
 
 refpmsi <- function(referentiel = "", periodepmsi = "", chemin = path.package("refpmsi")) {
 
-  referentiel <- rlang::quo_name(rlang::enquo(referentiel))
+  referentiel <- rlang::as_name(rlang::enquo(referentiel))
 
   chemin <- chemin %>%
     paste0("/referentiels/", referentiel, ".json.gz")
