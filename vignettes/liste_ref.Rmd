@@ -19,10 +19,10 @@ library(refpmsi)
 library(DT)
 ```
 
-70 référentiels  
+71 référentiels  
 [Derniers référentiels ajoutés ou mis à jour](https://denisgustin.github.io/refpmsi/articles/news.html)  
 
-Dernière maj : 7 août 2020  
+Dernière maj : 12 décembre 2020  
   
 
 ```{r liste_refpmsi, echo = FALSE, warning = FALSE}
