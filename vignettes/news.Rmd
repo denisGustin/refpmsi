@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 
 ### 12 décembre 2020 - Médicaments anticancéreux intra-GHS    
-Ajout du référentiel **anticancereux_intraghs** : liste des médicaments anticancéreux non-inscrits sur la liste en sus ou intra-GHS.Expérimentation article 51. Version du 9 novembre 2020.  
+Ajout du référentiel **anticancereux_intraghs** : liste des médicaments anticancéreux non-inscrits sur la liste en sus ou intra-GHS.Expérimentation article 51. Version du 9 novembre 2020    
 
 ### 3 août 2020 - Spécialités pharmaceutiques SSR  
 Ajout du référentiel **spe_pharma_ssr** : spécialités pharmaceutiques SSR version 2017 et version 2020  
