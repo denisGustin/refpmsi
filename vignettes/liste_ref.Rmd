@@ -22,7 +22,7 @@ library(DT)
 71 référentiels  
 [Derniers référentiels ajoutés ou mis à jour](https://denisgustin.github.io/refpmsi/articles/news.html)  
 
-Dernière maj : 12 décembre 2020  
+Dernière mise à jour : 12 décembre 2020  
   
 
 ```{r liste_refpmsi, echo = FALSE, warning = FALSE}
