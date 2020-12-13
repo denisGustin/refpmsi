@@ -22,7 +22,7 @@ library(dplyr)
 
 Intitulé du référentiel : **spe_pharma_ssr**
 
-Mise à jour : 07 août 2020.  
+Mise à jour : 07 août 2020  
 
 Le référentiel comprend les spécialités pharmaceutiques SSR des 2 versions diffusées à ce jour :  
 Version 2017 active du 2 janvier 2017 au 31 mai 2020  
