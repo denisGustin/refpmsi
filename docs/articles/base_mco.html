@@ -39,7 +39,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -80,7 +80,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/denisGustin/refpmsi/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -111,16 +111,16 @@
 <h2 class="hasAnchor">
 <a href="#r%C3%A9partition-du-nombre-de-r%C3%A9alisations-selon-les-codes-diagnostics-dp-dr-ou-das" class="anchor"></a>Répartition du nombre de réalisations selon les codes diagnostics (DP, DR ou DAS)</h2>
 <p>Intitulé du référentiel : <strong>base_mco_diag</strong></p>
-<p>Mise à jour : 7 août 2020.</p>
+<p>Mise à jour : 15 avril 2021</p>
 <div id="variables" class="section level3">
 <h3 class="hasAnchor">
 <a href="#variables" class="anchor"></a>Variables</h3>
-<p><strong>diag</strong> = code diagnostic (DP, DR ou DAS) codé au moins une fois nationalement<br><strong>nb_sejsea</strong> = nombre de séjours et séances dans lesquels est codé au moins 1 fois le diagnostic.<br><em>Cas particulier des séjours de la CMD 28 “Séances” non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c’est le le nombre de séances qui est pris en compte.</em><br><strong>decile</strong> = décile du nombre de séjours et séances avec le diagnostic codé par rapport au nombre total de séjours et séances dans la base nationale. Variable calculée</p>
+<p><strong>diag_bn_mco_code</strong> = code diagnostic (DP, DR ou DAS) codé au moins une fois nationalement<br><strong>diag_bn_mco_sej_sea</strong> = nombre de séjours et séances dans lesquels est codé au moins 1 fois le diagnostic.<br><em>Cas particulier des séjours de la CMD 28 “Séances” non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c’est le le nombre de séances qui est pris en compte.</em><br><strong>diag_bn_mco_decile</strong> = décile du nombre de séjours et séances avec le diagnostic codé par rapport au nombre total de séjours et séances dans la base nationale. <em>Variable calculée par nous</em></p>
 <pre><code>#&gt; Rows: 20,576
 #&gt; Columns: 3
-#&gt; $ diag      &lt;chr&gt; "A000", "A001", "A009", "A010", "A011", "A012", "A013", "...
-#&gt; $ nb_sejsea &lt;int&gt; 22, 6, 22, 227, 9, 7, 2, 9, 3208, 591, 166, 149, 329, 44,...
-#&gt; $ decile    &lt;int&gt; 6, 8, 6, 4, 7, 7, 9, 7, 2, 3, 4, 5, 4, 6, 5, 6, 5, 5, 4, ...</code></pre>
+#&gt; $ diag_bn_mco_code    &lt;chr&gt; "A000", "A001", "A009", "A010", "A011", "A012",...
+#&gt; $ diag_bn_mco_sej_sea &lt;int&gt; 22, 6, 22, 227, 9, 7, 2, 9, 3208, 591, 166, 149...
+#&gt; $ diag_bn_mco_decile  &lt;int&gt; 6, 8, 6, 4, 7, 7, 9, 7, 2, 3, 4, 5, 4, 6, 5, 6,...</code></pre>
 </div>
 <div id="source" class="section level3">
 <h3 class="hasAnchor">
@@ -132,19 +132,19 @@
 <h2 class="hasAnchor">
 <a href="#r%C3%A9partition-du-nombre-de-r%C3%A9alisations-selon-les-actes-ccam" class="anchor"></a>Répartition du nombre de réalisations selon les actes CCAM</h2>
 <p>Intitulé du référentiel : <strong>base_mco_ccam</strong></p>
-<p>Mise à jour : 7 août 2020.</p>
+<p>Mise à jour : 15 avril 2021</p>
 <div id="variables-1" class="section level3">
 <h3 class="hasAnchor">
 <a href="#variables-1" class="anchor"></a>Variables</h3>
-<p><strong>acte</strong> = acte CCAM codé au moins une fois nationalement<br><strong>phase</strong> = code phase de l’acte<br><strong>activite</strong> = code activité de l’acte<br><strong>ext</strong> = extention PMSI<br><strong>nb_sejsea</strong> = nombre de séjours et séances dans lesquels est codé au moins 1 fois le quadruplet (acte, phase, activité, extension PMSI).<br><em>Cas particulier des séjours de la CMD 28 “Séances” non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c’est le le nombre de séances qui est pris en compte.</em><br><strong>decile</strong> = décile du nombre de séjours et séances avec l’acte CCAM codé par rapport au nombre total de séjours et séances dans la base nationale. Variable calculée</p>
+<p><strong>ccam_bn_mco_code</strong> = code de l’acte CCAM codé au moins une fois nationalement<br><strong>ccam_bn_mco_phase</strong> = code phase de l’acte<br><strong>ccam_bn_mco_activite</strong> = code activité de l’acte<br><strong>ccam_bn_mco_ext</strong> = extention PMSI de l’acte<br><strong>ccam_bn_mco_sej_sea</strong> = nombre de séjours et séances dans lesquels est codé au moins 1 fois le quadruplet (acte, phase, activité, extension PMSI).<br><em>Cas particulier des séjours de la CMD 28 “Séances” non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c’est le le nombre de séances qui est pris en compte.</em><br><strong>ccam_bn_mco_decile</strong> = décile du nombre de séjours et séances avec l’acte CCAM codé par rapport au nombre total de séjours et séances dans la base nationale. <em>Variable calculée par nous</em></p>
 <pre><code>#&gt; Rows: 13,664
 #&gt; Columns: 6
-#&gt; $ acte      &lt;chr&gt; "AAFA001", "AAFA001", "AAFA002", "AAFA002", "AAFA003", "A...
-#&gt; $ phase     &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
-#&gt; $ activite  &lt;int&gt; 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, ...
-#&gt; $ nb_sejsea &lt;int&gt; 1141, 1104, 5391, 5281, 124, 122, 12, 12, 37, 28, 29, 28,...
-#&gt; $ decile    &lt;int&gt; 3, 3, 1, 1, 6, 6, 9, 9, 8, 8, 8, 8, 4, 5, 8, 8, 9, 9, 5, ...
-#&gt; $ ext       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N...</code></pre>
+#&gt; $ ccam_bn_mco_code     &lt;chr&gt; "AAFA001", "AAFA001", "AAFA002", "AAFA002", "A...
+#&gt; $ ccam_bn_mco_phase    &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0...
+#&gt; $ ccam_bn_mco_activite &lt;int&gt; 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4...
+#&gt; $ ccam_bn_mco_sej_sea  &lt;int&gt; 1141, 1104, 5391, 5281, 124, 122, 12, 12, 37, ...
+#&gt; $ ccam_bn_mco_decile   &lt;int&gt; 3, 3, 1, 1, 6, 6, 9, 9, 8, 8, 8, 8, 4, 5, 8, 8...
+#&gt; $ ccam_bn_mco_ext      &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...</code></pre>
 </div>
 <div id="source-1" class="section level3">
 <h3 class="hasAnchor">
@@ -152,54 +152,32 @@
 <p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3832/denombrement_2019.xlsx">Denombrement base nationale PMSI MCO 2019 (ATIH)</a></p>
 </div>
 </div>
-<div id="répartition-du-nombre-de-réalisations-selon-les-ghs" class="section level2">
+<div id="open-ccam" class="section level2">
 <h2 class="hasAnchor">
-<a href="#r%C3%A9partition-du-nombre-de-r%C3%A9alisations-selon-les-ghs" class="anchor"></a>Répartition du nombre de réalisations selon les GHS</h2>
-<p>Intitulé du référentiel : <strong>base_mco_ghs</strong></p>
-<p>Mise à jour : 7 août 2020.</p>
+<a href="#open-ccam" class="anchor"></a>Open CCAM</h2>
+<p>Intitulé du référentiel : <strong>open_ccam</strong></p>
+<p>Mise à jour : 15 avril 2021</p>
 <div id="variables-2" class="section level3">
 <h3 class="hasAnchor">
 <a href="#variables-2" class="anchor"></a>Variables</h3>
-<p><strong>ghs</strong> = code GHS<br><strong>ghm</strong> = code GHM correspondant au GHS<br><strong>lib_ghm</strong> = libellé du GHM<br><strong>nb_sejsea</strong> = nombre de séjours et séances groupés dans le GHS<br><strong>decile</strong> = décile du nombre de séjours et séances groupés dans le GHS par rapport au nombre total de séjours et séances dans la base nationale. Variable calculée</p>
-<pre><code>#&gt; Rows: 2,661
-#&gt; Columns: 5
-#&gt; $ ghs       &lt;chr&gt; "22", "23", "24", "25", "26", "27", "28", "29", "30", "31...
-#&gt; $ nb_sejsea &lt;int&gt; 699, 1713, 1477, 1227, 6015, 7953, 5204, 4032, 7070, 3940...
-#&gt; $ ghm       &lt;chr&gt; "01C031", "01C032", "01C033", "01C034", "01C041", "01C042...
-#&gt; $ lib_ghm   &lt;chr&gt; "Craniotomies pour traumatisme, âge supérieur à 17 ans, n...
-#&gt; $ decile    &lt;int&gt; 7, 5, 5, 6, 3, 2, 3, 3, 3, 3, 5, 7, 2, 3, 5, 8, 3, 7, 8, ...</code></pre>
+<p><strong>open_ccam_code</strong> = code de l’acte CCAM codé au moins une fois nationalement<br><strong>open_ccam_phase</strong> = code phase de l’acte<br><strong>open_ccam_sej_sea</strong> = nombre de séjours et séances dans lesquels est codé au moins 1 fois le quadruplet (acte, phase, activité, extension PMSI).<br><em>Cas particulier des séjours de la CMD 28 “Séances” non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c’est le le nombre de séances qui est pris en compte.<br>
+Lorsque le nombre de séjours/séances est inférieur à 11, l’information ne figure pas dans OpenCCAM.</em><br><strong>open_ccam_nb</strong> = nombre de réalisations de l’acte CCAM au cours de l’ensemble des séjours et séances<br><strong>open_ccam_dms</strong> = durée moyenne des séjours au cours desquels l’acte a été réalisé en nombre de nuitées (dms_globale). La durée des séances est par convention 0<br>
+**open_ccam__sej_0_nuit** = nombre de séjours ambulatoires (= séjours de 0 nuit + les séances)<br>
+*Lorsque le nombre de séjours ambulatoires pour un acte est inférieur à 11, l’acte concerné est exclu.<br><strong>open_ccam_ambu</strong> = nombre de réalisations de l’acte au cours des séjours ambulatoires et des séances</p>
+<p>Commentaire : les actes CCAM correspondent aux actes avec activité = 1, sauf les actes de la hiérarchie 18.01 (= les gestes d’anesthésie complémentaire) et quelques autres pour lesquels c’est l’activité 4 qui est prise en compte</p>
+<pre><code>#&gt; Rows: 6,970
+#&gt; Columns: 7
+#&gt; $ open_ccam_code       &lt;chr&gt; "AAFA001", "AAFA002", "AAFA003", "AAFA004", "A...
+#&gt; $ open_ccam_phase      &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0...
+#&gt; $ open_ccam_sej_sea    &lt;int&gt; 1141, 5391, 124, 12, 37, 29, 354, 31, 19, 251,...
+#&gt; $ open_ccam_nb         &lt;int&gt; 1155, 5483, 124, 12, 38, 29, 356, 32, 19, 715,...
+#&gt; $ open_ccam_dms        &lt;dbl&gt; 14.0333, 10.7299, 16.4597, 15.6667, 15.7568, 2...
+#&gt; $ open_ccam_sej_0_nuit &lt;int&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+#&gt; $ open_ccam_ambu       &lt;int&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...</code></pre>
 </div>
 <div id="source-2" class="section level3">
 <h3 class="hasAnchor">
 <a href="#source-2" class="anchor"></a>Source</h3>
-<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3832/denombrement_2019.xlsx">Denombrement base nationale PMSI MCO 2019 (ATIH)</a></p>
-</div>
-</div>
-<div id="open-ccam-2019" class="section level2">
-<h2 class="hasAnchor">
-<a href="#open-ccam-2019" class="anchor"></a>Open CCAM 2019</h2>
-<p>Intitulé du référentiel : <strong>open_ccam</strong></p>
-<p>Mise à jour : 7 août 2020.</p>
-<div id="variables-3" class="section level3">
-<h3 class="hasAnchor">
-<a href="#variables-3" class="anchor"></a>Variables</h3>
-<p><strong>acte</strong> = acte CCAM codé au moins une fois nationalement<br><strong>phase</strong> = code phase de l’acte<br><strong>nb_sejsea</strong> = nombre de séjours et séances dans lesquels est codé au moins 1 fois le quadruplet (acte, phase, activité, extension PMSI).<br><em>Cas particulier des séjours de la CMD 28 “Séances” non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c’est le le nombre de séances qui est pris en compte.<br>
-Lorsque le nombre de séjours/séances est inférieur à 11, l’information ne figure pas dans OpenCCAM.</em><br><strong>nb_actes</strong> = nombre de réalisations de l’acte CCAM au cours de l’ensemble des séjours et séances<br><strong>dms_globale</strong> = durée moyenne des séjours au cours desquels l’acte a été réalisé en nombre de nuitées (dms_globale). La durée des séances est par convention 0<br><strong>nb_sej_0_nuit</strong> = nombre de séjours ambulatoires (= séjours de 0 nuit + les séances)<br>
-*Lorsque le nombre de séjours ambulatoires pour un acte est inférieur à 11, l’acte concerné est exclu.<br><strong>nb_acte_ambu</strong> = nombre de réalisations de l’acte au cours des séjours ambulatoires et des séances</p>
-<p>Commentaire : les actes CCAM correspondent aux actes avec activité = 1, sauf les actes de la hiérarchie 18.01 (= les gestes d’anesthésie complémentaire) et quelques autres pour lesquels c’est l’activité 4 qui est prise en compte (voir exemple “Comparaison openCCAM et dénombrement des actes CCAM dans la base nationale MCO” ci-dessous)</p>
-<pre><code>#&gt; Rows: 6,970
-#&gt; Columns: 7
-#&gt; $ acte          &lt;chr&gt; "AAFA001", "AAFA002", "AAFA003", "AAFA004", "AAFA005"...
-#&gt; $ phase         &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
-#&gt; $ nb_sejsea     &lt;int&gt; 1141, 5391, 124, 12, 37, 29, 354, 31, 19, 251, 329, 1...
-#&gt; $ nb_actes      &lt;int&gt; 1155, 5483, 124, 12, 38, 29, 356, 32, 19, 715, 349, 1...
-#&gt; $ dms_globale   &lt;dbl&gt; 14.0333, 10.7299, 16.4597, 15.6667, 15.7568, 28.6552,...
-#&gt; $ nb_sej_0_nuit &lt;int&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N...
-#&gt; $ nb_acte_ambu  &lt;int&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N...</code></pre>
-</div>
-<div id="source-3" class="section level3">
-<h3 class="hasAnchor">
-<a href="#source-3" class="anchor"></a>Source</h3>
 <p><a href="https://www.scansante.fr/open-ccam/open-ccam-2019">Open CCAM 2019 (ATIH)</a></p>
 </div>
 </div>

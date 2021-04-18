@@ -39,7 +39,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -80,7 +80,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/denisGustin/refpmsi/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -108,31 +108,32 @@
     
     
 <p>Intitulé du référentiel : <strong>spe_pharma_ssr</strong></p>
-<p>Mise à jour : 07 août 2020</p>
-<p>Le référentiel comprend les spécialités pharmaceutiques SSR des 2 versions diffusées à ce jour :<br>
+<p>Mise à jour : 15 avril 2021</p>
+<p>Le référentiel comprend les spécialités pharmaceutiques SSR des 3 versions diffusées à ce jour :<br>
 Version 2017 active du 2 janvier 2017 au 31 mai 2020<br>
-Version 2020 active à partir du 1er juin 2020</p>
+Version 2020 active à partir du 1er juin 2020<br>
+Version 2021 active à partir du 1er janvier 2021</p>
 <div id="variables-du-référentiel" class="section level2">
 <h2 class="hasAnchor">
 <a href="#variables-du-r%C3%A9f%C3%A9rentiel" class="anchor"></a>Variables du référentiel</h2>
-<p><strong>ucd_7</strong> = code UCD sur 7 positions<br><strong>ucd_13</strong> = code UCD sur 13 positions<br><strong>lib_ucd_ssr</strong> = libellé de l’UCD<br><strong>dci</strong> = dénomination commune internationale de l’UCD<br><strong>annee</strong> = année correspondant à la version</p>
-<pre><code>#&gt; Rows: 1,540
+<p><strong>ucd_ssr_7</strong> = code UCD sur 7 positions<br><strong>ucd_ssr_13</strong> = code UCD sur 13 positions<br><strong>ucd_ssr_lib</strong> = libellé de l’UCD<br><strong>dci</strong> = dénomination commune internationale de l’UCD<br><strong>annee</strong> = année correspondant à la version (2017, 2020, 2021)</p>
+<pre><code>#&gt; Rows: 1,876
 #&gt; Columns: 5
-#&gt; $ ucd_7       &lt;chr&gt; "9281644", "9435751", "9426479", "9447725", "9426255", ...
-#&gt; $ ucd_13      &lt;chr&gt; "3400892816449", "3400894357513", "3400894264798", "340...
-#&gt; $ lib_ucd_ssr &lt;chr&gt; "0HLT METHOTREXATE (METOJECT IMETH) 25 MG SER PRERE", "...
-#&gt; $ dci         &lt;chr&gt; "METHOTREXATE", "ABACAVIR (SULFATE D')", "ABACAVIR (SUL...
-#&gt; $ annee       &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", "2020", "2020",...</code></pre>
+#&gt; $ ucd_ssr_7   &lt;chr&gt; "9406583", "9406608", "9343339", "9309294", "9309302", ...
+#&gt; $ ucd_ssr_13  &lt;chr&gt; "3400894065838", "3400894066088", "3400893433393", "340...
+#&gt; $ ucd_ssr_lib &lt;chr&gt; "ACCOFIL 30 MUI/0,5 ML SOL INJ SER", "ACCOFIL 48 MUI/0,...
+#&gt; $ dci         &lt;chr&gt; "FILGRASTIM", "FILGRASTIM", "ALTEPLASE", "TACROLIMUS", ...
+#&gt; $ annee       &lt;chr&gt; "2021", "2021", "2021", "2021", "2021", "2021", "2021",...</code></pre>
 </div>
 <div id="sources" class="section level2">
 <h2 class="hasAnchor">
 <a href="#sources" class="anchor"></a>Sources</h2>
-<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/2420/liste_mo_ssr_2020.xlsx">“Spécialités pharmaceutiques SSR” Version 2020</a><br><a href="https://www.atih.sante.fr/sites/default/files/public/content/2420/mo_ssr_maj_20171102_pf2tr_envoi_atih_20171107_v3_voriconazole.xlsx">“Spécialités pharmaceutiques SSR” version 2017</a></p>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4053/med_ssr_2021.xlsx">“Spécialités pharmaceutiques SSR” Version 2021</a><br><a href="https://www.atih.sante.fr/sites/default/files/public/content/2420/liste_mo_ssr_juin_2020_v2.xlsx">“Spécialités pharmaceutiques SSR” Version 2020</a><br><a href="https://www.atih.sante.fr/sites/default/files/public/content/2420/mo_ssr_maj_20171102_pf2tr_envoi_atih_20171107_v3_voriconazole.xlsx">“Spécialités pharmaceutiques SSR” version 2017</a></p>
 </div>
 <div id="exemples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#exemples" class="anchor"></a>Exemples</h2>
-<p>Soit le jeu de données suivant composé manuellement avec des variables que l’on retrouve dans un FICHCOMP “médicaments (UCD)”</p>
+<p>Soit le jeu de données suivant composé manuellement avec des variables que l’on peut retrouver dans un FICHCOMP “médicaments (UCD)” SSR</p>
 <pre><code>#&gt; # A tibble: 15 x 3
 #&gt;      NAS UCD     n_adm
 #&gt;    &lt;int&gt; &lt;chr&gt;   &lt;int&gt;
@@ -155,15 +156,15 @@ Version 2020 active à partir du 1er juin 2020</p>
 <h3 class="hasAnchor">
 <a href="#attribution-du-libell%C3%A9-aux-ucd" class="anchor"></a>Attribution du libellé aux UCD</h3>
 <div class="sourceCode" id="cb3"><html><body><pre class="r">
-<span class="co"># on considère que les dates d'administration du jeu de données sont &gt;= 1 juin 2020</span>
 <span class="no">ucd_libelle</span> <span class="kw">&lt;-</span> <span class="no">jeu_ucd</span> <span class="kw">%&gt;%</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"spe_pharma_ssr"</span>) <span class="kw">%&gt;%</span>
+                     <span class="co"># on considère que les dates d'administration du dataset sont &gt;= 1 juin 2020</span>
                      <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">annee</span> <span class="kw">==</span> <span class="st">"2020"</span>) <span class="kw">%&gt;%</span>
-                     <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ucd_7</span>,<span class="no">lib_ucd_ssr</span>),
-                   <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"UCD"</span> <span class="kw">=</span> <span class="st">"ucd_7"</span>))
+                     <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ucd_ssr_7</span>,<span class="no">ucd_ssr_lib</span>),
+                   <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"UCD"</span> <span class="kw">=</span> <span class="st">"ucd_ssr_7"</span>))
 <span class="no">ucd_libelle</span></pre></body></html></div>
 <pre><code>#&gt; # A tibble: 15 x 4
-#&gt;      NAS UCD     n_adm lib_ucd_ssr                        
+#&gt;      NAS UCD     n_adm ucd_ssr_lib                        
 #&gt;    &lt;int&gt; &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;                              
 #&gt;  1     1 9262285     3 ACTOSOLV 100000 UI PDR INJ         
 #&gt;  2     2 9339384     2 ZARZIO 30 MUI SOL INJ SER          
@@ -187,20 +188,20 @@ Version 2020 active à partir du 1er juin 2020</p>
 <div class="sourceCode" id="cb5"><html><body><pre class="r">
 <span class="no">ucd_new_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"spe_pharma_ssr"</span>) <span class="kw">%&gt;%</span>
   <span class="co"># Entre 2017 et 2020, des intitulés de DCI pour un même UCD peuvent différer</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ucd_7</span>,<span class="no">annee</span>) <span class="kw">%&gt;%</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/with_groups.html">with_groups</a></span>(<span class="no">ucd_7</span>, <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="no"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>, !<span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span>(<span class="no">annee</span> <span class="kw">==</span> <span class="st">"2017"</span>))
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ucd_ssr_7</span>,<span class="no">annee</span>) <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/with_groups.html">with_groups</a></span>(<span class="no">ucd_ssr_7</span>, <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="no"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>, !<span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span>(<span class="no">annee</span> <span class="kw">==</span> <span class="st">"2017"</span>))
 <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(<span class="no">ucd_new_2020</span>)
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">ucd_new_2020</span>)</pre></body></html></div>
-<pre><code>#&gt; [1] 1023
+<pre><code>#&gt; [1] 1237
 #&gt; # A tibble: 6 x 2
-#&gt;   ucd_7   annee
-#&gt;   &lt;chr&gt;   &lt;chr&gt;
-#&gt; 1 9281644 2020 
-#&gt; 2 9435751 2020 
-#&gt; 3 9426479 2020 
-#&gt; 4 9447725 2020 
-#&gt; 5 9426255 2020 
-#&gt; 6 9429638 2020</code></pre>
+#&gt;   ucd_ssr_7 annee
+#&gt;   &lt;chr&gt;     &lt;chr&gt;
+#&gt; 1 9309294   2021 
+#&gt; 2 9309302   2021 
+#&gt; 3 9333192   2021 
+#&gt; 4 9309319   2021 
+#&gt; 5 9426485   2021 
+#&gt; 6 9177208   2021</code></pre>
 </div>
 <div id="case-mix-en-dci" class="section level3">
 <h3 class="hasAnchor">
@@ -209,16 +210,19 @@ Version 2020 active à partir du 1er juin 2020</p>
 <span class="no">case_mix_dci</span> <span class="kw">&lt;-</span> <span class="no">jeu_ucd</span> <span class="kw">%&gt;%</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"spe_pharma_ssr"</span>) <span class="kw">%&gt;%</span>
                      <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">annee</span> <span class="kw">==</span> <span class="st">"2020"</span>) <span class="kw">%&gt;%</span>
-                     <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ucd_7</span>,<span class="no">dci</span>),
-                   <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"UCD"</span> <span class="kw">=</span> <span class="st">"ucd_7"</span>)) <span class="kw">%&gt;%</span>
-  <span class="co"># par DCI : nombre de NAS différents avec au moins 1 UCD, nombre d'UCD différentes, nombre total des administrations des UCD</span>
+                     <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ucd_ssr_7</span>,<span class="no">dci</span>),
+                   <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"UCD"</span> <span class="kw">=</span> <span class="st">"ucd_ssr_7"</span>)) <span class="kw">%&gt;%</span>
+  <span class="co"># regroupement par DCI</span>
+  <span class="co"># calcul du nombre de NAS différents avec au moins 1 UCD</span>
+  <span class="co"># calcul du nombre d'UCD différentes</span>
+  <span class="co"># calcul du nombre total des administrations des UCD</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/with_groups.html">with_groups</a></span>(<span class="no">dci</span>, <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="no"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span>, <span class="kw">n_NAS</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/n_distinct.html">n_distinct</a></span>(<span class="no">NAS</span>),
                      <span class="kw">n_ucd</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/n_distinct.html">n_distinct</a></span>(<span class="no">UCD</span>),
                      <span class="kw">n_adm</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span>(<span class="no">n_adm</span>))
 <span class="no">case_mix_dci</span></pre></body></html></div>
 <pre><code>#&gt; # A tibble: 6 x 4
 #&gt;   dci                          n_NAS n_ucd n_adm
-#&gt;   &lt;chr&gt;                        &lt;int&gt; &lt;int&gt; &lt;int&gt;
+#&gt; * &lt;chr&gt;                        &lt;int&gt; &lt;int&gt; &lt;int&gt;
 #&gt; 1 BACLOFENE                        3     2     6
 #&gt; 2 COLISTINE                        1     1    30
 #&gt; 3 FILGRASTIM                       3     1     8

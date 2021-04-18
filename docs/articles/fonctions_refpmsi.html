@@ -39,7 +39,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -80,7 +80,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/denisGustin/refpmsi/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -117,20 +117,22 @@
 <span class="no">icr</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ccam_icr"</span>)
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">icr</span>)</pre></body></html></div>
 <pre><code>#&gt; # A tibble: 6 x 8
-#&gt;   code    phase activite ICE_salarie ICR_non_salarie type  commentaire extension
-#&gt;   &lt;chr&gt;   &lt;int&gt;    &lt;int&gt;       &lt;int&gt;           &lt;int&gt; &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;    
-#&gt; 1 AAFA001     0        1         655             503 1     &lt;NA&gt;        &lt;NA&gt;     
-#&gt; 2 AAFA002     0        1         415             232 1     &lt;NA&gt;        &lt;NA&gt;     
-#&gt; 3 AAFA003     0        1         762             579 1     &lt;NA&gt;        &lt;NA&gt;     
-#&gt; 4 AAFA004     0        1         894             673 1     &lt;NA&gt;        &lt;NA&gt;     
-#&gt; 5 AAFA005     0        1         473             260 1     &lt;NA&gt;        &lt;NA&gt;     
-#&gt; 6 AAFA006     0        1         427             340 1     &lt;NA&gt;        &lt;NA&gt;</code></pre>
+#&gt;   ccam_code ccam_phase ccam_activite ccam_icr_salarie ccam_icr_non_sa~
+#&gt;   &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;                    &lt;int&gt;            &lt;int&gt;
+#&gt; 1 AAFA001   0          1                          655              503
+#&gt; 2 AAFA001   0          4                          222              222
+#&gt; 3 AAFA002   0          1                          415              232
+#&gt; 4 AAFA002   0          4                          189              189
+#&gt; 5 AAFA003   0          1                          762              579
+#&gt; 6 AAFA003   0          4                          246              246
+#&gt; # ... with 3 more variables: ccam_icr_type &lt;chr&gt;, ccam_icr_commentaire &lt;chr&gt;,
+#&gt; #   ccam_code_extension_pmsi &lt;chr&gt;</code></pre>
 <p>Pour les référentiels annualisés au sens PMSI (CIM-10, GHM, GHS, GME, GMT, OVALIDE, CSARR, …), sélection des années via un 2eme argument.</p>
 <div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="co"># exemples avec le référentiel CIM-10 FR à usage PMSI</span>
 <span class="co"># sélection d'une année</span>
 <span class="no">cim_2019</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>)
 
-<span class="co"># sélection de plusieurs années successives</span>
+<span class="co"># sélection de plusieurs années directement</span>
 <span class="no">cim_2018_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2018</span>:<span class="fl">2020</span>)
 
 <span class="co"># sélection de plusieurs années via un vecteur</span>
@@ -144,21 +146,21 @@
 <div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="co"># affichage de la liste documentée des référentiels du package refpmsi::</span>
 <span class="no">liste_ref</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span>()
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">liste_ref</span>)</pre></body></html></div>
-<pre><code>#&gt; # A tibble: 6 x 4
-#&gt;   refpmsi    libelle                 variables                 source           
-#&gt;   &lt;chr&gt;      &lt;chr&gt;                   &lt;chr&gt;                     &lt;chr&gt;            
-#&gt; 1 atu        "Médicament en Autoris~ code UCD 7, code UCD 13,~ "Liste ATU et Po~
-#&gt; 2 autorisat~ "Autorisations MCO"     code autorisation, libel~ "GENRSA M3 2020\~
-#&gt; 3 autorisat~ "Autorisations SSR"     code autorisation, libel~ "GENRHA (M03 202~
-#&gt; 4 base_mco_~ "Dénombrement variable~ acte CCAM,phase, activit~ "ATIH\nVersion20~
-#&gt; 5 base_mco_~ "Dénombrement variable~ diagnostics CIM-10 (DP, ~ "ATIH\nVersion20~
-#&gt; 6 base_mco_~ "Dénombrement variable~ code GHS, code GHM, libe~ "ATIH\nVersion20~</code></pre>
+<pre><code>#&gt; # A tibble: 6 x 5
+#&gt;   refpmsi  refpmsi_lib      refpmsi_variables    refpmsi_source refpmsi_periode~
+#&gt;   &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;                &lt;chr&gt;          &lt;chr&gt;           
+#&gt; 1 antican~ "Médicaments an~ DCI, code UCD, indi~ ATIH           2020 (version 9~
+#&gt; 2 atu      "Médicament en ~ code UCD 7, code UC~ ATIH           2021 (février)  
+#&gt; 3 autoris~ "Autorisations ~ code autorisation, ~ GENRSA         M2 2021         
+#&gt; 4 autoris~ "Autorisations ~ code autorisation, ~ GENRHA         M2 2021         
+#&gt; 5 base_mc~ "Dénombrement v~ acte CCAM,phase, ac~ ATIH           2019            
+#&gt; 6 base_mc~ "Dénombrement v~ diagnostics CIM-10 ~ ATIH           2019</code></pre>
 <p>Pour ne charger que la liste des intitulés des référentiels.</p>
 <div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="co"># affichage uniquement des intitulés des référentiels</span>
 <span class="no">liste_ref</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span>()$<span class="no">refpmsi</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">liste_ref</span>)</pre></body></html></div>
-<pre><code>#&gt; [1] "atu"              "autorisation_mco" "autorisation_ssr" "base_mco_ccam"   
-#&gt; [5] "base_mco_diag"    "base_mco_ghs"</code></pre>
+<pre><code>#&gt; [1] "anticancereux_intraghs" "atu"                    "autorisation_mco"      
+#&gt; [4] "autorisation_ssr"       "base_mco_ccam"          "base_mco_diag"</code></pre>
 </div>
   </div>
 
