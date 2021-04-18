@@ -15,6 +15,14 @@ knitr::opts_chunk$set(
 ```
 
 
+### 15 avril 2021 - Mises à jour année PMSI 2021   
+**VERSION STABLE du package**  
+Normalisation des noms de variables des référentiels  
+Ajout de l'année PMSI 2021 pour les référentiels CIM-10, CCAM, GHM, CSARR  
+Ajout du référentiel **ghm_intermediaire**  
+Ajout du référentiel **csarr_hier_note**  
+Ajout du référentiel **csarr_code_note**  
+
 ### 12 décembre 2020 - Médicaments anticancéreux intra-GHS    
 Ajout du référentiel **anticancereux_intraghs** : liste des médicaments anticancéreux non-inscrits sur la liste en sus ou intra-GHS.Expérimentation article 51. Version du 9 novembre 2020    
 

@@ -71,4 +71,4 @@ as.integer(nDA)
 ```{r str_remove_2, eval = TRUE, echo = FALSE}
 ```
 
-Mais pour nettoyer des NAS ou des numéro d'UM c'est bien l'approche avec **stringr::str_remove()** qui conviendra et qui conserva la donnée en character.  
+Mais pour nettoyer des NAS ou des numéro d'UM c'est bien l'approche avec **stringr::str_remove()** qui convient le mieux car elle conserve la donnée en character.  

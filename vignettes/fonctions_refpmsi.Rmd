@@ -41,7 +41,7 @@ Pour les référentiels annualisés au sens PMSI (CIM-10, GHM, GHS, GME, GMT, OV
 # sélection d'une année
 cim_2019 <- refpmsi::refpmsi("cim",2019)
 
-# sélection de plusieurs années successives
+# sélection de plusieurs années directement
 cim_2018_2020 <- refpmsi::refpmsi("cim",2018:2020)
 
 # sélection de plusieurs années via un vecteur

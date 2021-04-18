@@ -23,7 +23,7 @@ library(dplyr)
 
 Intitulé du référentiel : **had**
 
-Mise à jour : 7 août 2020.  
+Mise à jour : 15 avril 2021.  
 
 Liste des codes et libellés correspondant des natures du séjour, des types de lieu de domicile et des MPC (modes de prises en charge : MPP, MPA, MPD)  
 
@@ -43,9 +43,9 @@ refpmsi::refpmsi("had") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ght_dgf**
 
-Mise à jour : 7 août 2020.  
+Mise à jour : 15 avril 2021.  
 
-Liste des GHT DGF avec leur tarif pour les années PMSI 2016 à 2020
+Liste des GHT DGF avec leur tarif pour les années PMSI 2017 à 2021
 
 ### Variables  
 
@@ -63,9 +63,9 @@ refpmsi::refpmsi("ght_dgf") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ght_oqn**
 
-Mise à jour : 7 août 2020.  
+Mise à jour : 15 avril 2021.  
 
-Liste des GHT OQN avec leur tarif pour les années PMSI 2016 à 2020
+Liste des GHT OQN avec leur tarif pour les années PMSI 2017 à 2021
 
 ### Variables  
 
@@ -83,7 +83,7 @@ refpmsi::refpmsi("ght_oqn") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **me_ms_had**
 
-Mise à jour : 7 août 2020.  
+Mise à jour : 15 avril 2021.  
 
 Liste des codes et libellés correspondant des modes d'entrée, sortie, provenance et destination en HAD
 

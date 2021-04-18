@@ -19,10 +19,10 @@ library(refpmsi)
 library(DT)
 ```
 
-71 référentiels  
+73 référentiels  
 [Derniers référentiels ajoutés ou mis à jour](https://denisgustin.github.io/refpmsi/articles/news.html)  
 
-Dernière mise à jour : 12 décembre 2020  
+Dernière mise à jour : 15 avril 2021  
   
 
 ```{r liste_refpmsi, echo = FALSE, warning = FALSE}
@@ -31,7 +31,7 @@ refpmsi::liste_refpmsi() %>%
   DT::datatable(escape = F, rownames = F,
                 options = list(language = list(search = 'Rechercher :',
                                            info = "Page _PAGE_ sur _PAGES_"),
-                               pageLength = 60,
+                               pageLength = 90,
                                dom = 'ft'))
 
 ```

@@ -4,8 +4,7 @@
 \alias{refpmsi}
 \title{refpmsi}
 \usage{
-refpmsi(referentiel = "", periodepmsi = "",
-  chemin = path.package("refpmsi"))
+refpmsi(referentiel = "", periodepmsi = "", chemin = path.package("refpmsi"))
 }
 \arguments{
 \item{referentiel}{= intitule du referentiel pmsi}
