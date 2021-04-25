@@ -1,5 +1,5 @@
 ---
-title: "Dénombrements base nationale MCO"
+title: "Base nationale MCO"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Dénombrements base nationale MCO}
@@ -23,12 +23,14 @@ library(refpmsi)
 
 Intitulé du référentiel : **base_mco_diag**
 
+Période : 2019  
+
 Mise à jour : 15 avril 2021    
 
 ### Variables  
 
 **diag_bn_mco_code** = code diagnostic (DP, DR ou DAS) codé au moins une fois nationalement  
-**diag_bn_mco_sej_sea** = nombre de séjours et séances dans lesquels est codé au moins 1 fois le diagnostic.  
+**diag_bn_mco_sej_sea** = nombre de séjours ou séances dans lesquels le diagnostic est codé au moins 1 fois.  
 *Cas particulier des séjours de la CMD 28 "Séances" non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c'est le le nombre de séances qui est pris en compte.*  
 **diag_bn_mco_decile** = décile du nombre de séjours et séances avec le diagnostic codé par rapport au nombre total de séjours et séances dans la base nationale. *Variable calculée par nous*  
 
@@ -46,6 +48,8 @@ refpmsi::refpmsi("base_mco_diag") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **base_mco_ccam**
 
+Période : 2019  
+
 Mise à jour : 15 avril 2021  
 
 ### Variables  
@@ -54,7 +58,7 @@ Mise à jour : 15 avril 2021
 **ccam_bn_mco_phase** = code phase de l'acte  
 **ccam_bn_mco_activite** = code activité de l'acte  
 **ccam_bn_mco_ext** = extention PMSI de l'acte    
-**ccam_bn_mco_sej_sea** = nombre de séjours et séances dans lesquels est codé au moins 1 fois le quadruplet (acte, phase, activité, extension PMSI).  
+**ccam_bn_mco_sej_sea** = nombre de séjours ou séances dans lesquels le quadruplet (acte, phase, activité, extension PMSI) est codé au moins 1 fois.  
 *Cas particulier des séjours de la CMD 28 "Séances" non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c'est le le nombre de séances qui est pris en compte.*  
 **ccam_bn_mco_decile** = décile du nombre de séjours et séances avec l'acte CCAM codé par rapport au nombre total de séjours et séances dans la base nationale. *Variable calculée par nous*      
 
@@ -72,6 +76,8 @@ refpmsi::refpmsi("base_mco_ccam") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **open_ccam**
 
+Période : 2019  
+
 Mise à jour : 15 avril 2021  
 
 ### Variables  
@@ -79,9 +85,9 @@ Mise à jour : 15 avril 2021
 **open_ccam_code** = code de l'acte CCAM codé au moins une fois nationalement  
 **open_ccam_phase** = code phase de l'acte  
 **open_ccam_sej_sea** = nombre de séjours et séances dans lesquels est codé au moins 1 fois le quadruplet (acte, phase, activité, extension PMSI).  
-*Cas particulier des séjours de la CMD 28 "Séances" non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c'est le le nombre de séances qui est pris en compte.  
-Lorsque le nombre de séjours/séances est inférieur à 11, l’information ne figure pas dans OpenCCAM.*  
-**open_ccam_nb** = nombre de réalisations de l’acte CCAM au cours de l’ensemble des séjours et séances  
+*Cas particulier des séjours de la CMD 28 "Séances" non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c'est le le nombre de séances qui est pris en compte.*  
+Lorsque le nombre de séjours/séances est inférieur à 11, l’information ne figure pas dans OpenCCAM.    
+**open_ccam_nb** = nombre de réalisations de l’acte CCAM au cours de l’ensemble des séjours ou séances    
 **open_ccam_dms** = durée moyenne des séjours au cours desquels l’acte a été réalisé en nombre de nuitées (dms_globale). La durée des séances est par convention 0  
 **open_ccam__sej_0_nuit** = nombre de séjours ambulatoires (= séjours de 0 nuit + les séances)  
 *Lorsque le nombre de séjours ambulatoires pour un acte est inférieur à 11, l'acte concerné est exclu.  

@@ -15,5 +15,136 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
+library(dplyr)
 library(refpmsi)
 ```
+
+## Répartition du nombre de réalisations selon la Manifestation Morbide Principale (MMP)
+
+Intitulé du référentiel : **base_ssr_mp**
+
+Période : 2019  
+
+Mise à jour : 15 avril 2021    
+
+### Variables  
+
+**diag_bn_ssr_code** = code diagnostic MMP codé au moins une fois nationalement  
+**diag_bn_ssr_sej_hp** = nombre de séjours en HP avec au moins une fois le code  
+**diag_bn_ssr_sej_hc** = nombre de séjours en HC avec au moins une fois le code  
+**diag_bn_ssr_ordre_hp** = ordre du code par rapport aux séjours en HP avec au moins une fois le code *(calculé par nous)*  
+**diag_bn_ssr_ordre_hc** = ordre du code par rapport aux séjours en HC avec au moins une fois le code *(calculé par nous)*  
+
+```{r base ssr mmp, echo = FALSE}
+
+refpmsi::refpmsi("base_ssr_mp") %>% dplyr::glimpse()
+
+```
+
+### Source  
+[Denombrement base nationale PMSI SSR 2019 (ATIH)](https://www.atih.sante.fr/sites/default/files/public/content/3850/denombrement_variables_ssr_19_sas.xlsx)  
+
+## Répartition du nombre de réalisations selon l'Affection Etiologique (AE)
+
+Intitulé du référentiel : **base_ssr_ae**
+
+Période : 2019  
+
+Mise à jour : 15 avril 2021    
+
+### Variables  
+
+**diag_bn_ssr_code** = code diagnostic AE codé au moins une fois nationalement  
+**diag_bn_ssr_sej_hp** = nombre de séjours en HP avec au moins une fois le code  
+**diag_bn_ssr_sej_hc** = nombre de séjours en HC avec au moins une fois le code  
+**diag_bn_ssr_ordre_hp** = ordre du code par rapport aux séjours en HP avec au moins une fois le code *(calculé par nous)*  
+**diag_bn_ssr_ordre_hc** = ordre du code par rapport aux séjours en HC avec au moins une fois le code *(calculé par nous)*  
+
+```{r base ssr ae, echo = FALSE}
+
+refpmsi::refpmsi("base_ssr_ae") %>% dplyr::glimpse()
+
+```
+
+### Source  
+[Denombrement base nationale PMSI SSR 2019 (ATIH)](https://www.atih.sante.fr/sites/default/files/public/content/3850/denombrement_variables_ssr_19_sas.xlsx)  
+
+## Répartition du nombre de réalisations selon le Diagnostic Associé (DAS)
+
+Intitulé du référentiel : **base_ssr_das**
+
+Période : 2019  
+
+Mise à jour : 15 avril 2021    
+
+### Variables  
+
+**diag_bn_ssr_code** = code diagnostic DAS codé au moins une fois nationalement  
+**diag_bn_ssr_sej_hp** = nombre de séjours en HP avec au moins une fois le code  
+**diag_bn_ssr_sej_hc** = nombre de séjours en HC avec au moins une fois le code  
+**diag_bn_ssr_ordre_hp** = ordre du code par rapport aux séjours en HP avec au moins une fois le code *(calculé par nous)*  
+**diag_bn_ssr_ordre_hc** = ordre du code par rapport aux séjours en HC avec au moins une fois le code *(calculé par nous)*  
+
+```{r base ssr das, echo = FALSE}
+
+refpmsi::refpmsi("base_ssr_das") %>% dplyr::glimpse()
+
+```
+
+### Source  
+[Denombrement base nationale PMSI SSR 2019 (ATIH)](https://www.atih.sante.fr/sites/default/files/public/content/3850/denombrement_variables_ssr_19_sas.xlsx)  
+
+## Répartition du nombre de réalisations selon le codage CSARR (CSARR)
+
+Intitulé du référentiel : **base_ssr_csarr**
+
+Période : 2019  
+
+Mise à jour : 15 avril 2021    
+
+### Variables  
+
+**csarr_bn_ssr_code** = code acte CSARR codé au moins une fois nationalement  
+**csarr_bn_ssr_sej_hp** = nombre de séjours en HP avec au moins une fois l'acte    
+**csarr_bn_ssr_sej_hc** = nombre de séjours en HC avec au moins une fois l'acte   
+**csarr_bn_ssr_ordre_hp** = ordre de l'acte par rapport aux séjours en HP avec au moins une fois l'acte *(calculé par nous)*  
+**csarr_bn_ssr_ordre_hc** = ordre de l'acte par rapport aux séjours en HC avec au moins une fois l'acte *(calculé par nous)*    
+**csarr_bn_ssr_decile_hp** = numéro du décile de l'acte par rapport à l'ordre de l'acte en HP *(calculé par nous)*    
+**csarr_bn_ssr_decile_hc** = numéro du décile de l'acte par rapport à l'ordre de l'acte en HC *(calculé par nous)*    
+
+```{r base ssr csarr, echo = FALSE}
+
+refpmsi::refpmsi("base_ssr_csarr") %>% dplyr::glimpse()
+
+```
+
+### Source  
+[Denombrement base nationale PMSI SSR 2019 (ATIH)](https://www.atih.sante.fr/sites/default/files/public/content/3850/denombrement_variables_ssr_19_sas.xlsx)  
+
+## Répartition du nombre de réalisations selon le codage CCAM (CCAM)
+
+Intitulé du référentiel : **base_ssr_ccam**
+
+Période : 2019  
+
+Mise à jour : 15 avril 2021    
+
+### Variables  
+
+**ccam_bn_ssr_code** = code acte CCAM codé au moins une fois nationalement  
+**ccam_bn_ssr_sej_hp** = nombre de séjours en HP avec au moins une fois l'acte    
+**ccam_bn_ssr_sej_hc** = nombre de séjours en HC avec au moins une fois l'acte   
+**ccam_bn_ssr_ordre_hp** = ordre de l'acte par rapport aux séjours en HP avec au moins une fois l'acte *(calculé par nous)*  
+**ccam_bn_ssr_ordre_hc** = ordre de l'acte par rapport aux séjours en HC avec au moins une fois l'acte *(calculé par nous)*    
+**ccam_bn_ssr_decile_hp** = numéro du décile de l'acte par rapport à l'ordre de l'acte en HP *(calculé par nous)*    
+**ccam_bn_ssr_decile_hc** = numéro du décile de l'acte par rapport à l'ordre de l'acte en HC *(calculé par nous)*    
+
+```{r base ssr ccam, echo = FALSE}
+
+refpmsi::refpmsi("base_ssr_ccam") %>% dplyr::glimpse()
+
+```
+
+### Source  
+[Denombrement base nationale PMSI SSR 2019 (ATIH)](https://www.atih.sante.fr/sites/default/files/public/content/3850/denombrement_variables_ssr_19_sas.xlsx)  
+

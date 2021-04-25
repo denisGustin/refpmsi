@@ -1,5 +1,5 @@
 ---
-title: "GHM, GHS, regroupements GHM, CMD, OVALIDE MCO"
+title: "Référentiels GHM"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{ghm}
@@ -15,9 +15,9 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
-library(refpmsi)
 library(dplyr)
 library(stringr)
+library(refpmsi)
 ```
 
 Le package `refpmsi` comprend 11 référentiels liés aux GHM et GHS.  
@@ -330,11 +330,9 @@ refpmsi::refpmsi("ovalide_ghminfo_oqn") %>% dplyr::glimpse()
 
 ```
 
-
 ### Sources  
 
 [OVALIDE MCO - Tables de référence 2020](https://www.atih.sante.fr/sites/default/files/public/content/3843/ovalide.zip) (ATIH) 
-
 
 ## OVALIDE - Table de référence RacineINFO_exDGF
 
@@ -361,15 +359,13 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **pctssacte** = taux de séjours de 0 jours sans acte  
 **app** = racine apparentée à la racine GHM  
 **pctapp** = pourcentage de séjours dans la racine apparentée  
-**anne__pmsi** = année PMSI de 2016 à 2020    
-
+**annee__pmsi** = année PMSI de 2016 à 2020    
 
 ```{r var ovalide_racineinfo_dgf, echo = FALSE}
 
 refpmsi::refpmsi("ovalide_racineinfo_dgf") %>% dplyr::glimpse()
 
 ```
-
 
 ### Sources  
 
@@ -412,7 +408,6 @@ refpmsi::refpmsi("ovalide_racineinfo_oqn") %>% dplyr::glimpse()
 ### Sources  
 
 [OVALIDE MCO - Tables de référence 2020](https://www.atih.sante.fr/sites/default/files/public/content/3843/ovalide.zip) (ATIH) 
-
 
 ## Exemples
 

@@ -37,15 +37,15 @@ refpmsi::refpmsi("had") %>% dplyr::glimpse()
 
 ### Source  
 
-[Guide méthodologie PMSI HAD 2020](https://www.atih.sante.fr/sites/default/files/public/content/3732/guide-methodo-had-2020_version_provisoire_2_erratum.pdf)  
+[Guide méthodologie PMSI HAD 2021](https://www.atih.sante.fr/sites/default/files/public/content/4009/guide-methodo-had-2021_version_provisoire_fevrier_vf.pdf)  
 
 ## GHT DGF
 
-Intitulé du référentiel : **ght_dgf**
+Intitulé du référentiel : **ght_dgf**  
 
 Mise à jour : 15 avril 2021.  
 
-Liste des GHT DGF avec leur tarif pour les années PMSI 2017 à 2021
+Liste des GHT DGF avec leur tarif pour les années PMSI 2017 à 2021  
 
 ### Variables  
 
@@ -85,16 +85,16 @@ Intitulé du référentiel : **me_ms_had**
 
 Mise à jour : 15 avril 2021.  
 
-Liste des codes et libellés correspondant des modes d'entrée, sortie, provenance et destination en HAD
+Liste des codes et libellés correspondant des modes d'entrée, sortie, provenance et destination en HAD  
 
 ### Variables  
 
 ```{r me_ms_had, echo = FALSE}
 
-refpmsi::refpmsi("ght_oqn") %>% dplyr::glimpse()
+refpmsi::refpmsi("me_ms_had") %>% dplyr::glimpse()
 
 ```
 
 ### Source  
 
-[Guide méthodologie PMSI HAD 2020](https://www.atih.sante.fr/sites/default/files/public/content/3732/guide-methodo-had-2020_version_provisoire_2_erratum.pdf)  
+[Guide méthodologie PMSI HAD 2021](https://www.atih.sante.fr/sites/default/files/public/content/4009/guide-methodo-had-2021_version_provisoire_fevrier_vf.pdf)  

@@ -57,13 +57,22 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="articles/base_mco.html">Base nationale MCO</a>
+    </li>
+    <li>
+      <a href="articles/base_ssr.html">Base nationale SSR</a>
+    </li>
+    <li>
       <a href="articles/cim.html">CIM-10 FR à usage PMSI</a>
+    </li>
+    <li>
+      <a href="articles/csarr.html">CSARR</a>
     </li>
     <li>
       <a href="articles/ghm.html">GHM</a>
     </li>
     <li>
-      <a href="articles/base_mco.html">Base MCO</a>
+      <a href="articles/had.html">HAD</a>
     </li>
     <li>
       <a href="articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a>
@@ -99,23 +108,37 @@
 <div id="refpmsi" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#refpmsi" class="anchor"></a>refpmsi</h1></div>
-<p>Package de référentiels PMSI : <a href="https://denisgustin.github.io/refpmsi/articles/liste_ref.html">73 référentiels disponibles</a></p>
-<p>Dernière mise à jour : 15 avril 2021</p>
-<p><a href="http://www.lespmsi.com/r-et-pmsi/">Etre tenu au courant des mises à jour et ajout de référentiels PMSI</a></p>
+<p>Package de référentiels PMSI : <a href="https://denisgustin.github.io/refpmsi/articles/liste_ref.html">72 référentiels disponibles</a></p>
+<p>Dernière mise à jour : 24 avril 2021</p>
+<p><a href="http://www.lespmsi.com/r-et-pmsi/">Etre tenu au courant des mises à jour et ajouts de référentiels PMSI</a></p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>Le téléchargement du package <code>refpmsi</code> se fait à partir de Github, à l’aide du package <code>devtools</code></p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="co"># install.packages("devtools")</span>
+<p>Le téléchargement du package <code>refpmsi</code> se fait à partir de Github.</p>
+<div class="sourceCode" id="cb1"><pre class="r"><span class="co"># 1ere solution avec le package devtools</span>
+<span class="co"># install.packages("devtools")</span>
 <span class="co"># library("devtools")</span>
-
 <span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"denisGustin/refpmsi"</span>)
+
+<span class="co"># 2eme solution avec le package remotes</span>
+<span class="co"># install.packages("remotes")</span>
+<span class="co"># library("remotes")</span>
+<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"denisGustin/refpmsi"</span>)
+
+<span class="co"># activation de refpmsi</span>
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"refpmsi"</span>)</pre></div>
 </div>
-<div id="fonctions-du-package" class="section level2">
+<div id="mise-à-jour" class="section level2">
 <h2 class="hasAnchor">
-<a href="#fonctions-du-package" class="anchor"></a>Fonctions du package</h2>
-<p><a href="https://denisgustin.github.io/refpmsi/articles/fonctions_refpmsi.html">Fonctions refpmsi</a></p>
+<a href="#mise-%C3%A0-jour" class="anchor"></a>Mise à jour</h2>
+<div class="sourceCode" id="cb2"><pre class="r"><span class="co"># 1ere étape : suppression du package refpmsi</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/remove.packages.html">remove.packages</a></span>(<span class="st">"refpmsi"</span>)
+
+<span class="co"># 2eme étape : ré-installation</span>
+<span class="co"># voir ci-dessus</span>
+
+<span class="co"># activation de refpmsi</span>
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"refpmsi"</span>)</pre></div>
 </div>
 </div>
   </div>

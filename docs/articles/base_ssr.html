@@ -57,13 +57,22 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="../articles/base_mco.html">Base nationale MCO</a>
+    </li>
+    <li>
+      <a href="../articles/base_ssr.html">Base nationale SSR</a>
+    </li>
+    <li>
       <a href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
+    </li>
+    <li>
+      <a href="../articles/csarr.html">CSARR</a>
     </li>
     <li>
       <a href="../articles/ghm.html">GHM</a>
     </li>
     <li>
-      <a href="../articles/base_mco.html">Base MCO</a>
+      <a href="../articles/had.html">HAD</a>
     </li>
     <li>
       <a href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a>
@@ -107,12 +116,147 @@
 
     
     
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">refpmsi</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>)
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Attachement du package : 'dplyr'</span>
+<span class="co">#&gt; The following objects are masked from 'package:stats':</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     filter, lag</span>
+<span class="co">#&gt; The following objects are masked from 'package:base':</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     intersect, setdiff, setequal, union</span>
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">refpmsi</span>)</pre></body></html></div>
+<div id="répartition-du-nombre-de-réalisations-selon-la-manifestation-morbide-principale-mmp" class="section level2">
+<h2 class="hasAnchor">
+<a href="#r%C3%A9partition-du-nombre-de-r%C3%A9alisations-selon-la-manifestation-morbide-principale-mmp" class="anchor"></a>Répartition du nombre de réalisations selon la Manifestation Morbide Principale (MMP)</h2>
+<p>Intitulé du référentiel : <strong>base_ssr_mp</strong></p>
+<p>Période : 2019</p>
+<p>Mise à jour : 15 avril 2021</p>
+<div id="variables" class="section level3">
+<h3 class="hasAnchor">
+<a href="#variables" class="anchor"></a>Variables</h3>
+<p><strong>diag_bn_ssr_code</strong> = code diagnostic MMP codé au moins une fois nationalement<br><strong>diag_bn_ssr_sej_hp</strong> = nombre de séjours en HP avec au moins une fois le code<br><strong>diag_bn_ssr_sej_hc</strong> = nombre de séjours en HC avec au moins une fois le code<br><strong>diag_bn_ssr_ordre_hp</strong> = ordre du code par rapport aux séjours en HP avec au moins une fois le code <em>(calculé par nous)</em><br><strong>diag_bn_ssr_ordre_hc</strong> = ordre du code par rapport aux séjours en HC avec au moins une fois le code <em>(calculé par nous)</em></p>
+<pre><code>#&gt; Rows: 7,365
+#&gt; Columns: 5
+#&gt; $ mp_bn_ssr_code     &lt;chr&gt; "A000", "A020", "A021", "A022", "A038", "A040", ...
+#&gt; $ mp_bn_ssr_sej_hp   &lt;int&gt; 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
+#&gt; $ mp_bn_ssr_sej_hc   &lt;int&gt; 2, 22, 12, 2, 1, 9, 1, 2, 33, 2, 578, 18, 5, 1, ...
+#&gt; $ mp_bn_ssr_ordre_hc &lt;int&gt; 4784, 2060, 2660, 4785, 5484, 3003, 5485, 4786, ...
+#&gt; $ mp_bn_ssr_ordre_hp &lt;int&gt; 5839, 3157, 4697, 5840, 6349, 4852, 6350, 5841, ...</code></pre>
+</div>
+<div id="source" class="section level3">
+<h3 class="hasAnchor">
+<a href="#source" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3850/denombrement_variables_ssr_19_sas.xlsx">Denombrement base nationale PMSI SSR 2019 (ATIH)</a></p>
+</div>
+</div>
+<div id="répartition-du-nombre-de-réalisations-selon-laffection-etiologique-ae" class="section level2">
+<h2 class="hasAnchor">
+<a href="#r%C3%A9partition-du-nombre-de-r%C3%A9alisations-selon-laffection-etiologique-ae" class="anchor"></a>Répartition du nombre de réalisations selon l’Affection Etiologique (AE)</h2>
+<p>Intitulé du référentiel : <strong>base_ssr_ae</strong></p>
+<p>Période : 2019</p>
+<p>Mise à jour : 15 avril 2021</p>
+<div id="variables-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#variables-1" class="anchor"></a>Variables</h3>
+<p><strong>diag_bn_ssr_code</strong> = code diagnostic AE codé au moins une fois nationalement<br><strong>diag_bn_ssr_sej_hp</strong> = nombre de séjours en HP avec au moins une fois le code<br><strong>diag_bn_ssr_sej_hc</strong> = nombre de séjours en HC avec au moins une fois le code<br><strong>diag_bn_ssr_ordre_hp</strong> = ordre du code par rapport aux séjours en HP avec au moins une fois le code <em>(calculé par nous)</em><br><strong>diag_bn_ssr_ordre_hc</strong> = ordre du code par rapport aux séjours en HC avec au moins une fois le code <em>(calculé par nous)</em></p>
+<pre><code>#&gt; Rows: 7,612
+#&gt; Columns: 5
+#&gt; $ ae_bn_ssr_code     &lt;chr&gt; "A000", "A001", "A010", "A020", "A021", "A022", ...
+#&gt; $ ae_bn_ssr_sej_hp   &lt;int&gt; 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, ...
+#&gt; $ ae_bn_ssr_sej_hc   &lt;int&gt; 1, 2, 1, 13, 7, 1, 1, 2, 0, 1, 1, 25, 4, 1, 4, 2...
+#&gt; $ ae_bn_ssr_ordre_hc &lt;int&gt; 5743, 5067, 5744, 2824, 3578, 5745, 5746, 5068, ...
+#&gt; $ ae_bn_ssr_ordre_hp &lt;int&gt; 4354, 6260, 6675, 5249, 5511, 6676, 6677, 6261, ...</code></pre>
+</div>
+<div id="source-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#source-1" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3850/denombrement_variables_ssr_19_sas.xlsx">Denombrement base nationale PMSI SSR 2019 (ATIH)</a></p>
+</div>
+</div>
+<div id="répartition-du-nombre-de-réalisations-selon-le-diagnostic-associé-das" class="section level2">
+<h2 class="hasAnchor">
+<a href="#r%C3%A9partition-du-nombre-de-r%C3%A9alisations-selon-le-diagnostic-associ%C3%A9-das" class="anchor"></a>Répartition du nombre de réalisations selon le Diagnostic Associé (DAS)</h2>
+<p>Intitulé du référentiel : <strong>base_ssr_das</strong></p>
+<p>Période : 2019</p>
+<p>Mise à jour : 15 avril 2021</p>
+<div id="variables-2" class="section level3">
+<h3 class="hasAnchor">
+<a href="#variables-2" class="anchor"></a>Variables</h3>
+<p><strong>diag_bn_ssr_code</strong> = code diagnostic DAS codé au moins une fois nationalement<br><strong>diag_bn_ssr_sej_hp</strong> = nombre de séjours en HP avec au moins une fois le code<br><strong>diag_bn_ssr_sej_hc</strong> = nombre de séjours en HC avec au moins une fois le code<br><strong>diag_bn_ssr_ordre_hp</strong> = ordre du code par rapport aux séjours en HP avec au moins une fois le code <em>(calculé par nous)</em><br><strong>diag_bn_ssr_ordre_hc</strong> = ordre du code par rapport aux séjours en HC avec au moins une fois le code <em>(calculé par nous)</em></p>
+<pre><code>#&gt; Rows: 13,489
+#&gt; Columns: 5
+#&gt; $ das_bn_code     &lt;chr&gt; "A000", "A001", "A009", "A010", "A011", "A013", "A0...
+#&gt; $ das_bn_sej_hp   &lt;int&gt; 4, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 3, 0, 1, ...
+#&gt; $ das_bn_sej_hc   &lt;int&gt; 16, 2, 1, 11, 3, 2, 1, 42, 14, 6, 6, 9, 3, 2, 126, ...
+#&gt; $ das_bn_ordre_hc &lt;int&gt; 6198, 10050, 11074, 6922, 9349, 10051, 11075, 4459,...
+#&gt; $ das_bn_ordre_hp &lt;int&gt; 5188, 8241, 11904, 7598, 10770, 11186, 8418, 9123, ...</code></pre>
+</div>
+<div id="source-2" class="section level3">
+<h3 class="hasAnchor">
+<a href="#source-2" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3850/denombrement_variables_ssr_19_sas.xlsx">Denombrement base nationale PMSI SSR 2019 (ATIH)</a></p>
+</div>
+</div>
+<div id="répartition-du-nombre-de-réalisations-selon-le-codage-csarr-csarr" class="section level2">
+<h2 class="hasAnchor">
+<a href="#r%C3%A9partition-du-nombre-de-r%C3%A9alisations-selon-le-codage-csarr-csarr" class="anchor"></a>Répartition du nombre de réalisations selon le codage CSARR (CSARR)</h2>
+<p>Intitulé du référentiel : <strong>base_ssr_csarr</strong></p>
+<p>Période : 2019</p>
+<p>Mise à jour : 15 avril 2021</p>
+<div id="variables-3" class="section level3">
+<h3 class="hasAnchor">
+<a href="#variables-3" class="anchor"></a>Variables</h3>
+<p><strong>csarr_bn_ssr_code</strong> = code acte CSARR codé au moins une fois nationalement<br><strong>csarr_bn_ssr_sej_hp</strong> = nombre de séjours en HP avec au moins une fois l’acte<br><strong>csarr_bn_ssr_sej_hc</strong> = nombre de séjours en HC avec au moins une fois l’acte<br><strong>csarr_bn_ssr_ordre_hp</strong> = ordre de l’acte par rapport aux séjours en HP avec au moins une fois l’acte <em>(calculé par nous)</em><br><strong>csarr_bn_ssr_ordre_hc</strong> = ordre de l’acte par rapport aux séjours en HC avec au moins une fois l’acte <em>(calculé par nous)</em><br><strong>csarr_bn_ssr_decile_hp</strong> = numéro du décile de l’acte par rapport à l’ordre de l’acte en HP <em>(calculé par nous)</em><br><strong>csarr_bn_ssr_decile_hc</strong> = numéro du décile de l’acte par rapport à l’ordre de l’acte en HC <em>(calculé par nous)</em></p>
+<pre><code>#&gt; Rows: 546
+#&gt; Columns: 7
+#&gt; $ csarr_bn_ssr_code      &lt;chr&gt; "AGR+047", "AGR+102", "AGR+298", "AKQ+124", ...
+#&gt; $ csarr_bn_ssr_sej_hp    &lt;int&gt; 13062, 26114, 1375, 940, 197, 187, 1270, 209...
+#&gt; $ csarr_bn_ssr_sej_hc    &lt;int&gt; 23952, 70812, 9632, 3125, 182, 341, 845, 435...
+#&gt; $ csarr_bn_ssr_ordre_hc  &lt;int&gt; 126, 42, 201, 288, 427, 407, 361, 264, 214, ...
+#&gt; $ csarr_bn_ssr_decile_hc &lt;int&gt; 3, 1, 4, 6, 8, 8, 7, 5, 4, 5, 2, 5, 4, 4, 6,...
+#&gt; $ csarr_bn_ssr_ordre_hp  &lt;int&gt; 75, 25, 268, 310, 414, 418, 280, 228, 164, 1...
+#&gt; $ csarr_bn_ssr_decile_hp &lt;int&gt; 2, 1, 5, 6, 8, 8, 6, 5, 3, 4, 2, 4, 3, 3, 6,...</code></pre>
+</div>
+<div id="source-3" class="section level3">
+<h3 class="hasAnchor">
+<a href="#source-3" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3850/denombrement_variables_ssr_19_sas.xlsx">Denombrement base nationale PMSI SSR 2019 (ATIH)</a></p>
+</div>
+</div>
+<div id="répartition-du-nombre-de-réalisations-selon-le-codage-ccam-ccam" class="section level2">
+<h2 class="hasAnchor">
+<a href="#r%C3%A9partition-du-nombre-de-r%C3%A9alisations-selon-le-codage-ccam-ccam" class="anchor"></a>Répartition du nombre de réalisations selon le codage CCAM (CCAM)</h2>
+<p>Intitulé du référentiel : <strong>base_ssr_ccam</strong></p>
+<p>Période : 2019</p>
+<p>Mise à jour : 15 avril 2021</p>
+<div id="variables-4" class="section level3">
+<h3 class="hasAnchor">
+<a href="#variables-4" class="anchor"></a>Variables</h3>
+<p><strong>ccam_bn_ssr_code</strong> = code acte CCAM codé au moins une fois nationalement<br><strong>ccam_bn_ssr_sej_hp</strong> = nombre de séjours en HP avec au moins une fois l’acte<br><strong>ccam_bn_ssr_sej_hc</strong> = nombre de séjours en HC avec au moins une fois l’acte<br><strong>ccam_bn_ssr_ordre_hp</strong> = ordre de l’acte par rapport aux séjours en HP avec au moins une fois l’acte <em>(calculé par nous)</em><br><strong>ccam_bn_ssr_ordre_hc</strong> = ordre de l’acte par rapport aux séjours en HC avec au moins une fois l’acte <em>(calculé par nous)</em><br><strong>ccam_bn_ssr_decile_hp</strong> = numéro du décile de l’acte par rapport à l’ordre de l’acte en HP <em>(calculé par nous)</em><br><strong>ccam_bn_ssr_decile_hc</strong> = numéro du décile de l’acte par rapport à l’ordre de l’acte en HC <em>(calculé par nous)</em></p>
+<pre><code>#&gt; Rows: 2,174
+#&gt; Columns: 7
+#&gt; $ ccam_bn_ssr_code      &lt;chr&gt; "AAFA001", "AAGB001", "AAJA001", "AAJH001", "...
+#&gt; $ ccam_bn_ssr_sej_hp    &lt;int&gt; 0, 0, 0, 0, 5, 1, 54, 0, 0, 0, 0, 0, 8, 0, 0,...
+#&gt; $ ccam_bn_ssr_sej_hc    &lt;int&gt; 4, 1, 1, 1, 17, 0, 2, 7, 11, 1, 6, 3, 62, 4, ...
+#&gt; $ ccam_bn_ssr_ordre_hc  &lt;int&gt; 1125, 1589, 1590, 1591, 726, 2136, 1348, 960,...
+#&gt; $ ccam_bn_ssr_decile_hc &lt;int&gt; 6, 8, 8, 8, 4, 10, 7, 5, 4, 8, 5, 6, 3, 6, 8,...
+#&gt; $ ccam_bn_ssr_ordre_hp  &lt;int&gt; 1244, 1656, 1657, 1658, 433, 770, 197, 1105, ...
+#&gt; $ ccam_bn_ssr_decile_hp &lt;int&gt; 6, 8, 8, 8, 2, 4, 1, 6, 5, 8, 6, 7, 2, 6, 8, ...</code></pre>
+</div>
+<div id="source-4" class="section level3">
+<h3 class="hasAnchor">
+<a href="#source-4" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3850/denombrement_variables_ssr_19_sas.xlsx">Denombrement base nationale PMSI SSR 2019 (ATIH)</a></p>
+</div>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 

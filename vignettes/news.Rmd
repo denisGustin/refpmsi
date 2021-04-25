@@ -14,6 +14,10 @@ knitr::opts_chunk$set(
 )
 ```
 
+### 24 avril 2021 - CCAM à usage PMSI V2 2021  
+Mise à jour des 2 référentiels **ccam_pmsi** et **ccam_icr** avec la V2 2021 de la CCAM à usage PMSI  
+Ajout de l'article [CSARR](https://denisgustin.github.io/refpmsi/articles/csarr.html) décrivant les référentiels CSARR  
+Ajout de l'article [HAD](https://denisgustin.github.io/refpmsi/articles/had.html) décrivant les référentiels HAD    
 
 ### 15 avril 2021 - Mises à jour année PMSI 2021   
 **VERSION STABLE du package**  
@@ -22,6 +26,8 @@ Ajout de l'année PMSI 2021 pour les référentiels CIM-10, CCAM, GHM, CSARR
 Ajout du référentiel **ghm_intermediaire**  
 Ajout du référentiel **csarr_hier_note**  
 Ajout du référentiel **csarr_code_note**  
+Mise à jour du référentiel **specialites_pharmaceutiques_ssr** avec la version 2021 active à partir du 1er janvier 2021  
+Ajout de l'article [Base nationale SSR](https://denisgustin.github.io/refpmsi/articles/base_ssr.html) décrivant les référentiels de dénombrement de la base nationale SSR  
 
 ### 12 décembre 2020 - Médicaments anticancéreux intra-GHS    
 Ajout du référentiel **anticancereux_intraghs** : liste des médicaments anticancéreux non-inscrits sur la liste en sus ou intra-GHS.Expérimentation article 51. Version du 9 novembre 2020    
@@ -48,7 +54,6 @@ Ajout de référentiels issus de dénombrements de la base nationale PMSI MCO 20
 
 ### 24 juillet 2020 - open CCAM 2019  
 Ajout du référentiel **open_ccam** : par acte CCAM de la base nationale PMSI MCO 2019, nombre d'actes CCAM, nombre de séjours ou séances, nombre d'actes ambulatoires, nombre de séjours 0 nuit  
-
 ### 7 juillet 2020 - Référentiels HAD  
 Ajout de référentiels PMSI HAD  
 **ght_oqn** : tarifs GHT OQN (de 2016 à 2020)  

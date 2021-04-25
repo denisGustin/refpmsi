@@ -16,23 +16,38 @@ knitr::opts_chunk$set(
 
 ```{r setup, echo = FALSE, warning = FALSE}
 library(refpmsi)
-library(DT)
+library(gt)
 ```
 
-73 référentiels  
+72 référentiels PMSI disponibles  
+  
 [Derniers référentiels ajoutés ou mis à jour](https://denisgustin.github.io/refpmsi/articles/news.html)  
 
-Dernière mise à jour : 15 avril 2021  
-  
 
 ```{r liste_refpmsi, echo = FALSE, warning = FALSE}
 
-refpmsi::liste_refpmsi() %>% 
-  DT::datatable(escape = F, rownames = F,
-                options = list(language = list(search = 'Rechercher :',
-                                           info = "Page _PAGE_ sur _PAGES_"),
-                               pageLength = 90,
-                               dom = 'ft'))
+refpmsi::liste_refpmsi() %>%
+  dplyr::mutate(refpmsi_article = ifelse(is.na(refpmsi_article),refpmsi_article,glue::glue("[{refpmsi_article}]({refpmsi_article_lien})")),
+                 refpmsi_article = purrr::map(refpmsi_article, gt::md)
+  ) %>% 
+  dplyr::select(refpmsi,refpmsi_lib,refpmsi_periode_version,refpmsi_source,refpmsi_article) %>% 
+  gt::gt(
+    rowname_col = "refpmsi"
+  ) %>% 
+  gt::cols_width(vars(refpmsi_article) ~ gt::px(100),
+                 vars(refpmsi_source) ~ gt::px(150),
+                 vars(refpmsi_periode_version) ~ gt::px(100)) %>% 
+  gt::cols_label(refpmsi_lib = "Libellé",
+                 refpmsi_source = "Source",
+                 refpmsi_article = "Article",
+                 refpmsi_periode_version = html("Période<br>Version")) %>%
+  gt::tab_stubhead(label = "Référentiels") %>% 
+  gt::fmt_missing(columns = c("refpmsi_article"),
+                  missing_text = "") %>% 
+  gt::fmt_markdown(columns = vars(refpmsi_source,refpmsi_periode_version)) %>% 
+  gt::tab_style(style = list(gt::cell_text(size = "small")),
+                locations = gt::cells_body(columns = vars(refpmsi_source,refpmsi_article))) %>% 
+  gt::cols_align(align = "left", columns = gt::everything())
 
 ```
 

@@ -57,13 +57,22 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="../articles/base_mco.html">Base nationale MCO</a>
+    </li>
+    <li>
+      <a href="../articles/base_ssr.html">Base nationale SSR</a>
+    </li>
+    <li>
       <a href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
+    </li>
+    <li>
+      <a href="../articles/csarr.html">CSARR</a>
     </li>
     <li>
       <a href="../articles/ghm.html">GHM</a>
     </li>
     <li>
-      <a href="../articles/base_mco.html">Base MCO</a>
+      <a href="../articles/had.html">HAD</a>
     </li>
     <li>
       <a href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a>
@@ -146,15 +155,16 @@
 <div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="co"># affichage de la liste documentée des référentiels du package refpmsi::</span>
 <span class="no">liste_ref</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span>()
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">liste_ref</span>)</pre></body></html></div>
-<pre><code>#&gt; # A tibble: 6 x 5
-#&gt;   refpmsi  refpmsi_lib      refpmsi_variables    refpmsi_source refpmsi_periode~
-#&gt;   &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;                &lt;chr&gt;          &lt;chr&gt;           
-#&gt; 1 antican~ "Médicaments an~ DCI, code UCD, indi~ ATIH           2020 (version 9~
-#&gt; 2 atu      "Médicament en ~ code UCD 7, code UC~ ATIH           2021 (février)  
-#&gt; 3 autoris~ "Autorisations ~ code autorisation, ~ GENRSA         M2 2021         
-#&gt; 4 autoris~ "Autorisations ~ code autorisation, ~ GENRHA         M2 2021         
-#&gt; 5 base_mc~ "Dénombrement v~ acte CCAM,phase, ac~ ATIH           2019            
-#&gt; 6 base_mc~ "Dénombrement v~ diagnostics CIM-10 ~ ATIH           2019</code></pre>
+<pre><code>#&gt; # A tibble: 6 x 6
+#&gt;   refpmsi refpmsi_lib refpmsi_source refpmsi_periode~ refpmsi_article
+#&gt;   &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;          &lt;chr&gt;            &lt;chr&gt;          
+#&gt; 1 antica~ "Médicamen~ ATIH           2020             &lt;NA&gt;           
+#&gt; 2 atu     "Médicamen~ ATIH           2021             &lt;NA&gt;           
+#&gt; 3 autori~ "Autorisat~ GENRSA         2021             &lt;NA&gt;           
+#&gt; 4 autori~ "Autorisat~ GENRHA         2021             &lt;NA&gt;           
+#&gt; 5 base_m~ "Dénombrem~ ATIH           2019             Base nationale~
+#&gt; 6 base_m~ "Dénombrem~ ATIH           2019             Base nationale~
+#&gt; # ... with 1 more variable: refpmsi_article_lien &lt;chr&gt;</code></pre>
 <p>Pour ne charger que la liste des intitulés des référentiels.</p>
 <div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="co"># affichage uniquement des intitulés des référentiels</span>
 <span class="no">liste_ref</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span>()$<span class="no">refpmsi</span>

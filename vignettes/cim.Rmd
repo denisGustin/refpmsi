@@ -19,6 +19,8 @@ library(dplyr)
 library(refpmsi)
 ```
 
+## CIM-10 FR à usage PMSI 
+
 Intitulé du référentiel : **cim**
 
 Mise à jour : 15 avril 2021  
@@ -27,7 +29,7 @@ Ce référentiel annualisé au sens PMSI (2017 à 2021) comprend 10 variables et
 
 Son chargement complet en local et/ou sa visualisation dans R Studio peuvent être longs. Il est recommandé de ne charger que la ou les années utile(s).  
   
-## Variables  
+### Variables  
 
 **cim_code** = code CIM-10  
 **cim_lib** = libellé CIM-10 long  
@@ -54,15 +56,13 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)
 **cim_categorie** = 3 premières positions du code CIM-10  
 **annee_pmsi** = année PMSI de 2017 à 2021  
 
-
 ```{r var cim10, echo = FALSE}
 
 refpmsi::refpmsi("cim") %>% dplyr::glimpse()
 
 ```
 
-
-## Sources  
+### Sources  
 
 [Nomenclature CIM-10 2021 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/14692/456) (ATIH)  
 
@@ -75,6 +75,113 @@ refpmsi::refpmsi("cim") %>% dplyr::glimpse()
 [CIM-10 FR à usage PMSI 2018 - version du 23 avril 2018](https://solidarites-sante.gouv.fr/fichiers/bos/2018/sts_20180009_0001_p000.pdf) (ATIH)
 
 [CIM-10 FR à usage PMSI 2017 - version du 30 mai 2017](http://social-sante.gouv.fr/fichiers/bos/2017/sts_20170009_0001_p000.pdf) (ATIH)
+
+
+## CIM Chapitre
+
+Intitulé du référentiel : **cim_chapitre**
+
+Mise à jour : 15 avril 2021  
+
+Le référentiel n'est pas annualisé. Il est calé sur la dernière version CIM-10 à usage PMSI (2021)  
+
+### Variables  
+
+**cim_chapitre_num** = numéros des chapitres de la CIM-10    
+**cim_chapitre_intervalle** = premier et dernier code CIM-10 de chaque chapitre de la CIM-10  
+**cim_chapitre_lib** = libellés des chapitres de la CIM-10    
+**cim_chapitre_romain** = numérotation romaine des chapitres de la CIM-10    
+**cim_chapitre_debut** = premier code CIM-10 de chaque chapitre de la CIM-10  
+**cim_chapitre_fin** = dernier code CIM-10 de chaque chapitre de la CIM-10    
+
+```{r var cim_chapitre, echo = FALSE}
+refpmsi::refpmsi("cim_chapitre") %>% dplyr::glimpse()
+```
+
+### Sources  
+
+[Nomenclature CIM-10 2021 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/14692/456) (ATIH)  
+
+[CIM-10 FR à usage PMSI 2021 - version du 12 mars 2021](https://www.atih.sante.fr/sites/default/files/public/content/3963/cim-10_2021_1.pdf) (ATIH)
+
+
+## CIM Groupe
+
+Intitulé du référentiel : **cim_groupe**
+
+Mise à jour : 15 avril 2021  
+
+Le référentiel n'est pas annualisé. Il est calé sur la dernière version CIM-10 à usage PMSI (2021)  
+
+### Variables  
+
+**cim_groupe** = premier et dernier code CIM-10 de chaque groupe de la CIM-10  
+**cim_groupe_lib** =libellés des groupes de la CIM-10  
+**cim_groupe_debut** = premier code CIM-10 de chaque groupe de la CIM-10  
+**cim_groupe_fin** = dernier code CIM-10 de chaque groupe de la CIM-10  
+**cim_chapitre** = chapitre de la CIM-10 dont dépend le groupe de la CIM-10  
+**cim_groupe_type** = type de chaque groupe  
+1 = groupe de premier niveau par rapport au chapitre    
+2 = sous-groupe par rapport à un groupe de premier niveau  
+3 = sous-groupe par rapport à un sous-groupe d'un groupe de premier niveau    
+
+```{r var cim_groupe, echo = FALSE}
+refpmsi::refpmsi("cim_groupe") %>% dplyr::glimpse()
+```
+
+### Sources  
+
+[Nomenclature CIM-10 2021 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/14692/456) (ATIH)  
+
+[CIM-10 FR à usage PMSI 2021 - version du 12 mars 2021](https://www.atih.sante.fr/sites/default/files/public/content/3963/cim-10_2021_1.pdf) (ATIH)
+
+## CIM Précarité
+
+Intitulé du référentiel : **cim_precarite**  
+
+Mise à jour : 15 avril 2021  
+
+Le référentiel n'est pas annualisé. Il est calé sur la dernière version CIM-10 à usage PMSI (2021)  
+
+### Variables  
+
+**cim_code** = code CIM-10 des codes de précarité  
+**cim_lib** = libellés des codes CIM-10 de précarité  
+
+```{r var cim_precarite, echo = FALSE}
+refpmsi::refpmsi("cim_precarite") %>% dplyr::glimpse()
+```
+
+### Source  
+
+[Guide de lecture OVALIDE MCO 2020](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_MCO_DGF_2020.pdf) (ATIH)  
+
+## CIM Polyhandicap lourd  
+
+Intitulé du référentiel : **cim_polyhandicap**  
+
+Mise à jour : 15 avril 2021  
+
+Le référentiel n'est pas annualisé. Il est calé sur la dernière version CIM-10 à usage PMSI (2021)  
+
+### Variables  
+
+**cim_code** = code CIM-10 des codes de polyhandicap lourd    
+**cim_lib** = libellés des codes CIM-10 de polyhandicap lourd  
+**cim_polyhandicap_liste** =  numéro de la liste de polyhandicap lourd à laquelle est rattaché le code  
+1 = Déficiences mentales ou psychiatriques sévères  
+2 = Troubles moteurs  
+3 = Critères de mobilité réduite  
+4 = Restrictions extrêmes de l’autonomie    
+**cim_polyhandicap_liste** = libellés des listes de polyhandicap lourd    
+
+```{r var cim_polyhandicap, echo = FALSE}
+refpmsi::refpmsi("cim_polyhandicap") %>% dplyr::glimpse()
+```
+
+### Source  
+
+[Guide de lecture OVALIDE MCO 2020](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_MCO_DGF_2020.pdf) (ATIH)  
 
 
 ## Exemples

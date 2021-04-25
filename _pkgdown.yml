@@ -11,12 +11,18 @@ navbar:
       href: articles/fonctions_refpmsi.html
     - text: Articles
       menu:
+      - text: Base nationale MCO
+        href: articles/base_mco.html
+      - text: Base nationale SSR
+        href: articles/base_ssr.html
       - text: CIM-10 FR à usage PMSI
         href: articles/cim.html
+      - text: CSARR
+        href: articles/csarr.html
       - text: GHM
         href: articles/ghm.html
-      - text: Base MCO
-        href: articles/base_mco.html
+      - text: HAD
+        href: articles/had.html
       - text: Spécialités pharmaceutiques SSR
         href: articles/specialites_pharmaceutiques_ssr.html
     - text: Code PMSI
