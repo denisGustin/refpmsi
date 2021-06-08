@@ -23,9 +23,9 @@ library(dplyr)
 
 Intitulé du référentiel : **had**
 
-Mise à jour : 15 avril 2021.  
+Mise à jour : 7 juin 2021.  
 
-Liste des codes et libellés correspondant des natures du séjour, des types de lieu de domicile et des MPC (modes de prises en charge : MPP, MPA, MPD)  
+Liste des codes et libellés des natures du séjour, des types de lieu de domicile et des MPC en 2021 (modes de prises en charge : MPP, MPA, MPD)  
 
 ### Variables  
 
@@ -39,19 +39,19 @@ refpmsi::refpmsi("had") %>% dplyr::glimpse()
 
 [Guide méthodologie PMSI HAD 2021](https://www.atih.sante.fr/sites/default/files/public/content/4009/guide-methodo-had-2021_version_provisoire_fevrier_vf.pdf)  
 
-## GHT DGF
+## GHT Public
 
-Intitulé du référentiel : **ght_dgf**  
+Intitulé du référentiel : **ght_public**  
 
-Mise à jour : 15 avril 2021.  
+Mise à jour : 7 juin 2021    
 
-Liste des GHT DGF avec leur tarif pour les années PMSI 2017 à 2021  
+Liste des GHT public avec leur tarif pour les années PMSI 2017 à 2021  
 
 ### Variables  
 
 ```{r ght_dgf, echo = FALSE}
 
-refpmsi::refpmsi("ght_dgf") %>% dplyr::glimpse()
+refpmsi::refpmsi("ght_public") %>% dplyr::glimpse()
 
 ```
 
@@ -59,19 +59,19 @@ refpmsi::refpmsi("ght_dgf") %>% dplyr::glimpse()
 
 [Tarifs HAD (ATIH)](https://www.atih.sante.fr/tarifs-mco-et-had)  
 
-## GHT OQN
+## GHT Privé
 
-Intitulé du référentiel : **ght_oqn**
+Intitulé du référentiel : **ght_prive**
 
-Mise à jour : 15 avril 2021.  
+Mise à jour : 7 juin 2021  
 
-Liste des GHT OQN avec leur tarif pour les années PMSI 2017 à 2021
+Liste des GHT privé avec leur tarif pour les années PMSI 2017 à 2021
 
 ### Variables  
 
 ```{r ght_oqn, echo = FALSE}
 
-refpmsi::refpmsi("ght_oqn") %>% dplyr::glimpse()
+refpmsi::refpmsi("ght_prive") %>% dplyr::glimpse()
 
 ```
 
@@ -85,7 +85,7 @@ Intitulé du référentiel : **me_ms_had**
 
 Mise à jour : 15 avril 2021.  
 
-Liste des codes et libellés correspondant des modes d'entrée, sortie, provenance et destination en HAD  
+Liste des codes et libellés des modes d'entrée, sortie, provenance et destination en HAD en 2021  
 
 ### Variables  
 

@@ -14,10 +14,16 @@ knitr::opts_chunk$set(
 )
 ```
 
+### 7 juin 2021 - Divers  
+Ajout de l'année 2021 pour les référentiels **csarr_incompatibilite_intervenant**, **ghm_regroupement**, **rghm_regroupement**, **ovalide_racineinfo_dgf**, **ovalide_racineinfo_oqn**, **ovalide_ghminfo_dgf**, **ovalide_ghminfo_oqn**, **ovalide_ccaminfo**, **ovalide_diaginfo**  
+Mise à jour référentiels **atu** et **spe_pharma_ssr**  
+Renommage des référentiels **ght_dgf**, **gme_dgf**, **ghs_dgf** et **supp_mco_dgf** en **ght_public**, **gme_public**, **ghs_public** et **supp_mco_public**  
+Renommage des référentiels **ght_oqn**, **gme_oqn**, **ghs_oqn** et **supp_mco_oqn** en **ght_prive**, **gme_prive**, **ghs_prive** et **supp_mco_prive**  
+
 ### 24 avril 2021 - CCAM à usage PMSI V2 2021  
 Mise à jour des 2 référentiels **ccam_pmsi** et **ccam_icr** avec la V2 2021 de la CCAM à usage PMSI  
 Ajout de l'article [CSARR](https://denisgustin.github.io/refpmsi/articles/csarr.html) décrivant les référentiels CSARR  
-Ajout de l'article [HAD](https://denisgustin.github.io/refpmsi/articles/had.html) décrivant les référentiels HAD    
+Nouvel article [HAD](https://denisgustin.github.io/refpmsi/articles/had.html) décrivant les référentiels HAD    
 
 ### 15 avril 2021 - Mises à jour année PMSI 2021   
 **VERSION STABLE du package**  

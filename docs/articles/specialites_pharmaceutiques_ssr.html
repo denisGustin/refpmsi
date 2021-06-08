@@ -117,27 +117,27 @@
     
     
 <p>Intitulé du référentiel : <strong>spe_pharma_ssr</strong></p>
-<p>Mise à jour : 15 avril 2021</p>
+<p>Mise à jour : 7 juin 2021</p>
 <p>Le référentiel comprend les spécialités pharmaceutiques SSR des 3 versions diffusées à ce jour :<br>
 Version 2017 active du 2 janvier 2017 au 31 mai 2020<br>
 Version 2020 active à partir du 1er juin 2020<br>
-Version 2021 active à partir du 1er janvier 2021</p>
+Version 2021 active à partir du 1er janvier 2021 (avec <a href="https://www.atih.sante.fr/specialites-pharmaceutiques-en-ssr-2021">rectificatif ATIH du 7 mai 2021</a>)</p>
 <div id="variables-du-référentiel" class="section level2">
 <h2 class="hasAnchor">
 <a href="#variables-du-r%C3%A9f%C3%A9rentiel" class="anchor"></a>Variables du référentiel</h2>
 <p><strong>ucd_ssr_7</strong> = code UCD sur 7 positions<br><strong>ucd_ssr_13</strong> = code UCD sur 13 positions<br><strong>ucd_ssr_lib</strong> = libellé de l’UCD<br><strong>dci</strong> = dénomination commune internationale de l’UCD<br><strong>annee</strong> = année correspondant à la version (2017, 2020, 2021)</p>
-<pre><code>#&gt; Rows: 1,876
+<pre><code>#&gt; Rows: 1,884
 #&gt; Columns: 5
-#&gt; $ ucd_ssr_7   &lt;chr&gt; "9406583", "9406608", "9343339", "9309294", "9309302", ...
-#&gt; $ ucd_ssr_13  &lt;chr&gt; "3400894065838", "3400894066088", "3400893433393", "340...
-#&gt; $ ucd_ssr_lib &lt;chr&gt; "ACCOFIL 30 MUI/0,5 ML SOL INJ SER", "ACCOFIL 48 MUI/0,...
-#&gt; $ dci         &lt;chr&gt; "FILGRASTIM", "FILGRASTIM", "ALTEPLASE", "TACROLIMUS", ...
+#&gt; $ ucd_ssr_7   &lt;chr&gt; "9000368", "9000369", "9000370", "9059207", "9106993", ...
+#&gt; $ ucd_ssr_13  &lt;chr&gt; "3400890003681", "3400890003698", "3400890003704", "340...
+#&gt; $ ucd_ssr_lib &lt;chr&gt; "ERLOTINIB KRK 100MG CPR", "ERLOTINIB KRK 150MG CPR", "...
+#&gt; $ dci         &lt;chr&gt; "ERLOTINIB", "ERLOTINIB", "ERLOTINIB", "DESMOPRESSINE A...
 #&gt; $ annee       &lt;chr&gt; "2021", "2021", "2021", "2021", "2021", "2021", "2021",...</code></pre>
 </div>
 <div id="sources" class="section level2">
 <h2 class="hasAnchor">
 <a href="#sources" class="anchor"></a>Sources</h2>
-<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4053/med_ssr_2021.xlsx">“Spécialités pharmaceutiques SSR” Version 2021</a><br><a href="https://www.atih.sante.fr/sites/default/files/public/content/2420/liste_mo_ssr_juin_2020_v2.xlsx">“Spécialités pharmaceutiques SSR” Version 2020</a><br><a href="https://www.atih.sante.fr/sites/default/files/public/content/2420/mo_ssr_maj_20171102_pf2tr_envoi_atih_20171107_v3_voriconazole.xlsx">“Spécialités pharmaceutiques SSR” version 2017</a></p>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4053/med_ssr_2021_v1_rectificatif_1.xlsx">“Spécialités pharmaceutiques SSR” Version 2021</a><br><a href="https://www.atih.sante.fr/sites/default/files/public/content/2420/liste_mo_ssr_juin_2020_v2.xlsx">“Spécialités pharmaceutiques SSR” Version 2020</a><br><a href="https://www.atih.sante.fr/sites/default/files/public/content/2420/mo_ssr_maj_20171102_pf2tr_envoi_atih_20171107_v3_voriconazole.xlsx">“Spécialités pharmaceutiques SSR” version 2017</a></p>
 </div>
 <div id="exemples" class="section level2">
 <h2 class="hasAnchor">
@@ -205,12 +205,12 @@ Version 2021 active à partir du 1er janvier 2021</p>
 #&gt; # A tibble: 6 x 2
 #&gt;   ucd_ssr_7 annee
 #&gt;   &lt;chr&gt;     &lt;chr&gt;
-#&gt; 1 9309294   2021 
-#&gt; 2 9309302   2021 
-#&gt; 3 9333192   2021 
-#&gt; 4 9309319   2021 
-#&gt; 5 9426485   2021 
-#&gt; 6 9177208   2021</code></pre>
+#&gt; 1 9000368   2021 
+#&gt; 2 9000369   2021 
+#&gt; 3 9000370   2021 
+#&gt; 4 9059207   2021 
+#&gt; 5 9128813   2021 
+#&gt; 6 9171312   2021</code></pre>
 </div>
 <div id="case-mix-en-dci" class="section level3">
 <h3 class="hasAnchor">

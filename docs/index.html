@@ -109,23 +109,24 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#refpmsi" class="anchor"></a>refpmsi</h1></div>
 <p>Package de référentiels PMSI : <a href="https://denisgustin.github.io/refpmsi/articles/liste_ref.html">72 référentiels disponibles</a></p>
-<p>Dernière mise à jour : 24 avril 2021</p>
+<p>Dernière mise à jour : 7 juin 2021</p>
 <p><a href="http://www.lespmsi.com/r-et-pmsi/">Etre tenu au courant des mises à jour et ajouts de référentiels PMSI</a></p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>Le téléchargement du package <code>refpmsi</code> se fait à partir de Github.</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="co"># 1ere solution avec le package devtools</span>
-<span class="co"># install.packages("devtools")</span>
-<span class="co"># library("devtools")</span>
-<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"denisGustin/refpmsi"</span>)
-
-<span class="co"># 2eme solution avec le package remotes</span>
+<div class="sourceCode" id="cb1"><pre class="r"><span class="co"># 1ere solution avec le package remotes::</span>
 <span class="co"># install.packages("remotes")</span>
 <span class="co"># library("remotes")</span>
 <span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"denisGustin/refpmsi"</span>)
 
-<span class="co"># activation de refpmsi</span>
+<span class="co"># 2eme solution avec le package devtools::</span>
+<span class="co"># install.packages("devtools")</span>
+<span class="co"># library("devtools")</span>
+<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"denisGustin/refpmsi"</span>)
+<span class="co"># Risque d'erreur si RTools (https://cran.r-project.org/bin/windows/Rtools/) n'est pas installé</span>
+
+<span class="co"># activation du package refpmsi::</span>
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"refpmsi"</span>)</pre></div>
 </div>
 <div id="mise-à-jour" class="section level2">
@@ -135,7 +136,7 @@
 <span class="fu"><a href="https://rdrr.io/r/utils/remove.packages.html">remove.packages</a></span>(<span class="st">"refpmsi"</span>)
 
 <span class="co"># 2eme étape : ré-installation</span>
-<span class="co"># voir ci-dessus</span>
+<span class="co"># voir ci-dessus "installation"</span>
 
 <span class="co"># activation de refpmsi</span>
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"refpmsi"</span>)</pre></div>

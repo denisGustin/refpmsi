@@ -26,7 +26,7 @@ Le package `refpmsi` comprend 11 référentiels liés aux GHM et GHS.
 
 Intitulé du référentiel : **cmd**  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 7 juin 2021  
 
 Référentiel des libellés des CMD (Catégories Majeures de Diagnostics).    
 Le référentiel n'est pas annualisé car la liste des CMD est la même pour les années 2017à 2021.  
@@ -43,17 +43,17 @@ refpmsi::refpmsi("cmd") %>% dplyr::glimpse()
 
 [Manuel de groupage GHM 2021 - Volume 1](https://www.atih.sante.fr/sites/default/files/public/content/4018/volume_1.pdf) (ATIH)
 
-## GHS DGF
+## GHS Public
 
-Intitulé du référentiel : **ghs_dgf**
+Intitulé du référentiel : **ghs_public**
 
-Mise à jour : 15 avril 2021.  
+Mise à jour : 7 juin 2021  
 
-Référentiel des GHS et GHM du secteur ex-DGF.  
+Référentiel des GHS et GHM du secteur public (ex-DGF).  
 
 Référentiel annualisé au sens du PMSI MCO.  
 
-Il est recommandé de ne charger que les années PMSI utiles.  
+Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
 ### Variables  
 
@@ -71,37 +71,30 @@ Il est recommandé de ne charger que les années PMSI utiles.
 1 = GHS plein  
 2 = GHS intermédiaire  
 NA = ghs non concerné  
-Depuis 2020  
 
 ```{r var ghm dgf, echo = FALSE}
-
-refpmsi::refpmsi("ghs_dgf") %>% dplyr::glimpse()
-
+refpmsi::refpmsi("ghs_public") %>% dplyr::glimpse()
 ```
 
 ### Sources  
 
-[Arrêté tarifaire MCO 2021](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043306334) (Ministère de la Santé - Arrêté 2021)  
-
+[Arrêté tarifaire MCO 2021](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043306334) (Ministère de la Santé - Arrêté 2021)    
 [Arrêté tarifaire MCO 2020](https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000041663256) (Ministère de la Santé - Arrêté 2020)  
-
 [Arrêté tarifaire MCO 2019](https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000038219729) (Ministère de la Santé - Arrêté 2019)  
-
 [Arrêté tarifaire MCO 2018](https://www.legifrance.gouv.fr/eli/arrete/2018/2/28/SSAH1805897A/jo/texte) (Ministère de la Santé - Arrêté 2018)  
-
 [Arrêté tarifaire MCO 2017](https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=B80622FC6B829BA7FBA321AF0AB77CAE.tpdila08v_2?cidTexte=JORFTEXT000034203360&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000034203183) (Ministère de la Santé - Arrêté 2017)  
 
-## GHS OQN
+## GHS Privé
 
-Intitulé du référentiel : **ghs_oqn**
+Intitulé du référentiel : **ghs_prive**
 
-Mise à jour : 15 avril 2021.  
+Mise à jour : 7 juin 2021  
 
-Référentiel des GHS et GHM du secteur ex-OQN.  
+Référentiel des GHS et GHM du secteur privé (ex-OQN).  
 
 Référentiel annualisé au sens du PMSI MCO.  
 
-Il est recommandé de ne charger que les années PMSI utiles.  
+Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
 ### Variables  
 
@@ -119,25 +112,17 @@ Il est recommandé de ne charger que les années PMSI utiles.
 1 = GHS plein  
 2 = GHS intermédiaire  
 NA = ghs non concerné  
-Depuis 2020  
 
 ```{r var ghm oqn, echo = FALSE}
-
-refpmsi::refpmsi("ghs_oqn") %>% dplyr::glimpse()
-
+refpmsi::refpmsi("ghs_prive") %>% dplyr::glimpse()
 ```
-
 
 ### Sources  
 
 [Arrêté tarifaire MCO 2021](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043306334) (Ministère de la Santé - Arrêté 2021)  
-
 [Arrêté tarifaire MCO 2020](https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000041663256) (Ministère de la Santé - Arrêté 2020)  
-
 [Arrêté tarifaire MCO 2019](https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000038219729) (Ministère de la Santé - Arrêté 2019)  
-
 [Arrêté tarifaire MCO 2018](https://www.legifrance.gouv.fr/eli/arrete/2018/2/28/SSAH1805897A/jo/texte) (Ministère de la Santé - Arrêté 2018)  
-
 [Arrêté tarifaire MCO 2017](https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=B80622FC6B829BA7FBA321AF0AB77CAE.tpdila08v_2?cidTexte=JORFTEXT000034203360&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000034203183) (Ministère de la Santé - Arrêté 2017)  
 
 ## GHM intermédiaire  
@@ -162,13 +147,13 @@ refpmsi::refpmsi("ghm_intermediaire") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ghm_regroupement**
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 7 juin 2021  
 
 Référentiel des regroupements des GHM en DA (Domaine d'Activité), GA (Groupe d'Activité) et GP (Groupe de Planification).  
 
 Référentiel annualisé au sens du PMSI MCO.  
 
-Il est recommandé de ne charger que les années PMSI utiles.  
+Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
 ### Variables  
 
@@ -183,24 +168,21 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **ga_lib** = libellé du GA  
 **da_gp** = concaténation des codes DA et GP du GHM  
 **da_gp_ga** = concaténation des codes DA, GP et GA du GHM  
-**annee_pmsi** = année PMSI de 2016 à 2020  
-
+**annee_pmsi** = année PMSI de 2017 à 2021  
 
 ```{r var ghm_regroupement, echo = FALSE}
-
 refpmsi::refpmsi("ghm_regroupement") %>% dplyr::glimpse()
-
 ```
 
-### Sources  
+### Source  
 
-[Regroupements des GHM 2020](https://www.atih.sante.fr/sites/default/files/public/content/3854/regroupement_ghm_v2020_0.xlsx) (ATIH)  
+[Regroupements des GHM 2021](https://www.atih.sante.fr/sites/default/files/public/content/4071/regroupement_ghm_v2021.xlsx) (ATIH)  
 
 ## Libellés des regroupements GHM
 
 Intitulé du référentiel : **ghm_regroupement_lib**
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 7 juin 2021  
 
 Libellés des DA (Domaine d'Activité), GA (Groupe d'Activité) et GP (Groupe de Planification).  
 
@@ -213,27 +195,25 @@ Le référentiel n'est pas annualisé. Il comprend tous les DA, GA et GP depuis 
 **ghm_regroupement_lib** = libellé du code regroupement  
 
 ```{r var ghm_regroupement_lib, echo = FALSE}
-
 refpmsi::refpmsi("ghm_regroupement_lib") %>% dplyr::glimpse()
-
 ```
 
-### Sources  
+### Source  
 
-[Regroupements des GHM 2020](https://www.atih.sante.fr/sites/default/files/public/content/3854/regroupement_ghm_v2020_0.xlsx) (ATIH) 
+[Regroupements des GHM 2021](https://www.atih.sante.fr/sites/default/files/public/content/4071/regroupement_ghm_v2021.xlsx) (ATIH) 
 
 
 ## Regroupements des racines de GHM
 
 Intitulé du référentiel : **rghm_regroupement**
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 7 juin 2021  
 
 Référentiel des regroupements des racines de GHM en DA (Domaine d'Activité), GA (Groupe d'Activité) et GP (Groupe de Planification).  
 
-Référentiel, annualisé au sens du PMSI MCO.  
+Référentiel annualisé au sens du PMSI MCO.  
 
-Il est recommandé de ne charger que les années PMSI utiles.  
+Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
 
 ### Variables  
 
@@ -248,30 +228,27 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **ga_lib** = libellé du GA  
 **da_gp** = concaténation des codes DA et GP de la racine GHM  
 **da_gp_ga** = concaténation des codes DA, GP et GA de la racine GHM    
-**annee_pmsi** = année PMSI de 2017 à 2020  
-
+**annee_pmsi** = année PMSI de 2017 à 2021  
 
 ```{r var rghm_regroupement, echo = FALSE}
-
 refpmsi::refpmsi("rghm_regroupement") %>% dplyr::glimpse()
-
 ```
 
-### Sources  
+### Source  
 
-[Regroupements des racines de GHM 2020](https://www.atih.sante.fr/sites/default/files/public/content/3854/regroupement_racinesghm_v2020_0.xlsx) (ATIH) 
+[Regroupements des racines de GHM 2021](https://www.atih.sante.fr/sites/default/files/public/content/4071/regroupement_racinesghm_v2021.xlsx) (ATIH) 
 
 ## OVALIDE - Table de référence GHMINFO_exDGF
 
 Intitulé du référentiel : **ovalide_ghminfo_dgf**
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 7 juin 2021  
 
 Informations issues de la table GHMINFO_exDGF OVALIDE MCO. Les informations redondantes avec d'autres référentiels de `refpmsi::` ne sont pas reprises (exemples : cma, bb, bh, ...)
 
 Référentiel, annualisé au sens du PMSI MCO.  
 
-Il est recommandé de ne charger que les années PMSI utiles.  
+Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
 ### Variables  
 
@@ -285,30 +262,27 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **pctpvalo** = taux de séjours aux GHS plus élevés  
 **pctcma4** = pourcentage de séjours de niveau 4 par sous-cmd (sous-cmd = 3 premières positions des GHM)  
 **pctautres** = pourcentage de séjours avec un DA autres (.8)  
-**annee_pmsi** = année PMSI de 2017 à 2020  
+**annee_pmsi** = année PMSI de 2017 à 2021  
 
 ```{r var ovalide_ghminfo_dgf, echo = FALSE}
-
 refpmsi::refpmsi("ovalide_ghminfo_dgf") %>% dplyr::glimpse()
-
 ```
 
-### Sources  
+### Source  
 
-[OVALIDE MCO - Tables de référence 2020](https://www.atih.sante.fr/sites/default/files/public/content/3843/ovalide.zip) (ATIH) 
-
+[OVALIDE MCO - Tables de référence 2021](https://www.atih.sante.fr/sites/default/files/public/content/4082/ovalide_0.zip) (ATIH) 
 
 ## OVALIDE - Table de référence GHMINFO_exOQN
 
 Intitulé du référentiel : **ovalide_ghminfo_oqn**
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 7 juin 2021  
 
 Informations issues de la table OVALIDE MCO, GHMINFO_exOQN. Les informations redondantes avec d'autres référentiels de `refpmsi::` ne sont pas reprises (exemples : cma, bb, bh, ...)
 
 Référentiel annualisé au sens du PMSI MCO.  
 
-Il est recommandé de ne charger que les années PMSI utiles.  
+Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
 ### Variables  
 
@@ -322,29 +296,27 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **pctpvalo** = taux de séjours aux GHS plus élevés  
 **pctcma4** = pourcentage de séjours de niveau 4 par sous-cmd (sous-cmd = 3 premières positions des GHM)  
 **pctautres** = pourcentage de séjours avec un DA autres (.8)  
-**annee_pmsi** = année PMSI de 2017 à 2020  
+**annee_pmsi** = année PMSI de 2017 à 2021  
 
 ```{r var ovalide_ghminfo_oqn, echo = FALSE}
-
 refpmsi::refpmsi("ovalide_ghminfo_oqn") %>% dplyr::glimpse()
-
 ```
 
-### Sources  
+### Source  
 
-[OVALIDE MCO - Tables de référence 2020](https://www.atih.sante.fr/sites/default/files/public/content/3843/ovalide.zip) (ATIH) 
+[OVALIDE MCO - Tables de référence 2021](https://www.atih.sante.fr/sites/default/files/public/content/4082/ovalide_0.zip) (ATIH) 
 
 ## OVALIDE - Table de référence RacineINFO_exDGF
 
 Intitulé du référentiel : **ovalide_racineinfo_dgf**
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 7 juin 2021  
 
 Informations issues de la table OVALIDE MCO, RacineINFO_exDGF.  
 
 Référentiel annualisé au sens du PMSI MCO.  
 
-Il est recommandé de ne charger que les années PMSI utiles.  
+Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
 ### Variables  
 
@@ -359,30 +331,27 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **pctssacte** = taux de séjours de 0 jours sans acte  
 **app** = racine apparentée à la racine GHM  
 **pctapp** = pourcentage de séjours dans la racine apparentée  
-**annee__pmsi** = année PMSI de 2016 à 2020    
+**annee__pmsi** = année PMSI de 2017 à 2021    
 
 ```{r var ovalide_racineinfo_dgf, echo = FALSE}
-
 refpmsi::refpmsi("ovalide_racineinfo_dgf") %>% dplyr::glimpse()
-
 ```
 
-### Sources  
+### Source  
 
-[OVALIDE MCO - Tables de référence 2020](https://www.atih.sante.fr/sites/default/files/public/content/3843/ovalide.zip) (ATIH) 
-
+[OVALIDE MCO - Tables de référence 2021](https://www.atih.sante.fr/sites/default/files/public/content/4082/ovalide_0.zip) (ATIH) 
 
 ## OVALIDE - Table de référence RacineINFO_exOQN  
 
 Intitulé du référentiel : **ovalide_racineinfo_oqn**
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 7 juin 2021  
 
 Informations issues de la table OVALIDE MCO, RacineINFO_exOQN. 
 
 Référentiel annualisé au sens du PMSI MCO.  
 
-Il est recommandé de ne charger que les années PMSI utiles.  
+Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
 ### Variables du référentiel  
 
@@ -397,30 +366,28 @@ Il est recommandé de ne charger que les années PMSI utiles.
 **pctssacte** = taux de séjours de 0 jours sans acte  
 **app** = racine apparentée à la racine GHM  
 **pctapp** = pourcentage de séjours dans la racine apparentée  
-**annee_pmsi** = année PMSI de 2017 à 2020    
+**annee_pmsi** = année PMSI de 2017 à 2021    
 
 ```{r var ovalide_racineinfo_oqn, echo = FALSE}
-
 refpmsi::refpmsi("ovalide_racineinfo_oqn") %>% dplyr::glimpse()
-
 ```
 
-### Sources  
+### Source  
 
-[OVALIDE MCO - Tables de référence 2020](https://www.atih.sante.fr/sites/default/files/public/content/3843/ovalide.zip) (ATIH) 
+[OVALIDE MCO - Tables de référence 2021](https://www.atih.sante.fr/sites/default/files/public/content/4082/ovalide_0.zip) (ATIH) 
 
 ## Exemples
 
-### Chargement du référentiel des GHS DGF des années 2020 et 2021  
+### Chargement du référentiel des GHS Public des années 2020 et 2021  
 
 ```{r ghs_chargement, eval = FALSE}
-# Chargement du référentiel des GHS-GHM DGF des années 2020 et 2021
-ghs_2020_2021 <- refpmsi::refpmsi("ghs_dgf",2020:2021)
+# Chargement du référentiel des GHS-GHM Public des années 2020 et 2021
+ghs_2020_2021 <- refpmsi::refpmsi("ghs_public",2020:2021)
 ghs_2020_2021
 ```
 
 ```{r ghs_chargement_affichage, echo = FALSE}
-ghs_2020_2021 <- refpmsi::refpmsi("ghs_dgf",2020:2021)
+ghs_2020_2021 <- refpmsi::refpmsi("ghs_public",2020:2021)
 ghs_2020_2021
 ```
 
@@ -447,13 +414,12 @@ jeu_ghm <- tibble::tibble(no_rum = c(rep(1L,10L),1,2,1,2,3,1,1),
                                         "2019","2019","2020","2019",
                                       "2020","2019","2019","2020","2020","2020","2020","2020"))
 jeu_ghm
-
 ```
 
 
 ```{r ghm_association_libelle, eval = FALSE}
-# chargement des GHM DGF 2019 et 2020
-ghm_2019_2020 <- refpmsi::refpmsi("ghs_dgf",2019:2020)
+# chargement des GHM Public 2019 et 2020
+ghm_2019_2020 <- refpmsi::refpmsi("ghs_public",2019:2020)
 
 jeu_ghm_libelle <- jeu_ghm %>% 
   # rattachement des libellés aux GHM via la jointure (ghs, annee_pmsi)
@@ -466,7 +432,7 @@ jeu_ghm_libelle
 
 
 ```{r ghm_association_libelle_eval, echo = FALSE}
-ghm_2019_2020 <- refpmsi::refpmsi("ghs_dgf",2019:2020)
+ghm_2019_2020 <- refpmsi::refpmsi("ghs_public",2019:2020)
 
 jeu_ghm_libelle <- jeu_ghm %>% 
   dplyr::left_join(ghm_2019_2020 %>% 
@@ -524,9 +490,7 @@ sej_2.5_dms <- jeu_ghm_dms %>%
 sej_2.5_dms %>% print(width = Inf)
 ```
 
-
 ### Case mix en DA (Domaine d'Activité) des séjours  
-
 
 ```{r case_mix_da, eval = FALSE}
 case_mix_da <- jeu_ghm %>% 
@@ -572,7 +536,6 @@ sej_ghm_gradation_ambulatoire <- jeu_ghm %>%
   dplyr::filter(!is.na(ghs_plein))
 sej_ghm_gradation_ambulatoire
 ```
-
 
 ```{r ghm_gradation_eval, echo = FALSE}
 sej_ghm_gradation_ambulatoire <- jeu_ghm %>% 

@@ -121,7 +121,7 @@
 <h2 class="hasAnchor">
 <a href="#cmd" class="anchor"></a>CMD</h2>
 <p>Intitulé du référentiel : <strong>cmd</strong></p>
-<p>Mise à jour : 15 avril 2021</p>
+<p>Mise à jour : 7 juin 2021</p>
 <p>Référentiel des libellés des CMD (Catégories Majeures de Diagnostics).<br>
 Le référentiel n’est pas annualisé car la liste des CMD est la même pour les années 2017à 2021.</p>
 <div id="variables" class="section level3">
@@ -138,22 +138,21 @@ Le référentiel n’est pas annualisé car la liste des CMD est la même pour l
 <p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4018/volume_1.pdf">Manuel de groupage GHM 2021 - Volume 1</a> (ATIH)</p>
 </div>
 </div>
-<div id="ghs-dgf" class="section level2">
+<div id="ghs-public" class="section level2">
 <h2 class="hasAnchor">
-<a href="#ghs-dgf" class="anchor"></a>GHS DGF</h2>
-<p>Intitulé du référentiel : <strong>ghs_dgf</strong></p>
-<p>Mise à jour : 15 avril 2021.</p>
-<p>Référentiel des GHS et GHM du secteur ex-DGF.</p>
+<a href="#ghs-public" class="anchor"></a>GHS Public</h2>
+<p>Intitulé du référentiel : <strong>ghs_public</strong></p>
+<p>Mise à jour : 7 juin 2021</p>
+<p>Référentiel des GHS et GHM du secteur public (ex-DGF).</p>
 <p>Référentiel annualisé au sens du PMSI MCO.</p>
-<p>Il est recommandé de ne charger que les années PMSI utiles.</p>
+<p>Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).</p>
 <div id="variables-1" class="section level3">
 <h3 class="hasAnchor">
 <a href="#variables-1" class="anchor"></a>Variables</h3>
 <p><strong>ghs</strong> = code GHS<br><strong>ghm</strong> = code GHM<br><strong>ghm_lib</strong> = libellé du GHM<br><strong>ghm_bb</strong> = borne basse du GHM<br><strong>ghm_bh</strong> = borne haute du GHM<br><strong>ghs_tarif</strong> = tarif du GHS<br><strong>ghs_forfait_exb</strong> = forfait EXB <em>(variable utilisée jusqu’en 2016)</em><br><strong>ghs_exb</strong> = tarif journalier EXB (EXtrême Bas)<br><strong>ghs_exh</strong> = tarif journalier EXH (EXtrême Haut)<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2021<br><strong>ghs_intermediaire</strong> =<br>
 1 = GHS plein<br>
 2 = GHS intermédiaire<br>
-NA = ghs non concerné<br>
-Depuis 2020</p>
+NA = ghs non concerné</p>
 <pre><code>#&gt; Rows: 14,694
 #&gt; Columns: 11
 #&gt; $ ghs               &lt;chr&gt; "22", "23", "24", "25", "26", "27", "28", "29", "...
@@ -171,29 +170,24 @@ Depuis 2020</p>
 <div id="sources" class="section level3">
 <h3 class="hasAnchor">
 <a href="#sources" class="anchor"></a>Sources</h3>
-<p><a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043306334">Arrêté tarifaire MCO 2021</a> (Ministère de la Santé - Arrêté 2021)</p>
-<p><a href="https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000041663256">Arrêté tarifaire MCO 2020</a> (Ministère de la Santé - Arrêté 2020)</p>
-<p><a href="https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000038219729">Arrêté tarifaire MCO 2019</a> (Ministère de la Santé - Arrêté 2019)</p>
-<p><a href="https://www.legifrance.gouv.fr/eli/arrete/2018/2/28/SSAH1805897A/jo/texte">Arrêté tarifaire MCO 2018</a> (Ministère de la Santé - Arrêté 2018)</p>
-<p><a href="https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=B80622FC6B829BA7FBA321AF0AB77CAE.tpdila08v_2?cidTexte=JORFTEXT000034203360&amp;dateTexte=&amp;oldAction=rechJO&amp;categorieLien=id&amp;idJO=JORFCONT000034203183">Arrêté tarifaire MCO 2017</a> (Ministère de la Santé - Arrêté 2017)</p>
+<p><a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043306334">Arrêté tarifaire MCO 2021</a> (Ministère de la Santé - Arrêté 2021)<br><a href="https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000041663256">Arrêté tarifaire MCO 2020</a> (Ministère de la Santé - Arrêté 2020)<br><a href="https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000038219729">Arrêté tarifaire MCO 2019</a> (Ministère de la Santé - Arrêté 2019)<br><a href="https://www.legifrance.gouv.fr/eli/arrete/2018/2/28/SSAH1805897A/jo/texte">Arrêté tarifaire MCO 2018</a> (Ministère de la Santé - Arrêté 2018)<br><a href="https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=B80622FC6B829BA7FBA321AF0AB77CAE.tpdila08v_2?cidTexte=JORFTEXT000034203360&amp;dateTexte=&amp;oldAction=rechJO&amp;categorieLien=id&amp;idJO=JORFCONT000034203183">Arrêté tarifaire MCO 2017</a> (Ministère de la Santé - Arrêté 2017)</p>
 </div>
 </div>
-<div id="ghs-oqn" class="section level2">
+<div id="ghs-privé" class="section level2">
 <h2 class="hasAnchor">
-<a href="#ghs-oqn" class="anchor"></a>GHS OQN</h2>
-<p>Intitulé du référentiel : <strong>ghs_oqn</strong></p>
-<p>Mise à jour : 15 avril 2021.</p>
-<p>Référentiel des GHS et GHM du secteur ex-OQN.</p>
+<a href="#ghs-priv%C3%A9" class="anchor"></a>GHS Privé</h2>
+<p>Intitulé du référentiel : <strong>ghs_prive</strong></p>
+<p>Mise à jour : 7 juin 2021</p>
+<p>Référentiel des GHS et GHM du secteur privé (ex-OQN).</p>
 <p>Référentiel annualisé au sens du PMSI MCO.</p>
-<p>Il est recommandé de ne charger que les années PMSI utiles.</p>
+<p>Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).</p>
 <div id="variables-2" class="section level3">
 <h3 class="hasAnchor">
 <a href="#variables-2" class="anchor"></a>Variables</h3>
 <p><strong>ghs</strong> = code GHS<br><strong>ghm</strong> = code GHM<br><strong>ghm_lib</strong> = libellé du GHM<br><strong>ghm_bb</strong> = borne basse du GHM<br><strong>ghm_bh</strong> = borne haute du GHM<br><strong>ghs_tarif</strong> = tarif du GHS<br><strong>ghs_forfait_exb</strong> = forfait EXB <em>(variable utilisée jusqu’en 2016)</em><br><strong>ghs_exb</strong> = tarif journalier EXB (EXtrême Bas)<br><strong>ghs_exh</strong> = tarif journalier EXH (EXtrême Haut)<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2021<br><strong>ghs_intermediaire</strong> =<br>
 1 = GHS plein<br>
 2 = GHS intermédiaire<br>
-NA = ghs non concerné<br>
-Depuis 2020</p>
+NA = ghs non concerné</p>
 <pre><code>#&gt; Rows: 14,386
 #&gt; Columns: 11
 #&gt; $ ghs               &lt;chr&gt; "22", "23", "24", "25", "26", "27", "28", "29", "...
@@ -211,11 +205,7 @@ Depuis 2020</p>
 <div id="sources-1" class="section level3">
 <h3 class="hasAnchor">
 <a href="#sources-1" class="anchor"></a>Sources</h3>
-<p><a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043306334">Arrêté tarifaire MCO 2021</a> (Ministère de la Santé - Arrêté 2021)</p>
-<p><a href="https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000041663256">Arrêté tarifaire MCO 2020</a> (Ministère de la Santé - Arrêté 2020)</p>
-<p><a href="https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000038219729">Arrêté tarifaire MCO 2019</a> (Ministère de la Santé - Arrêté 2019)</p>
-<p><a href="https://www.legifrance.gouv.fr/eli/arrete/2018/2/28/SSAH1805897A/jo/texte">Arrêté tarifaire MCO 2018</a> (Ministère de la Santé - Arrêté 2018)</p>
-<p><a href="https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=B80622FC6B829BA7FBA321AF0AB77CAE.tpdila08v_2?cidTexte=JORFTEXT000034203360&amp;dateTexte=&amp;oldAction=rechJO&amp;categorieLien=id&amp;idJO=JORFCONT000034203183">Arrêté tarifaire MCO 2017</a> (Ministère de la Santé - Arrêté 2017)</p>
+<p><a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043306334">Arrêté tarifaire MCO 2021</a> (Ministère de la Santé - Arrêté 2021)<br><a href="https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000041663256">Arrêté tarifaire MCO 2020</a> (Ministère de la Santé - Arrêté 2020)<br><a href="https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000038219729">Arrêté tarifaire MCO 2019</a> (Ministère de la Santé - Arrêté 2019)<br><a href="https://www.legifrance.gouv.fr/eli/arrete/2018/2/28/SSAH1805897A/jo/texte">Arrêté tarifaire MCO 2018</a> (Ministère de la Santé - Arrêté 2018)<br><a href="https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=B80622FC6B829BA7FBA321AF0AB77CAE.tpdila08v_2?cidTexte=JORFTEXT000034203360&amp;dateTexte=&amp;oldAction=rechJO&amp;categorieLien=id&amp;idJO=JORFCONT000034203183">Arrêté tarifaire MCO 2017</a> (Ministère de la Santé - Arrêté 2017)</p>
 </div>
 </div>
 <div id="ghm-intermédiaire" class="section level2">
@@ -240,15 +230,15 @@ Depuis 2020</p>
 <h2 class="hasAnchor">
 <a href="#regroupements-ghm" class="anchor"></a>Regroupements GHM</h2>
 <p>Intitulé du référentiel : <strong>ghm_regroupement</strong></p>
-<p>Mise à jour : 15 avril 2021</p>
+<p>Mise à jour : 7 juin 2021</p>
 <p>Référentiel des regroupements des GHM en DA (Domaine d’Activité), GA (Groupe d’Activité) et GP (Groupe de Planification).</p>
 <p>Référentiel annualisé au sens du PMSI MCO.</p>
-<p>Il est recommandé de ne charger que les années PMSI utiles.</p>
+<p>Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).</p>
 <div id="variables-4" class="section level3">
 <h3 class="hasAnchor">
 <a href="#variables-4" class="anchor"></a>Variables</h3>
-<p><strong>ghm</strong> = code GHM<br><strong>ghm_lib</strong> = libellé du GHM<br><strong>aso</strong> = code ASO du GHM (Activité de SOins)<br><strong>da</strong> = code DA du GHM<br><strong>da_lib</strong> = libellé du DA<br><strong>gp</strong> = code GP du GHM<br><strong>gp_lib</strong> = libellé du GP<br><strong>ga</strong> = code GA du GHM<br><strong>ga_lib</strong> = libellé du GA<br><strong>da_gp</strong> = concaténation des codes DA et GP du GHM<br><strong>da_gp_ga</strong> = concaténation des codes DA, GP et GA du GHM<br><strong>annee_pmsi</strong> = année PMSI de 2016 à 2020</p>
-<pre><code>#&gt; Rows: 10,372
+<p><strong>ghm</strong> = code GHM<br><strong>ghm_lib</strong> = libellé du GHM<br><strong>aso</strong> = code ASO du GHM (Activité de SOins)<br><strong>da</strong> = code DA du GHM<br><strong>da_lib</strong> = libellé du DA<br><strong>gp</strong> = code GP du GHM<br><strong>gp_lib</strong> = libellé du GP<br><strong>ga</strong> = code GA du GHM<br><strong>ga_lib</strong> = libellé du GA<br><strong>da_gp</strong> = concaténation des codes DA et GP du GHM<br><strong>da_gp_ga</strong> = concaténation des codes DA, GP et GA du GHM<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2021</p>
+<pre><code>#&gt; Rows: 12,965
 #&gt; Columns: 12
 #&gt; $ ghm        &lt;chr&gt; "01C031", "01C032", "01C033", "01C034", "01C041", "01C04...
 #&gt; $ ghm_lib    &lt;chr&gt; "Craniotomies pour traumatisme, âge supérieur à 17 ans, ...
@@ -261,19 +251,19 @@ Depuis 2020</p>
 #&gt; $ ga_lib     &lt;chr&gt; "Chirurgies SNC trauma", "Chirurgies SNC trauma", "Chiru...
 #&gt; $ da_gp      &lt;chr&gt; "D05C02", "D05C02", "D05C02", "D05C02", "D05C02", "D05C0...
 #&gt; $ da_gp_ga   &lt;chr&gt; "D05C02G043", "D05C02G043", "D05C02G043", "D05C02G043", ...
-#&gt; $ annee_pmsi &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", "2020", "2020", ...</code></pre>
+#&gt; $ annee_pmsi &lt;chr&gt; "2021", "2021", "2021", "2021", "2021", "2021", "2021", ...</code></pre>
 </div>
-<div id="sources-2" class="section level3">
+<div id="source-1" class="section level3">
 <h3 class="hasAnchor">
-<a href="#sources-2" class="anchor"></a>Sources</h3>
-<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3854/regroupement_ghm_v2020_0.xlsx">Regroupements des GHM 2020</a> (ATIH)</p>
+<a href="#source-1" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4071/regroupement_ghm_v2021.xlsx">Regroupements des GHM 2021</a> (ATIH)</p>
 </div>
 </div>
 <div id="libellés-des-regroupements-ghm" class="section level2">
 <h2 class="hasAnchor">
 <a href="#libell%C3%A9s-des-regroupements-ghm" class="anchor"></a>Libellés des regroupements GHM</h2>
 <p>Intitulé du référentiel : <strong>ghm_regroupement_lib</strong></p>
-<p>Mise à jour : 15 avril 2021</p>
+<p>Mise à jour : 7 juin 2021</p>
 <p>Libellés des DA (Domaine d’Activité), GA (Groupe d’Activité) et GP (Groupe de Planification).</p>
 <p>Le référentiel n’est pas annualisé. Il comprend tous les DA, GA et GP depuis 2017.</p>
 <div id="variables-5" class="section level3">
@@ -286,25 +276,25 @@ Depuis 2020</p>
 #&gt; $ ghm_regroupement_code &lt;chr&gt; "D01", "D02", "D03", "D04", "D05", "D06", "D0...
 #&gt; $ ghm_regroupement_lib  &lt;chr&gt; "Digestif", "Orthopédie traumatologie", "Trau...</code></pre>
 </div>
-<div id="sources-3" class="section level3">
+<div id="source-2" class="section level3">
 <h3 class="hasAnchor">
-<a href="#sources-3" class="anchor"></a>Sources</h3>
-<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3854/regroupement_ghm_v2020_0.xlsx">Regroupements des GHM 2020</a> (ATIH)</p>
+<a href="#source-2" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4071/regroupement_ghm_v2021.xlsx">Regroupements des GHM 2021</a> (ATIH)</p>
 </div>
 </div>
 <div id="regroupements-des-racines-de-ghm" class="section level2">
 <h2 class="hasAnchor">
 <a href="#regroupements-des-racines-de-ghm" class="anchor"></a>Regroupements des racines de GHM</h2>
 <p>Intitulé du référentiel : <strong>rghm_regroupement</strong></p>
-<p>Mise à jour : 15 avril 2021</p>
+<p>Mise à jour : 7 juin 2021</p>
 <p>Référentiel des regroupements des racines de GHM en DA (Domaine d’Activité), GA (Groupe d’Activité) et GP (Groupe de Planification).</p>
-<p>Référentiel, annualisé au sens du PMSI MCO.</p>
-<p>Il est recommandé de ne charger que les années PMSI utiles.</p>
+<p>Référentiel annualisé au sens du PMSI MCO.</p>
+<p>Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).</p>
 <div id="variables-6" class="section level3">
 <h3 class="hasAnchor">
 <a href="#variables-6" class="anchor"></a>Variables</h3>
-<p><strong>rghm</strong> = code racine GHM<br><strong>rghm_lib</strong> = libellé de la racine GHM<br><strong>aso</strong> = code ASO de la racine GHM (Activité de SOins)<br><strong>da</strong> = code DA de la racine GHM<br><strong>da_lib</strong> = libellé du DA<br><strong>gp</strong> = code GP de la racine GHM<br><strong>gp_lib</strong> = libellé du GP<br><strong>ga</strong> = code GA de la racine GHM<br><strong>ga_lib</strong> = libellé du GA<br><strong>da_gp</strong> = concaténation des codes DA et GP de la racine GHM<br><strong>da_gp_ga</strong> = concaténation des codes DA, GP et GA de la racine GHM<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2020</p>
-<pre><code>#&gt; Rows: 2,672
+<p><strong>rghm</strong> = code racine GHM<br><strong>rghm_lib</strong> = libellé de la racine GHM<br><strong>aso</strong> = code ASO de la racine GHM (Activité de SOins)<br><strong>da</strong> = code DA de la racine GHM<br><strong>da_lib</strong> = libellé du DA<br><strong>gp</strong> = code GP de la racine GHM<br><strong>gp_lib</strong> = libellé du GP<br><strong>ga</strong> = code GA de la racine GHM<br><strong>ga_lib</strong> = libellé du GA<br><strong>da_gp</strong> = concaténation des codes DA et GP de la racine GHM<br><strong>da_gp_ga</strong> = concaténation des codes DA, GP et GA de la racine GHM<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2021</p>
+<pre><code>#&gt; Rows: 3,340
 #&gt; Columns: 12
 #&gt; $ rghm       &lt;chr&gt; "01C03", "01C04", "01C05", "01C06", "01C08", "01C09", "0...
 #&gt; $ rghm_lib   &lt;chr&gt; "Craniotomies pour traumatisme, âge supérieur à 17 ans",...
@@ -317,153 +307,153 @@ Depuis 2020</p>
 #&gt; $ ga_lib     &lt;chr&gt; "Chirurgies SNC trauma", "Chirurgies SNC hors trauma (ra...
 #&gt; $ da_gp      &lt;chr&gt; "D05C02", "D05C02", "D05C02", "D07C14", "D26C25", "D05C0...
 #&gt; $ da_gp_ga   &lt;chr&gt; "D05C02G043", "D05C02G044", "D05C02G041", "D07C14G074", ...
-#&gt; $ annee_pmsi &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", "2020", "2020", ...</code></pre>
+#&gt; $ annee_pmsi &lt;chr&gt; "2021", "2021", "2021", "2021", "2021", "2021", "2021", ...</code></pre>
 </div>
-<div id="sources-4" class="section level3">
+<div id="source-3" class="section level3">
 <h3 class="hasAnchor">
-<a href="#sources-4" class="anchor"></a>Sources</h3>
-<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3854/regroupement_racinesghm_v2020_0.xlsx">Regroupements des racines de GHM 2020</a> (ATIH)</p>
+<a href="#source-3" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4071/regroupement_racinesghm_v2021.xlsx">Regroupements des racines de GHM 2021</a> (ATIH)</p>
 </div>
 </div>
 <div id="ovalide---table-de-référence-ghminfo_exdgf" class="section level2">
 <h2 class="hasAnchor">
 <a href="#ovalide---table-de-r%C3%A9f%C3%A9rence-ghminfo_exdgf" class="anchor"></a>OVALIDE - Table de référence GHMINFO_exDGF</h2>
 <p>Intitulé du référentiel : <strong>ovalide_ghminfo_dgf</strong></p>
-<p>Mise à jour : 15 avril 2021</p>
+<p>Mise à jour : 7 juin 2021</p>
 <p>Informations issues de la table GHMINFO_exDGF OVALIDE MCO. Les informations redondantes avec d’autres référentiels de <code>refpmsi::</code> ne sont pas reprises (exemples : cma, bb, bh, …)</p>
 <p>Référentiel, annualisé au sens du PMSI MCO.</p>
-<p>Il est recommandé de ne charger que les années PMSI utiles.</p>
+<p>Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).</p>
 <div id="variables-7" class="section level3">
 <h3 class="hasAnchor">
 <a href="#variables-7" class="anchor"></a>Variables</h3>
-<p><strong>ghm</strong> = code GHM<br><strong>tghm</strong> = type du GHM (C : chirurgical; M : médical; X : autre)<br><strong>dms</strong> = durée moyenne de séjour nationale<br><strong>pctdc</strong> = taux de décès national<br><strong>mage</strong> = age moyen<br><strong>pctcourt</strong> = pourcentage de séjours courts (parmi les séjours de durée &gt; 1 jour). Durée d’un séjour court = borne basse ou borne basse +1<br><strong>pvalo</strong> = code GHS du GHS le plus valorisé dans les GHM multi-GHS<br><strong>pctpvalo</strong> = taux de séjours aux GHS plus élevés<br><strong>pctcma4</strong> = pourcentage de séjours de niveau 4 par sous-cmd (sous-cmd = 3 premières positions des GHM)<br><strong>pctautres</strong> = pourcentage de séjours avec un DA autres (.8)<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2020</p>
-<pre><code>#&gt; Rows: 10,373
+<p><strong>ghm</strong> = code GHM<br><strong>tghm</strong> = type du GHM (C : chirurgical; M : médical; X : autre)<br><strong>dms</strong> = durée moyenne de séjour nationale<br><strong>pctdc</strong> = taux de décès national<br><strong>mage</strong> = age moyen<br><strong>pctcourt</strong> = pourcentage de séjours courts (parmi les séjours de durée &gt; 1 jour). Durée d’un séjour court = borne basse ou borne basse +1<br><strong>pvalo</strong> = code GHS du GHS le plus valorisé dans les GHM multi-GHS<br><strong>pctpvalo</strong> = taux de séjours aux GHS plus élevés<br><strong>pctcma4</strong> = pourcentage de séjours de niveau 4 par sous-cmd (sous-cmd = 3 premières positions des GHM)<br><strong>pctautres</strong> = pourcentage de séjours avec un DA autres (.8)<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2021</p>
+<pre><code>#&gt; Rows: 12,966
 #&gt; Columns: 11
 #&gt; $ ghm        &lt;chr&gt; "01C031", "01C032", "01C033", "01C034", "01C041", "01C04...
 #&gt; $ tghm       &lt;chr&gt; "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "...
-#&gt; $ dms        &lt;dbl&gt; 4.0950, 7.5497, 13.6334, 35.1220, 4.9626, 8.0330, 14.232...
-#&gt; $ pctdc      &lt;dbl&gt; 0.1070, 0.0411, 0.0719, 0.2398, 0.0347, 0.0163, 0.0467, ...
-#&gt; $ mage       &lt;dbl&gt; 58.2884, 67.8103, 69.6763, 58.5514, 56.4499, 57.6994, 61...
-#&gt; $ pctcourt   &lt;dbl&gt; 0.0000, 0.0000, 0.0000, 0.0406, 0.0000, 0.0000, 0.0000, ...
-#&gt; $ pctcma4    &lt;dbl&gt; 0.1241, 0.1241, 0.1241, 0.1241, 0.1241, 0.1241, 0.1241, ...
-#&gt; $ pctautres  &lt;dbl&gt; 0.1874, 0.1874, 0.1874, 0.1874, 0.1874, 0.1874, 0.1874, ...
-#&gt; $ annee_pmsi &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", "2020", "2020", ...
-#&gt; $ pvalo      &lt;chr&gt; NA, NA, NA, NA, "0065", "0066", "0067", "0068", NA, NA, ...
-#&gt; $ pctpvalo   &lt;dbl&gt; NA, NA, NA, NA, 0.0002, 0.0155, 0.0014, 0.0005, NA, NA, ...</code></pre>
+#&gt; $ dms        &lt;dbl&gt; 3.6912, 6.8735, 13.2672, 35.5264, 4.6837, 7.8226, 13.566...
+#&gt; $ pctdc      &lt;dbl&gt; 0.1425, 0.0435, 0.0602, 0.2040, 0.0301, 0.0206, 0.0425, ...
+#&gt; $ mage       &lt;dbl&gt; 61.2807, 67.4427, 69.5910, 57.0818, 57.0284, 57.5378, 61...
+#&gt; $ pctcourt   &lt;dbl&gt; 0.0000, 0.0000, 0.0000, 0.0405, 0.0000, 0.0000, 0.0000, ...
+#&gt; $ pvalo      &lt;chr&gt; "22", "23", "24", "25", "65", "66", "67", "68", "30", "3...
+#&gt; $ pctpvalo   &lt;dbl&gt; 0.9986, 1.0000, 1.0000, 1.0000, 0.0002, 0.0148, 0.0004, ...
+#&gt; $ pctcma4    &lt;dbl&gt; 0.1289, 0.1289, 0.1289, 0.1289, 0.1289, 0.1289, 0.1289, ...
+#&gt; $ pctautres  &lt;dbl&gt; 0.194, 0.194, 0.194, 0.194, 0.194, 0.194, 0.194, 0.194, ...
+#&gt; $ annee_pmsi &lt;chr&gt; "2021", "2021", "2021", "2021", "2021", "2021", "2021", ...</code></pre>
 </div>
-<div id="sources-5" class="section level3">
+<div id="source-4" class="section level3">
 <h3 class="hasAnchor">
-<a href="#sources-5" class="anchor"></a>Sources</h3>
-<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3843/ovalide.zip">OVALIDE MCO - Tables de référence 2020</a> (ATIH)</p>
+<a href="#source-4" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4082/ovalide_0.zip">OVALIDE MCO - Tables de référence 2021</a> (ATIH)</p>
 </div>
 </div>
 <div id="ovalide---table-de-référence-ghminfo_exoqn" class="section level2">
 <h2 class="hasAnchor">
 <a href="#ovalide---table-de-r%C3%A9f%C3%A9rence-ghminfo_exoqn" class="anchor"></a>OVALIDE - Table de référence GHMINFO_exOQN</h2>
 <p>Intitulé du référentiel : <strong>ovalide_ghminfo_oqn</strong></p>
-<p>Mise à jour : 15 avril 2021</p>
+<p>Mise à jour : 7 juin 2021</p>
 <p>Informations issues de la table OVALIDE MCO, GHMINFO_exOQN. Les informations redondantes avec d’autres référentiels de <code>refpmsi::</code> ne sont pas reprises (exemples : cma, bb, bh, …)</p>
 <p>Référentiel annualisé au sens du PMSI MCO.</p>
-<p>Il est recommandé de ne charger que les années PMSI utiles.</p>
+<p>Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).</p>
 <div id="variables-8" class="section level3">
 <h3 class="hasAnchor">
 <a href="#variables-8" class="anchor"></a>Variables</h3>
-<p><strong>ghm</strong> = code GHM<br><strong>tghm</strong> = type du GHM (C : chirurgical; M : médical; X : autre)<br><strong>dms</strong> = durée moyenne de séjour nationale<br><strong>pctdc</strong> = taux de décès national<br><strong>mage</strong> = age moyen<br><strong>pctcourt</strong> = pourcentage de séjours courts (parmi les séjours de durée &gt; 1 jour). Durée d’un séjour court = borne basse ou borne basse +1<br><strong>pvalo</strong> = code GHS du GHS le plus valorisé dans les GHM multi-GHS<br><strong>pctpvalo</strong> = taux de séjours aux GHS plus élevés<br><strong>pctcma4</strong> = pourcentage de séjours de niveau 4 par sous-cmd (sous-cmd = 3 premières positions des GHM)<br><strong>pctautres</strong> = pourcentage de séjours avec un DA autres (.8)<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2020</p>
-<pre><code>#&gt; Rows: 10,373
+<p><strong>ghm</strong> = code GHM<br><strong>tghm</strong> = type du GHM (C : chirurgical; M : médical; X : autre)<br><strong>dms</strong> = durée moyenne de séjour nationale<br><strong>pctdc</strong> = taux de décès national<br><strong>mage</strong> = age moyen<br><strong>pctcourt</strong> = pourcentage de séjours courts (parmi les séjours de durée &gt; 1 jour). Durée d’un séjour court = borne basse ou borne basse +1<br><strong>pvalo</strong> = code GHS du GHS le plus valorisé dans les GHM multi-GHS<br><strong>pctpvalo</strong> = taux de séjours aux GHS plus élevés<br><strong>pctcma4</strong> = pourcentage de séjours de niveau 4 par sous-cmd (sous-cmd = 3 premières positions des GHM)<br><strong>pctautres</strong> = pourcentage de séjours avec un DA autres (.8)<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2021</p>
+<pre><code>#&gt; Rows: 12,966
 #&gt; Columns: 11
 #&gt; $ ghm        &lt;chr&gt; "01C031", "01C032", "01C033", "01C034", "01C041", "01C04...
 #&gt; $ tghm       &lt;chr&gt; "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "...
-#&gt; $ dms        &lt;dbl&gt; 5.9074, 8.7108, 16.1935, 43.5667, 6.6178, 10.1143, 15.81...
-#&gt; $ pctdc      &lt;dbl&gt; 0.0556, 0.0357, 0.1290, 0.3000, 0.0028, 0.0077, 0.0588, ...
-#&gt; $ mage       &lt;dbl&gt; 70.1296, 74.0000, 71.6452, 73.7000, 60.9251, 64.8764, 64...
-#&gt; $ pctcourt   &lt;dbl&gt; 0.0000, 0.0000, 0.0000, 0.0785, 0.0000, 0.0000, 0.0000, ...
-#&gt; $ pctcma4    &lt;dbl&gt; 0.0202, 0.0202, 0.0202, 0.0202, 0.0202, 0.0202, 0.0202, ...
-#&gt; $ pctautres  &lt;dbl&gt; 0.216, 0.216, 0.216, 0.216, 0.216, 0.216, 0.216, 0.216, ...
-#&gt; $ annee_pmsi &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", "2020", "2020", ...
-#&gt; $ pvalo      &lt;chr&gt; NA, NA, NA, NA, "0065", "0066", "0067", "0068", NA, NA, ...
-#&gt; $ pctpvalo   &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ...</code></pre>
+#&gt; $ dms        &lt;dbl&gt; 4.0857, 9.6825, 17.0426, 30.5143, 5.4904, 9.0899, 16.203...
+#&gt; $ pctdc      &lt;dbl&gt; 0.1389, 0.0159, 0.0851, 0.3889, 0.0035, 0.0042, 0.1168, ...
+#&gt; $ mage       &lt;dbl&gt; 64.6111, 73.5714, 74.8085, 64.2222, 60.4197, 63.7473, 64...
+#&gt; $ pctcourt   &lt;dbl&gt; 0.0000, 0.0000, 0.0000, 0.0558, 0.0000, 0.0000, 0.0000, ...
+#&gt; $ pvalo      &lt;chr&gt; "22", "23", "24", "25", "65", "66", "67", "68", "30", "3...
+#&gt; $ pctpvalo   &lt;dbl&gt; 1.0000, 1.0000, 1.0000, 1.0000, NA, NA, NA, NA, 1.0000, ...
+#&gt; $ pctcma4    &lt;dbl&gt; 0.0194, 0.0194, 0.0194, 0.0194, 0.0194, 0.0194, 0.0194, ...
+#&gt; $ pctautres  &lt;dbl&gt; 0.2208, 0.2208, 0.2208, 0.2208, 0.2208, 0.2208, 0.2208, ...
+#&gt; $ annee_pmsi &lt;chr&gt; "2021", "2021", "2021", "2021", "2021", "2021", "2021", ...</code></pre>
 </div>
-<div id="sources-6" class="section level3">
+<div id="source-5" class="section level3">
 <h3 class="hasAnchor">
-<a href="#sources-6" class="anchor"></a>Sources</h3>
-<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3843/ovalide.zip">OVALIDE MCO - Tables de référence 2020</a> (ATIH)</p>
+<a href="#source-5" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4082/ovalide_0.zip">OVALIDE MCO - Tables de référence 2021</a> (ATIH)</p>
 </div>
 </div>
 <div id="ovalide---table-de-référence-racineinfo_exdgf" class="section level2">
 <h2 class="hasAnchor">
 <a href="#ovalide---table-de-r%C3%A9f%C3%A9rence-racineinfo_exdgf" class="anchor"></a>OVALIDE - Table de référence RacineINFO_exDGF</h2>
 <p>Intitulé du référentiel : <strong>ovalide_racineinfo_dgf</strong></p>
-<p>Mise à jour : 15 avril 2021</p>
+<p>Mise à jour : 7 juin 2021</p>
 <p>Informations issues de la table OVALIDE MCO, RacineINFO_exDGF.</p>
 <p>Référentiel annualisé au sens du PMSI MCO.</p>
-<p>Il est recommandé de ne charger que les années PMSI utiles.</p>
+<p>Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).</p>
 <div id="variables-9" class="section level3">
 <h3 class="hasAnchor">
 <a href="#variables-9" class="anchor"></a>Variables</h3>
 <p><strong>racine</strong> = code racine GHM<br><strong>pctdc</strong> = taux de décès national<br><strong>conf</strong> = confirmation de codage nécessaire pour la racine GHM (1 : OUI ; 0 : NON)<br><strong>age2</strong> = effet de l’âge pour les moins de 2 ans (1 : OUI ; 0 : NON)<br><strong>age69</strong> = effet de l’âge pour les plus de 69 / 79 ans (1-3 : OUI pour les plus de 69 ans ; 2-4-6 : OUI pour les plus de 79 ans ; 0 : NON)<br><strong>pctcma2</strong> = pourcentage de séjours de niveau 2 dans la racine GHM<br><strong>pctcma3</strong> = pourcentage de séjours de niveau 2 dans la racine GHM<br><strong>pctexb</strong> = pourcentage de séjours en dessous de la borne basse<br><strong>pctssacte</strong> = taux de séjours de 0 jours sans acte<br><strong>app</strong> = racine apparentée à la racine GHM<br><strong>pctapp</strong> = pourcentage de séjours dans la racine apparentée<br>
-**annee__pmsi** = année PMSI de 2016 à 2020</p>
-<pre><code>#&gt; Rows: 2,669
+**annee__pmsi** = année PMSI de 2017 à 2021</p>
+<pre><code>#&gt; Rows: 3,334
 #&gt; Columns: 12
 #&gt; $ rghm       &lt;chr&gt; "01C03", "01C04", "01C05", "01C06", "01C08", "01C09", "0...
-#&gt; $ pctdc      &lt;dbl&gt; 0.1028, 0.0545, 0.0142, 0.0061, 0.0097, 0.0021, NA, 0.02...
+#&gt; $ pctdc      &lt;dbl&gt; 0.0902, 0.0553, 0.0142, 0.0041, 0.0094, 0.0033, NA, 0.01...
 #&gt; $ conf       &lt;int&gt; 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 3, 3,...
 #&gt; $ age2       &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
 #&gt; $ age69      &lt;int&gt; 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 2, 3, 3,...
-#&gt; $ pctcma2    &lt;dbl&gt; 0.7029, 0.6007, 0.4338, 0.4046, 0.2300, 0.1958, 0.1396, ...
-#&gt; $ pctcma3    &lt;dbl&gt; 0.3712, 0.2775, 0.2127, 0.1052, 0.0830, 0.0389, 0.0078, ...
-#&gt; $ pctexb     &lt;dbl&gt; 0.0172, 0.0181, 0.0133, 0.0015, 0.0042, 0.0000, 0.0000, ...
+#&gt; $ pctcma2    &lt;dbl&gt; 0.7045, 0.5849, 0.4327, 0.3957, 0.2571, 0.1636, 0.1168, ...
+#&gt; $ pctcma3    &lt;dbl&gt; 0.3545, 0.2731, 0.2142, 0.0986, 0.0956, 0.0293, 0.0071, ...
+#&gt; $ pctexb     &lt;dbl&gt; 0.0203, 0.0210, 0.0137, 0.0016, 0.0055, 0.0000, 0.0000, ...
 #&gt; $ pctssacte  &lt;dbl&gt; 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, ...
-#&gt; $ annee_pmsi &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", "2020", "2020", ...
+#&gt; $ annee_pmsi &lt;chr&gt; "2021", "2021", "2021", "2021", "2021", "2021", "2021", ...
 #&gt; $ app        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, "XXXXX", "01C11", NA, NA, "0...
-#&gt; $ pctapp     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, 0.3326, NA, NA, NA, NA, NA, ...</code></pre>
+#&gt; $ pctapp     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, 0.3568, NA, NA, NA, NA, NA, ...</code></pre>
 </div>
-<div id="sources-7" class="section level3">
+<div id="source-6" class="section level3">
 <h3 class="hasAnchor">
-<a href="#sources-7" class="anchor"></a>Sources</h3>
-<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3843/ovalide.zip">OVALIDE MCO - Tables de référence 2020</a> (ATIH)</p>
+<a href="#source-6" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4082/ovalide_0.zip">OVALIDE MCO - Tables de référence 2021</a> (ATIH)</p>
 </div>
 </div>
 <div id="ovalide---table-de-référence-racineinfo_exoqn" class="section level2">
 <h2 class="hasAnchor">
 <a href="#ovalide---table-de-r%C3%A9f%C3%A9rence-racineinfo_exoqn" class="anchor"></a>OVALIDE - Table de référence RacineINFO_exOQN</h2>
 <p>Intitulé du référentiel : <strong>ovalide_racineinfo_oqn</strong></p>
-<p>Mise à jour : 15 avril 2021</p>
+<p>Mise à jour : 7 juin 2021</p>
 <p>Informations issues de la table OVALIDE MCO, RacineINFO_exOQN.</p>
 <p>Référentiel annualisé au sens du PMSI MCO.</p>
-<p>Il est recommandé de ne charger que les années PMSI utiles.</p>
+<p>Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).</p>
 <div id="variables-du-référentiel" class="section level3">
 <h3 class="hasAnchor">
 <a href="#variables-du-r%C3%A9f%C3%A9rentiel" class="anchor"></a>Variables du référentiel</h3>
-<p><strong>racine</strong> = code racine GHM<br><strong>pctdc</strong> = taux de décès national<br><strong>conf</strong> = confirmation de codage nécessaire pour la racine GHM (1 : OUI ; 0 : NON)<br><strong>age2</strong> = effet de l’âge pour les moins de 2 ans (1 : OUI ; 0 : NON)<br><strong>age69</strong> = effet de l’âge pour les plus de 69 / 79 ans (1-3 : OUI pour les plus de 69 ans ; 2-4-6 : OUI pour les plus de 79 ans ; 0 : NON)<br><strong>pctcma2</strong> = pourcentage de séjours de niveau 2 dans la racine GHM<br><strong>pctcma3</strong> = pourcentage de séjours de niveau 2 dans la racine GHM<br><strong>pctexb</strong> = pourcentage de séjours en dessous de la borne basse<br><strong>pctssacte</strong> = taux de séjours de 0 jours sans acte<br><strong>app</strong> = racine apparentée à la racine GHM<br><strong>pctapp</strong> = pourcentage de séjours dans la racine apparentée<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2020</p>
-<pre><code>#&gt; Rows: 2,641
+<p><strong>racine</strong> = code racine GHM<br><strong>pctdc</strong> = taux de décès national<br><strong>conf</strong> = confirmation de codage nécessaire pour la racine GHM (1 : OUI ; 0 : NON)<br><strong>age2</strong> = effet de l’âge pour les moins de 2 ans (1 : OUI ; 0 : NON)<br><strong>age69</strong> = effet de l’âge pour les plus de 69 / 79 ans (1-3 : OUI pour les plus de 69 ans ; 2-4-6 : OUI pour les plus de 79 ans ; 0 : NON)<br><strong>pctcma2</strong> = pourcentage de séjours de niveau 2 dans la racine GHM<br><strong>pctcma3</strong> = pourcentage de séjours de niveau 2 dans la racine GHM<br><strong>pctexb</strong> = pourcentage de séjours en dessous de la borne basse<br><strong>pctssacte</strong> = taux de séjours de 0 jours sans acte<br><strong>app</strong> = racine apparentée à la racine GHM<br><strong>pctapp</strong> = pourcentage de séjours dans la racine apparentée<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2021</p>
+<pre><code>#&gt; Rows: 3,276
 #&gt; Columns: 12
 #&gt; $ rghm       &lt;chr&gt; "01C03", "01C04", "01C05", "01C06", "01C08", "01C09", "0...
-#&gt; $ pctdc      &lt;dbl&gt; 0.0969, 0.0243, 0.0041, 0.0038, 0.0011, NA, NA, NA, NA, ...
-#&gt; $ conf       &lt;int&gt; 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 3, 3,...
+#&gt; $ pctdc      &lt;dbl&gt; 0.1250, 0.0296, 0.0042, 0.0031, 0.0064, NA, 0.0016, NA, ...
+#&gt; $ conf       &lt;int&gt; 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 3, 3, 0,...
 #&gt; $ age2       &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
-#&gt; $ age69      &lt;int&gt; 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 2, 3, 3,...
-#&gt; $ pctcma2    &lt;dbl&gt; 0.5814, 0.4241, 0.2305, 0.2750, 0.1250, 0.0000, 0.0459, ...
-#&gt; $ pctcma3    &lt;dbl&gt; 0.1963, 0.1677, 0.0790, 0.0376, 0.0237, 0.0000, 0.0088, ...
-#&gt; $ pctexb     &lt;dbl&gt; 0.0000, 0.0091, 0.0003, 0.0010, 0.0000, 0.0000, 0.0000, ...
+#&gt; $ age69      &lt;int&gt; 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 2, 3, 3, 0,...
+#&gt; $ pctcma2    &lt;dbl&gt; 0.6230, 0.4484, 0.2149, 0.2901, 0.1250, NA, 0.0273, 0.00...
+#&gt; $ pctcma3    &lt;dbl&gt; 0.2824, 0.1597, 0.0780, 0.0445, 0.0303, NA, 0.0051, 0.00...
+#&gt; $ pctexb     &lt;dbl&gt; 0.0000, 0.0063, 0.0009, 0.0007, 0.0000, 0.0000, 0.0000, ...
 #&gt; $ pctssacte  &lt;dbl&gt; 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, ...
-#&gt; $ annee_pmsi &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", "2020", "2020", ...
-#&gt; $ app        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, "XXXXX", "01C11", NA, NA, "0...
-#&gt; $ pctapp     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, 0.2857, NA, NA, NA, NA, NA, ...</code></pre>
+#&gt; $ annee_pmsi &lt;chr&gt; "2021", "2021", "2021", "2021", "2021", "2021", "2021", ...
+#&gt; $ app        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "01K07", NA, NA,...
+#&gt; $ pctapp     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ...</code></pre>
 </div>
-<div id="sources-8" class="section level3">
+<div id="source-7" class="section level3">
 <h3 class="hasAnchor">
-<a href="#sources-8" class="anchor"></a>Sources</h3>
-<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/3843/ovalide.zip">OVALIDE MCO - Tables de référence 2020</a> (ATIH)</p>
+<a href="#source-7" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4082/ovalide_0.zip">OVALIDE MCO - Tables de référence 2021</a> (ATIH)</p>
 </div>
 </div>
 <div id="exemples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#exemples" class="anchor"></a>Exemples</h2>
-<div id="chargement-du-référentiel-des-ghs-dgf-des-années-2020-et-2021" class="section level3">
+<div id="chargement-du-référentiel-des-ghs-public-des-années-2020-et-2021" class="section level3">
 <h3 class="hasAnchor">
-<a href="#chargement-du-r%C3%A9f%C3%A9rentiel-des-ghs-dgf-des-ann%C3%A9es-2020-et-2021" class="anchor"></a>Chargement du référentiel des GHS DGF des années 2020 et 2021</h3>
-<div class="sourceCode" id="cb12"><html><body><pre class="r"><span class="co"># Chargement du référentiel des GHS-GHM DGF des années 2020 et 2021</span>
-<span class="no">ghs_2020_2021</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_dgf"</span>,<span class="fl">2020</span>:<span class="fl">2021</span>)
+<a href="#chargement-du-r%C3%A9f%C3%A9rentiel-des-ghs-public-des-ann%C3%A9es-2020-et-2021" class="anchor"></a>Chargement du référentiel des GHS Public des années 2020 et 2021</h3>
+<div class="sourceCode" id="cb12"><html><body><pre class="r"><span class="co"># Chargement du référentiel des GHS-GHM Public des années 2020 et 2021</span>
+<span class="no">ghs_2020_2021</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_public"</span>,<span class="fl">2020</span>:<span class="fl">2021</span>)
 <span class="no">ghs_2020_2021</span></pre></body></html></div>
 <pre><code>#&gt; # A tibble: 6,622 x 11
 #&gt;    ghs   ghm   ghm_lib ghm_bb ghm_bh ghs_tarif ghs_forfait_exb ghs_exb ghs_exh
@@ -505,8 +495,8 @@ Depuis 2020</p>
 #&gt; 15      3     12 04M053 J189      11 1144  2020     
 #&gt; 16      1     13 16M11T D508       0 6186  2020     
 #&gt; 17      1     14 16M11T D509       0 6118  2020</code></pre>
-<div class="sourceCode" id="cb15"><html><body><pre class="r"><span class="co"># chargement des GHM DGF 2019 et 2020</span>
-<span class="no">ghm_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_dgf"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
+<div class="sourceCode" id="cb15"><html><body><pre class="r"><span class="co"># chargement des GHM Public 2019 et 2020</span>
+<span class="no">ghm_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_public"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
 
 <span class="no">jeu_ghm_libelle</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
   <span class="co"># rattachement des libellés aux GHM via la jointure (ghs, annee_pmsi)</span>

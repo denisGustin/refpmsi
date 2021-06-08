@@ -26,7 +26,7 @@ Le package `refpmsi` comprend 13 référentiels CSARR.
 
 Intitulé du référentiel : **csarr_code**  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 7 juin 2021  
 
 Référentiel annualisé des années PMSI 2017 à 2021.  
 
@@ -186,7 +186,7 @@ refpmsi::refpmsi("csarr_eval") %>% dplyr::glimpse()
 
 ### Source  
 
-[OVALIDE SSR 2020](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2020.pdf) (ATIH)
+[OVALIDE SSR 2021](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2021.pdf) (ATIH)
 
 ## CSARR extensions documentaires    
 
@@ -232,7 +232,7 @@ refpmsi::refpmsi("csarr_gestcomp") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_incompatibilite_intervenant**  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 7 juin 2021  
 
 Référentiel annualisé des années PMSI 2020 à 2021    
 
@@ -246,7 +246,7 @@ refpmsi::refpmsi("csarr_incompatibilite_intervenant") %>% dplyr::glimpse()
 
 ### Source  
 
-[OVALIDE SSR 2020](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2020.pdf) (ATIH)
+[OVALIDE SSR 2021](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2021.pdf) (ATIH)
 
 ## CSARR modulateurs   
 

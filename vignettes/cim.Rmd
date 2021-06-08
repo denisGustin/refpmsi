@@ -28,7 +28,7 @@ Mise à jour : 15 avril 2021
 Ce référentiel annualisé au sens PMSI (2017 à 2021) comprend 10 variables et 209 626 lignes.  
 
 Son chargement complet en local et/ou sa visualisation dans R Studio peuvent être longs. Il est recommandé de ne charger que la ou les années utile(s).  
-  
+
 ### Variables  
 
 **cim_code** = code CIM-10  
@@ -54,28 +54,19 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)
 **cim_chapitre** = chapitre CIM-10 du code CIM-10  
 **cim_groupe** = groupe de catégories dans lequel s'insère le code CIM-10  
 **cim_categorie** = 3 premières positions du code CIM-10  
-**annee_pmsi** = année PMSI de 2017 à 2021  
-
+**annee_pmsi** = année PMSI de 2017 à 2021    
 ```{r var cim10, echo = FALSE}
 
 refpmsi::refpmsi("cim") %>% dplyr::glimpse()
 
 ```
-
 ### Sources  
-
 [Nomenclature CIM-10 2021 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/14692/456) (ATIH)  
-
-[CIM-10 FR à usage PMSI 2021 - version du 12 mars 2021](https://www.atih.sante.fr/sites/default/files/public/content/3963/cim-10_2021_1.pdf) (ATIH)
-
-[CIM-10 FR à usage PMSI 2020 - version du 21 août 2020](https://www.atih.sante.fr/sites/default/files/public/content/3706/cim-10_2020_bo.pdf) (ATIH)
-
-[CIM-10 FR à usage PMSI 2019 - version du 21 novembre 2019 mars 2019](https://www.atih.sante.fr/sites/default/files/public/content/3502/cim-10fr_2019_actualisation_oms_24-09-2019.pdf) (ATIH)
-
-[CIM-10 FR à usage PMSI 2018 - version du 23 avril 2018](https://solidarites-sante.gouv.fr/fichiers/bos/2018/sts_20180009_0001_p000.pdf) (ATIH)
-
-[CIM-10 FR à usage PMSI 2017 - version du 30 mai 2017](http://social-sante.gouv.fr/fichiers/bos/2017/sts_20170009_0001_p000.pdf) (ATIH)
-
+[CIM-10 FR à usage PMSI 2021 - version du 12 mars 2021](https://www.atih.sante.fr/sites/default/files/public/content/3963/cim-10_2021_1.pdf) (ATIH)  
+[CIM-10 FR à usage PMSI 2020 - version du 21 août 2020](https://www.atih.sante.fr/sites/default/files/public/content/3706/cim-10_2020_bo.pdf) (ATIH)  
+[CIM-10 FR à usage PMSI 2019 - version du 21 novembre 2019 mars 2019](https://www.atih.sante.fr/sites/default/files/public/content/3502/cim-10fr_2019_actualisation_oms_24-09-2019.pdf) (ATIH)  
+[CIM-10 FR à usage PMSI 2018 - version du 23 avril 2018](https://solidarites-sante.gouv.fr/fichiers/bos/2018/sts_20180009_0001_p000.pdf) (ATIH)  
+[CIM-10 FR à usage PMSI 2017 - version du 30 mai 2017](http://social-sante.gouv.fr/fichiers/bos/2017/sts_20170009_0001_p000.pdf) (ATIH)  
 
 ## CIM Chapitre
 
@@ -93,17 +84,13 @@ Le référentiel n'est pas annualisé. Il est calé sur la dernière version CIM
 **cim_chapitre_romain** = numérotation romaine des chapitres de la CIM-10    
 **cim_chapitre_debut** = premier code CIM-10 de chaque chapitre de la CIM-10  
 **cim_chapitre_fin** = dernier code CIM-10 de chaque chapitre de la CIM-10    
-
 ```{r var cim_chapitre, echo = FALSE}
 refpmsi::refpmsi("cim_chapitre") %>% dplyr::glimpse()
 ```
-
 ### Sources  
 
-[Nomenclature CIM-10 2021 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/14692/456) (ATIH)  
-
+[Nomenclature CIM-10 2021 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/14692/456) (ATIH)    
 [CIM-10 FR à usage PMSI 2021 - version du 12 mars 2021](https://www.atih.sante.fr/sites/default/files/public/content/3963/cim-10_2021_1.pdf) (ATIH)
-
 
 ## CIM Groupe
 
@@ -132,7 +119,6 @@ refpmsi::refpmsi("cim_groupe") %>% dplyr::glimpse()
 ### Sources  
 
 [Nomenclature CIM-10 2021 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/14692/456) (ATIH)  
-
 [CIM-10 FR à usage PMSI 2021 - version du 12 mars 2021](https://www.atih.sante.fr/sites/default/files/public/content/3963/cim-10_2021_1.pdf) (ATIH)
 
 ## CIM Précarité
@@ -154,7 +140,7 @@ refpmsi::refpmsi("cim_precarite") %>% dplyr::glimpse()
 
 ### Source  
 
-[Guide de lecture OVALIDE MCO 2020](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_MCO_DGF_2020.pdf) (ATIH)  
+[Guide de lecture OVALIDE MCO 2021](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2021.pdf) (ATIH)  
 
 ## CIM Polyhandicap lourd  
 
@@ -181,8 +167,7 @@ refpmsi::refpmsi("cim_polyhandicap") %>% dplyr::glimpse()
 
 ### Source  
 
-[Guide de lecture OVALIDE MCO 2020](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_MCO_DGF_2020.pdf) (ATIH)  
-
+[Guide de lecture OVALIDE MCO 2021](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2021.pdf) (ATIH)  
 
 ## Exemples
 

@@ -22,12 +22,12 @@ library(dplyr)
 
 Intitulé du référentiel : **spe_pharma_ssr**
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 7 juin 2021  
 
 Le référentiel comprend les spécialités pharmaceutiques SSR des 3 versions diffusées à ce jour :  
 Version 2017 active du 2 janvier 2017 au 31 mai 2020  
 Version 2020 active à partir du 1er juin 2020  
-Version 2021 active à partir du 1er janvier 2021  
+Version 2021 active à partir du 1er janvier 2021 (avec [rectificatif ATIH du 7 mai 2021](https://www.atih.sante.fr/specialites-pharmaceutiques-en-ssr-2021)) 
 
 ## Variables du référentiel  
 **ucd_ssr_7** = code UCD sur 7 positions  
@@ -44,7 +44,7 @@ refpmsi::refpmsi("spe_pharma_ssr") %>% dplyr::glimpse()
 
 
 ## Sources  
-["Spécialités pharmaceutiques SSR" Version 2021](https://www.atih.sante.fr/sites/default/files/public/content/4053/med_ssr_2021.xlsx)  
+["Spécialités pharmaceutiques SSR" Version 2021](https://www.atih.sante.fr/sites/default/files/public/content/4053/med_ssr_2021_v1_rectificatif_1.xlsx)  
 ["Spécialités pharmaceutiques SSR" Version 2020](https://www.atih.sante.fr/sites/default/files/public/content/2420/liste_mo_ssr_juin_2020_v2.xlsx)  
 ["Spécialités pharmaceutiques SSR" version 2017](https://www.atih.sante.fr/sites/default/files/public/content/2420/mo_ssr_maj_20171102_pf2tr_envoi_atih_20171107_v3_voriconazole.xlsx)  
 
