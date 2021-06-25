@@ -14,15 +14,19 @@ knitr::opts_chunk$set(
 )
 ```
 
+### 23 juin 2021 - GHM mono-RUM UHCD Public et Privé et Spécialités pharmaceutiques SSR rectificatif 2 2021  
+Ajout des 2 nouveaux référentiels **ghm_monorum_uhcd_public** et **ghm_monorum_uhcd_prive** en lien avec la réforme de financement des urgences qui créé, à partir du 1er mars 2021, des GHS dédiés pour chaque racine de GHM, dès que le séjour a lieu uniquement en UHCD et que son mode d'entrée et de sortie est le domicile ([Notice technique ATIH 234-7-2021](https://www.atih.sante.fr/sites/default/files/public/content/4004/notice_technique_n_atih-234-7-2021_nouveautes_financement_2021-hh.pdf))
+Mise à jour du référentiel **spe_pharma_ssr** suite au [rectificatif 2 de 2021](https://www.atih.sante.fr/specialites-pharmaceutiques-en-ssr-2021). A cette occasion, ajout de variables pour gérer les dates de début et de fin d'activité des spécialités pharmaceutiques SSR. Mise à jour des exemples.  
+
 ### 7 juin 2021 - Divers  
 Ajout de l'année 2021 pour les référentiels **csarr_incompatibilite_intervenant**, **ghm_regroupement**, **rghm_regroupement**, **ovalide_racineinfo_dgf**, **ovalide_racineinfo_oqn**, **ovalide_ghminfo_dgf**, **ovalide_ghminfo_oqn**, **ovalide_ccaminfo**, **ovalide_diaginfo**  
-Mise à jour référentiels **atu** et **spe_pharma_ssr**  
+Mise à jour des référentiels **atu** et **spe_pharma_ssr**  
 Renommage des référentiels **ght_dgf**, **gme_dgf**, **ghs_dgf** et **supp_mco_dgf** en **ght_public**, **gme_public**, **ghs_public** et **supp_mco_public**  
 Renommage des référentiels **ght_oqn**, **gme_oqn**, **ghs_oqn** et **supp_mco_oqn** en **ght_prive**, **gme_prive**, **ghs_prive** et **supp_mco_prive**  
 
 ### 24 avril 2021 - CCAM à usage PMSI V2 2021  
 Mise à jour des 2 référentiels **ccam_pmsi** et **ccam_icr** avec la V2 2021 de la CCAM à usage PMSI  
-Ajout de l'article [CSARR](https://denisgustin.github.io/refpmsi/articles/csarr.html) décrivant les référentiels CSARR  
+Nouvel article [CSARR](https://denisgustin.github.io/refpmsi/articles/csarr.html) décrivant les référentiels CSARR  
 Nouvel article [HAD](https://denisgustin.github.io/refpmsi/articles/had.html) décrivant les référentiels HAD    
 
 ### 15 avril 2021 - Mises à jour année PMSI 2021   
@@ -33,7 +37,7 @@ Ajout du référentiel **ghm_intermediaire**
 Ajout du référentiel **csarr_hier_note**  
 Ajout du référentiel **csarr_code_note**  
 Mise à jour du référentiel **specialites_pharmaceutiques_ssr** avec la version 2021 active à partir du 1er janvier 2021  
-Ajout de l'article [Base nationale SSR](https://denisgustin.github.io/refpmsi/articles/base_ssr.html) décrivant les référentiels de dénombrement de la base nationale SSR  
+Nouvel article [Base nationale SSR](https://denisgustin.github.io/refpmsi/articles/base_ssr.html) décrivant les référentiels de dénombrement de la base nationale SSR  
 
 ### 12 décembre 2020 - Médicaments anticancéreux intra-GHS    
 Ajout du référentiel **anticancereux_intraghs** : liste des médicaments anticancéreux non-inscrits sur la liste en sus ou intra-GHS.Expérimentation article 51. Version du 9 novembre 2020    

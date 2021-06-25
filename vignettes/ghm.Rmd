@@ -20,7 +20,7 @@ library(stringr)
 library(refpmsi)
 ```
 
-Le package `refpmsi` comprend 11 référentiels liés aux GHM et GHS.  
+Le package `refpmsi` comprend 13 référentiels liés aux GHM et GHS.  
 
 ## CMD  
 
@@ -51,7 +51,7 @@ Mise à jour : 7 juin 2021
 
 Référentiel des GHS et GHM du secteur public (ex-DGF).  
 
-Référentiel annualisé au sens du PMSI MCO.  
+Référentiel annualisé au sens du PMSI MCO (2017 à 2021).  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -92,7 +92,7 @@ Mise à jour : 7 juin 2021
 
 Référentiel des GHS et GHM du secteur privé (ex-OQN).  
 
-Référentiel annualisé au sens du PMSI MCO.  
+Référentiel annualisé au sens du PMSI MCO (2017 à 2021).  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -133,7 +133,7 @@ Mise à jour : 15 avril 2021
 
 Référentiel des GHM avec GHS intermédiaire  
 
-Référentiel annualisé au sens du PMSI MCO  
+Référentiel annualisé depuis 2020 au sens PMSI MCO  
 
 ### Variables  
 
@@ -142,6 +142,44 @@ Référentiel annualisé au sens du PMSI MCO
 refpmsi::refpmsi("ghm_intermediaire") %>% dplyr::glimpse()
 
 ```
+
+## GHM mono-RUM UHCD Public  
+
+Intitulé du référentiel : **ghm_monorum_uhcd_public**
+
+Mise à jour : 23 juin 2021  
+
+Référentiel des GHM avec GHS mono-RUM UHCD Public (secteur ex-DGF)    
+
+Référentiel annualisé depuis 2021 au sens PMSI MCO  
+
+### Variables  
+
+```{r var ghm_monorum_uhcd_public, echo = FALSE}
+
+refpmsi::refpmsi("ghm_monorum_uhcd_public") %>% dplyr::glimpse()
+
+```
+
+
+## GHM mono-RUM UHCD Privé  
+
+Intitulé du référentiel : **ghm_monorum_uhcd_prive**
+
+Mise à jour : 23 juin 2021  
+
+Référentiel des GHM avec GHS mono-RUM UHCD Privé (secteur ex-OQN)    
+
+Référentiel annualisé depuis 2021 au sens PMSI MCO  
+
+### Variables  
+
+```{r var ghm_monorum_uhcd_prive, echo = FALSE}
+
+refpmsi::refpmsi("ghm_monorum_uhcd_prive") %>% dplyr::glimpse()
+
+```
+
 
 ## Regroupements GHM
 

@@ -19,7 +19,7 @@ library(refpmsi)
 library(gt)
 ```
 
-72 référentiels PMSI disponibles  
+74 référentiels PMSI disponibles  
   
 [Derniers référentiels ajoutés ou mis à jour](https://denisgustin.github.io/refpmsi/articles/news.html)  
 

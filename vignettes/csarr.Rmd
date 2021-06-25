@@ -232,11 +232,14 @@ refpmsi::refpmsi("csarr_gestcomp") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_incompatibilite_intervenant**  
 
-Mise à jour : 7 juin 2021  
+Mise à jour : 23 juin 2021  
 
 Référentiel annualisé des années PMSI 2020 à 2021    
 
 ### Variables  
+
+**csarr_ci_21_autorise** = 1 si l'acte CSARR est compatible avec le type intervenant 21(Infirmier) et 0 si l'acte CSARR n'est pas compatible avec le type intervenant 21(Infirmier)  
+**csarr_ci_88_autorise** = 1 si l'acte CSARR est compatible avec le type intervenant 88(Autre intervenant) et 0 si l'acte CSARR n'est pas compatible avec le type intervenant 88(Autre intervenant)  
 
 ```{r var csarr_incompatibilite_intervenant, echo = FALSE}
 

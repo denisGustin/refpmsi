@@ -22,19 +22,25 @@ library(dplyr)
 
 Intitulé du référentiel : **spe_pharma_ssr**
 
-Mise à jour : 7 juin 2021  
+Mise à jour : 23 juin 2021  
 
-Le référentiel comprend les spécialités pharmaceutiques SSR des 3 versions diffusées à ce jour :  
-Version 2017 active du 2 janvier 2017 au 31 mai 2020  
-Version 2020 active à partir du 1er juin 2020  
-Version 2021 active à partir du 1er janvier 2021 (avec [rectificatif ATIH du 7 mai 2021](https://www.atih.sante.fr/specialites-pharmaceutiques-en-ssr-2021)) 
+Le référentiel comprend les spécialités pharmaceutiques SSR historicisées depuis le 1er janvier 2017  
+
+Dernière version : [2021 rectificatif 2 du 18 juin 2021](https://www.atih.sante.fr/specialites-pharmaceutiques-en-ssr-2021)
 
 ## Variables du référentiel  
 **ucd_ssr_7** = code UCD sur 7 positions  
 **ucd_ssr_13** = code UCD sur 13 positions  
 **ucd_ssr_lib** = libellé de l'UCD  
-**dci** = dénomination commune internationale de l'UCD  
-**annee** = année correspondant à la version (2017, 2020, 2021)  
+**ucd_dci** = dénomination commune internationale de l'UCD  
+**ucd_debut_date** = date de début de validité de l'UCD en tant que spécialité pharmaceutique SSR  
+**ucd_fin_date** = date de fin de validité de l'UCD en tant que spécialité pharmaceutique SSR  
+**ucd_debut_jour** = jour de **ucd_debut_date**  
+**ucd_debut_mois** = mois de **ucd_debut_date**  
+**ucd_debut_annee** = année de **ucd_debut_date**  
+**ucd_fin_jour** = jour de **ucd_fin_date**  
+**ucd_fin_mois** = mois de **ucd_fin_date**  
+**ucd_fin_annee** = année de **ucd_fin_date**  
 
 ```{r var, echo = FALSE}
 
@@ -43,20 +49,18 @@ refpmsi::refpmsi("spe_pharma_ssr") %>% dplyr::glimpse()
 ```
 
 
-## Sources  
-["Spécialités pharmaceutiques SSR" Version 2021](https://www.atih.sante.fr/sites/default/files/public/content/4053/med_ssr_2021_v1_rectificatif_1.xlsx)  
-["Spécialités pharmaceutiques SSR" Version 2020](https://www.atih.sante.fr/sites/default/files/public/content/2420/liste_mo_ssr_juin_2020_v2.xlsx)  
-["Spécialités pharmaceutiques SSR" version 2017](https://www.atih.sante.fr/sites/default/files/public/content/2420/mo_ssr_maj_20171102_pf2tr_envoi_atih_20171107_v3_voriconazole.xlsx)  
+## Source  
+["Spécialités pharmaceutiques SSR" 2021 - rectificatig 2 du 18 juin 2021](https://www.atih.sante.fr/sites/default/files/public/content/4053/historique_med_ssr_202106.xlsx)  
 
 ## Exemples  
 
-Soit le jeu de données suivant composé manuellement avec des variables que l'on peut retrouver dans un FICHCOMP "médicaments (UCD)" SSR   
+Soit `jeu_ucd` le jeu de données suivant composé manuellement avec des variables que l'on peut retrouver dans un FICHCOMP "médicaments (UCD)" SSR   
 
 ```{r jeu_ucd, echo = FALSE}
 
 jeu_ucd <- tibble::tibble(NAS = as.integer(c(1:8,10,10,10,11,12,13,13)),
                   UCD = c("9262285","9339384","9262285","9348584","9190166",
-                          "9348590","9166966","9348590","9262285","9339384",
+                          "9348590","9166966","9170583","9262285","9339384",
                           "9339384","9339384","9190166","9294285","9294285"),
                   n_adm = as.integer(c(3,2,1,2,1,
                             3,2,1,2,1,
@@ -71,51 +75,57 @@ jeu_ucd
 
 ```{r lib_ucd, eval = FALSE}
 
-ucd_libelle <- jeu_ucd %>% 
+library(refpmsi)
+library(dplyr)
+
+jeu_ucd_libelle <- jeu_ucd %>% 
   dplyr::left_join(refpmsi::refpmsi("spe_pharma_ssr") %>% 
-                     # on considère que les dates d'administration du dataset sont >= 1 juin 2020
-                     dplyr::filter(annee == "2020") %>% 
-                     dplyr::select(ucd_ssr_7,ucd_ssr_lib),
+                     dplyr::select(ucd_ssr_7,ucd_ssr_lib) %>% 
+                     # dédoublonnage : cf cas des UCD supprimés puis réintroduits
+                     # exemple avec le baclofène UCD 9170583 dans jeu_ucd
+                     dplyr::distinct(),
                    by = c("UCD" = "ucd_ssr_7"))
-ucd_libelle
+jeu_ucd_libelle
 
 ```
 
 
 ```{r lib_ucd_eval, echo = FALSE}
 
-ucd_libelle <- jeu_ucd %>% 
+jeu_ucd_libelle <- jeu_ucd %>% 
   dplyr::left_join(refpmsi::refpmsi("spe_pharma_ssr") %>% 
-                     # on considère que les dates d'administration du dataset sont >= 1 juin 2020
-                     dplyr::filter(annee == "2020") %>% 
-                     dplyr::select(ucd_ssr_7,ucd_ssr_lib),
+                     dplyr::select(ucd_ssr_7,ucd_ssr_lib) %>% 
+                     dplyr::distinct(),
                    by = c("UCD" = "ucd_ssr_7"))
-ucd_libelle
+jeu_ucd_libelle
 
 ```
 
-### Nouvelles spécialités pharmaceutiques SSR de la version 2020  
+### Nouvelles spécialités pharmaceutiques SSR actives depuis le 1er janvier 2021  
 
 ```{r new_ucd, eval = FALSE}
 
-ucd_new_2020 <- refpmsi::refpmsi("spe_pharma_ssr") %>%
-  # Entre 2017 et 2020, des intitulés de DCI pour un même UCD peuvent différer
-  dplyr::select(ucd_ssr_7,annee) %>% 
-  dplyr::with_groups(ucd_ssr_7, dplyr::filter, !any(annee == "2017"))
-nrow(ucd_new_2020)
-head(ucd_new_2020)
+library(refpmsi)
+library(dplyr)
+
+new_spe_pharma_ssr_2021 <- refpmsi::refpmsi("spe_pharma_ssr") %>% 
+  dplyr::filter(ucd_debut_date >= as.Date("2021-01-01")) %>% 
+  dplyr::select(ucd_ssr_7,ucd_ssr_lib, ucd_debut_date, ucd_fin_date)
+
+nrow(new_spe_pharma_ssr_2021)
+head(new_spe_pharma_ssr_2021)
 
 ```
 
 
 ```{r new_ucd_eval, echo = FALSE}
 
-ucd_new_2020 <- refpmsi::refpmsi("spe_pharma_ssr") %>%
-  # Entre 2017 et 2020, des intitulés de DCI pour un même UCD peuvent différer
-  dplyr::select(ucd_ssr_7,annee) %>% 
-  dplyr::with_groups(ucd_ssr_7, dplyr::filter, !any(annee == "2017"))
-nrow(ucd_new_2020)
-head(ucd_new_2020)
+new_spe_pharma_ssr_2021 <- refpmsi::refpmsi("spe_pharma_ssr") %>% 
+  dplyr::filter(ucd_debut_date >= as.Date("2021-01-01")) %>% 
+  dplyr::select(ucd_ssr_7,ucd_ssr_lib, ucd_debut_date, ucd_fin_date)
+
+nrow(new_spe_pharma_ssr_2021)
+head(new_spe_pharma_ssr_2021)
 
 ```
 
@@ -123,16 +133,20 @@ head(ucd_new_2020)
 
 ```{r case_mix_dci, eval = FALSE}
 
-case_mix_dci <- jeu_ucd %>% 
+library(refpmsi)
+library(dplyr)
+
+case_mix_dci <- jeu_ucd %>%
   dplyr::left_join(refpmsi::refpmsi("spe_pharma_ssr") %>% 
-                     dplyr::filter(annee == "2020") %>% 
-                     dplyr::select(ucd_ssr_7,dci),
-                   by = c("UCD" = "ucd_ssr_7")) %>% 
+                     dplyr::select(ucd_ssr_7,ucd_dci) %>% 
+                     # dédoublonnage en faisant l'hypothèse que la DCI d'un UCD ne change pas
+                     dplyr::distinct(),
+                   by = c("UCD" = "ucd_ssr_7")) %>%
   # regroupement par DCI
   # calcul du nombre de NAS différents avec au moins 1 UCD
   # calcul du nombre d'UCD différentes
   # calcul du nombre total des administrations des UCD
-  dplyr::with_groups(dci, dplyr::summarise, n_NAS = dplyr::n_distinct(NAS),
+  dplyr::with_groups(ucd_dci, dplyr::summarise, n_nas = dplyr::n_distinct(NAS),
                      n_ucd = dplyr::n_distinct(UCD),
                      n_adm = sum(n_adm))
 case_mix_dci
@@ -141,12 +155,12 @@ case_mix_dci
 
 ```{r case_mix_dci_eval, echo = FALSE}
 
-case_mix_dci <- jeu_ucd %>% 
+case_mix_dci <- jeu_ucd %>%
   dplyr::left_join(refpmsi::refpmsi("spe_pharma_ssr") %>% 
-                     dplyr::filter(annee == "2020") %>% 
-                     dplyr::select(ucd_ssr_7,dci),
-                   by = c("UCD" = "ucd_ssr_7")) %>% 
-  dplyr::with_groups(dci, dplyr::summarise, n_NAS = dplyr::n_distinct(NAS),
+                     dplyr::select(ucd_ssr_7,ucd_dci) %>% 
+                     dplyr::distinct(),
+                   by = c("UCD" = "ucd_ssr_7")) %>%
+  dplyr::with_groups(ucd_dci, dplyr::summarise, n_nas = dplyr::n_distinct(NAS),
                      n_ucd = dplyr::n_distinct(UCD),
                      n_adm = sum(n_adm))
 case_mix_dci
