@@ -18,9 +18,10 @@ knitr::opts_chunk$set(
 library(dplyr)
 library(stringr)
 library(refpmsi)
+library(tidyr)
 ```
 
-Le package `refpmsi` comprend 13 référentiels liés aux GHM et GHS.  
+Le package `refpmsi` comprend 14 référentiels liés aux GHM et GHS.  
 
 ## CMD  
 
@@ -406,7 +407,7 @@ Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).
 **pctapp** = pourcentage de séjours dans la racine apparentée  
 **annee_pmsi** = année PMSI de 2017 à 2021    
 
-```{r var ovalide_racineinfo_oqn, echo = FALSE}
+```{r ovalide_racineinfo_oqn, echo = FALSE}
 refpmsi::refpmsi("ovalide_racineinfo_oqn") %>% dplyr::glimpse()
 ```
 
@@ -414,17 +415,44 @@ refpmsi::refpmsi("ovalide_racineinfo_oqn") %>% dplyr::glimpse()
 
 [OVALIDE MCO - Tables de référence 2021](https://www.atih.sante.fr/sites/default/files/public/content/4082/ovalide_0.zip) (ATIH) 
 
+## Listes en D et en A de l'algorithme de groupage MCO  
+
+Intitulé du référentiel : **mco_fg_listes**
+
+Mise à jour : 8 octobre 2021  
+
+Référentiel annualisé au sens du PMSI MCO à partir de 2021.  
+
+### Variables du référentiel  
+
+**mco_fg_liste_code** = code des listes  
+**mco_fg_liste_lib** = libellé des listes  
+**mco_fg_liste_type** = D pour les listes en D et A pour les listes en A  
+**mco_fg_cmd** = CMD dans laquelle la liste participe au groupage des séjours  
+**mco_fg_code** = code CIM-10 (liste en D) ou code acte CCAM PMSI (liste en A)  
+**mco_fg_ccam_pmsi_extension** = extension PMSI des actes CCAM PMSI  
+**mco_fg_ccam_pmsi_phase** = phase des actes CCAM PMSI  
+**annee_pmsi** = année PMSI 2021  
+
+```{r mco_fg_listes, echo = FALSE}
+refpmsi::refpmsi("mco_fg_listes") %>% dplyr::glimpse()
+```
+
+### Source  
+
+[Données du volume 2 du manuel des GHS 2021 - format csv](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3111) (ATIH)  
+
 ## Exemples
 
 ### Chargement du référentiel des GHS Public des années 2020 et 2021  
 
-```{r ghs_chargement, eval = FALSE}
+```{r ghs_chargement_affichage, eval = FALSE}
 # Chargement du référentiel des GHS-GHM Public des années 2020 et 2021
 ghs_2020_2021 <- refpmsi::refpmsi("ghs_public",2020:2021)
 ghs_2020_2021
 ```
 
-```{r ghs_chargement_affichage, echo = FALSE}
+```{r ghs_chargement, echo = FALSE}
 ghs_2020_2021 <- refpmsi::refpmsi("ghs_public",2020:2021)
 ghs_2020_2021
 ```
@@ -455,7 +483,7 @@ jeu_ghm
 ```
 
 
-```{r ghm_association_libelle, eval = FALSE}
+```{r ghm_association_libelle_affichage, eval = FALSE}
 # chargement des GHM Public 2019 et 2020
 ghm_2019_2020 <- refpmsi::refpmsi("ghs_public",2019:2020)
 
@@ -469,7 +497,7 @@ jeu_ghm_libelle
 ```
 
 
-```{r ghm_association_libelle_eval, echo = FALSE}
+```{r ghm_association_libelle, echo = FALSE}
 ghm_2019_2020 <- refpmsi::refpmsi("ghs_public",2019:2020)
 
 jeu_ghm_libelle <- jeu_ghm %>% 
@@ -485,7 +513,7 @@ Dans un premier temps, on rattache les DMS nationales issues d'OVALIDE MCO à ch
 
 Puis on compare la DS des séjours avec ces DMS nationales pour les séjours pour lesquels cela a un sens (séjours avec une DS > 0).  
 
-```{r ghm_dms, eval = FALSE}
+```{r ghm_dms_affichage, eval = FALSE}
 # Chargement des DMS nationales des années PMSI 2019 et 2020
 dms_nat <- refpmsi::refpmsi("ovalide_ghminfo_dgf",2019:2020) %>% 
   dplyr::select(ghm,dms,annee_pmsi)
@@ -515,7 +543,7 @@ jeu_ghm_dms %>% print(n = 15, width = Inf)
 
 Enfin, on peut filtrer les séjours qui ont une DS >= 2,5 x la DMS nationale de leur GHM pour repérer des séjours, à priori, particulièrement longs.  
 
-```{r ghm_dms_2.5, eval = FALSE}
+```{r ghm_dms_2.5_affichage, eval = FALSE}
 sej_2.5_dms <- jeu_ghm_dms %>%
   dplyr::filter(ratio_ecart_dms >= 2.5)
 sej_2.5_dms %>% print(width = Inf)
@@ -530,7 +558,7 @@ sej_2.5_dms %>% print(width = Inf)
 
 ### Case mix en DA (Domaine d'Activité) des séjours  
 
-```{r case_mix_da, eval = FALSE}
+```{r case_mix_da_affichage, eval = FALSE}
 case_mix_da <- jeu_ghm %>% 
   # rattachement des codes DA aux séjours
   dplyr::left_join(refpmsi::refpmsi("ghm_regroupement",2019:2020) %>% 
@@ -563,7 +591,7 @@ case_mix_da
 
 Dans un premier temps, on repère les séjours groupés dans un GHM concerné par la gradation des prises en charge ambulatoires et on rattache le GHS plein et le GHS intermédiaire.    
 
-```{r ghm_gradation, eval = FALSE}
+```{r ghm_gradation_affichage, eval = FALSE}
 sej_ghm_gradation_ambulatoire <- jeu_ghm %>% 
   # filtre sur l'année 2020, seule année concernée dans notre data set
   dplyr::filter(annee_rss == 2020) %>% 
@@ -586,7 +614,7 @@ sej_ghm_gradation_ambulatoire
 
 Dans un second temps, on repère les seuls séjours classés dans un GHS intermédiaire  
 
-```{r ghs_intermediaire, eval = FALSE}
+```{r ghs_intermediaire_affichage, eval = FALSE}
 sej_ghs_intermediaire <- sej_ghm_gradation_ambulatoire %>% 
   # filtre sur les séjours dont le GHS = le GHS intermédiaire associé
   dplyr::filter(ghs == ghs_intermediaire)
@@ -599,3 +627,125 @@ sej_ghs_intermediaire <- sej_ghm_gradation_ambulatoire %>%
   dplyr::filter(ghs == ghs_intermediaire)
 sej_ghs_intermediaire
 ```
+
+### Liste des codes CIM-10 d'une liste D  
+
+```{r mco_fg_listes_chargement_affichage, eval = FALSE}
+# Chargement du référentiel des listes D et A de l'algorithme de groupage MCO V2021
+mco_fg_listes <- refpmsi::refpmsi("mco_fg_listes",2021)
+mco_fg_listes
+```
+
+```{r mco_fg_listes_chargement, echo = FALSE}
+mco_fg_listes <- refpmsi::refpmsi("mco_fg_listes",2021)
+mco_fg_listes
+```
+
+On choisit d'extraire les codes CIM-10 de la liste D-0401 ""Bronchite ou asthme"  
+
+Le DP d'un séjour appartenant à cette liste amène le séjour concerné en racine 04M03 "Bronchites et asthme, âge supérieur à 17 ans" ou 04M02 "Bronchites et asthme, âge inférieur à 18 ans"  
+
+```{r d_0401_affichage, eval = FALSE}
+liste_D_0401 <- mco_fg_listes %>% 
+  # on ne garde que des variables qui nous intéressent pour une liste en D
+  dplyr::select(-contains("ccam"),-mco_fg_liste_type,-annee_pmsi) %>% 
+  dplyr::filter(mco_fg_liste_code == "D-0401")
+liste_D_0401
+```
+
+```{r d_0401, echo = FALSE}
+liste_D_0401 <- mco_fg_listes %>% 
+  dplyr::select(-c(tidyselect::contains("ccam"),"mco_fg_liste_type","annee_pmsi")) %>% 
+  dplyr::filter(mco_fg_liste_code == "D-0401")
+liste_D_0401
+```
+
+Script identique pour extraire les actes CCAM PMSI d'une liste A.  
+
+### Diagnostics d'entrée d'une CMD  
+
+On choisit d'extraire les diags d'entrée de la CMD 01  
+
+```{r cmd_01_affichage, eval = FALSE}
+# on a chargé le référentiel mco_fg_listes dans la variable mco_fg_listes
+diag_cmd_01 <- mco_fg_listes %>% 
+  dplyr::filter(mco_fg_cmd == "01", mco_fg_liste_type == "D") %>% 
+  # argument.keep_all = TRUE pour garder les colonnes
+  dplyr::distinct(mco_fg_code, .keep_all = TRUE) %>% 
+  # colonnes qui nous intéressent + réordonnancement 
+  dplyr::select(mco_fg_code, mco_fg_cmd, mco_fg_liste_code, mco_fg_liste_lib)
+diag_cmd_01
+```
+
+```{r cmd_01, echo = FALSE}
+diag_cmd_01 <- mco_fg_listes %>% 
+  dplyr::filter(mco_fg_cmd == "01", mco_fg_liste_type == "D") %>% 
+  dplyr::distinct(mco_fg_code, .keep_all = TRUE) %>% 
+  dplyr::select(mco_fg_code, mco_fg_cmd, mco_fg_liste_code, mco_fg_liste_lib)
+diag_cmd_01
+```
+
+### Rattachement des libellés des listes D aux DP  
+Niveau R avancé  
+
+Soit un mini-jeu de données de 12 séjours avec le DP, le GHM et l'année PMSI du séjour   
+```{r jeu_dp_ghm, echo = FALSE}
+jeu_dp_ghm <- tibble::tibble(no_rss = seq(1:12),
+                         dp_rss = c("I5010","S7220","H269","Z380",
+                                    "S7200","S0600","R074","J441",
+                                    "K358","R53+0","S7200","I5011"),
+                         ghm_rss = c("05M091","08M041","02C05J","15M05A",
+                                     "08C471","01M201","05M13T","04M202",
+                                     "06C091","23M20Z","08C471","05M092"),
+                         annee_rss = sample(c("2020","2021"),12,replace = TRUE))
+jeu_dp_ghm
+```
+
+1ere étape : construire le tibble des diagnostics d'entrée de toutes les CMD concernées par une introduction de groupage par le DP  
+```{r diag_cmd_affichage, eval = FALSE}
+# on a chargé le référentiel mco_fg_listes dans la variable mco_fg_listes
+diag_cmd <- mco_fg_listes %>% 
+  dplyr::filter(mco_fg_liste_type == "D") %>%
+  # nest_by = group_by + summarise + rowwise (expérimental dplyr 1.0.7)
+  dplyr::nest_by(mco_fg_cmd, .key = "diag_entree") %>%
+  # dégroupage du rowwise généré par nest_by
+  dplyr::ungroup() %>% 
+  # traitement de la list_column des diags d'entrée
+  dplyr::mutate(diag_entree = purrr::map(diag_entree, ~ dplyr::distinct(.x, mco_fg_code, .keep_all = TRUE) %>% dplyr::select(c("mco_fg_code", "mco_fg_liste_code", "mco_fg_liste_lib"))))
+diag_cmd
+```
+
+```{r diag_cmd, echo = FALSE}
+diag_cmd <- mco_fg_listes %>% 
+  dplyr::filter(mco_fg_liste_type == "D") %>%
+  dplyr::nest_by(mco_fg_cmd, .key = "diag_entree") %>%
+  dplyr::ungroup() %>% 
+  dplyr::mutate(diag_entree = purrr::map(diag_entree, ~ dplyr::distinct(.x, mco_fg_code, .keep_all = TRUE) %>% dplyr::select(c("mco_fg_code", "mco_fg_liste_code", "mco_fg_liste_lib"))))
+diag_cmd
+```
+
+2eme étape : rattachement du libellé de la liste D correspondant au DP pour la CMD du séjour  
+
+```{r jeu_dp_ghm_liste_D_affichage,eval = FALSE}
+jeu_dp_ghm_liste_D <- jeu_dp_ghm %>% 
+  # extraction de la CMD du séjour
+  dplyr::mutate(cmd_rss = stringr::str_sub(ghm_rss,1,2)) %>% 
+  dplyr::left_join(diag_cmd %>% tidyr::unnest(diag_entree),
+                            # jonction via dp et cmd. Rappel : plusieurs listes D possibles pour un DP
+                            by = c("dp_rss" = "mco_fg_code",
+                                   "cmd_rss" = "mco_fg_cmd"
+                                   ))
+jeu_dp_ghm_liste_D
+```
+
+```{r jeu_dp_ghm_liste_D, echo = FALSE}
+jeu_dp_ghm_liste_D <- jeu_dp_ghm %>% 
+  dplyr::mutate(cmd_rss = stringr::str_sub(ghm_rss,1,2)) %>% 
+  dplyr::left_join(diag_cmd %>% tidyr::unnest(diag_entree),
+                            by = c("dp_rss" = "mco_fg_code",
+                                   "cmd_rss" = "mco_fg_cmd"
+                                   ))
+jeu_dp_ghm_liste_D
+```
+
+Remarque : pas de libellé de liste D pour le DP Z380 "Enfant unique, né à l'hôpital" d'un séjour classé dans la CMD 15 "Nouveau-nés, prématurés et affections de la période périnatale" car, dans cette CMD, le groupage ne commence pas par le DP.  

@@ -23,9 +23,9 @@ library(refpmsi)
 
 Intitulé du référentiel : **cim**
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 08 octobre 2021  
 
-Ce référentiel annualisé au sens PMSI (2017 à 2021) comprend 10 variables et 209 626 lignes.  
+Ce référentiel annualisé au sens PMSI (2017 à 2021) comprend 11 variables et 209 626 lignes.  
 
 Son chargement complet en local et/ou sa visualisation dans R Studio peuvent être longs. Il est recommandé de ne charger que la ou les années utile(s).  
 
@@ -54,7 +54,9 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)
 **cim_chapitre** = chapitre CIM-10 du code CIM-10  
 **cim_groupe** = groupe de catégories dans lequel s'insère le code CIM-10  
 **cim_categorie** = 3 premières positions du code CIM-10  
+**cim_precision** = TRUE si pas de code fils plus précis, FALSE sinon  
 **annee_pmsi** = année PMSI de 2017 à 2021    
+
 ```{r var cim10, echo = FALSE}
 
 refpmsi::refpmsi("cim") %>% dplyr::glimpse()
@@ -204,31 +206,31 @@ Soit un mini jeu de données `jeu_dp` composé de 12 codes DP de RSS mono-RUM
 
 ```{r cim_jeu_association_libelle, echo = FALSE}
 jeu_dp <- tibble::tibble(no_rss = seq(1:12),
-                         dp_rss = c("I501","Z491","H251","Z380",
+                         dp_rss = c("I5010","Z491","H251","Z380",
                                     "S7200","S0600","R074",
-                                    "J441","K358","R53+0","S7200","I501"),
-                         annee_rss = sample(c("2019","2020"),12,replace = TRUE))
+                                    "J441","K358","R53+0","S7200","I5011"),
+                         annee_rss = sample(c("2020","2021"),12,replace = TRUE))
 jeu_dp
 ```
 
 
 ```{r cim_association_libelle, eval = FALSE}
-# chargement de la CIM-10 2019 et 2020
-cim_2019_2020 <- refpmsi::refpmsi("cim",2019:2020)
+# chargement de la CIM-10 2020 et 2021
+cim_2020_2021 <- refpmsi::refpmsi("cim",2020:2021)
 
 # rattachement à chaque DP du libellé CIM-10 correspondant au DP et à son année PMSI
 jeu_dp_libelle <- jeu_dp %>% 
-  dplyr::left_join(cim_2019_2020 %>% dplyr::select(cim_code,cim_lib,annee_pmsi),
+  dplyr::left_join(cim_2020_2021 %>% dplyr::select(cim_code,cim_lib,annee_pmsi),
                    by = c("dp_rss" = "cim_code", "annee_rss" = "annee_pmsi"))
 jeu_dp_libelle
 ```
 
 
 ```{r cim_association_libelle_eval, echo = FALSE}
-cim_2019_2020 <- refpmsi::refpmsi("cim",2019:2020)
+cim_2020_2021 <- refpmsi::refpmsi("cim",2020:2021)
 
 jeu_dp_libelle <- jeu_dp %>% 
-  dplyr::left_join(cim_2019_2020 %>% dplyr::select(cim_code,cim_lib,annee_pmsi),
+  dplyr::left_join(cim_2020_2021 %>% dplyr::select(cim_code,cim_lib,annee_pmsi),
                    by = c("dp_rss" = "cim_code", "annee_rss" = "annee_pmsi"))
 jeu_dp_libelle
 ```
@@ -238,12 +240,12 @@ jeu_dp_libelle
 Avec le jeu de données `jeu_dp` de l'exemple précédent.  
 
 ```{r case_mix_chapitre, eval = FALSE}
-# chargement de la CIM-10 2019 et 2020
-cim_2019_2020 <- refpmsi::refpmsi("cim",2019:2020)
+# chargement de la CIM-10 2020 et 2021
+cim_2020_2021 <- refpmsi::refpmsi("cim",2020:2021)
 
 # rattachement aux codes DP des libellés CIM-10 et des numéros de chapitre CIM-10 correspondant
 dp_chapitre <- jeu_dp %>% 
-  dplyr::left_join(cim_2019_2020 %>% 
+  dplyr::left_join(cim_2020_2021 %>% 
                      dplyr::select(cim_code, cim_lib, cim_chapitre, annee_pmsi),
                    by = c("dp_rss" = "cim_code",
                           "annee_rss" = "annee_pmsi"))
@@ -273,7 +275,7 @@ dp_chapitre
 ```{r case_mix_chapitre_eval, echo = FALSE}
 # rattachement aux codes DP des libellés CIM-10 et des numéros de chapitre CIM-10 correspondant
 dp_chapitre <- jeu_dp %>% 
-  dplyr::left_join(cim_2019_2020 %>% 
+  dplyr::left_join(cim_2020_2021 %>% 
                      dplyr::select(cim_code, cim_lib, cim_chapitre, annee_pmsi),
                    by = c("dp_rss" = "cim_code",
                           "annee_rss" = "annee_pmsi"))
@@ -301,18 +303,18 @@ jeu_das <- tibble::tibble(no_rss = seq(1:10),
                             das = c("Z370","I10","P040","F1725",
                                        "G473","W189","R600",
                                        "N178","B952","D638"),
-                            annee_rss = sample(c("2019","2020"),10,replace = TRUE))
+                            annee_rss = sample(c("2020","2021"),10,replace = TRUE))
 jeu_das
 ```
 
 
-```{r das_interdits_dp_dr, eval = FALSE}
-# chargement de la CIM-10 2019 et 2020
-cim_2019_2020 <- refpmsi::refpmsi("cim",2019:2020)
+```{r das_interdits_dp_dr_affichage, eval = FALSE}
+# chargement de la CIM-10 2020 et 2021
+cim_2020_2021 <- refpmsi::refpmsi("cim",2020:2021)
 
 das_interdit_dp_dr <- jeu_das %>% 
   # rattachement à chaque DAS du type MCO et du libellé CIM-10, correspondant à son année PMSI
-  dplyr::left_join(cim_2019_2020 %>% dplyr::select(cim_code,cim_lib,cim_tmco,annee_pmsi),
+  dplyr::left_join(cim_2020_2021 %>% dplyr::select(cim_code,cim_lib,cim_tmco,annee_pmsi),
                    by = c("das" = "cim_code", "annee_rss" = "annee_pmsi")) %>%
   # filtre sur les types MCO 1 "Diagnostic interdit en DP et DR - Autorisé ailleurs" 
   # et 2 "Diagnostic interdit en DP et DR - Cause externe de morbidité" 
@@ -320,9 +322,9 @@ das_interdit_dp_dr <- jeu_das %>%
 das_interdit_dp_dr
 ```
 
-```{r das_interdits_dp_dr_eval, echo = FALSE}
+```{r das_interdits_dp_dr, echo = FALSE}
 das_interdit_dp_dr <- jeu_das %>% 
-  dplyr::left_join(cim_2019_2020 %>% dplyr::select(cim_code,cim_lib,cim_tmco,annee_pmsi),
+  dplyr::left_join(cim_2020_2021 %>% dplyr::select(cim_code,cim_lib,cim_tmco,annee_pmsi),
                    by = c("das" = "cim_code", "annee_rss" = "annee_pmsi")) %>%
   dplyr::filter(cim_tmco %in% c(1,2))
 das_interdit_dp_dr

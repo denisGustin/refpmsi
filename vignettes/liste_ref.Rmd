@@ -1,5 +1,5 @@
 ---
-title: "Liste des référentiels PMSI du package refpmsi"
+title: "Les référentiels PMSI du package refpmsi"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Liste des référentiels}
@@ -19,7 +19,7 @@ library(refpmsi)
 library(gt)
 ```
 
-74 référentiels PMSI disponibles  
+75 référentiels PMSI disponibles  
   
 [Derniers référentiels ajoutés ou mis à jour](https://denisgustin.github.io/refpmsi/articles/news.html)  
 

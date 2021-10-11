@@ -120,8 +120,8 @@
 <h2 class="hasAnchor">
 <a href="#cim-10-fr-%C3%A0-usage-pmsi" class="anchor"></a>CIM-10 FR à usage PMSI</h2>
 <p>Intitulé du référentiel : <strong>cim</strong></p>
-<p>Mise à jour : 15 avril 2021</p>
-<p>Ce référentiel annualisé au sens PMSI (2017 à 2021) comprend 10 variables et 209 626 lignes.</p>
+<p>Mise à jour : 08 octobre 2021</p>
+<p>Ce référentiel annualisé au sens PMSI (2017 à 2021) comprend 11 variables et 209 626 lignes.</p>
 <p>Son chargement complet en local et/ou sa visualisation dans R Studio peuvent être longs. Il est recommandé de ne charger que la ou les années utile(s).</p>
 <div id="variables" class="section level3">
 <h3 class="hasAnchor">
@@ -140,9 +140,9 @@ digit 2 : code autorisé en manifestation morbide principale ? (O : oui, N : non
 digit 3 : code autorisé en affection étiologique ? (O : oui, N : non)<br>
 digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>cim_code_actif</strong> =<br>
 1 : code actif dans l’année PMSI<br>
-0 : code inactif dans l’année PMSI<br><strong>cim_chapitre</strong> = chapitre CIM-10 du code CIM-10<br><strong>cim_groupe</strong> = groupe de catégories dans lequel s’insère le code CIM-10<br><strong>cim_categorie</strong> = 3 premières positions du code CIM-10<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2021</p>
+0 : code inactif dans l’année PMSI<br><strong>cim_chapitre</strong> = chapitre CIM-10 du code CIM-10<br><strong>cim_groupe</strong> = groupe de catégories dans lequel s’insère le code CIM-10<br><strong>cim_categorie</strong> = 3 premières positions du code CIM-10<br><strong>cim_precision</strong> = TRUE si pas de code fils plus précis, FALSE sinon<br><strong>annee_pmsi</strong> = année PMSI de 2017 à 2021</p>
 <pre><code>#&gt; Rows: 209,626
-#&gt; Columns: 10
+#&gt; Columns: 11
 #&gt; $ cim_code       &lt;chr&gt; "A00", "A000", "A001", "A009", "A01", "A010", "A011"...
 #&gt; $ cim_tmco       &lt;int&gt; 3, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0...
 #&gt; $ cim_pssr       &lt;chr&gt; "NNNN", "NOOO", "NOOO", "NOOO", "NNNN", "NOOO", "NOO...
@@ -152,6 +152,7 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>cim_code_actif</
 #&gt; $ cim_categorie  &lt;chr&gt; "A00", "A00", "A00", "A00", "A01", "A01", "A01", "A0...
 #&gt; $ cim_chapitre   &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1...
 #&gt; $ cim_groupe     &lt;chr&gt; "A00-A09", "A00-A09", "A00-A09", "A00-A09", "A00-A09...
+#&gt; $ cim_precision  &lt;lgl&gt; FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TR...
 #&gt; $ annee_pmsi     &lt;chr&gt; "2021", "2021", "2021", "2021", "2021", "2021", "202...</code></pre>
 </div>
 <div id="sources" class="section level3">
@@ -270,7 +271,7 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>cim_code_actif</
 <div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="co"># Chargement de la CIM-10 de l'année 2021</span>
 <span class="no">cim_2021</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2021</span>)
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">cim_2021</span>)</pre></body></html></div>
-<pre><code>#&gt; # A tibble: 6 x 10
+<pre><code>#&gt; # A tibble: 6 x 11
 #&gt;   cim_code cim_tmco cim_pssr cim_tpsy cim_lib cim_code_actif cim_categorie
 #&gt;   &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;        
 #&gt; 1 A00             3 NNNN            3 Choléra              1 A00          
@@ -279,8 +280,8 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>cim_code_actif</
 #&gt; 4 A009            0 NOOO            0 Cholér~              1 A00          
 #&gt; 5 A01             3 NNNN            3 Fièvre~              1 A01          
 #&gt; 6 A010            0 NOOO            0 Fièvre~              1 A01          
-#&gt; # ... with 3 more variables: cim_chapitre &lt;chr&gt;, cim_groupe &lt;chr&gt;,
-#&gt; #   annee_pmsi &lt;chr&gt;</code></pre>
+#&gt; # ... with 4 more variables: cim_chapitre &lt;chr&gt;, cim_groupe &lt;chr&gt;,
+#&gt; #   cim_precision &lt;lgl&gt;, annee_pmsi &lt;chr&gt;</code></pre>
 </div>
 <div id="chargement-de-la-cim-10-des-années-2020-et-2021" class="section level3">
 <h3 class="hasAnchor">
@@ -288,7 +289,7 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>cim_code_actif</
 <div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="co"># Chargement de la CIM-10 des années 2020 et 2021</span>
 <span class="no">cim_2020_2021</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2020</span>:<span class="fl">2021</span>)
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">cim_2020_2021</span>)</pre></body></html></div>
-<pre><code>#&gt; # A tibble: 6 x 10
+<pre><code>#&gt; # A tibble: 6 x 11
 #&gt;   cim_code cim_tmco cim_pssr cim_tpsy cim_lib cim_code_actif cim_categorie
 #&gt;   &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;        
 #&gt; 1 A00             3 NNNN            3 Choléra              1 A00          
@@ -297,8 +298,8 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>cim_code_actif</
 #&gt; 4 A009            0 NOOO            0 Cholér~              1 A00          
 #&gt; 5 A01             3 NNNN            3 Fièvre~              1 A01          
 #&gt; 6 A010            0 NOOO            0 Fièvre~              1 A01          
-#&gt; # ... with 3 more variables: cim_chapitre &lt;chr&gt;, cim_groupe &lt;chr&gt;,
-#&gt; #   annee_pmsi &lt;chr&gt;</code></pre>
+#&gt; # ... with 4 more variables: cim_chapitre &lt;chr&gt;, cim_groupe &lt;chr&gt;,
+#&gt; #   cim_precision &lt;lgl&gt;, annee_pmsi &lt;chr&gt;</code></pre>
 </div>
 <div id="association-du-libellé-cim-10-aux-dp" class="section level3">
 <h3 class="hasAnchor">
@@ -307,52 +308,52 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>cim_code_actif</
 <pre><code>#&gt; # A tibble: 12 x 3
 #&gt;    no_rss dp_rss annee_rss
 #&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;    
-#&gt;  1      1 I501   2020     
-#&gt;  2      2 Z491   2019     
-#&gt;  3      3 H251   2019     
-#&gt;  4      4 Z380   2019     
-#&gt;  5      5 S7200  2019     
+#&gt;  1      1 I5010  2021     
+#&gt;  2      2 Z491   2021     
+#&gt;  3      3 H251   2020     
+#&gt;  4      4 Z380   2020     
+#&gt;  5      5 S7200  2021     
 #&gt;  6      6 S0600  2020     
-#&gt;  7      7 R074   2020     
-#&gt;  8      8 J441   2019     
+#&gt;  7      7 R074   2021     
+#&gt;  8      8 J441   2020     
 #&gt;  9      9 K358   2020     
-#&gt; 10     10 R53+0  2019     
-#&gt; 11     11 S7200  2019     
-#&gt; 12     12 I501   2019</code></pre>
-<div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2019 et 2020</span>
-<span class="no">cim_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
+#&gt; 10     10 R53+0  2020     
+#&gt; 11     11 S7200  2020     
+#&gt; 12     12 I5011  2020</code></pre>
+<div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2020 et 2021</span>
+<span class="no">cim_2020_2021</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2020</span>:<span class="fl">2021</span>)
 
 <span class="co"># rattachement à chaque DP du libellé CIM-10 correspondant au DP et à son année PMSI</span>
 <span class="no">jeu_dp_libelle</span> <span class="kw">&lt;-</span> <span class="no">jeu_dp</span> <span class="kw">%&gt;%</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">cim_2019_2020</span> <span class="kw">%&gt;%</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">cim_code</span>,<span class="no">cim_lib</span>,<span class="no">annee_pmsi</span>),
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">cim_2020_2021</span> <span class="kw">%&gt;%</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">cim_code</span>,<span class="no">cim_lib</span>,<span class="no">annee_pmsi</span>),
                    <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"dp_rss"</span> <span class="kw">=</span> <span class="st">"cim_code"</span>, <span class="st">"annee_rss"</span> <span class="kw">=</span> <span class="st">"annee_pmsi"</span>))
 <span class="no">jeu_dp_libelle</span></pre></body></html></div>
 <pre><code>#&gt; # A tibble: 12 x 4
 #&gt;    no_rss dp_rss annee_rss cim_lib                                              
 #&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;                                                
-#&gt;  1      1 I501   2020      Insuffisance ventriculaire gauche                    
-#&gt;  2      2 Z491   2019      Dialyse extra-corporelle                             
-#&gt;  3      3 H251   2019      Cataracte sénile nucléaire                           
-#&gt;  4      4 Z380   2019      Enfant unique, né à l'hôpital                        
-#&gt;  5      5 S7200  2019      Fracture fermée du col du fémur                      
+#&gt;  1      1 I5010  2021      Insuffisance ventriculaire gauche, avec fraction d'é~
+#&gt;  2      2 Z491   2021      Dialyse extra-corporelle                             
+#&gt;  3      3 H251   2020      Cataracte sénile nucléaire                           
+#&gt;  4      4 Z380   2020      Enfant unique, né à l'hôpital                        
+#&gt;  5      5 S7200  2021      Fracture fermée du col du fémur                      
 #&gt;  6      6 S0600  2020      Commotion cérébrale, sans plaie intracrânienne       
-#&gt;  7      7 R074   2020      Douleur thoracique, sans précision                   
-#&gt;  8      8 J441   2019      Maladie pulmonaire obstructive chronique avec épisod~
+#&gt;  7      7 R074   2021      Douleur thoracique, sans précision                   
+#&gt;  8      8 J441   2020      Maladie pulmonaire obstructive chronique avec épisod~
 #&gt;  9      9 K358   2020      Appendicites aigües, autres et non précisées         
-#&gt; 10     10 R53+0  2019      Altération [baisse] de l'état général                
-#&gt; 11     11 S7200  2019      Fracture fermée du col du fémur                      
-#&gt; 12     12 I501   2019      Insuffisance ventriculaire gauche</code></pre>
+#&gt; 10     10 R53+0  2020      Altération [baisse] de l'état général                
+#&gt; 11     11 S7200  2020      Fracture fermée du col du fémur                      
+#&gt; 12     12 I5011  2020      Insuffisance ventriculaire gauche, avec fraction d'é~</code></pre>
 </div>
 <div id="case-mix-par-chapitre-cim-10" class="section level3">
 <h3 class="hasAnchor">
 <a href="#case-mix-par-chapitre-cim-10" class="anchor"></a>Case mix par chapitre CIM-10</h3>
 <p>Avec le jeu de données <code>jeu_dp</code> de l’exemple précédent.</p>
-<div class="sourceCode" id="cb13"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2019 et 2020</span>
-<span class="no">cim_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
+<div class="sourceCode" id="cb13"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2020 et 2021</span>
+<span class="no">cim_2020_2021</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2020</span>:<span class="fl">2021</span>)
 
 <span class="co"># rattachement aux codes DP des libellés CIM-10 et des numéros de chapitre CIM-10 correspondant</span>
 <span class="no">dp_chapitre</span> <span class="kw">&lt;-</span> <span class="no">jeu_dp</span> <span class="kw">%&gt;%</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">cim_2019_2020</span> <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">cim_2020_2021</span> <span class="kw">%&gt;%</span>
                      <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">cim_code</span>, <span class="no">cim_lib</span>, <span class="no">cim_chapitre</span>, <span class="no">annee_pmsi</span>),
                    <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"dp_rss"</span> <span class="kw">=</span> <span class="st">"cim_code"</span>,
                           <span class="st">"annee_rss"</span> <span class="kw">=</span> <span class="st">"annee_pmsi"</span>))
@@ -381,7 +382,7 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>cim_code_actif</
 #&gt; 1 19           Lésions traumatiques, empoisonnement~     3         2 S7200,S060~
 #&gt; 2 18           Symptômes, signes et résultats anorm~     2         2 R074,R53+0 
 #&gt; 3 21           Facteurs influant sur l'état de sant~     2         2 Z491,Z380  
-#&gt; 4 9            Maladies de l'appareil circulatoire       2         1 I501,I501  
+#&gt; 4 9            Maladies de l'appareil circulatoire       2         2 I5010,I5011
 #&gt; 5 10           Maladies de l'appareil respiratoire       1         1 J441       
 #&gt; 6 11           Maladies de l'appareil digestif           1         1 K358       
 #&gt; 7 7            Maladies de l'œil et de ses annexes       1         1 H251</code></pre>
@@ -393,22 +394,22 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>cim_code_actif</
 <pre><code>#&gt; # A tibble: 10 x 3
 #&gt;    no_rss das   annee_rss
 #&gt;     &lt;int&gt; &lt;chr&gt; &lt;chr&gt;    
-#&gt;  1      1 Z370  2019     
-#&gt;  2      2 I10   2019     
-#&gt;  3      3 P040  2020     
-#&gt;  4      4 F1725 2020     
+#&gt;  1      1 Z370  2021     
+#&gt;  2      2 I10   2021     
+#&gt;  3      3 P040  2021     
+#&gt;  4      4 F1725 2021     
 #&gt;  5      5 G473  2020     
-#&gt;  6      6 W189  2019     
+#&gt;  6      6 W189  2020     
 #&gt;  7      7 R600  2020     
-#&gt;  8      8 N178  2020     
+#&gt;  8      8 N178  2021     
 #&gt;  9      9 B952  2020     
-#&gt; 10     10 D638  2019</code></pre>
-<div class="sourceCode" id="cb16"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2019 et 2020</span>
-<span class="no">cim_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
+#&gt; 10     10 D638  2021</code></pre>
+<div class="sourceCode" id="cb16"><html><body><pre class="r"><span class="co"># chargement de la CIM-10 2020 et 2021</span>
+<span class="no">cim_2020_2021</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"cim"</span>,<span class="fl">2020</span>:<span class="fl">2021</span>)
 
 <span class="no">das_interdit_dp_dr</span> <span class="kw">&lt;-</span> <span class="no">jeu_das</span> <span class="kw">%&gt;%</span>
   <span class="co"># rattachement à chaque DAS du type MCO et du libellé CIM-10, correspondant à son année PMSI</span>
-  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">cim_2019_2020</span> <span class="kw">%&gt;%</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">cim_code</span>,<span class="no">cim_lib</span>,<span class="no">cim_tmco</span>,<span class="no">annee_pmsi</span>),
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">cim_2020_2021</span> <span class="kw">%&gt;%</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">cim_code</span>,<span class="no">cim_lib</span>,<span class="no">cim_tmco</span>,<span class="no">annee_pmsi</span>),
                    <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"das"</span> <span class="kw">=</span> <span class="st">"cim_code"</span>, <span class="st">"annee_rss"</span> <span class="kw">=</span> <span class="st">"annee_pmsi"</span>)) <span class="kw">%&gt;%</span>
   <span class="co"># filtre sur les types MCO 1 "Diagnostic interdit en DP et DR - Autorisé ailleurs" </span>
   <span class="co"># et 2 "Diagnostic interdit en DP et DR - Cause externe de morbidité" </span>
@@ -417,8 +418,8 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>cim_code_actif</
 <pre><code>#&gt; # A tibble: 3 x 5
 #&gt;   no_rss das   annee_rss cim_lib                                        cim_tmco
 #&gt;    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;                                             &lt;int&gt;
-#&gt; 1      1 Z370  2019      Naissance unique, enfant vivant                       1
-#&gt; 2      6 W189  2019      Autre chute de plain-pied, lieu sans précision        2
+#&gt; 1      1 Z370  2021      Naissance unique, enfant vivant                       1
+#&gt; 2      6 W189  2020      Autre chute de plain-pied, lieu sans précision        2
 #&gt; 3      9 B952  2020      Streptocoques, groupe D, et entérocoques, cau~        1</code></pre>
 </div>
 </div>

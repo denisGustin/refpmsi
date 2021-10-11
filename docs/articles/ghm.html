@@ -116,7 +116,7 @@
 
     
     
-<p>Le package <code>refpmsi</code> comprend 13 référentiels liés aux GHM et GHS.</p>
+<p>Le package <code>refpmsi</code> comprend 14 référentiels liés aux GHM et GHS.</p>
 <div id="cmd" class="section level2">
 <h2 class="hasAnchor">
 <a href="#cmd" class="anchor"></a>CMD</h2>
@@ -482,13 +482,40 @@ NA = ghs non concerné</p>
 <p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4082/ovalide_0.zip">OVALIDE MCO - Tables de référence 2021</a> (ATIH)</p>
 </div>
 </div>
+<div id="listes-en-d-et-en-a-de-lalgorithme-de-groupage-mco" class="section level2">
+<h2 class="hasAnchor">
+<a href="#listes-en-d-et-en-a-de-lalgorithme-de-groupage-mco" class="anchor"></a>Listes en D et en A de l’algorithme de groupage MCO</h2>
+<p>Intitulé du référentiel : <strong>mco_fg_listes</strong></p>
+<p>Mise à jour : 8 octobre 2021</p>
+<p>Référentiel annualisé au sens du PMSI MCO à partir de 2021.</p>
+<div id="variables-du-référentiel-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#variables-du-r%C3%A9f%C3%A9rentiel-1" class="anchor"></a>Variables du référentiel</h3>
+<p><strong>mco_fg_liste_code</strong> = code des listes<br><strong>mco_fg_liste_lib</strong> = libellé des listes<br><strong>mco_fg_liste_type</strong> = D pour les listes en D et A pour les listes en A<br><strong>mco_fg_cmd</strong> = CMD dans laquelle la liste participe au groupage des séjours<br><strong>mco_fg_code</strong> = code CIM-10 (liste en D) ou code acte CCAM PMSI (liste en A)<br><strong>mco_fg_ccam_pmsi_extension</strong> = extension PMSI des actes CCAM PMSI<br><strong>mco_fg_ccam_pmsi_phase</strong> = phase des actes CCAM PMSI<br><strong>annee_pmsi</strong> = année PMSI 2021</p>
+<pre><code>#&gt; Rows: 55,409
+#&gt; Columns: 8
+#&gt; $ mco_fg_liste_code          &lt;chr&gt; "A-002", "A-002", "A-002", "A-002", "A-0...
+#&gt; $ mco_fg_liste_lib           &lt;chr&gt; "Craniotomies", "Craniotomies", "Craniot...
+#&gt; $ mco_fg_liste_type          &lt;chr&gt; "A", "A", "A", "A", "A", "A", "A", "A", ...
+#&gt; $ mco_fg_cmd                 &lt;chr&gt; "01", "01", "01", "01", "01", "01", "01"...
+#&gt; $ mco_fg_code                &lt;chr&gt; "AAFA001", "AAFA002", "AAFA003", "AAFA00...
+#&gt; $ mco_fg_ccam_pmsi_extension &lt;chr&gt; "00", "00", "00", "00", "00", "00", "00"...
+#&gt; $ mco_fg_ccam_pmsi_phase     &lt;chr&gt; "0", "0", "0", "0", "0", "0", "0", "0", ...
+#&gt; $ annee_pmsi                 &lt;chr&gt; "2021", "2021", "2021", "2021", "2021", ...</code></pre>
+</div>
+<div id="source-8" class="section level3">
+<h3 class="hasAnchor">
+<a href="#source-8" class="anchor"></a>Source</h3>
+<p><a href="https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3111">Données du volume 2 du manuel des GHS 2021 - format csv</a> (ATIH)</p>
+</div>
+</div>
 <div id="exemples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#exemples" class="anchor"></a>Exemples</h2>
 <div id="chargement-du-référentiel-des-ghs-public-des-années-2020-et-2021" class="section level3">
 <h3 class="hasAnchor">
 <a href="#chargement-du-r%C3%A9f%C3%A9rentiel-des-ghs-public-des-ann%C3%A9es-2020-et-2021" class="anchor"></a>Chargement du référentiel des GHS Public des années 2020 et 2021</h3>
-<div class="sourceCode" id="cb14"><html><body><pre class="r"><span class="co"># Chargement du référentiel des GHS-GHM Public des années 2020 et 2021</span>
+<div class="sourceCode" id="cb15"><html><body><pre class="r"><span class="co"># Chargement du référentiel des GHS-GHM Public des années 2020 et 2021</span>
 <span class="no">ghs_2020_2021</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_public"</span>,<span class="fl">2020</span>:<span class="fl">2021</span>)
 <span class="no">ghs_2020_2021</span></pre></body></html></div>
 <pre><code>#&gt; # A tibble: 8,562 x 11
@@ -531,7 +558,7 @@ NA = ghs non concerné</p>
 #&gt; 15      3     12 04M053 J189      11 1144  2020     
 #&gt; 16      1     13 16M11T D508       0 6186  2020     
 #&gt; 17      1     14 16M11T D509       0 6118  2020</code></pre>
-<div class="sourceCode" id="cb17"><html><body><pre class="r"><span class="co"># chargement des GHM Public 2019 et 2020</span>
+<div class="sourceCode" id="cb18"><html><body><pre class="r"><span class="co"># chargement des GHM Public 2019 et 2020</span>
 <span class="no">ghm_2019_2020</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghs_public"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>)
 
 <span class="no">jeu_ghm_libelle</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
@@ -566,7 +593,7 @@ NA = ghs non concerné</p>
 <a href="#rattachement-dms-nationale-aux-s%C3%A9jours" class="anchor"></a>Rattachement DMS nationale aux séjours</h3>
 <p>Dans un premier temps, on rattache les DMS nationales issues d’OVALIDE MCO à chaque séjour.</p>
 <p>Puis on compare la DS des séjours avec ces DMS nationales pour les séjours pour lesquels cela a un sens (séjours avec une DS &gt; 0).</p>
-<div class="sourceCode" id="cb19"><html><body><pre class="r"><span class="co"># Chargement des DMS nationales des années PMSI 2019 et 2020</span>
+<div class="sourceCode" id="cb20"><html><body><pre class="r"><span class="co"># Chargement des DMS nationales des années PMSI 2019 et 2020</span>
 <span class="no">dms_nat</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ovalide_ghminfo_dgf"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>) <span class="kw">%&gt;%</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ghm</span>,<span class="no">dms</span>,<span class="no">annee_pmsi</span>)
 <span class="no">dms_nat</span>
@@ -616,7 +643,7 @@ NA = ghs non concerné</p>
 #&gt; 15            0.99
 #&gt; # ... with 2 more rows</code></pre>
 <p>Enfin, on peut filtrer les séjours qui ont une DS &gt;= 2,5 x la DMS nationale de leur GHM pour repérer des séjours, à priori, particulièrement longs.</p>
-<div class="sourceCode" id="cb21"><html><body><pre class="r"><span class="no">sej_2.5_dms</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm_dms</span> <span class="kw">%&gt;%</span>
+<div class="sourceCode" id="cb22"><html><body><pre class="r"><span class="no">sej_2.5_dms</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm_dms</span> <span class="kw">%&gt;%</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">ratio_ecart_dms</span> <span class="kw">&gt;=</span> <span class="fl">2.5</span>)
 <span class="no">sej_2.5_dms</span> <span class="kw">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw">width</span> <span class="kw">=</span> <span class="fl">Inf</span>)</pre></body></html></div>
 <pre><code>#&gt; # A tibble: 2 x 10
@@ -632,7 +659,7 @@ NA = ghs non concerné</p>
 <div id="case-mix-en-da-domaine-dactivité-des-séjours" class="section level3">
 <h3 class="hasAnchor">
 <a href="#case-mix-en-da-domaine-dactivit%C3%A9-des-s%C3%A9jours" class="anchor"></a>Case mix en DA (Domaine d’Activité) des séjours</h3>
-<div class="sourceCode" id="cb23"><html><body><pre class="r"><span class="no">case_mix_da</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
+<div class="sourceCode" id="cb24"><html><body><pre class="r"><span class="no">case_mix_da</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
   <span class="co"># rattachement des codes DA aux séjours</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"ghm_regroupement"</span>,<span class="fl">2019</span>:<span class="fl">2020</span>) <span class="kw">%&gt;%</span>
                      <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">ghm</span>,<span class="no">da</span>,<span class="no">da_lib</span>,<span class="no">annee_pmsi</span>),
@@ -660,7 +687,7 @@ NA = ghs non concerné</p>
 <h3 class="hasAnchor">
 <a href="#s%C3%A9jours-et-gradation-des-prises-en-charge-ambulatoires" class="anchor"></a>Séjours et gradation des prises en charge ambulatoires</h3>
 <p>Dans un premier temps, on repère les séjours groupés dans un GHM concerné par la gradation des prises en charge ambulatoires et on rattache le GHS plein et le GHS intermédiaire.</p>
-<div class="sourceCode" id="cb25"><html><body><pre class="r"><span class="no">sej_ghm_gradation_ambulatoire</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
+<div class="sourceCode" id="cb26"><html><body><pre class="r"><span class="no">sej_ghm_gradation_ambulatoire</span> <span class="kw">&lt;-</span> <span class="no">jeu_ghm</span> <span class="kw">%&gt;%</span>
   <span class="co"># filtre sur l'année 2020, seule année concernée dans notre data set</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">annee_rss</span> <span class="kw">==</span> <span class="fl">2020</span>) <span class="kw">%&gt;%</span>
   <span class="co"># rattachement GHS plein et GHS intermédiaire pour les GHM concernés</span>
@@ -677,7 +704,7 @@ NA = ghs non concerné</p>
 #&gt; 3      1     13 16M11T D508       0 6186  2020      6186      6118             
 #&gt; 4      1     14 16M11T D509       0 6118  2020      6186      6118</code></pre>
 <p>Dans un second temps, on repère les seuls séjours classés dans un GHS intermédiaire</p>
-<div class="sourceCode" id="cb27"><html><body><pre class="r"><span class="no">sej_ghs_intermediaire</span> <span class="kw">&lt;-</span> <span class="no">sej_ghm_gradation_ambulatoire</span> <span class="kw">%&gt;%</span>
+<div class="sourceCode" id="cb28"><html><body><pre class="r"><span class="no">sej_ghs_intermediaire</span> <span class="kw">&lt;-</span> <span class="no">sej_ghm_gradation_ambulatoire</span> <span class="kw">%&gt;%</span>
   <span class="co"># filtre sur les séjours dont le GHS = le GHS intermédiaire associé</span>
   <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">ghs</span> <span class="kw">==</span> <span class="no">ghs_intermediaire</span>)
 <span class="no">sej_ghs_intermediaire</span></pre></body></html></div>
@@ -686,6 +713,159 @@ NA = ghs non concerné</p>
 #&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;            
 #&gt; 1      1     10 06M12T R104       0 2206  2020      2200      2206             
 #&gt; 2      1     14 16M11T D509       0 6118  2020      6186      6118</code></pre>
+</div>
+<div id="liste-des-codes-cim-10-dune-liste-d" class="section level3">
+<h3 class="hasAnchor">
+<a href="#liste-des-codes-cim-10-dune-liste-d" class="anchor"></a>Liste des codes CIM-10 d’une liste D</h3>
+<div class="sourceCode" id="cb30"><html><body><pre class="r"><span class="co"># Chargement du référentiel des listes D et A de l'algorithme de groupage MCO V2021</span>
+<span class="no">mco_fg_listes</span> <span class="kw">&lt;-</span> <span class="kw pkg">refpmsi</span><span class="kw ns">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span>(<span class="st">"mco_fg_listes"</span>,<span class="fl">2021</span>)
+<span class="no">mco_fg_listes</span></pre></body></html></div>
+<pre><code>#&gt; # A tibble: 55,409 x 8
+#&gt;    mco_fg_liste_co~ mco_fg_liste_lib mco_fg_liste_ty~ mco_fg_cmd mco_fg_code
+#&gt;    &lt;chr&gt;            &lt;chr&gt;            &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;      
+#&gt;  1 A-002            Craniotomies     A                01         AAFA001    
+#&gt;  2 A-002            Craniotomies     A                01         AAFA002    
+#&gt;  3 A-002            Craniotomies     A                01         AAFA003    
+#&gt;  4 A-002            Craniotomies     A                01         AAFA004    
+#&gt;  5 A-002            Craniotomies     A                01         AAFA005    
+#&gt;  6 A-002            Craniotomies     A                01         AAFA006    
+#&gt;  7 A-002            Craniotomies     A                01         AAFA007    
+#&gt;  8 A-002            Craniotomies     A                01         AAFA008    
+#&gt;  9 A-002            Craniotomies     A                01         AAGA900    
+#&gt; 10 A-002            Craniotomies     A                01         AAJA001    
+#&gt; # ... with 55,399 more rows, and 3 more variables:
+#&gt; #   mco_fg_ccam_pmsi_extension &lt;chr&gt;, mco_fg_ccam_pmsi_phase &lt;chr&gt;,
+#&gt; #   annee_pmsi &lt;chr&gt;</code></pre>
+<p>On choisit d’extraire les codes CIM-10 de la liste D-0401 "“Bronchite ou asthme”</p>
+<p>Le DP d’un séjour appartenant à cette liste amène le séjour concerné en racine 04M03 “Bronchites et asthme, âge supérieur à 17 ans” ou 04M02 “Bronchites et asthme, âge inférieur à 18 ans”</p>
+<div class="sourceCode" id="cb32"><html><body><pre class="r"><span class="no">liste_D_0401</span> <span class="kw">&lt;-</span> <span class="no">mco_fg_listes</span> <span class="kw">%&gt;%</span>
+  <span class="co"># on ne garde que des variables qui nous intéressent pour une liste en D</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(-<span class="fu">contains</span>(<span class="st">"ccam"</span>),-<span class="no">mco_fg_liste_type</span>,-<span class="no">annee_pmsi</span>) <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">mco_fg_liste_code</span> <span class="kw">==</span> <span class="st">"D-0401"</span>)
+<span class="no">liste_D_0401</span></pre></body></html></div>
+<pre><code>#&gt; # A tibble: 20 x 4
+#&gt;    mco_fg_liste_code mco_fg_liste_lib     mco_fg_cmd mco_fg_code
+#&gt;    &lt;chr&gt;             &lt;chr&gt;                &lt;chr&gt;      &lt;chr&gt;      
+#&gt;  1 D-0401            Bronchites et asthme 04         J041       
+#&gt;  2 D-0401            Bronchites et asthme 04         J200       
+#&gt;  3 D-0401            Bronchites et asthme 04         J201       
+#&gt;  4 D-0401            Bronchites et asthme 04         J202       
+#&gt;  5 D-0401            Bronchites et asthme 04         J203       
+#&gt;  6 D-0401            Bronchites et asthme 04         J204       
+#&gt;  7 D-0401            Bronchites et asthme 04         J205       
+#&gt;  8 D-0401            Bronchites et asthme 04         J206       
+#&gt;  9 D-0401            Bronchites et asthme 04         J207       
+#&gt; 10 D-0401            Bronchites et asthme 04         J208       
+#&gt; 11 D-0401            Bronchites et asthme 04         J209       
+#&gt; 12 D-0401            Bronchites et asthme 04         J40        
+#&gt; 13 D-0401            Bronchites et asthme 04         J410       
+#&gt; 14 D-0401            Bronchites et asthme 04         J42        
+#&gt; 15 D-0401            Bronchites et asthme 04         J450       
+#&gt; 16 D-0401            Bronchites et asthme 04         J451       
+#&gt; 17 D-0401            Bronchites et asthme 04         J458       
+#&gt; 18 D-0401            Bronchites et asthme 04         J459       
+#&gt; 19 D-0401            Bronchites et asthme 04         J46        
+#&gt; 20 D-0401            Bronchites et asthme 04         J980</code></pre>
+<p>Script identique pour extraire les actes CCAM PMSI d’une liste A.</p>
+</div>
+<div id="diagnostics-dentrée-dune-cmd" class="section level3">
+<h3 class="hasAnchor">
+<a href="#diagnostics-dentr%C3%A9e-dune-cmd" class="anchor"></a>Diagnostics d’entrée d’une CMD</h3>
+<p>On choisit d’extraire les diags d’entrée de la CMD 01</p>
+<div class="sourceCode" id="cb34"><html><body><pre class="r"><span class="co"># on a chargé le référentiel mco_fg_listes dans la variable mco_fg_listes</span>
+<span class="no">diag_cmd_01</span> <span class="kw">&lt;-</span> <span class="no">mco_fg_listes</span> <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">mco_fg_cmd</span> <span class="kw">==</span> <span class="st">"01"</span>, <span class="no">mco_fg_liste_type</span> <span class="kw">==</span> <span class="st">"D"</span>) <span class="kw">%&gt;%</span>
+  <span class="co"># argument.keep_all = TRUE pour garder les colonnes</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span>(<span class="no">mco_fg_code</span>, <span class="kw">.keep_all</span> <span class="kw">=</span> <span class="fl">TRUE</span>) <span class="kw">%&gt;%</span>
+  <span class="co"># colonnes qui nous intéressent + réordonnancement </span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">mco_fg_code</span>, <span class="no">mco_fg_cmd</span>, <span class="no">mco_fg_liste_code</span>, <span class="no">mco_fg_liste_lib</span>)
+<span class="no">diag_cmd_01</span></pre></body></html></div>
+<pre><code>#&gt; # A tibble: 903 x 4
+#&gt;    mco_fg_code mco_fg_cmd mco_fg_liste_code mco_fg_liste_lib      
+#&gt;    &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;             &lt;chr&gt;                 
+#&gt;  1 F072        01         D-0101            Migraines et céphalées
+#&gt;  2 G430        01         D-0101            Migraines et céphalées
+#&gt;  3 G431        01         D-0101            Migraines et céphalées
+#&gt;  4 G432        01         D-0101            Migraines et céphalées
+#&gt;  5 G433        01         D-0101            Migraines et céphalées
+#&gt;  6 G438        01         D-0101            Migraines et céphalées
+#&gt;  7 G439        01         D-0101            Migraines et céphalées
+#&gt;  8 G440        01         D-0101            Migraines et céphalées
+#&gt;  9 G441        01         D-0101            Migraines et céphalées
+#&gt; 10 G442        01         D-0101            Migraines et céphalées
+#&gt; # ... with 893 more rows</code></pre>
+</div>
+<div id="rattachement-des-libellés-des-listes-d-aux-dp" class="section level3">
+<h3 class="hasAnchor">
+<a href="#rattachement-des-libell%C3%A9s-des-listes-d-aux-dp" class="anchor"></a>Rattachement des libellés des listes D aux DP</h3>
+<p>Niveau R avancé</p>
+<p>Soit un mini-jeu de données de 12 séjours avec le DP, le GHM et l’année PMSI du séjour</p>
+<pre><code>#&gt; # A tibble: 12 x 4
+#&gt;    no_rss dp_rss ghm_rss annee_rss
+#&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;    
+#&gt;  1      1 I5010  05M091  2021     
+#&gt;  2      2 S7220  08M041  2020     
+#&gt;  3      3 H269   02C05J  2020     
+#&gt;  4      4 Z380   15M05A  2021     
+#&gt;  5      5 S7200  08C471  2020     
+#&gt;  6      6 S0600  01M201  2021     
+#&gt;  7      7 R074   05M13T  2021     
+#&gt;  8      8 J441   04M202  2020     
+#&gt;  9      9 K358   06C091  2020     
+#&gt; 10     10 R53+0  23M20Z  2020     
+#&gt; 11     11 S7200  08C471  2021     
+#&gt; 12     12 I5011  05M092  2020</code></pre>
+<p>1ere étape : construire le tibble des diagnostics d’entrée de toutes les CMD concernées par une introduction de groupage par le DP</p>
+<div class="sourceCode" id="cb37"><html><body><pre class="r"><span class="co"># on a chargé le référentiel mco_fg_listes dans la variable mco_fg_listes</span>
+<span class="no">diag_cmd</span> <span class="kw">&lt;-</span> <span class="no">mco_fg_listes</span> <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">mco_fg_liste_type</span> <span class="kw">==</span> <span class="st">"D"</span>) <span class="kw">%&gt;%</span>
+  <span class="co"># nest_by = group_by + summarise + rowwise (expérimental dplyr 1.0.7)</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/nest_by.html">nest_by</a></span>(<span class="no">mco_fg_cmd</span>, <span class="kw">.key</span> <span class="kw">=</span> <span class="st">"diag_entree"</span>) <span class="kw">%&gt;%</span>
+  <span class="co"># dégroupage du rowwise généré par nest_by</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span>() <span class="kw">%&gt;%</span>
+  <span class="co"># traitement de la list_column des diags d'entrée</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="kw">diag_entree</span> <span class="kw">=</span> <span class="kw pkg">purrr</span><span class="kw ns">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span>(<span class="no">diag_entree</span>, ~ <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span>(<span class="no">.x</span>, <span class="no">mco_fg_code</span>, <span class="kw">.keep_all</span> <span class="kw">=</span> <span class="fl">TRUE</span>) <span class="kw">%&gt;%</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"mco_fg_code"</span>, <span class="st">"mco_fg_liste_code"</span>, <span class="st">"mco_fg_liste_lib"</span>))))
+<span class="no">diag_cmd</span></pre></body></html></div>
+<pre><code>#&gt; # A tibble: 26 x 2
+#&gt;    mco_fg_cmd diag_entree         
+#&gt;    &lt;chr&gt;      &lt;list&gt;              
+#&gt;  1 01         &lt;tibble [903 x 3]&gt;  
+#&gt;  2 02         &lt;tibble [408 x 3]&gt;  
+#&gt;  3 03         &lt;tibble [555 x 3]&gt;  
+#&gt;  4 04         &lt;tibble [465 x 3]&gt;  
+#&gt;  5 05         &lt;tibble [495 x 3]&gt;  
+#&gt;  6 06         &lt;tibble [579 x 3]&gt;  
+#&gt;  7 07         &lt;tibble [227 x 3]&gt;  
+#&gt;  8 08         &lt;tibble [4,058 x 3]&gt;
+#&gt;  9 09         &lt;tibble [914 x 3]&gt;  
+#&gt; 10 10         &lt;tibble [422 x 3]&gt;  
+#&gt; # ... with 16 more rows</code></pre>
+<p>2eme étape : rattachement du libellé de la liste D correspondant au DP pour la CMD du séjour</p>
+<div class="sourceCode" id="cb39"><html><body><pre class="r"><span class="no">jeu_dp_ghm_liste_D</span> <span class="kw">&lt;-</span> <span class="no">jeu_dp_ghm</span> <span class="kw">%&gt;%</span>
+  <span class="co"># extraction de la CMD du séjour</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="kw">cmd_rss</span> <span class="kw">=</span> <span class="kw pkg">stringr</span><span class="kw ns">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_sub.html">str_sub</a></span>(<span class="no">ghm_rss</span>,<span class="fl">1</span>,<span class="fl">2</span>)) <span class="kw">%&gt;%</span>
+  <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="no">diag_cmd</span> <span class="kw">%&gt;%</span> <span class="kw pkg">tidyr</span><span class="kw ns">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/nest.html">unnest</a></span>(<span class="no">diag_entree</span>),
+                            <span class="co"># jonction via dp et cmd. Rappel : plusieurs listes D possibles pour un DP</span>
+                            <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"dp_rss"</span> <span class="kw">=</span> <span class="st">"mco_fg_code"</span>,
+                                   <span class="st">"cmd_rss"</span> <span class="kw">=</span> <span class="st">"mco_fg_cmd"</span>
+                                   ))
+<span class="no">jeu_dp_ghm_liste_D</span></pre></body></html></div>
+<pre><code>#&gt; # A tibble: 12 x 7
+#&gt;    no_rss dp_rss ghm_rss annee_rss cmd_rss mco_fg_liste_code mco_fg_liste_lib   
+#&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;             &lt;chr&gt;              
+#&gt;  1      1 I5010  05M091  2021      05      D-0505            Insuffisances card~
+#&gt;  2      2 S7220  08M041  2020      08      D-069             Certaines lésions ~
+#&gt;  3      3 H269   02C05J  2020      02      D-0204            Autres affections ~
+#&gt;  4      4 Z380   15M05A  2021      15      &lt;NA&gt;              &lt;NA&gt;               
+#&gt;  5      5 S7200  08C471  2020      08      D-069             Certaines lésions ~
+#&gt;  6      6 S0600  01M201  2021      01      D-0121            Lésions crâniennes~
+#&gt;  7      7 R074   05M13T  2021      05      D-0508            Douleurs thoraciqu~
+#&gt;  8      8 J441   04M202  2020      04      D-0408            Bronchopneumopathi~
+#&gt;  9      9 K358   06C091  2020      06      D-0610            Autres affections ~
+#&gt; 10     10 R53+0  23M20Z  2020      23      D-2309            Autres motifs de r~
+#&gt; 11     11 S7200  08C471  2021      08      D-069             Certaines lésions ~
+#&gt; 12     12 I5011  05M092  2020      05      D-0505            Insuffisances card~</code></pre>
+<p>Remarque : pas de libellé de liste D pour le DP Z380 “Enfant unique, né à l’hôpital” d’un séjour classé dans la CMD 15 “Nouveau-nés, prématurés et affections de la période périnatale” car, dans cette CMD, le groupage ne commence pas par le DP.</p>
 </div>
 </div>
   </div>

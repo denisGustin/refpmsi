@@ -19,11 +19,15 @@ knitr::opts_chunk$set(
 ```
 # refpmsi
 
-Package de référentiels PMSI : [74 référentiels disponibles](https://denisgustin.github.io/refpmsi/articles/liste_ref.html)  
+Package de référentiels PMSI : [75 référentiels disponibles](https://denisgustin.github.io/refpmsi/articles/liste_ref.html)  
 
-Dernière mise à jour : 23 juin 2021  
+Dernière mise à jour : 08 octobre 2021  
 
 [Etre tenu au courant des mises à jour et ajouts de référentiels PMSI](http://www.lespmsi.com/r-et-pmsi/)
+
+[Webinaire MCO refpmsi - vendredi 26 novembre - De 14h à 15h30](https://www.lespmsi.com/webinaire-mco-refpmsi-vendredi-26-novembre-2021-de-14h-a-15h30/)  
+
+[Webinaire SSR refpmsi - vendredi 19 novembre - De 14h à 15h30](https://www.lespmsi.com/webinaire-ssr-refpmsi-vendredi-19-novembre-2021-de-14h-a-15h30/)  
 
 ## Installation
 
