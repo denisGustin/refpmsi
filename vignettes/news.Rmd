@@ -14,6 +14,26 @@ knitr::opts_chunk$set(
 )
 ```
 
+**Pondération CSARR V2022 SSR** *[18-11-2021]*  
+Ajout des pondérations CSARR de la V2022 dans le référentiel csarr_ponderation.  
+[Détails](https://denisgustin.github.io/refpmsi/articles/csarr.html#csarr-pond-rations)
+
+**Groupes de Lourdeur (GL) et Groupes de Réadaptation (GR) V2022 SSR** *[18-11-2021]*  
+2 nouveaux référentiels.  
+gl = codes et intitulés des GL  
+gr = codes et intitulés des GR  
+
+**Open CCAM 2020** *[18-11-2021]*  
+Ajout des données 2020 dans le référentiel open_ccam.  
+Annualisation du référentiel avec la variable annee_pmsi.  
+[Détails](https://denisgustin.github.io/refpmsi/articles/base_mco.html#open-ccam-1)
+
+**Dénombrements base nationale MCO 2020** *[18-11-2021]*  
+Ajout des données 2020 dans les référentiels base_mco_diag et base_mco_ccam.  
+Annualisation du référentiel avec la variable annee_pmsi.  
+Mise en classe des codes CIM et des actes CCAM selon le nombre de séjours et séances.  
+[Détails](https://denisgustin.github.io/refpmsi/articles/base_mco.html)
+
 **Listes D et A de l'algorithme de groupage MCO V2021** *[08-10-2021]*  
 Nouveau référentiel.  
 Listes D et listes A de groupage MCO dans les CMD.  
@@ -24,10 +44,10 @@ Dans le référentiel cim, ajout de la variable logique cim_precision qui indiqu
 [Détails](https://denisgustin.github.io/refpmsi/articles/cim.html)
 
 **GHM mono-RUM UHCD** *[23-06-2021]*  
-Ajout des 2 nouveaux référentiels ghm_monorum_uhcd_public et ghm_monorum_uhcd_prive en lien avec la réforme de financement des urgences qui créé, à partir du 1er mars 2021, des GHS dédiés pour chaque racine de GHM, dès que le séjour a lieu uniquement en UHCD et que son mode d'entrée et de sortie est le domicile ([Notice technique ATIH 234-7-2021](https://www.atih.sante.fr/sites/default/files/public/content/4004/notice_technique_n_atih-234-7-2021_nouveautes_financement_2021-hh.pdf)).  
+Ajout de 2 nouveaux référentiels ghm_monorum_uhcd_public et ghm_monorum_uhcd_prive en lien avec la réforme de financement des urgences qui créé, à partir du 1er mars 2021, des GHS dédiés pour chaque racine de GHM, dès que le séjour a lieu uniquement en UHCD et que son mode d'entrée et de sortie est le domicile ([Notice technique ATIH 234-7-2021](https://www.atih.sante.fr/sites/default/files/public/content/4004/notice_technique_n_atih-234-7-2021_nouveautes_financement_2021-hh.pdf)).  
 [Détails](https://denisgustin.github.io/refpmsi/articles/ghm.html#ghm-mono-rum-uhcd-public-1)      
 
-**spe_pharma_ssr** *[23-06-2021]*  
+**Référentiel spe_pharma_ssr** *[23-06-2021]*  
 Mise à jour suite au [rectificatif 2 de 2021](https://www.atih.sante.fr/specialites-pharmaceutiques-en-ssr-2021).  
 A cette occasion, ajout de variables pour gérer les dates de début et de fin d'activité des spécialités pharmaceutiques SSR.  
 Mise à jour des exemples associés.    
@@ -39,23 +59,23 @@ Mise à jour 2021 des 6 référentiels OVALIDE MCO : ovalide_racineinfo_dgf, ova
 **regroupements GHM et racines GHM V2021** *[07-06-2021]*  
 Mise à jour 2021 des référentiels ghm_regroupement et rghm_regroupement  
 
-**csarr_incompatibilite_intervenant** *[07-06-2021]*  
+**Référentiel csarr_incompatibilite_intervenant** *[07-06-2021]*  
 Mise à jour 2021  
 [Détails](https://denisgustin.github.io/refpmsi/articles/csarr.html#csarr-incompatibilit-s-intervenants)  
 
-**atu** *[07-06-2021]*  
+**Référentiel atu** *[07-06-2021]*  
 Mise à jour
 
 **CCAM à usage PMSI V2 2021** *[24-04-2021]*  
 Mise à jour des 2 référentiels ccam_pmsi et ccam_icr avec la V2 2021 de la CCAM à usage PMSI  
 
-**ghm_intermediaire** *[15-04-2021]*  
+**Référentiel ghm_intermediaire** *[15-04-2021]*  
 Nouveau référentiel  
 
-**csarr_hier_note** *[15-04-2021]*    
+**Référentiel csarr_hier_note** *[15-04-2021]*    
 Nouveau référentiel  
 
-**csarr_code_note** *[15-04-2021]*  
+**Référentiel csarr_code_note** *[15-04-2021]*  
 Nouveau référentiel  
 
 **Référentiels CIM-10, CCAM, GHM, CSARR V2021** *[15-04-2021]*  

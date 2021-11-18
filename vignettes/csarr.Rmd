@@ -149,11 +149,11 @@ refpmsi::refpmsi("csarr_ref") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_ponderation**  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 18 novembre 2021  
 
-Référentiel annualisé des années PMSI 2017 à 2021.  
+Référentiel annualisé des années PMSI 2017 à 2022 (2022 = version provisoire).  
 
-Mise au format "tidy" par nos soins  
+Mise en "tidy" par nos soins  
 
 ### Variables  
 
@@ -163,8 +163,8 @@ refpmsi::refpmsi("csarr_ponderation") %>% dplyr::glimpse()
 
 ```
 
-### Source  
-
+### Sources  
+[CSARR nomenclature 2022 provisoire](https://www.atih.sante.fr/experimentation-nouvelle-classification-ssr-2022-0) (ATIH)  
 [CSARR nomenclature 2021](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3108) (ATIH)
 
 

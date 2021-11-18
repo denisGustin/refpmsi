@@ -803,17 +803,17 @@ NA = ghs non concerné</p>
 <pre><code>#&gt; # A tibble: 12 x 4
 #&gt;    no_rss dp_rss ghm_rss annee_rss
 #&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;    
-#&gt;  1      1 I5010  05M091  2021     
-#&gt;  2      2 S7220  08M041  2020     
-#&gt;  3      3 H269   02C05J  2020     
-#&gt;  4      4 Z380   15M05A  2021     
+#&gt;  1      1 I5010  05M091  2020     
+#&gt;  2      2 S7220  08M041  2021     
+#&gt;  3      3 H269   02C05J  2021     
+#&gt;  4      4 Z380   15M05A  2020     
 #&gt;  5      5 S7200  08C471  2020     
-#&gt;  6      6 S0600  01M201  2021     
+#&gt;  6      6 S0600  01M201  2020     
 #&gt;  7      7 R074   05M13T  2021     
-#&gt;  8      8 J441   04M202  2020     
+#&gt;  8      8 J441   04M202  2021     
 #&gt;  9      9 K358   06C091  2020     
-#&gt; 10     10 R53+0  23M20Z  2020     
-#&gt; 11     11 S7200  08C471  2021     
+#&gt; 10     10 R53+0  23M20Z  2021     
+#&gt; 11     11 S7200  08C471  2020     
 #&gt; 12     12 I5011  05M092  2020</code></pre>
 <p>1ere étape : construire le tibble des diagnostics d’entrée de toutes les CMD concernées par une introduction de groupage par le DP</p>
 <div class="sourceCode" id="cb37"><html><body><pre class="r"><span class="co"># on a chargé le référentiel mco_fg_listes dans la variable mco_fg_listes</span>
@@ -853,17 +853,17 @@ NA = ghs non concerné</p>
 <pre><code>#&gt; # A tibble: 12 x 7
 #&gt;    no_rss dp_rss ghm_rss annee_rss cmd_rss mco_fg_liste_code mco_fg_liste_lib   
 #&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;             &lt;chr&gt;              
-#&gt;  1      1 I5010  05M091  2021      05      D-0505            Insuffisances card~
-#&gt;  2      2 S7220  08M041  2020      08      D-069             Certaines lésions ~
-#&gt;  3      3 H269   02C05J  2020      02      D-0204            Autres affections ~
-#&gt;  4      4 Z380   15M05A  2021      15      &lt;NA&gt;              &lt;NA&gt;               
+#&gt;  1      1 I5010  05M091  2020      05      D-0505            Insuffisances card~
+#&gt;  2      2 S7220  08M041  2021      08      D-069             Certaines lésions ~
+#&gt;  3      3 H269   02C05J  2021      02      D-0204            Autres affections ~
+#&gt;  4      4 Z380   15M05A  2020      15      &lt;NA&gt;              &lt;NA&gt;               
 #&gt;  5      5 S7200  08C471  2020      08      D-069             Certaines lésions ~
-#&gt;  6      6 S0600  01M201  2021      01      D-0121            Lésions crâniennes~
+#&gt;  6      6 S0600  01M201  2020      01      D-0121            Lésions crâniennes~
 #&gt;  7      7 R074   05M13T  2021      05      D-0508            Douleurs thoraciqu~
-#&gt;  8      8 J441   04M202  2020      04      D-0408            Bronchopneumopathi~
+#&gt;  8      8 J441   04M202  2021      04      D-0408            Bronchopneumopathi~
 #&gt;  9      9 K358   06C091  2020      06      D-0610            Autres affections ~
-#&gt; 10     10 R53+0  23M20Z  2020      23      D-2309            Autres motifs de r~
-#&gt; 11     11 S7200  08C471  2021      08      D-069             Certaines lésions ~
+#&gt; 10     10 R53+0  23M20Z  2021      23      D-2309            Autres motifs de r~
+#&gt; 11     11 S7200  08C471  2020      08      D-069             Certaines lésions ~
 #&gt; 12     12 I5011  05M092  2020      05      D-0505            Insuffisances card~</code></pre>
 <p>Remarque : pas de libellé de liste D pour le DP Z380 “Enfant unique, né à l’hôpital” d’un séjour classé dans la CMD 15 “Nouveau-nés, prématurés et affections de la période périnatale” car, dans cette CMD, le groupage ne commence pas par le DP.</p>
 </div>

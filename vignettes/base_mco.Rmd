@@ -23,16 +23,17 @@ library(refpmsi)
 
 Intitulé du référentiel : **base_mco_diag**
 
-Période : 2019  
+Périodes : 2019-2020   
 
-Mise à jour : 15 avril 2021    
+Mise à jour : 18 novembre 2021    
 
 ### Variables  
 
-**diag_bn_mco_code** = code diagnostic (DP, DR ou DAS) codé au moins une fois nationalement  
-**diag_bn_mco_sej_sea** = nombre de séjours ou séances dans lesquels le diagnostic est codé au moins 1 fois.  
+**bn_mco_diag_code** = code diagnostic (DP, DR ou DAS) codé au moins une fois nationalement  
+**bn_mco_diag_sej_sea** = nombre de séjours ou séances dans lesquels le diagnostic est codé au moins 1 fois.  
 *Cas particulier des séjours de la CMD 28 "Séances" non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c'est le le nombre de séances qui est pris en compte.*  
-**diag_bn_mco_decile** = décile du nombre de séjours et séances avec le diagnostic codé par rapport au nombre total de séjours et séances dans la base nationale. *Variable calculée par nous*  
+**bn_mco_diag_classe** = mise en classe des codes diagnostic en fonction de la variable bn_mco_diag_sej_sea. A partir de 2020, les codes représentés par <= 10 occurrences n'ont plus de nombre de séjours ou séances. La dernière classe correspond donc à cette situation. *Variable calculée par nous*  
+**annee_pmsi** = années PMSI 2019 et 2020  
 
 ```{r base mco diag, echo = FALSE}
 
@@ -40,7 +41,8 @@ refpmsi::refpmsi("base_mco_diag") %>% dplyr::glimpse()
 
 ```
 
-### Source  
+### Sources
+[Denombrement base nationale PMSI MCO 2020 (ATIH)](https://www.atih.sante.fr/sites/default/files/public/content/4170/denombrement_2020.xlsx)  
 [Denombrement base nationale PMSI MCO 2019 (ATIH)](https://www.atih.sante.fr/sites/default/files/public/content/3832/denombrement_2019.xlsx)  
 
 
@@ -48,19 +50,20 @@ refpmsi::refpmsi("base_mco_diag") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **base_mco_ccam**
 
-Période : 2019  
+Périodes : 2019-2020  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 18 novembre 2021  
 
 ### Variables  
 
-**ccam_bn_mco_code** = code de l'acte CCAM codé au moins une fois nationalement  
-**ccam_bn_mco_phase** = code phase de l'acte  
-**ccam_bn_mco_activite** = code activité de l'acte  
-**ccam_bn_mco_ext** = extention PMSI de l'acte    
-**ccam_bn_mco_sej_sea** = nombre de séjours ou séances dans lesquels le quadruplet (acte, phase, activité, extension PMSI) est codé au moins 1 fois.  
+**bn_mco_ccam_code** = code de l'acte CCAM codé au moins une fois nationalement  
+**bn_mco_ccam_phase** = code phase de l'acte  
+**bn_mco_ccam_activite** = code activité de l'acte  
+**bn_mco_ccam_extension** = extention PMSI de l'acte    
+**bn_mco_ccam_sej_sea** = nombre de séjours ou séances dans lesquels le quadruplet (acte, phase, activité, extension PMSI) est codé au moins 1 fois.  
 *Cas particulier des séjours de la CMD 28 "Séances" non groupés dans un GHM de préparation aux séances (28Z19Z, 28Z20Z, 28Z21Z et 28Z22Z), c'est le le nombre de séances qui est pris en compte.*  
-**ccam_bn_mco_decile** = décile du nombre de séjours et séances avec l'acte CCAM codé par rapport au nombre total de séjours et séances dans la base nationale. *Variable calculée par nous*      
+**bn_mco_ccam_classe** = mise en classe des actes en fonction de la variable bn_mco_ccam_sej_sea. A partir de 2020, les actes représentés par <= 10 occurrences n'ont plus de nombre de séjours ou séances. La dernière classe correspond donc à cette situation. *Variable calculée par nous*  
+**annee_pmsi** = années PMSI 2019 et 2020  
 
 ```{r base mco ccam, echo = FALSE}
 
@@ -68,7 +71,8 @@ refpmsi::refpmsi("base_mco_ccam") %>% dplyr::glimpse()
 
 ```
 
-### Source  
+### Sources  
+[Denombrement base nationale PMSI MCO 2020 (ATIH)](https://www.atih.sante.fr/sites/default/files/public/content/4170/denombrement_2020.xlsx)  
 [Denombrement base nationale PMSI MCO 2019 (ATIH)](https://www.atih.sante.fr/sites/default/files/public/content/3832/denombrement_2019.xlsx)  
 
 
@@ -76,9 +80,9 @@ refpmsi::refpmsi("base_mco_ccam") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **open_ccam**
 
-Période : 2019  
+Périodes : 2019-2020  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 18 novembre 2021  
 
 ### Variables  
 
@@ -92,6 +96,7 @@ Lorsque le nombre de séjours/séances est inférieur à 11, l’information ne 
 **open_ccam__sej_0_nuit** = nombre de séjours ambulatoires (= séjours de 0 nuit + les séances)  
 *Lorsque le nombre de séjours ambulatoires pour un acte est inférieur à 11, l'acte concerné est exclu.  
 **open_ccam_ambu** = nombre de réalisations de l’acte au cours des séjours ambulatoires et des séances  
+**annee_pmsi** = années PMSI 2019 et 2020  
 
 Commentaire : les actes CCAM correspondent aux actes avec activité = 1, sauf les actes de la hiérarchie 18.01 (= les gestes d'anesthésie complémentaire) et quelques autres pour lesquels c'est l'activité 4 qui est prise en compte   
 
@@ -102,4 +107,4 @@ refpmsi::refpmsi("open_ccam") %>% dplyr::glimpse()
 ```
 
 ### Source  
-[Open CCAM 2019 (ATIH)](https://www.scansante.fr/open-ccam/open-ccam-2019)  
+[Open CCAM (ATIH)](https://www.scansante.fr/opendata/pmsi-mco/ccam)  
