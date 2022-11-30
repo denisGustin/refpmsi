@@ -1,8 +1,6 @@
 template:
   bootstrap: 5
 
-lang: fr
-
 destination: docs
 
 navbar:
