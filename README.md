@@ -6,14 +6,14 @@
 Package de référentiels PMSI : [75 référentiels
 disponibles](https://denisgustin.github.io/refpmsi/articles/liste_ref.html)
 
-Dernière mise à jour : 28 novembre 2022
+Dernière mise à jour : **28 novembre 2022**
 
 [Etre tenu au courant des mises à jour et ajouts de référentiels
 PMSI](http://www.lespmsi.com/r-et-pmsi/)
 
 ## Installation
 
-Le téléchargement du package `refpmsi` se fait à partir de Github.
+Téléchargement du package `refpmsi` à partir de Github.
 
 ``` r
 # 1ere solution avec le package remotes::
