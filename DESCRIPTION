@@ -11,7 +11,7 @@ LazyData: true
 RoxygenNote: 7.1.1
 Imports: 
     dplyr, magrittr, tibble, jsonlite, rlang, gt, glue, purrr, stringr, tidyr
-URL: https://github.com/denisGustin/refpmsi
+URL: https://denisgustin.github.io/refpmsi/
 Suggests: 
     knitr,
     rmarkdown
