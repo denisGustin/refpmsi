@@ -20,221 +20,145 @@ library(stringr)
 library(refpmsi)
 ```
 
-Le package `refpmsi` comprend 13 référentiels CSARR.  
+Le package `refpmsi` comprend 11 référentiels CSARR.  
 
 ## CSARR codes    
 
 Intitulé du référentiel : **csarr_code**  
 
-Mise à jour : 7 juin 2021  
+Mise à jour : 28 novembre 2022  
 
-Référentiel annualisé des années PMSI 2017 à 2021.  
+Référentiel annualisé (2018 à 2022).  
 
 ### Variables  
 
 ```{r var csarr_code, echo = FALSE}
-
 refpmsi::refpmsi("csarr_code") %>% dplyr::glimpse()
-
 ```
-
-### Source  
-
-[CSARR nomenclature 2021](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3108) (ATIH)
 
 ## CSARR notes codes    
 
 Intitulé du référentiel : **csarr_code_note**  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 28 novembre 2022  
 
-Référentiel annualisé des années PMSI 2017 à 2021.  
+Référentiel annualisé (2018 à 2022).  
 
 ### Variables  
 
 ```{r var csarr_code_note, echo = FALSE}
-
 refpmsi::refpmsi("csarr_code_note") %>% dplyr::glimpse()
-
 ```
-
-### Source  
-
-[CSARR nomenclature 2021](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3108) (ATIH)
 
 ## CSARR hiérarchie  
 
 Intitulé du référentiel : **csarr_hier**  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 28 novembre 2022  
 
-Référentiel annualisé des années PMSI 2017 à 2021.  
+Référentiel annualisé (2018 à 2022).  
 
 ### Variables  
 
 ```{r var csarr_hier, echo = FALSE}
-
 refpmsi::refpmsi("csarr_hier") %>% dplyr::glimpse()
-
 ```
-
-### Source  
-
-[CSARR nomenclature 2021](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3108) (ATIH)
 
 ## CSARR notes des hiérarchies  
 
 Intitulé du référentiel : **csarr_hier_note**  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 28 novembre 2022  
 
-Référentiel annualisé des années PMSI 2017 à 2021.  
+Référentiel annualisé (2018 à 2022).  
 
 ### Variables  
 
 ```{r var csarr_hier_note, echo = FALSE}
-
 refpmsi::refpmsi("csarr_hier_note") %>% dplyr::glimpse()
-
 ```
-
-### Source  
-
-[CSARR nomenclature 2021](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3108) (ATIH)
-
 
 ## CSARR intervenant    
 
 Intitulé du référentiel : **csarr_intervenant**  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 28 novembre 2022  
 
-Référentiel non annualisé basé sur la liste des intervenants valable en 2021.  
+Référentiel annualisé (2018 à 2022).  
 
-Avec l'intervenant "29 (Neuro)psychorééducateur" supprimé à partir de l'année PMSI 2021.  
+Note : l'intervenant "29 (Neuro)psychorééducateur" supprimé à partir de l'année PMSI 2021 est conservé.  
 
 ### Variables  
 
 ```{r var csarr_intervenant, echo = FALSE}
-
 refpmsi::refpmsi("csarr_intervenant") %>% dplyr::glimpse()
-
 ```
-
-### Source  
-
-[CSARR nomenclature 2021](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3108) (ATIH)
 
 ## CSARR individuels dédiés, non dédiés, collectifs, pluriprofessionnels, appareillage, séance       
 
 Intitulé du référentiel : **csarr_ref**  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 28 novembre 2022  
 
-Référentiel annualisé des années PMSI 2017 à 2021.  
+Référentiel annualisé (2018 à 2022).  
 
 ### Variables  
 
 ```{r var csarr_ref, echo = FALSE}
-
 refpmsi::refpmsi("csarr_ref") %>% dplyr::glimpse()
-
 ```
-
-### Source  
-
-[CSARR nomenclature 2021](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3108) (ATIH)
 
 ## CSARR pondérations  
 
 Intitulé du référentiel : **csarr_ponderation**  
 
-Mise à jour : 18 novembre 2021  
+Mise à jour : 28 novembre 2022  
 
-Référentiel annualisé des années PMSI 2017 à 2022 (2022 = version provisoire).  
+Référentiel annualisé (2018 à 2022).  
 
-Mise en "tidy" par nos soins  
+Mise en "tidy" du référentiel ATIH par nos soins  
 
 ### Variables  
 
 ```{r var csarr_ponderation, echo = FALSE}
-
 refpmsi::refpmsi("csarr_ponderation") %>% dplyr::glimpse()
-
 ```
-
-### Sources  
-[CSARR nomenclature 2022 provisoire](https://www.atih.sante.fr/experimentation-nouvelle-classification-ssr-2022-0) (ATIH)  
-[CSARR nomenclature 2021](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3108) (ATIH)
-
 
 ## CSARR évaluations    
 
 Intitulé du référentiel : **csarr_eval**  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 28 novembre 2022  
 
-Référentiel annualisé des années PMSI 2017 à 2021  
+Référentiel annualisé (2018 à 2022).  
 
 ### Variables  
 
 ```{r var csarr_eval, echo = FALSE}
-
 refpmsi::refpmsi("csarr_eval") %>% dplyr::glimpse()
-
 ```
-
-### Source  
-
-[OVALIDE SSR 2021](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2021.pdf) (ATIH)
-
-## CSARR extensions documentaires    
-
-Intitulé du référentiel : **csarr_extdoc**  
-
-Mise à jour : 15 avril 2021  
-
-Référentiel non annualisé basé sur la liste des codes et libellés des extensions documentaires de l'année PMSI 2021.  
-
-### Variables  
-
-```{r var csarr_ext_doc, echo = FALSE}
-
-refpmsi::refpmsi("csarr_extdoc") %>% dplyr::glimpse()
-
-```
-
-### Source  
-
-[CSARR nomenclature 2021](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3108) (ATIH)
 
 ## CSARR gestes complémentaires      
 
 Intitulé du référentiel : **csarr_gestcomp**  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 28 novembre 2022  
 
-Référentiel annualisé des années PMSI 2017 à 2021    
+Référentiel annualisé (2018 à 2022).  
 
 ### Variables  
 
 ```{r var csarr_gestcomp, echo = FALSE}
-
 refpmsi::refpmsi("csarr_gestcomp") %>% dplyr::glimpse()
-
 ```
-
-### Source  
-
-[CSARR nomenclature 2021](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3108) (ATIH)
 
 ## CSARR incompatibilités intervenants        
 
 Intitulé du référentiel : **csarr_incompatibilite_intervenant**  
 
-Mise à jour : 23 juin 2021  
+Mise à jour : 28 novembre 2022  
 
-Référentiel annualisé des années PMSI 2020 à 2021    
+Référentiel annualisé (2020 à 2022).  
 
 ### Variables  
 
@@ -242,60 +166,28 @@ Référentiel annualisé des années PMSI 2020 à 2021
 **csarr_ci_88_autorise** = 1 si l'acte CSARR est compatible avec le type intervenant 88(Autre intervenant) et 0 si l'acte CSARR n'est pas compatible avec le type intervenant 88(Autre intervenant)  
 
 ```{r var csarr_incompatibilite_intervenant, echo = FALSE}
-
 refpmsi::refpmsi("csarr_incompatibilite_intervenant") %>% dplyr::glimpse()
-
 ```
-
-### Source  
-
-[OVALIDE SSR 2021](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2021.pdf) (ATIH)
-
-## CSARR modulateurs   
-
-Intitulé du référentiel : **csarr_modulateur**  
-
-Mise à jour : 15 avril 2021  
-
-Référentiel annualisé des années PMSI 2017 à 2021    
-
-### Variables  
-
-```{r var csarr_modulateur, echo = FALSE}
-
-refpmsi::refpmsi("csarr_modulateur") %>% dplyr::glimpse()
-
-```
-
-### Source  
-
-[CSARR nomenclature 2021](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3108) (ATIH)
 
 ## CSARR topographie   
 
 Intitulé du référentiel : **csarr_topographie**  
 
-Mise à jour : 15 avril 2021  
+Mise à jour : 28 novembre 2022  
 
-Référentiel non annualisé basé sur la topographie du CSARR en 2021  
+Référentiel non annualisé. Calé sur la dernière version CSARR  
 
 ### Variables  
 
 ```{r var csarr_topographie, echo = FALSE}
-
 refpmsi::refpmsi("csarr_topographie") %>% dplyr::glimpse()
-
 ```
-
-### Source  
-
-[CSARR guide de lecture et de codage 2021](https://www.atih.sante.fr/sites/default/files/public/content/3948/version_provisoire_csarr_2021.pdf) (ATIH)
 
 ## Exemples
 
 ### Nouveaux actes CSARR pluriprofessionnels en 2021  
 
-```{r csarr_pluriprofessionnel_new, eval = FALSE}
+```{r csarr_pluriprofessionnel_new, eval = TRUE, echo = TRUE}
 
 # chargement du référentiel CSARR avec les actes pluriprofessionnels
 csarr_ref <- refpmsi::refpmsi("csarr_ref")
@@ -303,7 +195,7 @@ csarr_ref <- refpmsi::refpmsi("csarr_ref")
 # repérage des actes pluriprofessionnels en 2021 qui ne l'étaient pas en 2020
 csarr_pluriprofessionnel_new_2021 <- csarr_ref %>% 
   dplyr::filter(annee_pmsi == "2021", csarr_pluriprofessionnel == "1") %>% 
-  dplyr::select(csarr_code,csarr_lib,csarr_pluriprofessionnel) %>% 
+  dplyr::select(csarr_code,csarr_pluriprofessionnel) %>% 
   dplyr::anti_join(csarr_ref %>% 
                       dplyr::filter(annee_pmsi == "2020",
                                     csarr_pluriprofessionnel == "1") %>% 
@@ -313,18 +205,9 @@ csarr_pluriprofessionnel_new_2021 <- csarr_ref %>%
 csarr_pluriprofessionnel_new_2021
 ```
 
-```{r csarr_pluriprofessionnel_new_affichage, echo = FALSE}
-csarr_ref <- refpmsi::refpmsi("csarr_ref")
+## Sources  
 
-csarr_pluriprofessionnel_new_2021 <- csarr_ref %>% 
-  dplyr::filter(annee_pmsi == "2021", csarr_pluriprofessionnel == "1") %>% 
-  dplyr::select(csarr_code,csarr_lib,csarr_pluriprofessionnel) %>% 
-  dplyr::anti_join(csarr_ref %>% 
-                      dplyr::filter(annee_pmsi == "2020",
-                                    csarr_pluriprofessionnel == "1") %>% 
-                      dplyr::select(csarr_code,csarr_pluriprofessionnel),
-                    by = c("csarr_code" = "csarr_code"))
-
-csarr_pluriprofessionnel_new_2021
-```
+[CSARR nomenclature 2022](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3290) (ATIH)  
+[CSARR guide de lecture et de codage 2022](https://www.atih.sante.fr/sites/default/files/public/content/4199/csarr_2022_guide_de_lecture_et_de_codage_vf.docx.pdf) (ATIH)  
+[OVALIDE SSR 2022](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2022.pdf) (ATIH)  
 

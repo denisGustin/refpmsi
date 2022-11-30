@@ -6,7 +6,7 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
-
+ 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -14,108 +14,117 @@ knitr::opts_chunk$set(
 )
 ```
 
-**Pondération CSARR V2022 SSR** *[18-11-2021]*  
-Ajout des pondérations CSARR de la V2022 dans le référentiel csarr_ponderation.  
-[Détails](https://denisgustin.github.io/refpmsi/articles/csarr.html#csarr-pond-rations)
+## [28-11-2022]   
+### Référentiels mis à jour  
+`ccam_pmsi` : V2 2022 de la CCAM à usage PMSI  
+`ccam_icr` : V2 2022  
+`ccam_ameli` : V69 applicable au 01/04/2022  
+`cim` : [version 2022 de CIM-10 FR à usage PMSI](https://denisgustin.github.io/refpmsi/articles/cim.html#cim-10-fr-usage-pmsi) post 04-10-2022 (cf autorisation A49X en DP/DR et code spécial U079 alerte sanitaire)  
+`cma_mco` : CMA MCO 2022  
+`cma_ssr` : CMA SSR 2022  
+`csarr_code`, `csarr_code_note`, `csarr_eval`, `csarr_gestocomp`, `csarr_hier`, `csarr_hier_note`, `csarr_incompatibilite_intervenant`, `csarr_ponderation`, `csarr_ref` : [2022](https://denisgustin.github.io/refpmsi/articles/csarr.html)  
+`ghm_regroupement` : [2022](https://denisgustin.github.io/refpmsi/articles/ghm.html#regroupements-ghm-1)  
+`ghs_public` et `ghs_prive` : [2022](https://denisgustin.github.io/refpmsi/articles/ghm.html)  
+`gme_public` et `gme_prive` : 2022  
+`me_ms_mco` : ajout provenance U "Avec passage dans une structure d’accueil des urgences d’une autre entité géographique"  
+`me_ms_ssr` : ajout provenance U "Avec passage dans une structure d’accueil des urgences d’une autre entité géographique"  
+`ovalide_ccaminfo`, `ovalide_diaginfo`, `ovalide_ghminfo_dgf`, `ovalide_ghminfo_oqn`, `ovalide_racineinfo_dgf`, `ovalide_racineinfo_oqn` : 2022  
+`psy` : nouvelles FA 2022 et nouveaux lieux d'acte 2022  
+`rghm_regroupement` : [2022](https://denisgustin.github.io/refpmsi/articles/ghm.html#regroupements-des-racines-de-ghm-1)  
+`supp_mco_public` et `supp_mco_oqn` : suppléments MCO 2022  
 
-**Groupes de Lourdeur (GL) et Groupes de Réadaptation (GR) V2022 SSR** *[18-11-2021]*  
-2 nouveaux référentiels.  
-gl = codes et intitulés des GL  
-gr = codes et intitulés des GR  
+### Nouveau référentiel  
+`cim_lib` : libellés de tous les codes CIM-10 depuis 2018 dans leur dernière version  
 
-**Open CCAM 2020** *[18-11-2021]*  
-Ajout des données 2020 dans le référentiel open_ccam.  
-Annualisation du référentiel avec la variable annee_pmsi.  
-[Détails](https://denisgustin.github.io/refpmsi/articles/base_mco.html#open-ccam-1)
+### Evolutions référentiels
+`gme_public` et `gme_prive` : nouvelles variables liées à la version 2022 des GME. [En savoir plus](https://gist.github.com/denisGustin/581e7abf5dd09756008442b0a1b0d01d)  
+`cim_polyhandicap` : correction de libellés  
+`csarr_ref` : suppression variable csarr_lib (voir csarr_code)  
 
-**Dénombrements base nationale MCO 2020** *[18-11-2021]*  
-Ajout des données 2020 dans les référentiels base_mco_diag et base_mco_ccam.  
-Annualisation du référentiel avec la variable annee_pmsi.  
-Mise en classe des codes CIM et des actes CCAM selon le nombre de séjours et séances.  
-[Détails](https://denisgustin.github.io/refpmsi/articles/base_mco.html)
+### Suppression référentiels  
+`csarr_extdoc` : voir csarr_code hiérarchie 12.03.01 et 12.03.02  
+`csarr_modulateur` : voir csarr_code hiérarchie 12.02  
+`ghm_monorum_uhcd_public` et `ghm_monorum_uhcd_prive` : voir nouveau référentiel ghs_uhcd  
 
-**Listes D et A de l'algorithme de groupage MCO V2021** *[08-10-2021]*  
-Nouveau référentiel.  
-Listes D et listes A de groupage MCO dans les CMD.  
-[Détails](https://denisgustin.github.io/refpmsi/articles/ghm.html#listes-en-d-et-en-a-de-l-algorithme-de-groupage-mco)  
+## [18-11-2021]  
+### Référentiels mis à jour  
+csarr_ponderation : [Pondération CSARR V2022 SSR](https://denisgustin.github.io/refpmsi/articles/csarr.html#csarr-pond-rations)
+open_ccam : [données de l'année 2020](https://denisgustin.github.io/refpmsi/articles/base_mco.html#open-ccam-1)  
+base_mco_diag : [année 2020](https://denisgustin.github.io/refpmsi/articles/base_mco.html)
+base_mco_ccam : [année 2020](https://denisgustin.github.io/refpmsi/articles/base_mco.html)
 
-**CIM-10 - nouvelle variable cim_precision** *[08-10-2021]*  
-Dans le référentiel cim, ajout de la variable logique cim_precision qui indique si le code CIM-10 a un ou des code(s) fils plus précis ou non.  
-[Détails](https://denisgustin.github.io/refpmsi/articles/cim.html)
+### Nouveaux référentiels  
+gl : groupes de lourdeur (GL) de la version 2022 des GME  
+gr : groupes de réadaptation (GR) de la version 2022 des GME  
 
-**GHM mono-RUM UHCD** *[23-06-2021]*  
-Ajout de 2 nouveaux référentiels ghm_monorum_uhcd_public et ghm_monorum_uhcd_prive en lien avec la réforme de financement des urgences qui créé, à partir du 1er mars 2021, des GHS dédiés pour chaque racine de GHM, dès que le séjour a lieu uniquement en UHCD et que son mode d'entrée et de sortie est le domicile ([Notice technique ATIH 234-7-2021](https://www.atih.sante.fr/sites/default/files/public/content/4004/notice_technique_n_atih-234-7-2021_nouveautes_financement_2021-hh.pdf)).  
-[Détails](https://denisgustin.github.io/refpmsi/articles/ghm.html#ghm-mono-rum-uhcd-public-1)      
+## [08-10-2021]  
+### Nouveau référentiel
+mco_fg_listes : [Listes D et listes A de groupage MCO dans les CMD](https://denisgustin.github.io/refpmsi/articles/ghm.html#listes-en-d-et-en-a-de-l-algorithme-de-groupage-mco)  
 
-**Référentiel spe_pharma_ssr** *[23-06-2021]*  
-Mise à jour suite au [rectificatif 2 de 2021](https://www.atih.sante.fr/specialites-pharmaceutiques-en-ssr-2021).  
-A cette occasion, ajout de variables pour gérer les dates de début et de fin d'activité des spécialités pharmaceutiques SSR.  
-Mise à jour des exemples associés.    
-[Détails](https://denisgustin.github.io/refpmsi/articles/specialites_pharmaceutiques_ssr.html)  
+### Evolution référentiel  
+cim : nouvelle variable logique cim_precision qui indique si le code CIM-10 a un ou des code(s) fils plus précis ou non. [En savoir plus](https://denisgustin.github.io/refpmsi/articles/cim.html)
 
-**OVALIDE MCO V2021** *[07-06-2021]*      
-Mise à jour 2021 des 6 référentiels OVALIDE MCO : ovalide_racineinfo_dgf, ovalide_racineinfo_oqn, ovalide_ghminfo_dgf, ovalide_ghminfo_oqn, ovalide_ccaminfo, ovalide_diaginfo  
+## [23-06-2021]  
+### Nouveaux référentiels  
+ghm_monorum_uhcd_public et ghm_monorum_uhcd_prive : en lien avec la réforme de financement des urgences qui créé, à partir du 1er mars 2021, des GHS dédiés pour chaque racine de GHM, dès que le séjour a lieu uniquement en UHCD et que son mode d'entrée et de sortie est le domicile ([Notice technique ATIH 234-7-2021](https://www.atih.sante.fr/sites/default/files/public/content/4004/notice_technique_n_atih-234-7-2021_nouveautes_financement_2021-hh.pdf)). *Maj 28-11-2022 : référentiels supprimés et remplacés par le référentiel ghs_uhcd*
 
-**regroupements GHM et racines GHM V2021** *[07-06-2021]*  
-Mise à jour 2021 des référentiels ghm_regroupement et rghm_regroupement  
+## [07-06-2021]  
+### Référentiels mis à jour  
+6 référentiels OVALIDE MCO (ovalide_racineinfo_dgf, ovalide_racineinfo_oqn, ovalide_ghminfo_dgf, ovalide_ghminfo_oqn, ovalide_ccaminfo, ovalide_diaginfo) : année 2021    
+ghm_regroupement : [2021](https://denisgustin.github.io/refpmsi/articles/ghm.html#regroupements-ghm-1)
+rghm_regroupement : [2021](https://denisgustin.github.io/refpmsi/articles/ghm.html#regroupements-des-racines-de-ghm-1)
+csarr_incompatibilite_intervenant : [2021](https://denisgustin.github.io/refpmsi/articles/csarr.html#csarr-incompatibilit-s-intervenants)  
 
-**Référentiel csarr_incompatibilite_intervenant** *[07-06-2021]*  
-Mise à jour 2021  
-[Détails](https://denisgustin.github.io/refpmsi/articles/csarr.html#csarr-incompatibilit-s-intervenants)  
+## [24-04-2021]  
+### Référentiels mis à jour  
+ccam_pmsi : V2 2021 de la CCAM à usage PMSI  
+ccam_icr : V2 2021 de la CCAM à usage PMSI  
 
-**Référentiel atu** *[07-06-2021]*  
-Mise à jour
-
-**CCAM à usage PMSI V2 2021** *[24-04-2021]*  
-Mise à jour des 2 référentiels ccam_pmsi et ccam_icr avec la V2 2021 de la CCAM à usage PMSI  
-
-**Référentiel ghm_intermediaire** *[15-04-2021]*  
-Nouveau référentiel  
-
-**Référentiel csarr_hier_note** *[15-04-2021]*    
-Nouveau référentiel  
-
-**Référentiel csarr_code_note** *[15-04-2021]*  
-Nouveau référentiel  
-
-**Référentiels CIM-10, CCAM, GHM, CSARR V2021** *[15-04-2021]*  
-Mise à jour année PMSI 2021
-
-**VERSION STABLE du package** *[15-04-2021]*  
+## [15-04-2021]  
+**VERSION STABLE du package**  
 Normalisation des noms et des types des variables des référentiels.  
 
-**Médicaments anticancéreux intra-GHS** *[12-12-2020]*  
-Ajout du référentiel anticancereux_intraghs.  
-Liste des médicaments anticancéreux non-inscrits sur la liste en sus ou intra-GHS.Expérimentation article 51.  
+### Nouveaux référentiels  
+ghm_intermediaire : 
+csarr_hier_note : 
+csarr_code_note : 
+
+### Référentiels mis à jour  
+cim : 2021  
+ccam_pmsi : V1 2021  
+ghs_public, ghs_prive: 2022
+csarr_code : V2021  
+
+## [12-12-2020]  
+### Nouveau référentiel  
+anticancereux_intraghs : liste des médicaments anticancéreux non-inscrits sur la liste en sus ou intra-GHS.Expérimentation article 51.  
 Version du 9 novembre 2020.  
 
-**Spécialités pharmaceutiques SSR** *[03-08-2020]*  
-Ajout du référentiel spe_pharma_ssr  
-Spécialités pharmaceutiques SSR version 2017 et version 2020   
+## [03-08-2020]  
+### Nouveau référentiel  
+spe_pharma_ssr : spécialités pharmaceutiques SSR version 2017 et version 2020   
 
-**Dénombrements base nationale PMSI SSR 2019** *[26-07-2020]*    
-Ajout de référentiels issus de dénombrements de la base nationale PMSI SSR 2019 (ATIH)  
+## [26-07-2020]  
+### Nouveaux référentiels  
+5 référentiels issus de dénombrements de la base nationale PMSI SSR 2019  
 base_ssr_mp : nombre de séjours ou séances par MMP  
 base_ssr_ae : nombre de séjours ou séances par AE  
 base_ssr_das : nombre de séjours ou séances par DAS  
 base_ssr_csarr : nombre de séjours ou séances par acte CSARR  
 base_ssr_ccam : nombre de séjours ou séances par acte CCAM  
 
-**Référentiels Dénombrements base nationale PMSI MCO 2019** *[25-07-2020]*    
-Ajout de référentiels issus de dénombrements de la base nationale PMSI MCO 2019 (ATIH)  
+3 référentiels issus de dénombrements de la base nationale PMSI MCO 2019  
 base_mco_ccam : nombre de séjours ou séances par acte CCAM  
 base_mco_diag : nombre de séjours ou séances par diagnostic (DP, DR ou DAS)    
 base_mco_ghs : nombre de séjours ou séances par GHS  
 
-**Référentiel open CCAM 2019** *[24-07-2020]*  
-Ajout du référentiel **open_ccam**  
-Par acte CCAM de la base nationale PMSI MCO 2019 : nombre d'actes CCAM, nombre de séjours ou séances, nombre d'actes ambulatoires, nombre de séjours 0 nuit  
+open_ccam : par acte CCAM de la base nationale PMSI MCO 2019 (nombre d'actes CCAM, nombre de séjours ou séances, nombre d'actes ambulatoires, nombre de séjours 0 nuit)  
 
-**Référentiels HAD** *[24-07-2020]*  
-Ajout de référentiels PMSI HAD  
+4 référentiels PMSI HAD  
 ght_oqn : tarifs GHT OQN (de 2016 à 2020)  
 ght_dgf : tarifs GHT DGF (de 2016 à 2020)  
 me_ms_had : codes et libellés des modes d'entrée, sortie, provenance et destination en HAD  
 had : codes et libellés des natures du séjour, types de lieu de domicile et des modes de prises en charge (MPP, MPA, MPD)  
 
-**Mise en ligne du package refpmsi** *[07-05-2020]*
+## [07-05-2020]  
+**Mise en ligne du package refpmsi** 
