@@ -13,5 +13,8 @@ articles:
   liste_ref: liste_ref.html
   news: news.html
   specialites_pharmaceutiques_ssr: specialites_pharmaceutiques_ssr.html
-last_built: 2022-11-30T03:37Z
+last_built: 2023-02-27T23:29Z
+urls:
+  reference: https://denisgustin.github.io/refpmsi/reference
+  article: https://denisgustin.github.io/refpmsi/articles
 

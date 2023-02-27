@@ -279,12 +279,52 @@ polyhandicap lourd</p>
 </div>
 </div>
 <div class="section level2">
+<h2 id="cma-mco">CMA MCO<a class="anchor" aria-label="anchor" href="#cma-mco"></a>
+</h2>
+<p>Intitulé du référentiel : <strong>cma_mco</strong></p>
+<p>Mise à jour : 27 février 2023</p>
+<p>Référentiel annualisé au sens PMSI MCO (de 2018 à 2023)</p>
+<p>Source : Annexe 4 du volume 1 des manuels des GHM</p>
+<div class="section level3">
+<h3 id="variables-6">Variables<a class="anchor" aria-label="anchor" href="#variables-6"></a>
+</h3>
+<p><strong>cma_mco_code</strong> = code CIM-10 des CMA MCO<br><strong>cma_mco_severite</strong> = niveau de sévérite (2, 3 ou 4) des
+CMA<br><strong>cma_mco_liste_exclusion_dp</strong> = numéro de la liste
+d’exclusions entre diagnostic principal (DP) et CMA<br><strong>cma_mco_liste_exclusion_racine</strong> = numéro de la liste
+d’exclusions entre racines de GHM et CMA<br><strong>annee_pmsi</strong> = année PMSI MCO</p>
+<pre><code><span><span class="co">#&gt; Rows: 28,750</span></span>
+<span><span class="co">#&gt; Columns: 5</span></span>
+<span><span class="co">#&gt; $ cma_mco_code                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A000", "A001", "A009", "A010", "A011",~</span></span>
+<span><span class="co">#&gt; $ cma_mco_severite               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2", "2", "2", "2", "2", "2", "2", "2",~</span></span>
+<span><span class="co">#&gt; $ cma_mco_liste_exclusion_dp     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "525", "525", "525", "525", "525", "525~</span></span>
+<span><span class="co">#&gt; $ annee_pmsi                     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023",~</span></span>
+<span><span class="co">#&gt; $ cma_mco_liste_exclusion_racine <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,~</span></span></code></pre>
+</div>
+</div>
+<div class="section level2">
+<h2 id="cma-ssr">CMA SSR<a class="anchor" aria-label="anchor" href="#cma-ssr"></a>
+</h2>
+<p>Intitulé du référentiel : <strong>cma_ssr</strong></p>
+<p>Mise à jour : 27 février 2023</p>
+<p>Référentiel annualisé au sens PMSI SSR (de 2018 à 2022)</p>
+<p>Source : Annexe 6 du volume 1 des manuels des GME</p>
+<div class="section level3">
+<h3 id="variables-7">Variables<a class="anchor" aria-label="anchor" href="#variables-7"></a>
+</h3>
+<p><strong>cma_ssr_code</strong> = code CIM-10 des CMA SSR<br><strong>annee_pmsi</strong> = année PMSI SSR</p>
+<pre><code><span><span class="co">#&gt; Rows: 4,704</span></span>
+<span><span class="co">#&gt; Columns: 2</span></span>
+<span><span class="co">#&gt; $ cma_ssr_code <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A000", "A001", "A009", "A020", "A022", "A028", "A029", "~</span></span>
+<span><span class="co">#&gt; $ annee_pmsi   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022", "2022", "~</span></span></code></pre>
+</div>
+</div>
+<div class="section level2">
 <h2 id="exemples">Exemples<a class="anchor" aria-label="anchor" href="#exemples"></a>
 </h2>
 <div class="section level3">
 <h3 id="chargement-de-la-cim-10-2021">Chargement de la CIM-10 2021<a class="anchor" aria-label="anchor" href="#chargement-de-la-cim-10-2021"></a>
 </h3>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Chargement de la CIM-10 de l'année 2021 dans la variable cim_2021</span>1</span>
 <span><span class="va">cim_2021</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim"</span>,<span class="fl">2021</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">cim_2021</span><span class="op">)</span></span>
@@ -304,7 +344,7 @@ polyhandicap lourd</p>
 <div class="section level3">
 <h3 id="chargement-de-la-cim-10-des-années-2020-et-2021">Chargement de la CIM-10 des années 2020 et 2021<a class="anchor" aria-label="anchor" href="#chargement-de-la-cim-10-des-ann%C3%A9es-2020-et-2021"></a>
 </h3>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Chargement de la CIM-10 des années 2020 et 2021</span>1</span>
 <span><span class="va">cim_2020_2021</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim"</span>,<span class="fl">2020</span><span class="op">:</span><span class="fl">2021</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">cim_2020_2021</span><span class="op">)</span></span>
@@ -329,19 +369,19 @@ DP de RSS mono-RUM</p>
 <pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 x 3</span></span></span>
 <span><span class="co">#&gt;    no_rss dp_rss annee_rss</span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2021</span></span></code></pre>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># chargement de la CIM-10 2020 et 2021</span></span>
 <span><span class="va">cim_2020_2021</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim"</span>,<span class="fl">2020</span><span class="op">:</span><span class="fl">2021</span><span class="op">)</span></span>
 <span></span>
@@ -353,17 +393,17 @@ DP de RSS mono-RUM</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 x 4</span></span></span>
 <span><span class="co">#&gt;    no_rss dp_rss annee_rss cim_lib                                              </span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                                </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2021      Insuffisance ventriculaire gauche, avec fraction d'é~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2020      Dialyse extra-corporelle                             </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2021      Cataracte sénile nucléaire                           </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2020      Insuffisance ventriculaire gauche, avec fraction d'é~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2021      Dialyse extra-corporelle                             </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2020      Cataracte sénile nucléaire                           </span>  </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2021      Enfant unique, né à l'hôpital                        </span>   </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2021      Fracture fermée du col du fémur                      </span>  </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2020      Commotion cérébrale, sans plaie intracrânienne       </span>   </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2021      Douleur thoracique, sans précision                   </span> </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2020      Douleur thoracique, sans précision                   </span> </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2020      Maladie pulmonaire obstructive chronique avec épisod~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2020      Appendicites aigües, autres et non précisées         </span>   </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2021      Appendicites aigües, autres et non précisées         </span>   </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2021      Altération [baisse] de l'état général                </span>    </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2020      Fracture fermée du col du fémur                      </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2021      Fracture fermée du col du fémur                      </span>  </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2021      Insuffisance ventriculaire gauche, avec fraction d'é~</span>~</span></code></pre></div>
 </div>
 <div class="section level3">
@@ -371,7 +411,7 @@ DP de RSS mono-RUM</p>
 </h3>
 <p>Avec le jeu de données <code>jeu_dp</code> de l’exemple
 précédent.</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># chargement de la CIM-10 2020 et 2021</span></span>
 <span><span class="co"># cim_2020_2021 &lt;- refpmsi::refpmsi("cim",2020:2021)</span></span>
 <span></span>
@@ -385,17 +425,17 @@ précédent.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 x 5</span></span></span>
 <span><span class="co">#&gt;    no_rss dp_rss annee_rss cim_lib                                       cim_c~1</span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2021      Insuffisance ventriculaire gauche, avec frac~ 9      </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2020      Dialyse extra-corporelle                      21     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2021      Cataracte sénile nucléaire                    7      </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2020      Insuffisance ventriculaire gauche, avec frac~ 9      </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2021      Dialyse extra-corporelle                      21     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2020      Cataracte sénile nucléaire                    7      </span>  </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2021      Enfant unique, né à l'hôpital                 21     </span>   </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2021      Fracture fermée du col du fémur               19     </span>  </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2020      Commotion cérébrale, sans plaie intracrânien~ 19     </span>   </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2021      Douleur thoracique, sans précision            18     </span> </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2020      Douleur thoracique, sans précision            18     </span> </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2020      Maladie pulmonaire obstructive chronique ave~ 10     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2020      Appendicites aigües, autres et non précisées  11     </span>   </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2021      Appendicites aigües, autres et non précisées  11     </span>   </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2021      Altération [baisse] de l'état général         18     </span>    </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2020      Fracture fermée du col du fémur               19     </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2021      Fracture fermée du col du fémur               19     </span>  </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2021      Insuffisance ventriculaire gauche, avec frac~ 9      </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ... with abbreviated variable name 1: cim_chapitre</span></span></span>
 <span></span>
@@ -452,15 +492,15 @@ DAS.</p>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 Z370  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 I10   2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 P040  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 P040  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 F1725 2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 G473  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 W189  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R600  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 N178  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 B952  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 D638  2021</span></span></code></pre>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 N178  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 B952  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 D638  2020</span></span></code></pre>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># chargement de la CIM-10 2020 et 2021</span></span>
 <span><span class="co"># cim_2020_2021 &lt;- refpmsi::refpmsi("cim",2020:2021)</span></span>
 <span></span>
@@ -477,8 +517,35 @@ DAS.</p>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                             <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>      1 Z370  2020      Naissance unique, enfant vivant                       1</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>      6 W189  2020      Autre chute de plain-pied, lieu sans précision        2</span>2</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span>      9 B952  2021      Streptocoques, groupe D, et entérocoques, caus~       1</span>1</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span>      9 B952  2020      Streptocoques, groupe D, et entérocoques, caus~       1</span>1</span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ... with abbreviated variable name 1: cim_tmco</span></span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="listes-des-cma-mco-par-niveau---sortie-excel">Listes des CMA MCO par niveau - sortie Excel<a class="anchor" aria-label="anchor" href="#listes-des-cma-mco-par-niveau---sortie-excel"></a>
+</h3>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://purrr.tidyverse.org/" class="external-link">purrr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org" class="external-link">readr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://stringr.tidyverse.org" class="external-link">stringr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://denisgustin.github.io/refpmsi/">refpmsi</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">cim_lib</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim_lib"</span><span class="op">)</span></span>
+<span><span class="va">cma_mco</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cma_mco"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># liste de 3 tibbles correspondant aux 3 listes de CMA par niveau</span></span>
+<span><span class="va">cma_mco_niveau</span> <span class="op">&lt;-</span> <span class="va">cma_mco</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">annee_pmsi</span> <span class="op">==</span> <span class="st">"2023"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cma_mco_code</span>,<span class="va">cma_mco_severite</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">cim_lib</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_code</span>,<span class="va">cim_lib</span><span class="op">)</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cma_mco_code"</span> <span class="op">=</span> <span class="st">"cim_code"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_split.html" class="external-link">group_split</a></span><span class="op">(</span><span class="va">cma_mco_severite</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="co"># nommage des listes</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/stats/setNames.html" class="external-link">setNames</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">cma_mco</span><span class="op">$</span><span class="va">cma_mco_severite</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># génération des 3 excels correspondant aux 3 niveaux</span></span>
+<span><span class="co"># dans le répertoire du projet</span></span>
+<span><span class="va">cma_mco_niveau</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/imap.html" class="external-link">iwalk</a></span><span class="op">(</span><span class="op">~</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html" class="external-link">write_excel_csv2</a></span><span class="op">(</span><span class="va">.x</span>, <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_c.html" class="external-link">str_c</a></span><span class="op">(</span><span class="st">"cma_mco_niveau_"</span>,<span class="va">.y</span>, <span class="st">".csv"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
@@ -493,7 +560,13 @@ FR à usage PMSI 2020 - version du 21 août 2020</a> (ATIH)<br><a href="https://
 FR à usage PMSI 2019 - version du 21 novembre 2019 mars 2019</a>
 (ATIH)<br><a href="https://solidarites-sante.gouv.fr/fichiers/bos/2018/sts_20180009_0001_p000.pdf" class="external-link">CIM-10
 FR à usage PMSI 2018 - version du 23 avril 2018</a> (ATIH)<br><a href="https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_MCO_DGF_2022.pdf" class="external-link">Guide
-de lecture OVALIDE MCO 2022</a> (ATIH)</p>
+de lecture OVALIDE MCO 2022</a> (ATIH)<br><a href="https://www.atih.sante.fr/sites/default/files/public/content/4490/volume_1.pdf" class="external-link">Manuel
+des GHM 2023 - Volume 1</a> (ATIH)<br><a href="https://solidarites-sante.gouv.fr/fichiers/bos/2022/2022.5bis.vol1.BOS.pdf" class="external-link">Manuel
+des GHM 2022 - Volume 1</a> (ATIH)<br><a href="https://solidarites-sante.gouv.fr/fichiers/bos/2021/2021.5bis.vol1.BOS.pdf" class="external-link">Manuel
+des GHM 2021 - Volume 1</a> (ATIH)<br><a href="https://solidarites-sante.gouv.fr/fichiers/bos/2020/sts_20200005_0001_p000.pdf" class="external-link">Manuel
+des GHM 2020 - Volume 1</a> (ATIH)<br><a href="https://solidarites-sante.gouv.fr/fichiers/bos/2019/sts_20190005_0001_p000.pdf" class="external-link">Manuel
+des GHM 2019 - Volume 1</a> (ATIH)<br><a href="http://solidarites-sante.gouv.fr/fichiers/bos/2018/sts_20180005_0001_p000.pdf" class="external-link">Manuel
+des GHM 2018 - Volume 1</a> (ATIH)</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

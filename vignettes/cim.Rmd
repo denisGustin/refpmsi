@@ -168,7 +168,48 @@ Référentiel non annualisé. Calé sur la dernière version CIM-10 à usage PMS
 refpmsi::refpmsi("cim_polyhandicap") %>% dplyr::glimpse()
 ```
 
-## Exemples
+## CMA MCO  
+
+Intitulé du référentiel : **cma_mco**  
+
+Mise à jour : 27 février 2023  
+
+Référentiel annualisé au sens PMSI MCO (de 2018 à 2023)  
+
+Source : Annexe 4 du volume 1 des manuels des GHM  
+
+### Variables  
+
+**cma_mco_code** = code CIM-10 des CMA MCO   
+**cma_mco_severite** = niveau de sévérite (2, 3 ou 4) des CMA  
+**cma_mco_liste_exclusion_dp** = numéro de la liste d’exclusions entre diagnostic principal (DP) et CMA  
+**cma_mco_liste_exclusion_racine** =  numéro de la liste d’exclusions entre racines de GHM et CMA  
+**annee_pmsi** = année PMSI MCO   
+
+```{r var cma_mco, echo = FALSE}
+refpmsi::refpmsi("cma_mco") %>% dplyr::glimpse()
+```
+
+## CMA SSR  
+
+Intitulé du référentiel : **cma_ssr**  
+
+Mise à jour : 27 février 2023  
+
+Référentiel annualisé au sens PMSI SSR (de 2018 à 2022)  
+
+Source : Annexe 6 du volume 1 des manuels des GME  
+
+### Variables  
+
+**cma_ssr_code** = code CIM-10 des CMA SSR   
+**annee_pmsi** = année PMSI SSR   
+
+```{r var cma_ssr, echo = FALSE}
+refpmsi::refpmsi("cma_ssr") %>% dplyr::glimpse()
+```
+
+## Exemples  
 
 ### Chargement de la CIM-10 2021
 
@@ -273,6 +314,33 @@ das_interdit_dp_dr <- jeu_das %>%
 das_interdit_dp_dr
 ```
 
+### Listes des CMA MCO par niveau - sortie Excel  
+
+```{r listes_cma_mco_niveau_excel, echo = TRUE, eval = FALSE}
+library(dplyr)
+library(purrr)
+library(readr)
+library(stringr)
+library(refpmsi)
+
+cim_lib <- refpmsi::refpmsi("cim_lib")
+cma_mco <- refpmsi::refpmsi("cma_mco")
+
+# liste de 3 tibbles correspondant aux 3 listes de CMA par niveau
+cma_mco_niveau <- cma_mco %>% 
+    dplyr::filter(annee_pmsi == "2023") %>% 
+    dplyr::select(cma_mco_code,cma_mco_severite) %>% 
+    dplyr::left_join(cim_lib %>% dplyr::select(cim_code,cim_lib), by = c("cma_mco_code" = "cim_code")) %>% 
+    dplyr::group_split(cma_mco_severite) %>% 
+    # nommage des listes
+    setNames(unique(cma_mco$cma_mco_severite))
+
+# génération des 3 excels correspondant aux 3 niveaux
+# dans le répertoire du projet
+cma_mco_niveau %>% 
+    purrr::iwalk(~ readr::write_excel_csv2(.x, stringr::str_c("cma_mco_niveau_",.y, ".csv")))
+```
+
 ## Sources  
 [Nomenclature CIM-10 2022 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/456) (ATIH)  
 [CIM-10 FR à usage PMSI 2022 - version du 04 octobre 2022](https://solidarites-sante.gouv.fr/fichiers/bos/2022/2022.9bis.BOS.pdf) (ATIH)  
@@ -281,3 +349,9 @@ das_interdit_dp_dr
 [CIM-10 FR à usage PMSI 2019 - version du 21 novembre 2019 mars 2019](https://www.atih.sante.fr/sites/default/files/public/content/3502/cim-10fr_2019_actualisation_oms_24-09-2019.pdf) (ATIH)  
 [CIM-10 FR à usage PMSI 2018 - version du 23 avril 2018](https://solidarites-sante.gouv.fr/fichiers/bos/2018/sts_20180009_0001_p000.pdf) (ATIH)  
 [Guide de lecture OVALIDE MCO 2022](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_MCO_DGF_2022.pdf) (ATIH)  
+[Manuel des GHM 2023 - Volume 1](https://www.atih.sante.fr/sites/default/files/public/content/4490/volume_1.pdf) (ATIH)  
+[Manuel des GHM 2022 - Volume 1](https://solidarites-sante.gouv.fr/fichiers/bos/2022/2022.5bis.vol1.BOS.pdf) (ATIH)  
+[Manuel des GHM 2021 - Volume 1](https://solidarites-sante.gouv.fr/fichiers/bos/2021/2021.5bis.vol1.BOS.pdf) (ATIH)  
+[Manuel des GHM 2020 - Volume 1](https://solidarites-sante.gouv.fr/fichiers/bos/2020/sts_20200005_0001_p000.pdf) (ATIH)  
+[Manuel des GHM 2019 - Volume 1](https://solidarites-sante.gouv.fr/fichiers/bos/2019/sts_20190005_0001_p000.pdf) (ATIH)  
+[Manuel des GHM 2018 - Volume 1](http://solidarites-sante.gouv.fr/fichiers/bos/2018/sts_20180005_0001_p000.pdf) (ATIH)  

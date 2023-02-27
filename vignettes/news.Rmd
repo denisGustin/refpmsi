@@ -14,6 +14,16 @@ knitr::opts_chunk$set(
 )
 ```
 
+## [27-02-2023]   
+### Référentiels mis à jour  
+`cma_mco` : CMA MCO 2023  
+`spe_pharma_ssr` : V6 2022 à partir du 1er août 2022  
+
+### Documentation mise à jour  
+[Descriptif du référentiel `cma_mco`](https://denisgustin.github.io/refpmsi/articles/cim.html#cma-mco)  
+[Descriptif du référentiel `cma_ssr`](https://denisgustin.github.io/refpmsi/articles/cim.html#cma-ssr)  
+[Ajout de l'exemple d'utilisation "Listes des CMA MCO par niveau - sortie Excel"](https://denisgustin.github.io/refpmsi/articles/cim.html#listes-des-cma-mco-par-niveau---sortie-excel)  
+
 ## [28-11-2022]   
 ### Référentiels mis à jour  
 `ccam_pmsi` : V2 2022 de la CCAM à usage PMSI  
