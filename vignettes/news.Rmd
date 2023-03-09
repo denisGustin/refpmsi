@@ -14,15 +14,35 @@ knitr::opts_chunk$set(
 )
 ```
 
-## [27-02-2023]   
+## [07-03-2023]   
 ### Référentiels mis à jour  
-`cma_mco` : CMA MCO 2023  
-`spe_pharma_ssr` : V6 2022 à partir du 1er août 2022  
+`cma_mco` : version 2023 des CMA MCO   
+`spe_pharma_ssr` : Version 2 mars 2023 des spécialités pharmaceutiques SSR  
 
-### Documentation mise à jour  
+### Nouveaux référentiels  
+`ucd_en_sus_lib` : libellés des UCD en sus avec 1 ligne par UCD en sus  
+`spe_pharma_ssr_lib` : libellés des spécialités pharmaceutiques SSR avec 1 ligne par spécialité pharmaceutique SSR  
+`formats_mco` : descriptif des variables de 5 formats PMSI MCO (RSS groupé, fichier d'information des UM, FICHCOMP LES, FICHCOMP DMI, VID-HOSP)  
+`ccam_dm_compatibilite` : liste d'incompatibilité entre acte CCAM et DMI [(source)](https://www.atih.sante.fr/compatibilite-entre-actes-ccam-et-groupes-de-dm)  
+`dmi_en_sus` : liste des DMI en sus avec historique des évènements par DMI  
+`dmi_en_sus_lib` : libellés des DMI en sus avec 1 libellé par DMI  
+`ucd_ap_ac_lib` : libellés des ATU et post-ATU avec 1 libellé par UCD  
+
+### Evolutions référentiels
+`spe_pharma_ssr` : historique depuis 2017 et non plus seulement dernière version.  Ajout des 2 variables `date_debut` et `date_fin` de validité  
+`ucd_en_sus` : renommage du référentiel `ucd` maintenant supprimé en `ucd_en_sus`. Renommage des variables désormais préfixées `ucd_en_sus_`   
+`ucd_ap_ac` : renommage du référentiel `atu` maintenant supprimé en `ucd_ap_ac`. Renommage des variables désormais préfixées `ucd_ap_ac_`   
+
+### Suppression référentiels  
+`ucd` : voir ci-dessus le référentiel `ucd_en_sus`  
+`atu` : voir ci-dessus le référentiel `ucd_ap_ac`  
+
+### Documentation  
 [Descriptif du référentiel `cma_mco`](https://denisgustin.github.io/refpmsi/articles/cim.html#cma-mco)  
 [Descriptif du référentiel `cma_ssr`](https://denisgustin.github.io/refpmsi/articles/cim.html#cma-ssr)  
 [Ajout de l'exemple d'utilisation "Listes des CMA MCO par niveau - sortie Excel"](https://denisgustin.github.io/refpmsi/articles/cim.html#listes-des-cma-mco-par-niveau---sortie-excel)  
+[Descriptif du référentiel `spe_pharma_ss_lib`](https://denisgustin.github.io/refpmsi/articles/specialites_pharmaceutiques_ssr.html#spécialités-pharmaceutiques-ssr-libellés)  
+[Descriptif du référentiel `formats_mco`](https://denisgustin.github.io/refpmsi/articles/formats)  
 
 ## [28-11-2022]   
 ### Référentiels mis à jour  

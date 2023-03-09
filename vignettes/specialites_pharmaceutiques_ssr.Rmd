@@ -20,26 +20,49 @@ library(tibble)
 library(dplyr)
 ```
 
+## Spécialités pharmaceutiques SSR  
+
 Intitulé du référentiel : **spe_pharma_ssr**
 
-Mise à jour : 27 février 2023  
+Mise à jour : 7 mars 2023  
 
-Le référentiel comprend les spécialités pharmaceutiques SSR dans leur dernière version.  
+Le référentiel comprend les spécialités pharmaceutiques SSR avec leurs historiques.  
 
-## Variables du référentiel  
+### Variables  
 **ucd_7** = code UCD sur 7 positions  
 **ucd_13** = code UCD sur 13 positions  
 **ucd_lib** = libellé de l'UCD  
-**denomination_commune**  
+**denomination_commune**  = dénomination commune  
+**date_debut** = date de début de validité de la spécialité pharmaceutique SSR  
+**date_fin** = date de fin de validité de la spécialité pharmaceutique SSR  
 
-```{r var, echo = FALSE}
+```{r var_spe_pharma_ssr, echo = FALSE}
 
 refpmsi::refpmsi("spe_pharma_ssr") %>% dplyr::glimpse()
-
 ```
 
-## Source  
-["Spécialités pharmaceutiques SSR" 2022 V6 - 1er août 2022](https://www.atih.sante.fr/sites/default/files/public/content/4237/med_ssr_2022_v6.xlsx)  
+## Spécialités pharmaceutiques SSR Libellés  
+
+Intitulé du référentiel : **spe_pharma_ssr_lib**
+
+Mise à jour : 7 mars 2023  
+
+Le référentiel comprend les spécialités pharmaceutiques SSR **dédoublonnées** avec la version la plus récente de chaque spécialité pharmaceutique SSR.  
+
+[Code R pour générer le référentiel à partir du référentiel `spe_pharma_ssr`](https://gist.github.com/denisGustin/26d2f54f5ecc3f2e1dd5af6c10a9b1ae)  
+
+### Variables  
+**ucd_7** = code UCD sur 7 positions  
+**ucd_13** = code UCD sur 13 positions  
+**ucd_lib** = libellé de l'UCD  
+**denomination_commune**  = dénomination commune  
+**date_debut** = date de début de validité la plus récente de la spécialité pharmaceutique SSR  
+**date_fin** = date de fin de validité la plus récente de la spécialité pharmaceutique SSR  
+
+```{r var_spe_pharma_ssr_lib, echo = FALSE}
+
+refpmsi::refpmsi("spe_pharma_ssr_lib") %>% dplyr::glimpse()
+```
 
 ## Exemples  
 
@@ -116,3 +139,6 @@ case_mix_dci <- jeu_ucd %>%
                        n_adm = sum(n_adm))
 case_mix_dci
 ```
+
+## Source  
+["Spécialités pharmaceutiques SSR" version du 3 mars 2023](https://www.atih.sante.fr/specialites-pharmaceutiques-en-ssr-2023)  

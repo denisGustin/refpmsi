@@ -8,12 +8,13 @@ articles:
   code_pmsi: code_pmsi.html
   csarr: csarr.html
   fonctions_refpmsi: fonctions_refpmsi.html
+  formats_pmsi: formats_pmsi.html
   ghm: ghm.html
   had: had.html
   liste_ref: liste_ref.html
   news: news.html
   specialites_pharmaceutiques_ssr: specialites_pharmaceutiques_ssr.html
-last_built: 2023-02-27T23:29Z
+last_built: 2023-03-09T01:15Z
 urls:
   reference: https://denisgustin.github.io/refpmsi/reference
   article: https://denisgustin.github.io/refpmsi/articles

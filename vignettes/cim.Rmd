@@ -107,15 +107,18 @@ Référentiel non annualisé. Calé sur la dernière version CIM-10 à usage PMS
 refpmsi::refpmsi("cim_groupe") %>% dplyr::glimpse()
 ```
 
-## CIM Libellé  
+## CIM Libellés  
 
 Intitulé du référentiel : **cim_lib**
 
 Mise à jour : 28 novembre 2022  
 
-Référentiel non annualisé.  
 Tous les codes CIM-10 depuis 2018 avec la dernière version de leur libellé.   
-Génération d'un référentiel cim_lib minimal (avec uniquement les codes et libellés CIM-10) à partir du référentiel cim : [code R](https://gist.github.com/denisGustin/dd58aafb4557ba7fb32f5e3836b24c2d)
+
+Référentiel non annualisé.  
+
+[Code R pour générer le référentiel à partir du référentiel `cim`](https://gist.github.com/denisGustin/dd58aafb4557ba7fb32f5e3836b24c2d)
+
 
 ### Variables  
 **cim_code** = code CIM-10  

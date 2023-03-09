@@ -1,0 +1,54 @@
+---
+title: "Formats PMSI"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Formats PMSI}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo = FALSE, message= FALSE}
+library(refpmsi)
+library(tibble)
+library(dplyr)
+```
+
+## Formats MCO    
+
+Intitulé du référentiel : **formats_mco**
+
+Mise à jour : 7 mars 2023  
+
+Liste des 5 fichiers PMSI MCO dont les variables sont décrites dans le référentiel :  
+- RSS groupé  
+- Fichier d'information des UM  
+- FICHCOMP LES  
+- FICHCOMP DMI  
+- VID-HOSP  
+
+Référentiel annualisé de 2018 à 2023.  
+
+### Variables  
+**format_mco_lib** = libellé de la variable  
+**format_mco_taille** = nombre de positions de la variable  
+**format_mco_debut** = position du début de l'emplacement de la variable  
+**format_mco_fin**  = position de fin de l'emplacement de la variable  
+**pmsisoft_type** = type de la variable (c = character, i = nombre entier, n = nombre réel) dans les exports [PMSISOft](https://www.pmsisoft.com/acces_pmsisoft_mco.html)  
+**pmsisoft_var** = intitulé normalisé de la variable dans les exports [PMSISOft](https://www.pmsisoft.com/acces_pmsisoft_mco.html)  
+**annee_pmsi** = année PMSI du format  
+**type_fichier** = intitulé normalisé du fichier MCO  
+
+```{r var_formats_mco, echo = FALSE}
+
+refpmsi::refpmsi("formats_mco") %>% dplyr::glimpse()
+```
+
+## Sources  
+[Formats MCO 2023](https://www.atih.sante.fr/sites/default/files/public/content/4429/formats_mco2023.xlsx)  

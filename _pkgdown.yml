@@ -5,6 +5,8 @@ template:
 
 destination: docs
 
+lang: fr
+
 navbar:
   title: "refpmsi"
   left:
@@ -24,6 +26,8 @@ navbar:
         href: articles/cim.html
       - text: CSARR
         href: articles/csarr.html
+      - text: Formats PMSI
+        href: articles/formats_pmsi.html
       - text: GHM
         href: articles/ghm.html
       - text: HAD
