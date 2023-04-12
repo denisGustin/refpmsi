@@ -1,0 +1,108 @@
+---
+title: "DMI - LPP"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Formats PMSI}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo = FALSE, message= FALSE}
+library(refpmsi)
+library(dplyr)
+```
+
+## DMI en sus  
+
+Intitulé du référentiel : **dmi_en_sus**  
+
+Mise à jour : 7 mars 2023  
+
+Version du 1er mars 2023  
+Référentiel non annualisé   
+
+### Variables  
+**dmi_en_sus_code** = code LPP des dispositifs médicaux pris en charge en sus  
+**dmi_en_sus_lib** = libellé des DMI en sus    
+**dmi_en_sus_evenement** = inscription, suppression du DMI de la liste des DMI en sus  
+**dmi_en_sus_date_publication** = date de publication au JO  
+**dmi_en_sus_date_effet** = date d'entrée en vigueur du DMI en sus (note : les dates d'effet non affichées de la source ont été calculées par nos soins au lendemain de la date de publication)  
+
+```{r var_dmi_en_sus, echo = FALSE}
+
+refpmsi::refpmsi("dmi_en_sus") %>% dplyr::glimpse()
+```
+
+## DMI en sus Libellés  
+
+Intitulé du référentiel : **dmi_en_sus_lib**  
+
+Mise à jour : 7 mars 2023  
+
+Référentiel non annualisé   
+
+### Variables  
+**dmi_en_sus_code** = code LPP des dispositifs médicaux pris en charge en sus. Liste dédoublonnée des codes LPP.  
+**dmi_en_sus_lib** = libellé correspondant à l'évènement le plus récent de chaque DMI en sus  
+
+```{r var_dmi_en_sus_lib, echo = FALSE}
+
+refpmsi::refpmsi("dmi_en_sus_lib") %>% dplyr::glimpse()
+```
+
+## LPP AMELI    
+
+Intitulé du référentiel : **lpp_ameli**  
+
+Mise à jour : 11 avril 2023  
+Version 724 du 5 avril 2023  
+
+Référentiel non annualisé   
+
+### Variables  
+**lpp_code** = code LPP  
+**lpp_lib** = libellé LPP  
+**lpp_arbo1** = 1er niveau d'arborescence de la hiérarchie des LPP  
+**lpp_arbo2** = 2eme niveau d'arborescence de la hiérarchie des LPP  
+**lpp_arbo3** = 3eme niveau d'arborescence de la hiérarchie des LPP   
+**lpp_date_fin** = date de fin du code LPP  
+
+```{r var_lpp_ameli, echo = FALSE}
+
+refpmsi::refpmsi("lpp_ameli") %>% dplyr::glimpse()
+```
+
+## LPP AMELI Hiérarchie  
+
+Intitulé du référentiel : **lpp_ameli_hier**  
+
+Mise à jour : 11 avril 2023  
+
+Hiérarchie LPP extraite de la base Open LPP (version 2021)  
+
+Référentiel non annualisé   
+
+### Variables  
+**titre** = code des titres LPP. Correspond au 1er niveau d'arborescence LPP  
+**titre_lib** = libellé des titres LPP  
+**sous_chapitre_niveau_1** = code du 1er niveau des sous-chapitres LPP. Correspond au 2eme niveau d'arborescence LPP  
+**sous_chapitre_niveau_1_lib** = libellé des codes du 1er niveau des sous-chapitres LPP.  
+**sous_chapitre_niveau_2** = code du 2eme niveau des sous-chapitres LPP. Correspond au 3eme niveau d'arborescence LPP  
+**sous_chapitre_niveau_1_lib** = libellé des codes du 2eme niveau des sous-chapitres LPP.  
+
+```{r var_lpp_ameli_hier, echo = FALSE}
+
+refpmsi::refpmsi("lpp_ameli_hier") %>% dplyr::glimpse()
+```
+
+## Sources  
+[DMI en sus](https://www.atih.sante.fr/dispositifs-medicaux-pris-en-charge-en-sus) (ATIH)  
+[LPP Ameli](http://www.codage.ext.cnamts.fr/codif/tips//telecharge/index_tele.php?p_site=AMELI) (AMELI - fichier LPP_fiche_totxxx.dbf)  
+[Open LPP](https://assurance-maladie.ameli.fr/etudes-et-donnees/open-lpp-base-complete-depenses-dispositifs-medicaux) (AMELI)  

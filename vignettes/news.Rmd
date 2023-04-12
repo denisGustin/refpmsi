@@ -14,6 +14,32 @@ knitr::opts_chunk$set(
 )
 ```
 
+## [11-04-2023]   
+### Référentiels mis à jour  
+`cim` : version 2023  
+Tous les référentiels CSARR (`csarr_code`, `csarr_ponderation`, `csarr_ref`, ...) : version 2023  
+`ghs_public`, `ghs_prive` : version 2023  
+`supp_mco_public`, `supp_mco_prive` : version 2023  
+`ghm_intermediaire`, `ghs_uhcd` : version 2023  
+`ccam_pmsi` : v2 2023  
+`ccam_icr` : v1 2023  
+`lpp_ameli` : v794 (5 avril 2023)  
+
+### Nouveaux référentiels  
+`ghm_lib` : libellés uniques des GHM depuis 2018  
+`cancerologie_appareil_organe` : codes CIM-10 de localisations tumorales primitives, par appareil et par groupe anatomique (organe)  
+`cancerologie_seuil` :  codes CIM-10 des chirurgie cancer  
+`lpp_ameli_hier` :  hiérarchie sur 3 arborescences des LPP  
+
+### Evolutions référentiels
+`lpp` a été renommé `lpp_ameli`  
+
+### Documentation  
+[Nouvel article "DMI-LPP"](https://denisgustin.github.io/refpmsi/articles/dmi_lpp.html)  
+[Nouvel article "Cancérologie"](https://denisgustin.github.io/refpmsi/articles/cancerologie.html)  
+[Ajout de l'exemple "Comparaison CIM-10 2023 et 2022"](https://denisgustin.github.io/refpmsi/articles/cim.html#comparaison-cim-10-2023-et-2022)  
+Ajout de la colonne "Annualisé" dans la [liste des référentiels](https://denisgustin.github.io/refpmsi/articles/liste_ref.html) pour indiquer si le référentiel est annualisé ou non  
+
 ## [07-03-2023]   
 ### Référentiels mis à jour  
 `cma_mco` : version 2023 des CMA MCO   

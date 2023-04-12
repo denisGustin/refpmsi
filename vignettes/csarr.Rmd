@@ -26,9 +26,9 @@ Le package `refpmsi` comprend 11 référentiels CSARR.
 
 Intitulé du référentiel : **csarr_code**  
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel annualisé (2018 à 2022).  
+Référentiel annualisé (2018 à 2023).  
 
 ### Variables  
 
@@ -36,13 +36,13 @@ Référentiel annualisé (2018 à 2022).
 refpmsi::refpmsi("csarr_code") %>% dplyr::glimpse()
 ```
 
-## CSARR notes codes    
+## CSARR codes notes
 
 Intitulé du référentiel : **csarr_code_note**  
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel annualisé (2018 à 2022).  
+Référentiel annualisé (2018 à 2023).  
 
 ### Variables  
 
@@ -54,9 +54,9 @@ refpmsi::refpmsi("csarr_code_note") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_hier**  
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel annualisé (2018 à 2022).  
+Référentiel annualisé (2018 à 2023).  
 
 ### Variables  
 
@@ -64,13 +64,13 @@ Référentiel annualisé (2018 à 2022).
 refpmsi::refpmsi("csarr_hier") %>% dplyr::glimpse()
 ```
 
-## CSARR notes des hiérarchies  
+## CSARR hiérarchie notes  
 
 Intitulé du référentiel : **csarr_hier_note**  
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel annualisé (2018 à 2022).  
+Référentiel annualisé (2018 à 2023).  
 
 ### Variables  
 
@@ -84,7 +84,7 @@ Intitulé du référentiel : **csarr_intervenant**
 
 Mise à jour : 28 novembre 2022  
 
-Référentiel annualisé (2018 à 2022).  
+Référentiel non annualisé  
 
 Note : l'intervenant "29 (Neuro)psychorééducateur" supprimé à partir de l'année PMSI 2021 est conservé.  
 
@@ -98,9 +98,9 @@ refpmsi::refpmsi("csarr_intervenant") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_ref**  
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel annualisé (2018 à 2022).  
+Référentiel annualisé (2018 à 2023).  
 
 ### Variables  
 
@@ -112,9 +112,9 @@ refpmsi::refpmsi("csarr_ref") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_ponderation**  
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel annualisé (2018 à 2022).  
+Référentiel annualisé (2018 à 2023).  
 
 Mise en "tidy" du référentiel ATIH par nos soins  
 
@@ -128,9 +128,9 @@ refpmsi::refpmsi("csarr_ponderation") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_eval**  
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel annualisé (2018 à 2022).  
+Référentiel annualisé (2018 à 2023).  
 
 ### Variables  
 
@@ -142,9 +142,9 @@ refpmsi::refpmsi("csarr_eval") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_gestcomp**  
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel annualisé (2018 à 2022).  
+Référentiel annualisé (2018 à 2023).  
 
 ### Variables  
 
@@ -156,9 +156,9 @@ refpmsi::refpmsi("csarr_gestcomp") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_incompatibilite_intervenant**  
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel annualisé (2020 à 2022).  
+Référentiel annualisé (2020 à 2023).  
 
 ### Variables  
 
@@ -175,7 +175,7 @@ Intitulé du référentiel : **csarr_topographie**
 
 Mise à jour : 28 novembre 2022  
 
-Référentiel non annualisé. Calé sur la dernière version CSARR  
+Référentiel non annualisé.  
 
 ### Variables  
 
@@ -207,7 +207,7 @@ csarr_pluriprofessionnel_new_2021
 
 ## Sources  
 
-[CSARR nomenclature 2022](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3290) (ATIH)  
-[CSARR guide de lecture et de codage 2022](https://www.atih.sante.fr/sites/default/files/public/content/4199/csarr_2022_guide_de_lecture_et_de_codage_vf.docx.pdf) (ATIH)  
+[CSARR nomenclature 2023](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/16991/3676) (ATIH)  
+[CSARR guide de lecture et de codage 2023](https://www.atih.sante.fr/sites/default/files/public/content/4433/csarr_2023_version_provisoire_v0.pdf) (ATIH)  
 [OVALIDE SSR 2022](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2022.pdf) (ATIH)  
 

@@ -22,10 +22,14 @@ navbar:
         href: articles/base_mco.html
       - text: Base nationale SSR
         href: articles/base_ssr.html
+      - text: Cancérologie
+        href: articles/cancerologie.html
       - text: CIM-10 FR à usage PMSI
         href: articles/cim.html
       - text: CSARR
         href: articles/csarr.html
+      - text: DMI en sus et LPP
+        href: articles/dmi_lpp.html
       - text: Formats PMSI
         href: articles/formats_pmsi.html
       - text: GHM

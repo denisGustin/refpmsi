@@ -52,8 +52,10 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/base_mco.html">Base nationale MCO</a>
     <a class="dropdown-item" href="../articles/base_ssr.html">Base nationale SSR</a>
+    <a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a>
     <a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
     <a class="dropdown-item" href="../articles/csarr.html">CSARR</a>
+    <a class="dropdown-item" href="../articles/dmi_lpp.html">DMI en sus et LPP</a>
     <a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a>
     <a class="dropdown-item" href="../articles/ghm.html">GHM</a>
     <a class="dropdown-item" href="../articles/had.html">HAD</a>
@@ -116,11 +118,11 @@ appelé dans un 1er argument</p>
 <span><span class="co">#&gt;   ccam_code ccam_phase ccam_activite ccam_icr_~1 ccam_~2 ccam_~3 ccam_~4 ccam_~5</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> AAFA001   0          1                     655     503 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> AAFA001   0          4                     222     222 4       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> AAFA002   0          1                     415     232 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> AAFA002   0          4                     189     189 4       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> AAFA003   0          1                     762     579 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> AAFA003   0          4                     246     246 4       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> AAFA002   0          1                     415     232 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> AAFA003   0          1                     762     579 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> AAFA004   0          1                     894     673 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> AAFA005   0          1                     473     260 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> AAFA006   0          1                     427     340 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ... with abbreviated variable names 1: ccam_icr_salarie,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   2: ccam_icr_non_salarie, 3: ccam_icr_type, 4: ccam_icr_commentaire,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   5: ccam_code_extension_pmsi</span></span></span></code></pre>
@@ -147,17 +149,18 @@ référentiels.</p>
 <code class="sourceCode R"><span><span class="co"># affichage de la liste documentée des référentiels du package refpmsi::</span></span>
 <span><span class="va">liste_ref</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">liste_ref</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 x 6</span></span></span>
-<span><span class="co">#&gt;   refpmsi                refpmsi_lib             refpm~1 refpm~2 refpm~3 refpm~4</span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> anticancereux_intraghs Médicaments anticancér~ ATIH    2020    <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> autorisation_mco       Autorisations MCO       GENRSA  2022    <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> autorisation_ssr       Autorisations SSR       GENRHA  2022    <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> base_mco_ccam          Dénombrement variables~ ATIH    2019-2~ Base n~ https:~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> base_mco_diag          Dénombrement variables~ ATIH    2019-2~ Base n~ https:~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> base_ssr_ae            Dénombrement variables~ ATIH    2019    Base n~ https:~</span>~</span>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 x 7</span></span></span>
+<span><span class="co">#&gt;   refpmsi                refpmsi_lib     refpm~1 refpm~2 refpm~3 refpm~4 refpm~5</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> anticancereux_intraghs Médicaments an~ ATIH    2020    non     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span> </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> autorisation_mco       Autorisations ~ GENRSA  2022    non     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> autorisation_ssr       Autorisations ~ GENRHA  2022    non     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> base_mco_ccam          Dénombrement v~ ATIH    2019-2~ oui     Base n~ https:~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> base_mco_diag          Dénombrement v~ ATIH    2019-2~ oui     Base n~ https:~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> base_ssr_ae            Dénombrement v~ ATIH    2019    oui     Base n~ https:~</span>~</span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ... with abbreviated variable names 1: refpmsi_source,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   2: refpmsi_periode_version, 3: refpmsi_article, 4: refpmsi_article_lien</span></span></span></code></pre>
+<span><span class="co">#&gt; <span style="color: #949494;">#   2: refpmsi_periode_version, 3: refpmsi_annualise, 4: refpmsi_article,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   5: refpmsi_article_lien</span></span></span></code></pre>
 <p>Pour ne charger que la liste des intitulés des référentiels.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># affichage uniquement des intitulés des référentiels</span></span>

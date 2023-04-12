@@ -23,10 +23,10 @@ library(refpmsi)
 
 Intitulé du référentiel : **cim**
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel annualisé au sens PMSI (2018 à 2022).  
-11 variables et 211 993 lignes.  
+Référentiel annualisé au sens PMSI (2018 à 2023).  
+11 variables et 254 880 lignes.  
 
 Le chargement complet en local et/ou sa visualisation dans R Studio peuvent être longs. Il est recommandé de ne charger que la ou les années utile(s).  
 
@@ -66,9 +66,9 @@ refpmsi::refpmsi("cim") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cim_chapitre**
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel non annualisé. Calé sur la dernière version CIM-10 à usage PMSI (2022)  
+Référentiel non annualisé.  
 
 ### Variables  
 
@@ -87,9 +87,9 @@ refpmsi::refpmsi("cim_chapitre") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cim_groupe**
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel non annualisé. Calé sur la dernière version CIM-10 à usage PMSI (2022)  
+Référentiel non annualisé.  
 
 ### Variables  
 
@@ -111,7 +111,7 @@ refpmsi::refpmsi("cim_groupe") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cim_lib**
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
 Tous les codes CIM-10 depuis 2018 avec la dernière version de leur libellé.   
 
@@ -122,7 +122,7 @@ Référentiel non annualisé.
 
 ### Variables  
 **cim_code** = code CIM-10  
-**cim_lib** = version la plus récente du du libellé CIM-10  
+**cim_lib** = version la plus récente du libellé CIM-10  
 **cim_categorie** = catégorie CIM-10 dont dépend le groupe de la CIM-10  
 **cim_groupe** = groupe CIM-10 dont dépend le groupe de la CIM-10  
 **cim_chapitre** = chapitre CIM-10 dont dépend le groupe de la CIM-10  
@@ -137,7 +137,7 @@ Intitulé du référentiel : **cim_precarite**
 
 Mise à jour : 28 novembre 2022  
 
-Référentiel non annualisé. Calé sur la dernière version CIM-10 à usage PMSI (2022)  
+Référentiel non annualisé.  
 
 ### Variables  
 
@@ -154,7 +154,7 @@ Intitulé du référentiel : **cim_polyhandicap**
 
 Mise à jour : 28 novembre 2022  
 
-Référentiel non annualisé. Calé sur la dernière version CIM-10 à usage PMSI (2022)  
+Référentiel non annualisé.  
 
 ### Variables  
 
@@ -197,9 +197,9 @@ refpmsi::refpmsi("cma_mco") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cma_ssr**  
 
-Mise à jour : 27 février 2023  
+Mise à jour : 11 avril 2023  
 
-Référentiel annualisé au sens PMSI SSR (de 2018 à 2022)  
+Référentiel annualisé au sens PMSI SSR (de 2018 à 2023)  
 
 Source : Annexe 6 du volume 1 des manuels des GME  
 
@@ -344,8 +344,33 @@ cma_mco_niveau %>%
     purrr::iwalk(~ readr::write_excel_csv2(.x, stringr::str_c("cma_mco_niveau_",.y, ".csv")))
 ```
 
+### Comparaison CIM-10 2023 et 2022  
+
+```{r comparaison_cim_2023_2022, echo = TRUE, eval = FALSE}
+library(dplyr)
+library(refpmsi)
+
+# Y-a-t-il des codes CIM-10 2023 avec un type mco (tmco) différent de leur tmco 2022 ?
+cim <- refpmsi::refpmsi("cim")
+cim_2022 <- cim %>% dplyr::filter(annee_pmsi == "2022") %>% dplyr::select(cim_code,cim_tmco)
+cim_2023 <- cim %>% dplyr::filter(annee_pmsi == "2023") %>% dplyr::select(cim_code,cim_tmco_2023 = cim_tmco)
+cim_2022 %>% 
+    dplyr::inner_join(cim_2023, by = c("cim_code" = "cim_code")) %>% 
+    dplyr::filter(cim_tmco != cim_tmco_2023)
+# résultat : aucune différence
+
+# Y-a-t-il des codes CIM-10 2023 avec un type ssr (pssr) différent de leur pssr 2022 ?
+cim_2022 <- cim %>% dplyr::filter(annee_pmsi == "2022") %>% dplyr::select(cim_code,cim_pssr)
+cim_2023 <- cim %>% dplyr::filter(annee_pmsi == "2023") %>% dplyr::select(cim_code,cim_pssr_2023 = cim_pssr)
+cim_2022 %>% 
+    dplyr::inner_join(cim_2023, by = c("cim_code" = "cim_code")) %>% 
+    dplyr::filter(cim_pssr != cim_pssr_2023)
+# résultat : Z515 devient autorisé en morbidité principale
+```
+
 ## Sources  
-[Nomenclature CIM-10 2022 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/456) (ATIH)  
+[Nomenclature CIM-10 2023 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/16958/456) (ATIH)  
+[CIM-10 FR à usage PMSI 2023 - version du 31 mars 2023](https://solidarites-sante.gouv.fr/fichiers/bos/2022/2022.9bis.BOS.pdf) (ATIH)  
 [CIM-10 FR à usage PMSI 2022 - version du 04 octobre 2022](https://solidarites-sante.gouv.fr/fichiers/bos/2022/2022.9bis.BOS.pdf) (ATIH)  
 [CIM-10 FR à usage PMSI 2021 - version du 12 mars 2021](https://www.atih.sante.fr/sites/default/files/public/content/3963/cim-10_2021_1.pdf) (ATIH)  
 [CIM-10 FR à usage PMSI 2020 - version du 21 août 2020](https://www.atih.sante.fr/sites/default/files/public/content/3706/cim-10_2020_bo.pdf) (ATIH)  

@@ -40,8 +40,8 @@ Référentiel annualisé de 2018 à 2023.
 **format_mco_taille** = nombre de positions de la variable  
 **format_mco_debut** = position du début de l'emplacement de la variable  
 **format_mco_fin**  = position de fin de l'emplacement de la variable  
-**pmsisoft_type** = type de la variable (c = character, i = nombre entier, n = nombre réel) dans les exports [PMSISOft](https://www.pmsisoft.com/acces_pmsisoft_mco.html)  
-**pmsisoft_var** = intitulé normalisé de la variable dans les exports [PMSISOft](https://www.pmsisoft.com/acces_pmsisoft_mco.html)  
+**pmsisoft_type** = type de la variable (c = character, i = nombre entier, n = nombre réel) dans les exports [PMSISoft](https://www.pmsisoft.com/acces_pmsisoft_mco.html)  
+**pmsisoft_var** = intitulé normalisé de la variable dans les exports [PMSISoft](https://www.pmsisoft.com/acces_pmsisoft_mco.html)  
 **annee_pmsi** = année PMSI du format  
 **type_fichier** = intitulé normalisé du fichier MCO  
 

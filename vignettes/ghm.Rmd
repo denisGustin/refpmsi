@@ -25,7 +25,7 @@ library(tidyr)
 
 Intitulé du référentiel : **cmd**  
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
 Référentiel des libellés des CMD (Catégories Majeures de Diagnostics).    
 Référentiel non annualisé.  
@@ -36,15 +36,33 @@ Référentiel non annualisé.
 refpmsi::refpmsi("cmd") %>% dplyr::glimpse()
 ```
 
+## GHM Libellés  
+
+Intitulé du référentiel : **ghm_lib**
+
+Mise à jour : 11 avril 2023  
+
+Les libellés des GHM depuis 2018 dans leur dernière version.  
+
+Référentiel non annualisé.  
+
+### Variables  
+**ghm** = code GHM  
+**ghm_lib** = version la plus récente du libellé GHM  
+
+```{r var ghm_lib, echo = FALSE}
+refpmsi::refpmsi("ghm_lib") %>% dplyr::glimpse()
+```
+
 ## GHS Public
 
 Intitulé du référentiel : **ghs_public**
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
 Référentiel des GHS et GHM du secteur public (ex-DGF).  
 
-Référentiel annualisé au sens du PMSI MCO (2018 à 2022).  
+Référentiel annualisé au sens du PMSI MCO (2018 à 2023).  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -68,11 +86,11 @@ refpmsi::refpmsi("ghs_public") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ghs_prive**
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
 Référentiel des GHS et GHM du secteur privé (ex-OQN).  
 
-Référentiel annualisé au sens du PMSI MCO (2018 à 2022).  
+Référentiel annualisé au sens du PMSI MCO (2018 à 2023).  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -96,11 +114,11 @@ refpmsi::refpmsi("ghs_prive") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ghm_intermediaire**
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
 Référentiel des GHM avec GHS intermédiaire  
 
-Référentiel annualisé au sens PMSI MCO (2020-2022)  
+Référentiel annualisé au sens PMSI MCO (2020-2023)  
 
 ### Variables  
 
@@ -112,9 +130,9 @@ refpmsi::refpmsi("ghm_intermediaire") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ghm_uhcd**
 
-Mise à jour : 28 novembre 2022  
+Mise à jour : 11 avril 2023  
 
-Référentiel annualisé au sens PMSI MCO (2021-2022)  
+Référentiel annualisé au sens PMSI MCO (2021-2023)  
 
 Pour chaque GHS UHCD et par année PMSI MCO, la liste des GHM associés  
 
@@ -551,12 +569,13 @@ Remarque : pas de libellé de liste D pour le DP Z380 "Enfant unique, né à l'h
 
 ## Sources  
 
-[Manuel de groupage GHM 2022 - Volume 1](https://solidarites-sante.gouv.fr/fichiers/bos/2022/2022.5bis.vol1.BOS.pdf) (ATIH)
+[Manuel de groupage GHM 2023 - Volume 1](https://www.atih.sante.fr/sites/default/files/public/content/4490/volume_1.pdf) (ATIH)  
+[Arrêté tarifaire MCO 2023](https://www.legifrance.gouv.fr/download/pdf?id=wbSfyB0QarBmS_OXWPwKuVZQxHw5YMz-RNeqeEq8Hqs=) (Ministère de la Santé - Arrêté 2023)    
 [Arrêté tarifaire MCO 2022](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045530951) (Ministère de la Santé - Arrêté 2022)    
 [Arrêté tarifaire MCO 2021](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043306334) (Ministère de la Santé - Arrêté 2021)    
 [Arrêté tarifaire MCO 2020](https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000041663256) (Ministère de la Santé - Arrêté 2020)  
 [Arrêté tarifaire MCO 2019](https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000038219729) (Ministère de la Santé - Arrêté 2019)  
 [Arrêté tarifaire MCO 2018](https://www.legifrance.gouv.fr/eli/arrete/2018/2/28/SSAH1805897A/jo/texte) (Ministère de la Santé - Arrêté 2018)  
 [Regroupements des GHM et RGHM 2022](https://www.atih.sante.fr/regroupement-ghm-en-2022) (ATIH)  
-[OVALIDE MCO - Tables de référence 2022](https://www.atih.sante.fr/sites/default/files/public/content/4297/ovalide.zip) (ATIH) 
-[Données du volume 2 du manuel des GHS 2022](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3329) (ATIH)  
+[OVALIDE MCO - Tables de référence 2022](https://www.atih.sante.fr/sites/default/files/public/content/4297/ovalide.zip) (ATIH)  
+[Données du volume 2 du manuel des GHS 2023](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/16835/3627) (ATIH)  

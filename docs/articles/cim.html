@@ -52,8 +52,10 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/base_mco.html">Base nationale MCO</a>
     <a class="dropdown-item" href="../articles/base_ssr.html">Base nationale SSR</a>
+    <a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a>
     <a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
     <a class="dropdown-item" href="../articles/csarr.html">CSARR</a>
+    <a class="dropdown-item" href="../articles/dmi_lpp.html">DMI en sus et LPP</a>
     <a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a>
     <a class="dropdown-item" href="../articles/ghm.html">GHM</a>
     <a class="dropdown-item" href="../articles/had.html">HAD</a>
@@ -103,9 +105,9 @@
 <h2 id="cim-10-fr-à-usage-pmsi">CIM-10 FR à usage PMSI<a class="anchor" aria-label="anchor" href="#cim-10-fr-%C3%A0-usage-pmsi"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>cim</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel annualisé au sens PMSI (2018 à 2022).<br>
-11 variables et 211 993 lignes.</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel annualisé au sens PMSI (2018 à 2023).<br>
+11 variables et 254 880 lignes.</p>
 <p>Le chargement complet en local et/ou sa visualisation dans R Studio
 peuvent être longs. Il est recommandé de ne charger que la ou les années
 utile(s).</p>
@@ -136,7 +138,7 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>cim_code_actif</
 le code CIM-10<br><strong>cim_categorie</strong> = 3 premières positions du code
 CIM-10<br><strong>cim_precision</strong> = TRUE si pas de code fils plus précis,
 FALSE sinon<br><strong>annee_pmsi</strong> = année PMSI</p>
-<pre><code><span><span class="co">#&gt; Rows: 211,993</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 254,880</span></span>
 <span><span class="co">#&gt; Columns: 11</span></span>
 <span><span class="co">#&gt; $ cim_code       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A00", "A000", "A001", "A009", "A01", "A010", "A011", "~</span></span>
 <span><span class="co">#&gt; $ cim_tmco       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 3, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0~</span></span>
@@ -148,16 +150,15 @@ FALSE sinon<br><strong>annee_pmsi</strong> = année PMSI</p>
 <span><span class="co">#&gt; $ cim_chapitre   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", ~</span></span>
 <span><span class="co">#&gt; $ cim_groupe     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A00-A09", "A00-A09", "A00-A09", "A00-A09", "A00-A09", ~</span></span>
 <span><span class="co">#&gt; $ cim_precision  <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE,~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022", "2022",~</span></span></code></pre>
+<span><span class="co">#&gt; $ annee_pmsi     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023", "2023",~</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
 <h2 id="cim-chapitre">CIM Chapitre<a class="anchor" aria-label="anchor" href="#cim-chapitre"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>cim_chapitre</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel non annualisé. Calé sur la dernière version CIM-10 à
-usage PMSI (2022)</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel non annualisé.</p>
 <div class="section level3">
 <h3 id="variables-1">Variables<a class="anchor" aria-label="anchor" href="#variables-1"></a>
 </h3>
@@ -182,9 +183,8 @@ chapitre de la CIM-10</p>
 <h2 id="cim-groupe">CIM Groupe<a class="anchor" aria-label="anchor" href="#cim-groupe"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>cim_groupe</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel non annualisé. Calé sur la dernière version CIM-10 à
-usage PMSI (2022)</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel non annualisé.</p>
 <div class="section level3">
 <h3 id="variables-2">Variables<a class="anchor" aria-label="anchor" href="#variables-2"></a>
 </h3>
@@ -211,7 +211,7 @@ niveau</p>
 <h2 id="cim-libellés">CIM Libellés<a class="anchor" aria-label="anchor" href="#cim-libell%C3%A9s"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>cim_lib</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
+<p>Mise à jour : 11 avril 2023</p>
 <p>Tous les codes CIM-10 depuis 2018 avec la dernière version de leur
 libellé.</p>
 <p>Référentiel non annualisé.</p>
@@ -221,12 +221,12 @@ R pour générer le référentiel à partir du référentiel
 <div class="section level3">
 <h3 id="variables-3">Variables<a class="anchor" aria-label="anchor" href="#variables-3"></a>
 </h3>
-<p><strong>cim_code</strong> = code CIM-10<br><strong>cim_lib</strong> = version la plus récente du du libellé
+<p><strong>cim_code</strong> = code CIM-10<br><strong>cim_lib</strong> = version la plus récente du libellé
 CIM-10<br><strong>cim_categorie</strong> = catégorie CIM-10 dont dépend le groupe
 de la CIM-10<br><strong>cim_groupe</strong> = groupe CIM-10 dont dépend le groupe de la
 CIM-10<br><strong>cim_chapitre</strong> = chapitre CIM-10 dont dépend le groupe de
 la CIM-10</p>
-<pre><code><span><span class="co">#&gt; Rows: 42,886</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 42,887</span></span>
 <span><span class="co">#&gt; Columns: 5</span></span>
 <span><span class="co">#&gt; $ cim_code      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A00", "A000", "A001", "A009", "A01", "A010", "A011", "A~</span></span>
 <span><span class="co">#&gt; $ cim_lib       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Choléra", "Choléra à Vibrio cholerae 01, biovar cholera~</span>ra~</span>
@@ -240,8 +240,7 @@ la CIM-10</p>
 </h2>
 <p>Intitulé du référentiel : <strong>cim_precarite</strong></p>
 <p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel non annualisé. Calé sur la dernière version CIM-10 à
-usage PMSI (2022)</p>
+<p>Référentiel non annualisé.</p>
 <div class="section level3">
 <h3 id="variables-4">Variables<a class="anchor" aria-label="anchor" href="#variables-4"></a>
 </h3>
@@ -257,8 +256,7 @@ usage PMSI (2022)</p>
 </h2>
 <p>Intitulé du référentiel : <strong>cim_polyhandicap</strong></p>
 <p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel non annualisé. Calé sur la dernière version CIM-10 à
-usage PMSI (2022)</p>
+<p>Référentiel non annualisé.</p>
 <div class="section level3">
 <h3 id="variables-5">Variables<a class="anchor" aria-label="anchor" href="#variables-5"></a>
 </h3>
@@ -306,17 +304,17 @@ d’exclusions entre racines de GHM et CMA<br><strong>annee_pmsi</strong> = ann�
 <h2 id="cma-ssr">CMA SSR<a class="anchor" aria-label="anchor" href="#cma-ssr"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>cma_ssr</strong></p>
-<p>Mise à jour : 27 février 2023</p>
-<p>Référentiel annualisé au sens PMSI SSR (de 2018 à 2022)</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel annualisé au sens PMSI SSR (de 2018 à 2023)</p>
 <p>Source : Annexe 6 du volume 1 des manuels des GME</p>
 <div class="section level3">
 <h3 id="variables-7">Variables<a class="anchor" aria-label="anchor" href="#variables-7"></a>
 </h3>
 <p><strong>cma_ssr_code</strong> = code CIM-10 des CMA SSR<br><strong>annee_pmsi</strong> = année PMSI SSR</p>
-<pre><code><span><span class="co">#&gt; Rows: 4,704</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 5,498</span></span>
 <span><span class="co">#&gt; Columns: 2</span></span>
 <span><span class="co">#&gt; $ cma_ssr_code <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A000", "A001", "A009", "A020", "A022", "A028", "A029", "~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022", "2022", "~</span></span></code></pre>
+<span><span class="co">#&gt; $ annee_pmsi   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023", "2023", "~</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
@@ -373,15 +371,15 @@ DP de RSS mono-RUM</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2021</span></span></code></pre>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2020</span></span></code></pre>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># chargement de la CIM-10 2020 et 2021</span></span>
 <span><span class="va">cim_2020_2021</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim"</span>,<span class="fl">2020</span><span class="op">:</span><span class="fl">2021</span><span class="op">)</span></span>
@@ -397,15 +395,15 @@ DP de RSS mono-RUM</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2021      Insuffisance ventriculaire gauche, avec fraction d'é~</span>~</span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2021      Dialyse extra-corporelle                             </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2020      Cataracte sénile nucléaire                           </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2021      Enfant unique, né à l'hôpital                        </span>   </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2020      Enfant unique, né à l'hôpital                        </span>   </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2020      Fracture fermée du col du fémur                      </span>  </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2020      Commotion cérébrale, sans plaie intracrânienne       </span>   </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2020      Douleur thoracique, sans précision                   </span> </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2020      Maladie pulmonaire obstructive chronique avec épisod~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2021      Douleur thoracique, sans précision                   </span> </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2021      Maladie pulmonaire obstructive chronique avec épisod~</span>~</span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2020      Appendicites aigües, autres et non précisées         </span>   </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2021      Altération [baisse] de l'état général                </span>    </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2021      Fracture fermée du col du fémur                      </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2021      Insuffisance ventriculaire gauche, avec fraction d'é~</span>~</span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2020      Fracture fermée du col du fémur                      </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2020      Insuffisance ventriculaire gauche, avec fraction d'é~</span>~</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="case-mix-par-chapitre-cim-10">Case mix par chapitre CIM-10<a class="anchor" aria-label="anchor" href="#case-mix-par-chapitre-cim-10"></a>
@@ -429,15 +427,15 @@ précédent.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2021      Insuffisance ventriculaire gauche, avec frac~ 9      </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2021      Dialyse extra-corporelle                      21     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2020      Cataracte sénile nucléaire                    7      </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2021      Enfant unique, né à l'hôpital                 21     </span>   </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2020      Enfant unique, né à l'hôpital                 21     </span>   </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2020      Fracture fermée du col du fémur               19     </span>  </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2020      Commotion cérébrale, sans plaie intracrânien~ 19     </span>   </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2020      Douleur thoracique, sans précision            18     </span> </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2020      Maladie pulmonaire obstructive chronique ave~ 10     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2021      Douleur thoracique, sans précision            18     </span> </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2021      Maladie pulmonaire obstructive chronique ave~ 10     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2020      Appendicites aigües, autres et non précisées  11     </span>   </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2021      Altération [baisse] de l'état général         18     </span>    </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2021      Fracture fermée du col du fémur               19     </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2021      Insuffisance ventriculaire gauche, avec frac~ 9      </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2020      Fracture fermée du col du fémur               19     </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2020      Insuffisance ventriculaire gauche, avec frac~ 9      </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ... with abbreviated variable name 1: cim_chapitre</span></span></span>
 <span></span>
 <span><span class="co"># chargement du référentiel "cim_chapitre" avec les 2 variables qui nous intéressent</span>ent</span>
@@ -491,14 +489,14 @@ DAS.</p>
 <pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 x 3</span></span></span>
 <span><span class="co">#&gt;    no_rss das   annee_rss</span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 Z370  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 Z370  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 I10   2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 P040  2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 F1725 2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 P040  2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 F1725 2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 G473  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 W189  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R600  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 N178  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 W189  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R600  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 N178  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 B952  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 D638  2020</span></span></code></pre>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
@@ -516,8 +514,8 @@ DAS.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 3 x 5</span></span></span>
 <span><span class="co">#&gt;   no_rss das   annee_rss cim_lib                                         cim_t~1</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                             <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>      1 Z370  2020      Naissance unique, enfant vivant                       1</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>      6 W189  2021      Autre chute de plain-pied, lieu sans précision        2</span>2</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>      1 Z370  2021      Naissance unique, enfant vivant                       1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>      6 W189  2020      Autre chute de plain-pied, lieu sans précision        2</span>2</span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span>      9 B952  2020      Streptocoques, groupe D, et entérocoques, caus~       1</span>1</span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ... with abbreviated variable name 1: cim_tmco</span></span></span></code></pre></div>
 </div>
@@ -548,13 +546,38 @@ DAS.</p>
 <span><span class="va">cma_mco_niveau</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
 <span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/imap.html" class="external-link">iwalk</a></span><span class="op">(</span><span class="op">~</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html" class="external-link">write_excel_csv2</a></span><span class="op">(</span><span class="va">.x</span>, <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_c.html" class="external-link">str_c</a></span><span class="op">(</span><span class="st">"cma_mco_niveau_"</span>,<span class="va">.y</span>, <span class="st">".csv"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
+<div class="section level3">
+<h3 id="comparaison-cim-10-2023-et-2022">Comparaison CIM-10 2023 et 2022<a class="anchor" aria-label="anchor" href="#comparaison-cim-10-2023-et-2022"></a>
+</h3>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://denisgustin.github.io/refpmsi/">refpmsi</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Y-a-t-il des codes CIM-10 2023 avec un type mco (tmco) différent de leur tmco 2022 ?</span></span>
+<span><span class="va">cim</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim"</span><span class="op">)</span></span>
+<span><span class="va">cim_2022</span> <span class="op">&lt;-</span> <span class="va">cim</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">annee_pmsi</span> <span class="op">==</span> <span class="st">"2022"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_code</span>,<span class="va">cim_tmco</span><span class="op">)</span></span>
+<span><span class="va">cim_2023</span> <span class="op">&lt;-</span> <span class="va">cim</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">annee_pmsi</span> <span class="op">==</span> <span class="st">"2023"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_code</span>,cim_tmco_2023 <span class="op">=</span> <span class="va">cim_tmco</span><span class="op">)</span></span>
+<span><span class="va">cim_2022</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">inner_join</a></span><span class="op">(</span><span class="va">cim_2023</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cim_code"</span> <span class="op">=</span> <span class="st">"cim_code"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">cim_tmco</span> <span class="op">!=</span> <span class="va">cim_tmco_2023</span><span class="op">)</span></span>
+<span><span class="co"># résultat : aucune différence</span></span>
+<span></span>
+<span><span class="co"># Y-a-t-il des codes CIM-10 2023 avec un type ssr (pssr) différent de leur pssr 2022 ?</span></span>
+<span><span class="va">cim_2022</span> <span class="op">&lt;-</span> <span class="va">cim</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">annee_pmsi</span> <span class="op">==</span> <span class="st">"2022"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_code</span>,<span class="va">cim_pssr</span><span class="op">)</span></span>
+<span><span class="va">cim_2023</span> <span class="op">&lt;-</span> <span class="va">cim</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">annee_pmsi</span> <span class="op">==</span> <span class="st">"2023"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_code</span>,cim_pssr_2023 <span class="op">=</span> <span class="va">cim_pssr</span><span class="op">)</span></span>
+<span><span class="va">cim_2022</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">inner_join</a></span><span class="op">(</span><span class="va">cim_2023</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cim_code"</span> <span class="op">=</span> <span class="st">"cim_code"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">cim_pssr</span> <span class="op">!=</span> <span class="va">cim_pssr_2023</span><span class="op">)</span></span>
+<span><span class="co"># résultat : Z515 devient autorisé en morbidité principale</span></span></code></pre></div>
+</div>
 </div>
 <div class="section level2">
 <h2 id="sources">Sources<a class="anchor" aria-label="anchor" href="#sources"></a>
 </h2>
-<p><a href="https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/456" class="external-link">Nomenclature
-CIM-10 2022 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR
+<p><a href="https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/16958/456" class="external-link">Nomenclature
+CIM-10 2023 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR
 et PSY</a> (ATIH)<br><a href="https://solidarites-sante.gouv.fr/fichiers/bos/2022/2022.9bis.BOS.pdf" class="external-link">CIM-10
+FR à usage PMSI 2023 - version du 31 mars 2023</a> (ATIH)<br><a href="https://solidarites-sante.gouv.fr/fichiers/bos/2022/2022.9bis.BOS.pdf" class="external-link">CIM-10
 FR à usage PMSI 2022 - version du 04 octobre 2022</a> (ATIH)<br><a href="https://www.atih.sante.fr/sites/default/files/public/content/3963/cim-10_2021_1.pdf" class="external-link">CIM-10
 FR à usage PMSI 2021 - version du 12 mars 2021</a> (ATIH)<br><a href="https://www.atih.sante.fr/sites/default/files/public/content/3706/cim-10_2020_bo.pdf" class="external-link">CIM-10
 FR à usage PMSI 2020 - version du 21 août 2020</a> (ATIH)<br><a href="https://www.atih.sante.fr/sites/default/files/public/content/3502/cim-10fr_2019_actualisation_oms_24-09-2019.pdf" class="external-link">CIM-10

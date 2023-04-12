@@ -52,8 +52,10 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/base_mco.html">Base nationale MCO</a>
     <a class="dropdown-item" href="../articles/base_ssr.html">Base nationale SSR</a>
+    <a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a>
     <a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
     <a class="dropdown-item" href="../articles/csarr.html">CSARR</a>
+    <a class="dropdown-item" href="../articles/dmi_lpp.html">DMI en sus et LPP</a>
     <a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a>
     <a class="dropdown-item" href="../articles/ghm.html">GHM</a>
     <a class="dropdown-item" href="../articles/had.html">HAD</a>
@@ -104,30 +106,29 @@
 <h2 id="csarr-codes">CSARR codes<a class="anchor" aria-label="anchor" href="#csarr-codes"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>csarr_code</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel annualisé (2018 à 2022).</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel annualisé (2018 à 2023).</p>
 <div class="section level3">
 <h3 id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a>
 </h3>
-<pre><code><span><span class="co">#&gt; Rows: 2,763</span></span>
-<span><span class="co">#&gt; Columns: 5</span></span>
-<span><span class="co">#&gt; $ csarr_code_hier       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01.01.01", "01.01.01", "01.01.01", "01.01.01", ~</span></span>
-<span><span class="co">#&gt; $ csarr_code            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ALQ+183", "ALQ+065", "ALQ+110", "ALQ+247", "ALQ~</span></span>
-<span><span class="co">#&gt; $ csarr_lib             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Évaluation analytique initiale de fonction cogn~</span>~</span>
-<span><span class="co">#&gt; $ csarr_code_ordre_hier <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1", "2", "3", "4", "5", "6", "7", "8", "9", "10~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022", ~</span></span></code></pre>
+<pre><code><span><span class="co">#&gt; Rows: 3,297</span></span>
+<span><span class="co">#&gt; Columns: 4</span></span>
+<span><span class="co">#&gt; $ csarr_code_hier <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01.01.01", "01.01.01", "01.01.01", "01.01.01", "01.01~</span></span>
+<span><span class="co">#&gt; $ csarr_code      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ALQ+183", "ALQ+065", "ALQ+110", "ALQ+247", "ALQ+137",~</span></span>
+<span><span class="co">#&gt; $ csarr_lib       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Évaluation analytique initiale de fonction cognitive"~</span>~</span>
+<span><span class="co">#&gt; $ annee_pmsi      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023", "2023"~</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
-<h2 id="csarr-notes-codes">CSARR notes codes<a class="anchor" aria-label="anchor" href="#csarr-notes-codes"></a>
+<h2 id="csarr-codes-notes">CSARR codes notes<a class="anchor" aria-label="anchor" href="#csarr-codes-notes"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>csarr_code_note</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel annualisé (2018 à 2022).</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel annualisé (2018 à 2023).</p>
 <div class="section level3">
 <h3 id="variables-1">Variables<a class="anchor" aria-label="anchor" href="#variables-1"></a>
 </h3>
-<pre><code><span><span class="co">#&gt; Rows: 14,389</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 17,329</span></span>
 <span><span class="co">#&gt; Columns: 7</span></span>
 <span><span class="co">#&gt; $ csarr_code_note_code     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ALQ+183", "ALQ+183", "ALQ+183", "ALQ+183", "~</span></span>
 <span><span class="co">#&gt; $ csarr_code_note_idnote   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 5, 5, 5, 6, ~</span></span>
@@ -135,41 +136,41 @@
 <span><span class="co">#&gt; $ csarr_code_note_niveau   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ~</span></span>
 <span><span class="co">#&gt; $ csarr_code_note_lib      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "À l'exclusion de :", "évaluation psychologiq~</span>q~</span>
 <span><span class="co">#&gt; $ csarr_code_note_ordre    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 1, 2, 3, 1, ~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022~</span></span></code></pre>
+<span><span class="co">#&gt; $ annee_pmsi               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023~</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
 <h2 id="csarr-hiérarchie">CSARR hiérarchie<a class="anchor" aria-label="anchor" href="#csarr-hi%C3%A9rarchie"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>csarr_hier</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel annualisé (2018 à 2022).</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel annualisé (2018 à 2023).</p>
 <div class="section level3">
 <h3 id="variables-2">Variables<a class="anchor" aria-label="anchor" href="#variables-2"></a>
 </h3>
-<pre><code><span><span class="co">#&gt; Rows: 757</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 909</span></span>
 <span><span class="co">#&gt; Columns: 3</span></span>
 <span><span class="co">#&gt; $ csarr_hier_code <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "00", "00.01", "00.02", "00.02.01", "00.02.02", "01", ~</span></span>
 <span><span class="co">#&gt; $ csarr_hier_lib  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "INTRODUCTION", "PRÉSENTATION DU CATALOGUE", "NOTES GÉ~</span>‰~</span>
-<span><span class="co">#&gt; $ annee_pmsi      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022", "2022"~</span></span></code></pre>
+<span><span class="co">#&gt; $ annee_pmsi      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023", "2023"~</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
-<h2 id="csarr-notes-des-hiérarchies">CSARR notes des hiérarchies<a class="anchor" aria-label="anchor" href="#csarr-notes-des-hi%C3%A9rarchies"></a>
+<h2 id="csarr-hiérarchie-notes">CSARR hiérarchie notes<a class="anchor" aria-label="anchor" href="#csarr-hi%C3%A9rarchie-notes"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>csarr_hier_note</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel annualisé (2018 à 2022).</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel annualisé (2018 à 2023).</p>
 <div class="section level3">
 <h3 id="variables-3">Variables<a class="anchor" aria-label="anchor" href="#variables-3"></a>
 </h3>
-<pre><code><span><span class="co">#&gt; Rows: 3,181</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 3,816</span></span>
 <span><span class="co">#&gt; Columns: 7</span></span>
 <span><span class="co">#&gt; $ csarr_hier_note_code     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "00", "00", "00.01", "00.01", "00.01", "00.01~</span></span>
 <span><span class="co">#&gt; $ csarr_hier_note_idnote   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 2, 3, 4, 5, 5, 5, 5, 5, 6, 7, 8, 9, 10, 11~</span></span>
 <span><span class="co">#&gt; $ csarr_hier_note_niveau   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ~</span></span>
 <span><span class="co">#&gt; $ csarr_hier_note_ordre    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 2, 3, 4, 5, 1, 1, 1, 1, 1, 1, ~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022~</span></span>
+<span><span class="co">#&gt; $ annee_pmsi               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023~</span></span>
 <span><span class="co">#&gt; $ csarr_hier_note_typenote <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, "aut_note", "aut_note", "aut_note", "~</span></span>
 <span><span class="co">#&gt; $ csarr_hier_note_lib      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, "Chaque chapitre est repéré par une c~</span>c~</span></code></pre>
 </div>
@@ -179,7 +180,7 @@
 </h2>
 <p>Intitulé du référentiel : <strong>csarr_intervenant</strong></p>
 <p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel annualisé (2018 à 2022).</p>
+<p>Référentiel non annualisé</p>
 <p>Note : l’intervenant “29 (Neuro)psychorééducateur” supprimé à partir
 de l’année PMSI 2021 est conservé.</p>
 <div class="section level3">
@@ -196,17 +197,16 @@ de l’année PMSI 2021 est conservé.</p>
 pluriprofessionnels, appareillage, séance<a class="anchor" aria-label="anchor" href="#csarr-individuels-d%C3%A9di%C3%A9s-non-d%C3%A9di%C3%A9s-collectifs-pluriprofessionnels-appareillage-s%C3%A9ance"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>csarr_ref</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel annualisé (2018 à 2022).</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel annualisé (2018 à 2023).</p>
 <div class="section level3">
 <h3 id="variables-5">Variables<a class="anchor" aria-label="anchor" href="#variables-5"></a>
 </h3>
-<pre><code><span><span class="co">#&gt; Rows: 2,763</span></span>
-<span><span class="co">#&gt; Columns: 8</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 3,297</span></span>
+<span><span class="co">#&gt; Columns: 7</span></span>
 <span><span class="co">#&gt; $ csarr_code               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ALQ+183", "ALQ+065", "ALQ+110", "ALQ+247", "~</span></span>
-<span><span class="co">#&gt; $ csarr_dedie              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1", "1", "1", "1", "1", "1", "1", "1", "1", ~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022~</span></span>
-<span><span class="co">#&gt; $ csarr_seance             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~</span></span>
+<span><span class="co">#&gt; $ csarr_dedie              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dedie", "dedie", "dedie", "dedie", "dedie", ~</span></span>
+<span><span class="co">#&gt; $ annee_pmsi               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023~</span></span>
 <span><span class="co">#&gt; $ csarr_collectif          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~</span></span>
 <span><span class="co">#&gt; $ csarr_non_dedie          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~</span></span>
 <span><span class="co">#&gt; $ csarr_pluriprofessionnel <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~</span></span>
@@ -217,13 +217,13 @@ pluriprofessionnels, appareillage, séance<a class="anchor" aria-label="anchor" 
 <h2 id="csarr-pondérations">CSARR pondérations<a class="anchor" aria-label="anchor" href="#csarr-pond%C3%A9rations"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>csarr_ponderation</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel annualisé (2018 à 2022).</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel annualisé (2018 à 2023).</p>
 <p>Mise en “tidy” du référentiel ATIH par nos soins</p>
 <div class="section level3">
 <h3 id="variables-6">Variables<a class="anchor" aria-label="anchor" href="#variables-6"></a>
 </h3>
-<pre><code><span><span class="co">#&gt; Rows: 4,176</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 6,207</span></span>
 <span><span class="co">#&gt; Columns: 8</span></span>
 <span><span class="co">#&gt; $ csarr_code           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "AGR+047", "AGR+102", "AGR+298", "AKQ+124", "AKQ+~</span></span>
 <span><span class="co">#&gt; $ csarr_intervenant    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "00", "00", "00", "00", "00", "00", "00", "00", "~</span></span>
@@ -231,7 +231,7 @@ pluriprofessionnels, appareillage, séance<a class="anchor" aria-label="anchor" 
 <span><span class="co">#&gt; $ csarr_ponderation_hw <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 60, 65, 60, 75, 60, 65, 75, 50, 60, 50, 65, 60, 6~</span></span>
 <span><span class="co">#&gt; $ csarr_ponderation_lj <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 60, 65, 60, 75, 60, 65, 75, 50, 60, 50, 65, 60, 6~</span></span>
 <span><span class="co">#&gt; $ csarr_ponderation_xh <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 90, 95, 90, 105, 90, 95, 70, 80, 90, 80, 95, 90, ~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022", "~</span></span>
+<span><span class="co">#&gt; $ annee_pmsi           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023", "~</span></span>
 <span><span class="co">#&gt; $ csarr_ponderation_qm <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 30, 35, 30, 45, 30, 35, 70, 20, 30, 20, 35, 30, 3~</span></span></code></pre>
 </div>
 </div>
@@ -239,16 +239,16 @@ pluriprofessionnels, appareillage, séance<a class="anchor" aria-label="anchor" 
 <h2 id="csarr-évaluations">CSARR évaluations<a class="anchor" aria-label="anchor" href="#csarr-%C3%A9valuations"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>csarr_eval</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel annualisé (2018 à 2022).</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel annualisé (2018 à 2023).</p>
 <div class="section level3">
 <h3 id="variables-7">Variables<a class="anchor" aria-label="anchor" href="#variables-7"></a>
 </h3>
-<pre><code><span><span class="co">#&gt; Rows: 879</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 1,054</span></span>
 <span><span class="co">#&gt; Columns: 6</span></span>
 <span><span class="co">#&gt; $ csarr_code               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "AKQ+124", "ALQ+183", "ALQ+247", "ANQ+067", "~</span></span>
 <span><span class="co">#&gt; $ csarr_eval_initiale      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1", "1", "1", "1", "1", "1", "1", "1", "1", ~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022~</span></span>
+<span><span class="co">#&gt; $ annee_pmsi               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023~</span></span>
 <span><span class="co">#&gt; $ csarr_eval_intermediaire <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~</span></span>
 <span><span class="co">#&gt; $ csarr_eval_finale        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~</span></span>
 <span><span class="co">#&gt; $ csarr_eval_autres        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~</span></span></code></pre>
@@ -258,16 +258,16 @@ pluriprofessionnels, appareillage, séance<a class="anchor" aria-label="anchor" 
 <h2 id="csarr-gestes-complémentaires">CSARR gestes complémentaires<a class="anchor" aria-label="anchor" href="#csarr-gestes-compl%C3%A9mentaires"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>csarr_gestcomp</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel annualisé (2018 à 2022).</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel annualisé (2018 à 2023).</p>
 <div class="section level3">
 <h3 id="variables-8">Variables<a class="anchor" aria-label="anchor" href="#variables-8"></a>
 </h3>
-<pre><code><span><span class="co">#&gt; Rows: 836</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 981</span></span>
 <span><span class="co">#&gt; Columns: 3</span></span>
 <span><span class="co">#&gt; $ csarr_code       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "DKQ+008", "DKQ+008", "EQQ+206", "EQQ+206", "GLR+226"~</span></span>
 <span><span class="co">#&gt; $ csarr_geste_comp <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "GLQ+043", "GLQ+175", "GLQ+043", "GLQ+175", "GLQ+043"~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022", "2022~</span></span></code></pre>
+<span><span class="co">#&gt; $ annee_pmsi       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023", "2023~</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
@@ -275,8 +275,8 @@ pluriprofessionnels, appareillage, séance<a class="anchor" aria-label="anchor" 
 </h2>
 <p>Intitulé du référentiel :
 <strong>csarr_incompatibilite_intervenant</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel annualisé (2020 à 2022).</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel annualisé (2020 à 2023).</p>
 <div class="section level3">
 <h3 id="variables-9">Variables<a class="anchor" aria-label="anchor" href="#variables-9"></a>
 </h3>
@@ -285,12 +285,12 @@ compatible avec le type intervenant 21(Infirmier) et 0 si l’acte CSARR
 n’est pas compatible avec le type intervenant 21(Infirmier)<br><strong>csarr_ci_88_autorise</strong> = 1 si l’acte CSARR est compatible
 avec le type intervenant 88(Autre intervenant) et 0 si l’acte CSARR
 n’est pas compatible avec le type intervenant 88(Autre intervenant)</p>
-<pre><code><span><span class="co">#&gt; Rows: 1,706</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 2,286</span></span>
 <span><span class="co">#&gt; Columns: 4</span></span>
 <span><span class="co">#&gt; $ csarr_code           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "AGR+047", "AGR+102", "AGR+298", "AKQ+124", "AKQ+~</span></span>
 <span><span class="co">#&gt; $ csarr_ci_21_autorise <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1~</span></span>
 <span><span class="co">#&gt; $ csarr_ci_88_autorise <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022", "~</span></span></code></pre>
+<span><span class="co">#&gt; $ annee_pmsi           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023", "~</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
@@ -298,7 +298,7 @@ n’est pas compatible avec le type intervenant 88(Autre intervenant)</p>
 </h2>
 <p>Intitulé du référentiel : <strong>csarr_topographie</strong></p>
 <p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel non annualisé. Calé sur la dernière version CSARR</p>
+<p>Référentiel non annualisé.</p>
 <div class="section level3">
 <h3 id="variables-10">Variables<a class="anchor" aria-label="anchor" href="#variables-10"></a>
 </h3>
@@ -332,20 +332,16 @@ n’est pas compatible avec le type intervenant 88(Autre intervenant)</p>
 <span>                    by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"csarr_code"</span> <span class="op">=</span> <span class="st">"csarr_code"</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">csarr_pluriprofessionnel_new_2021</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 3 x 2</span></span></span>
-<span><span class="co">#&gt;   csarr_code csarr_pluriprofessionnel</span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> ZZQ+136    1                       </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> ZZC+463    1                       </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> ALT+076    1</span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 0 x 2</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ... with 2 variables: csarr_code &lt;chr&gt;, csarr_pluriprofessionnel &lt;chr&gt;</span></span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
 <h2 id="sources">Sources<a class="anchor" aria-label="anchor" href="#sources"></a>
 </h2>
-<p><a href="https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3290" class="external-link">CSARR
-nomenclature 2022</a> (ATIH)<br><a href="https://www.atih.sante.fr/sites/default/files/public/content/4199/csarr_2022_guide_de_lecture_et_de_codage_vf.docx.pdf" class="external-link">CSARR
-guide de lecture et de codage 2022</a> (ATIH)<br><a href="https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2022.pdf" class="external-link">OVALIDE
+<p><a href="https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/16991/3676" class="external-link">CSARR
+nomenclature 2023</a> (ATIH)<br><a href="https://www.atih.sante.fr/sites/default/files/public/content/4433/csarr_2023_version_provisoire_v0.pdf" class="external-link">CSARR
+guide de lecture et de codage 2023</a> (ATIH)<br><a href="https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2022.pdf" class="external-link">OVALIDE
 SSR 2022</a> (ATIH)</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>Sur cette page</h2>

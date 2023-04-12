@@ -19,7 +19,7 @@ library(refpmsi)
 library(gt)
 ```
 
-81 référentiels PMSI disponibles  
+85 référentiels PMSI disponibles  
   
 [Derniers référentiels ajoutés ou mis à jour](https://denisgustin.github.io/refpmsi/articles/news.html)  
 
@@ -30,16 +30,17 @@ refpmsi::liste_refpmsi() %>%
     dplyr::mutate(refpmsi_article = ifelse(is.na(refpmsi_article),refpmsi_article,glue::glue("[{refpmsi_article}]({refpmsi_article_lien})")),
                   refpmsi_article = purrr::map(refpmsi_article, gt::md)
     ) %>% 
-    dplyr::select(refpmsi,refpmsi_lib,refpmsi_periode_version,refpmsi_source,refpmsi_article) %>% 
+    dplyr::select(refpmsi,refpmsi_lib,refpmsi_periode_version,refpmsi_annualise,refpmsi_source,refpmsi_article) %>% 
     gt::gt(
         rowname_col = "refpmsi"
     ) %>% 
-    gt::cols_width(c(refpmsi_article,refpmsi_periode_version) ~ gt::px(100),
-                   c(refpmsi_source) ~ gt::px(150)) %>% 
+    # gt::cols_width(c(refpmsi_article,refpmsi_periode_version) ~ gt::px(100),
+    #                c(refpmsi_source) ~ gt::px(150)) %>% 
     gt::cols_label(refpmsi_lib = "Détail",
                    refpmsi_source = "Source",
                    refpmsi_article = "Article",
-                   refpmsi_periode_version = gt::html("Période<br>Version")) %>% 
+                   refpmsi_periode_version = "Période, version, maj",
+                   refpmsi_annualise = "Annualisé") %>% 
     gt::tab_stubhead(label = "Référentiels") %>% 
     gt::sub_missing(columns = c("refpmsi_article"),
                     missing_text = "") %>% 
@@ -47,6 +48,5 @@ refpmsi::liste_refpmsi() %>%
     gt::tab_style(style = list(gt::cell_text(size = "small")),
                   locations = gt::cells_body(columns = c(refpmsi_source,refpmsi_article))) %>% 
     gt::cols_align(align = "left", columns = gt::everything())
-
 ```
 

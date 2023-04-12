@@ -1,0 +1,61 @@
+---
+title: "Cancérologie"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Formats PMSI}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo = FALSE, message= FALSE}
+library(refpmsi)
+library(dplyr)
+```
+
+## Chirurgie cancer  
+
+Intitulé du référentiel : **cancerologie_seuil**
+
+Mise à jour : 11 avril 2023  
+
+Référentiel non annualisé.  
+
+### Variables  
+**code_cim** = code CIM-10 de chirurgie cancer  
+**chirurgie_cancer** = libellé normalisé des chirurgies cancer  
+
+```{r var_cancerologie_seuil, echo = FALSE}
+
+refpmsi::refpmsi("cancerologie_seuil") %>% dplyr::glimpse()
+```
+
+## Cancérologie appareil et organe
+
+Intitulé du référentiel : **cancerologie_appareil_organe**
+
+Mise à jour : 11 avril 2023  
+
+Liste des codes CIM-10 de localisations tumorales primitives, par appareil et par groupe anatomique (organe).  
+
+Référentiel non annualisé.  
+
+### Variables  
+**code_cim** = code CIM-10 de localisations tumorales primitives  
+**appareil** = libellé normalisé des appareils  
+**organe** = libellé normalisé des organes  
+
+```{r var_cancerologie_appareil_organe, echo = FALSE}
+
+refpmsi::refpmsi("cancerologie_appareil_organe") %>% dplyr::glimpse()
+```
+
+## Sources  
+[Chirurgie des cancers - seuil minimal](https://www.e-cancer.fr/content/download/238533/3276365/file/Mesure_des_activites_cancer_soumises_a_seuils_D%C3%A9cembre_2017_mel_20180830.pdf) (INCa 2017)  
+[Algorithme cancer](https://www.e-cancer.fr/content/download/63161/568597/file/Algorithme-cancer-2013-V2.pdf) (INCa septembre 2013 - V2 - Annexe 7.6)  

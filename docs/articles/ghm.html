@@ -52,8 +52,10 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/base_mco.html">Base nationale MCO</a>
     <a class="dropdown-item" href="../articles/base_ssr.html">Base nationale SSR</a>
+    <a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a>
     <a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
     <a class="dropdown-item" href="../articles/csarr.html">CSARR</a>
+    <a class="dropdown-item" href="../articles/dmi_lpp.html">DMI en sus et LPP</a>
     <a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a>
     <a class="dropdown-item" href="../articles/ghm.html">GHM</a>
     <a class="dropdown-item" href="../articles/had.html">HAD</a>
@@ -103,7 +105,7 @@
 <h2 id="cmd">CMD<a class="anchor" aria-label="anchor" href="#cmd"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>cmd</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
+<p>Mise à jour : 11 avril 2023</p>
 <p>Référentiel des libellés des CMD (Catégories Majeures de
 Diagnostics).<br>
 Référentiel non annualisé.</p>
@@ -117,91 +119,108 @@ Référentiel non annualisé.</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="ghs-public">GHS Public<a class="anchor" aria-label="anchor" href="#ghs-public"></a>
+<h2 id="ghm-libellés">GHM Libellés<a class="anchor" aria-label="anchor" href="#ghm-libell%C3%A9s"></a>
 </h2>
-<p>Intitulé du référentiel : <strong>ghs_public</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel des GHS et GHM du secteur public (ex-DGF).</p>
-<p>Référentiel annualisé au sens du PMSI MCO (2018 à 2022).</p>
-<p>Il est recommandé de ne charger que la ou les année(s) PMSI
-utile(s).</p>
+<p>Intitulé du référentiel : <strong>ghm_lib</strong></p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Les libellés des GHM depuis 2018 dans leur dernière version.</p>
+<p>Référentiel non annualisé.</p>
 <div class="section level3">
 <h3 id="variables-1">Variables<a class="anchor" aria-label="anchor" href="#variables-1"></a>
 </h3>
-<p><strong>ghs</strong> = code GHS<br><strong>ghm</strong> = code GHM<br><strong>ghm_lib</strong> = libellé du GHM<br><strong>ghm_bb</strong> = borne basse du GHM<br><strong>ghm_bh</strong> = borne haute du GHM<br><strong>ghs_tarif</strong> = tarif du GHS<br><strong>ghs_exb</strong> = tarif journalier EXB (EXtrême Bas)<br><strong>ghs_exh</strong> = tarif journalier EXH (EXtrême Haut)<br><strong>annee_pmsi</strong> = année PMSI</p>
-<pre><code><span><span class="co">#&gt; Rows: 19,611</span></span>
-<span><span class="co">#&gt; Columns: 9</span></span>
-<span><span class="co">#&gt; $ ghs        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "22", "23", "24", "25", "65", "26", "66", "27", "28", "67",~</span></span>
-<span><span class="co">#&gt; $ ghm        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01C031", "01C032", "01C033", "01C034", "01C041", "01C041",~</span></span>
-<span><span class="co">#&gt; $ ghm_lib    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Craniotomies pour traumatisme, âge supérieur à 17 ans, niv~</span>iv~</span>
-<span><span class="co">#&gt; $ ghm_bb     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 12, 12, 0, 0, 0, 14, 0, 0, 0~</span></span>
-<span><span class="co">#&gt; $ ghm_bh     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 11, 19, 64, 124, 12, 12, 20, 20, 43, 43, 105, 105, 10, 17, ~</span></span>
-<span><span class="co">#&gt; $ ghs_tarif  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 3775.12, 6703.22, 12095.80, 16391.47, 13081.55, 5919.66, 17~</span></span>
-<span><span class="co">#&gt; $ ghs_exb    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 0.00, 0.00, 0.00, 409.11, 0.00, 0.00, 0.00, 0.00, 0.00, 0.0~</span></span>
-<span><span class="co">#&gt; $ ghs_exh    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 111.66, 92.27, 71.58, 303.66, 137.05, 137.05, 103.44, 103.4~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022", "2022", "20~</span></span></code></pre>
+<p><strong>ghm</strong> = code GHM<br><strong>ghm_lib</strong> = version la plus récente du libellé GHM</p>
+<pre><code><span><span class="co">#&gt; Rows: 2,678</span></span>
+<span><span class="co">#&gt; Columns: 2</span></span>
+<span><span class="co">#&gt; $ ghm     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01C031", "01C032", "01C033", "01C034", "01C041", "01C042", "0~</span></span>
+<span><span class="co">#&gt; $ ghm_lib <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Craniotomies pour traumatisme, âge supérieur à 17 ans, niveau~</span>au~</span></code></pre>
 </div>
 </div>
 <div class="section level2">
-<h2 id="ghs-privé">GHS Privé<a class="anchor" aria-label="anchor" href="#ghs-priv%C3%A9"></a>
+<h2 id="ghs-public">GHS Public<a class="anchor" aria-label="anchor" href="#ghs-public"></a>
 </h2>
-<p>Intitulé du référentiel : <strong>ghs_prive</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel des GHS et GHM du secteur privé (ex-OQN).</p>
-<p>Référentiel annualisé au sens du PMSI MCO (2018 à 2022).</p>
+<p>Intitulé du référentiel : <strong>ghs_public</strong></p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel des GHS et GHM du secteur public (ex-DGF).</p>
+<p>Référentiel annualisé au sens du PMSI MCO (2018 à 2023).</p>
 <p>Il est recommandé de ne charger que la ou les année(s) PMSI
 utile(s).</p>
 <div class="section level3">
 <h3 id="variables-2">Variables<a class="anchor" aria-label="anchor" href="#variables-2"></a>
 </h3>
 <p><strong>ghs</strong> = code GHS<br><strong>ghm</strong> = code GHM<br><strong>ghm_lib</strong> = libellé du GHM<br><strong>ghm_bb</strong> = borne basse du GHM<br><strong>ghm_bh</strong> = borne haute du GHM<br><strong>ghs_tarif</strong> = tarif du GHS<br><strong>ghs_exb</strong> = tarif journalier EXB (EXtrême Bas)<br><strong>ghs_exh</strong> = tarif journalier EXH (EXtrême Haut)<br><strong>annee_pmsi</strong> = année PMSI</p>
-<pre><code><span><span class="co">#&gt; Rows: 19,236</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 25,282</span></span>
+<span><span class="co">#&gt; Columns: 9</span></span>
+<span><span class="co">#&gt; $ ghs        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "22", "23", "24", "25", "65", "26", "66", "27", "28", "67",~</span></span>
+<span><span class="co">#&gt; $ ghm        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01C031", "01C032", "01C033", "01C034", "01C041", "01C041",~</span></span>
+<span><span class="co">#&gt; $ ghm_lib    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Craniotomies pour traumatisme, âge supérieur à 17 ans, niv~</span>iv~</span>
+<span><span class="co">#&gt; $ ghm_bb     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 12, 12, 0, 0, 0, 14, 0, 0, 0~</span></span>
+<span><span class="co">#&gt; $ ghm_bh     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 11, 19, 64, 124, 12, 12, 20, 20, 43, 43, 105, 105, 10, 17, ~</span></span>
+<span><span class="co">#&gt; $ ghs_tarif  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 4038.19, 7170.34, 12938.71, 17533.73, 13993.16, 6332.18, 18~</span></span>
+<span><span class="co">#&gt; $ ghs_exb    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 0.00, 0.00, 0.00, 437.62, 0.00, 0.00, 0.00, 0.00, 0.00, 0.0~</span></span>
+<span><span class="co">#&gt; $ ghs_exh    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 119.44, 98.70, 76.57, 324.82, 146.60, 146.60, 110.65, 110.6~</span></span>
+<span><span class="co">#&gt; $ annee_pmsi <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023", "2023", "20~</span></span></code></pre>
+</div>
+</div>
+<div class="section level2">
+<h2 id="ghs-privé">GHS Privé<a class="anchor" aria-label="anchor" href="#ghs-priv%C3%A9"></a>
+</h2>
+<p>Intitulé du référentiel : <strong>ghs_prive</strong></p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel des GHS et GHM du secteur privé (ex-OQN).</p>
+<p>Référentiel annualisé au sens du PMSI MCO (2018 à 2023).</p>
+<p>Il est recommandé de ne charger que la ou les année(s) PMSI
+utile(s).</p>
+<div class="section level3">
+<h3 id="variables-3">Variables<a class="anchor" aria-label="anchor" href="#variables-3"></a>
+</h3>
+<p><strong>ghs</strong> = code GHS<br><strong>ghm</strong> = code GHM<br><strong>ghm_lib</strong> = libellé du GHM<br><strong>ghm_bb</strong> = borne basse du GHM<br><strong>ghm_bh</strong> = borne haute du GHM<br><strong>ghs_tarif</strong> = tarif du GHS<br><strong>ghs_exb</strong> = tarif journalier EXB (EXtrême Bas)<br><strong>ghs_exh</strong> = tarif journalier EXH (EXtrême Haut)<br><strong>annee_pmsi</strong> = année PMSI</p>
+<pre><code><span><span class="co">#&gt; Rows: 24,808</span></span>
 <span><span class="co">#&gt; Columns: 9</span></span>
 <span><span class="co">#&gt; $ ghs        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "22", "23", "24", "25", "26", "65", "27", "66", "28", "67",~</span></span>
 <span><span class="co">#&gt; $ ghm        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01C031", "01C032", "01C033", "01C034", "01C041", "01C041",~</span></span>
 <span><span class="co">#&gt; $ ghm_lib    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Craniotomies pour traumatisme, âge supérieur à 17 ans, niv~</span>iv~</span>
 <span><span class="co">#&gt; $ ghm_bb     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 18, 0, 0, 0, 6, 0, 0, 0, ~</span></span>
 <span><span class="co">#&gt; $ ghm_bh     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 0, 24, 0, 0, 13, 13, 31, 31, 47, 47, 110, 110, 8, 12, 35, 5~</span></span>
-<span><span class="co">#&gt; $ ghs_tarif  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 1690.98, 3219.35, 7979.50, 11471.41, 2720.49, 10007.36, 493~</span></span>
+<span><span class="co">#&gt; $ ghs_tarif  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 1779.30, 3387.51, 8396.29, 12070.59, 2862.59, 10530.07, 519~</span></span>
 <span><span class="co">#&gt; $ ghs_exb    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00,~</span></span>
-<span><span class="co">#&gt; $ ghs_exh    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 0.00, 253.90, 0.00, 0.00, 88.78, 88.78, 80.98, 80.98, 69.37~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022", "2022", "20~</span></span></code></pre>
+<span><span class="co">#&gt; $ ghs_exh    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 0.00, 267.16, 0.00, 0.00, 93.42, 93.42, 85.21, 85.21, 72.99~</span></span>
+<span><span class="co">#&gt; $ annee_pmsi <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023", "2023", "20~</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
 <h2 id="ghm-intermédiaire">GHM intermédiaire<a class="anchor" aria-label="anchor" href="#ghm-interm%C3%A9diaire"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>ghm_intermediaire</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
+<p>Mise à jour : 11 avril 2023</p>
 <p>Référentiel des GHM avec GHS intermédiaire</p>
-<p>Référentiel annualisé au sens PMSI MCO (2020-2022)</p>
+<p>Référentiel annualisé au sens PMSI MCO (2020-2023)</p>
 <div class="section level3">
-<h3 id="variables-3">Variables<a class="anchor" aria-label="anchor" href="#variables-3"></a>
+<h3 id="variables-4">Variables<a class="anchor" aria-label="anchor" href="#variables-4"></a>
 </h3>
-<pre><code><span><span class="co">#&gt; Rows: 921</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 1,228</span></span>
 <span><span class="co">#&gt; Columns: 4</span></span>
 <span><span class="co">#&gt; $ ghm_intermediaire <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01M04T", "01M05T", "01M07T", "01M08T", "01M09T", "0~</span></span>
 <span><span class="co">#&gt; $ ghs_plein         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "333", "212", "217", "222", "227", "232", "237", "24~</span></span>
 <span><span class="co">#&gt; $ ghs_intermediaire <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "348", "5006", "5007", "5008", "5009", "5010", "5011~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022", "202~</span></span></code></pre>
+<span><span class="co">#&gt; $ annee_pmsi        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023", "202~</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
 <h2 id="ghs-uhcd">GHS UHCD<a class="anchor" aria-label="anchor" href="#ghs-uhcd"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>ghm_uhcd</strong></p>
-<p>Mise à jour : 28 novembre 2022</p>
-<p>Référentiel annualisé au sens PMSI MCO (2021-2022)</p>
+<p>Mise à jour : 11 avril 2023</p>
+<p>Référentiel annualisé au sens PMSI MCO (2021-2023)</p>
 <p>Pour chaque GHS UHCD et par année PMSI MCO, la liste des GHM
 associés</p>
 <div class="section level3">
-<h3 id="variables-4">Variables<a class="anchor" aria-label="anchor" href="#variables-4"></a>
+<h3 id="variables-5">Variables<a class="anchor" aria-label="anchor" href="#variables-5"></a>
 </h3>
-<pre><code><span><span class="co">#&gt; Rows: 5,173</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 7,782</span></span>
 <span><span class="co">#&gt; Columns: 3</span></span>
 <span><span class="co">#&gt; $ ghs        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "5071", "5071", "5071", "5071", "5072", "5072", "5072", "50~</span></span>
 <span><span class="co">#&gt; $ ghm        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01C031", "01C032", "01C033", "01C034", "01C041", "01C042",~</span></span>
-<span><span class="co">#&gt; $ annee_pmsi <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2022", "2022", "2022", "2022", "2022", "2022", "2022", "20~</span></span></code></pre>
+<span><span class="co">#&gt; $ annee_pmsi <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023", "2023", "2023", "2023", "2023", "2023", "2023", "20~</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
@@ -215,7 +234,7 @@ associés</p>
 <p>Il est recommandé de ne charger que la ou les année(s) PMSI
 utile(s).</p>
 <div class="section level3">
-<h3 id="variables-5">Variables<a class="anchor" aria-label="anchor" href="#variables-5"></a>
+<h3 id="variables-6">Variables<a class="anchor" aria-label="anchor" href="#variables-6"></a>
 </h3>
 <p><strong>ghm</strong> = code GHM<br><strong>ghm_lib</strong> = libellé du GHM<br><strong>aso</strong> = code ASO du GHM (Activité de SOins)<br><strong>da</strong> = code DA du GHM<br><strong>da_lib</strong> = libellé du DA<br><strong>gp</strong> = code GP du GHM<br><strong>gp_lib</strong> = libellé du GP<br><strong>ga</strong> = code GA du GHM<br><strong>ga_lib</strong> = libellé du GA<br><strong>da_gp</strong> = concaténation des codes DA et GP du GHM<br><strong>da_gp_ga</strong> = concaténation des codes DA, GP et GA du
 GHM<br><strong>annee_pmsi</strong> = année PMSI</p>
@@ -244,7 +263,7 @@ GHM<br><strong>annee_pmsi</strong> = année PMSI</p>
 et GP (Groupe de Planification) depuis 2018.</p>
 <p>Référentiel non annualisé.</p>
 <div class="section level3">
-<h3 id="variables-6">Variables<a class="anchor" aria-label="anchor" href="#variables-6"></a>
+<h3 id="variables-7">Variables<a class="anchor" aria-label="anchor" href="#variables-7"></a>
 </h3>
 <p><strong>ghm_regroupement</strong> = type de regroupement GHM
 (da,ga,gp)<br><strong>ghm_regroupement_code</strong> = code regroupement<br><strong>ghm_regroupement_lib</strong> = libellé du code regroupement</p>
@@ -266,7 +285,7 @@ d’Activité), GA (Groupe d’Activité) et GP (Groupe de Planification).</p>
 <p>Il est recommandé de ne charger que la ou les année(s) PMSI
 utile(s).</p>
 <div class="section level3">
-<h3 id="variables-7">Variables<a class="anchor" aria-label="anchor" href="#variables-7"></a>
+<h3 id="variables-8">Variables<a class="anchor" aria-label="anchor" href="#variables-8"></a>
 </h3>
 <p><strong>rghm</strong> = code racine GHM<br><strong>rghm_lib</strong> = libellé de la racine GHM<br><strong>aso</strong> = code ASO de la racine GHM (Activité de
 SOins)<br><strong>da</strong> = code DA de la racine GHM<br><strong>da_lib</strong> = libellé du DA<br><strong>gp</strong> = code GP de la racine GHM<br><strong>gp_lib</strong> = libellé du GP<br><strong>ga</strong> = code GA de la racine GHM<br><strong>ga_lib</strong> = libellé du GA<br><strong>da_gp</strong> = concaténation des codes DA et GP de la racine
@@ -301,7 +320,7 @@ informations redondantes avec d’autres référentiels de
 <p>Il est recommandé de ne charger que la ou les année(s) PMSI
 utile(s).</p>
 <div class="section level3">
-<h3 id="variables-8">Variables<a class="anchor" aria-label="anchor" href="#variables-8"></a>
+<h3 id="variables-9">Variables<a class="anchor" aria-label="anchor" href="#variables-9"></a>
 </h3>
 <p><strong>ghm</strong> = code GHM<br><strong>tghm</strong> = type du GHM (C : chirurgical; M : médical; X :
 autre)<br><strong>dms</strong> = durée moyenne de séjour nationale<br><strong>pctdc</strong> = taux de décès national<br><strong>mage</strong> = age moyen<br><strong>pctcourt</strong> = pourcentage de séjours courts (parmi les
@@ -338,7 +357,7 @@ informations redondantes avec d’autres référentiels de
 <p>Il est recommandé de ne charger que la ou les année(s) PMSI
 utile(s).</p>
 <div class="section level3">
-<h3 id="variables-9">Variables<a class="anchor" aria-label="anchor" href="#variables-9"></a>
+<h3 id="variables-10">Variables<a class="anchor" aria-label="anchor" href="#variables-10"></a>
 </h3>
 <p><strong>ghm</strong> = code GHM<br><strong>tghm</strong> = type du GHM (C : chirurgical; M : médical; X :
 autre)<br><strong>dms</strong> = durée moyenne de séjour nationale<br><strong>pctdc</strong> = taux de décès national<br><strong>mage</strong> = age moyen<br><strong>pctcourt</strong> = pourcentage de séjours courts (parmi les
@@ -372,7 +391,7 @@ sous-cmd (sous-cmd = 3 premières positions des GHM)<br><strong>pctautres</stron
 <p>Il est recommandé de ne charger que la ou les année(s) PMSI
 utile(s).</p>
 <div class="section level3">
-<h3 id="variables-10">Variables<a class="anchor" aria-label="anchor" href="#variables-10"></a>
+<h3 id="variables-11">Variables<a class="anchor" aria-label="anchor" href="#variables-11"></a>
 </h3>
 <p><strong>racine</strong> = code racine GHM<br><strong>pctdc</strong> = taux de décès national<br><strong>conf</strong> = confirmation de codage nécessaire pour la racine
 GHM (1 : OUI ; 0 : NON)<br><strong>age2</strong> = effet de l’âge pour les moins de 2 ans (1 : OUI
@@ -470,7 +489,7 @@ PMSI<br><strong>annee_pmsi</strong> = année PMSI</p>
 <h3 id="chargement-du-référentiel-des-ghs-public-des-années-2020-et-2021">Chargement du référentiel des GHS Public des années 2020 et
 2021<a class="anchor" aria-label="anchor" href="#chargement-du-r%C3%A9f%C3%A9rentiel-des-ghs-public-des-ann%C3%A9es-2020-et-2021"></a>
 </h3>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Chargement du référentiel des GHS-GHM Public des années 2020 et 2021</span>021</span>
 <span><span class="va">ghs_2020_2021</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"ghs_public"</span>,<span class="fl">2020</span><span class="op">:</span><span class="fl">2021</span><span class="op">)</span></span>
 <span><span class="va">ghs_2020_2021</span></span>
@@ -515,7 +534,7 @@ correspondant à 14 séjours.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span>      3     12 04M053 J189      11 1144  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span>      1     13 16M11T D508       0 6186  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">17</span>      1     14 16M11T D509       0 6118  2020</span></span></code></pre>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># chargement des GHM Public 2019 et 2020</span></span>
 <span><span class="va">ghm_2019_2020</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"ghs_public"</span>, <span class="fl">2019</span><span class="op">:</span><span class="fl">2020</span><span class="op">)</span></span>
 <span></span>
@@ -552,7 +571,7 @@ correspondant à 14 séjours.</p>
 d’OVALIDE MCO à chaque séjour.</p>
 <p>Puis on compare la DS des séjours avec ces DMS nationales pour les
 séjours pour lesquels cela a un sens (séjours avec une DS &gt; 0).</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Chargement des DMS nationales des années PMSI 2019 et 2020</span>0</span>
 <span><span class="va">dms_nat</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"ovalide_ghminfo_dgf"</span>, <span class="fl">2019</span><span class="op">:</span><span class="fl">2020</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">ghm</span>,<span class="va">dms</span>,<span class="va">annee_pmsi</span><span class="op">)</span></span>
 <span><span class="va">dms_nat</span></span>
@@ -618,7 +637,7 @@ séjours pour lesquels cela a un sens (séjours avec une DS &gt; 0).</p>
 <p>Enfin, on peut filtrer les séjours qui ont une DS &gt;= 2,5 x la DMS
 nationale de leur GHM pour repérer des séjours, à priori,
 particulièrement longs.</p>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">sej_2.5_dms</span> <span class="op">&lt;-</span> <span class="va">jeu_ghm_dms</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">ratio_ecart_dms</span> <span class="op">&gt;=</span> <span class="fl">2.5</span><span class="op">)</span></span>
 <span><span class="va">sej_2.5_dms</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span>width <span class="op">=</span> <span class="cn">Inf</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 2 x 10</span></span></span>
@@ -634,7 +653,7 @@ particulièrement longs.</p>
 <div class="section level3">
 <h3 id="case-mix-en-da-domaine-dactivité-des-séjours">Case mix en DA (Domaine d’Activité) des séjours<a class="anchor" aria-label="anchor" href="#case-mix-en-da-domaine-dactivit%C3%A9-des-s%C3%A9jours"></a>
 </h3>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">case_mix_da</span> <span class="op">&lt;-</span> <span class="va">jeu_ghm</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="co"># rattachement des codes DA aux séjours</span>s</span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"ghm_regroupement"</span>,<span class="fl">2019</span><span class="op">:</span><span class="fl">2020</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">ghm</span>,<span class="va">da</span>,<span class="va">da_lib</span>,<span class="va">annee_pmsi</span><span class="op">)</span>,</span>
@@ -663,7 +682,7 @@ particulièrement longs.</p>
 <p>Dans un premier temps, on repère les séjours groupés dans un GHM
 concerné par la gradation des prises en charge ambulatoires et on
 rattache le GHS plein et le GHS intermédiaire.</p>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">sej_ghm_gradation_ambulatoire</span> <span class="op">&lt;-</span> <span class="va">jeu_ghm</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="co"># filtre sur l'année 2020, seule année concernée dans notre data set</span>set</span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">annee_rss</span> <span class="op">==</span> <span class="fl">2020</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -682,7 +701,7 @@ rattache le GHS plein et le GHS intermédiaire.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span>      1     14 16M11T D509       0 6118  2020      6186      6118</span></span></code></pre></div>
 <p>Dans un second temps, on repère les seuls séjours classés dans un GHS
 intermédiaire</p>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">sej_ghs_intermediaire</span> <span class="op">&lt;-</span> <span class="va">sej_ghm_gradation_ambulatoire</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="co"># filtre sur les séjours dont le GHS = le GHS intermédiaire associé</span>iÃ©</span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">ghs</span> <span class="op">==</span> <span class="va">ghs_intermediaire</span><span class="op">)</span></span>
@@ -696,7 +715,7 @@ intermédiaire</p>
 <div class="section level3">
 <h3 id="liste-des-codes-cim-10-dune-liste-d">Liste des codes CIM-10 d’une liste D<a class="anchor" aria-label="anchor" href="#liste-des-codes-cim-10-dune-liste-d"></a>
 </h3>
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Chargement du référentiel des listes D et A de l'algorithme de groupage MCO V2021</span>21</span>
 <span><span class="va">mco_fg_listes</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"mco_fg_listes"</span>, <span class="fl">2021</span><span class="op">)</span></span>
 <span><span class="va">mco_fg_listes</span></span>
@@ -721,7 +740,7 @@ ou asthme”</p>
 <p>Le DP d’un séjour appartenant à cette liste amène le séjour concerné
 en racine 04M03 “Bronchites et asthme, âge supérieur à 17 ans” ou 04M02
 “Bronchites et asthme, âge inférieur à 18 ans”</p>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">liste_D_0401</span> <span class="op">&lt;-</span> <span class="va">mco_fg_listes</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="co"># on ne garde que des variables qui nous intéressent pour une liste en D</span>D</span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">mco_fg_liste_code</span>, <span class="va">mco_fg_liste_lib</span>, <span class="va">mco_fg_cmd</span>, <span class="va">mco_fg_code</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -756,7 +775,7 @@ en racine 04M03 “Bronchites et asthme, âge supérieur à 17 ans” ou 04M02
 <h3 id="diagnostics-dentrée-dune-cmd">Diagnostics d’entrée d’une CMD<a class="anchor" aria-label="anchor" href="#diagnostics-dentr%C3%A9e-dune-cmd"></a>
 </h3>
 <p>On choisit d’extraire les diags d’entrée de la CMD 01</p>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># on a chargé le référentiel mco_fg_listes dans la variable mco_fg_listes</span>tes</span>
 <span><span class="va">diag_cmd_01</span> <span class="op">&lt;-</span> <span class="va">mco_fg_listes</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">mco_fg_cmd</span> <span class="op">==</span> <span class="st">"01"</span>, <span class="va">mco_fg_liste_type</span> <span class="op">==</span> <span class="st">"D"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -790,20 +809,20 @@ l’année PMSI du séjour</p>
 <span><span class="co">#&gt;    no_rss dp_rss ghm_rss annee_rss</span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  05M091  2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 S7220  08M041  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H269   02C05J  2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 S7220  08M041  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H269   02C05J  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   15M05A  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  08C471  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  01M201  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   05M13T  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   04M202  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   06C091  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  23M20Z  2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  08C471  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  23M20Z  2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  08C471  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  05M092  2021</span></span></code></pre>
 <p>1ere étape : construire le tibble des diagnostics d’entrée de toutes
 les CMD concernées par une introduction de groupage par le DP</p>
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># on a chargé le référentiel mco_fg_listes dans la variable mco_fg_listes</span>tes</span>
 <span><span class="va">diag_cmd</span> <span class="op">&lt;-</span> <span class="va">mco_fg_listes</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">mco_fg_liste_type</span> <span class="op">==</span> <span class="st">"D"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -830,7 +849,7 @@ les CMD concernées par une introduction de groupage par le DP</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># ... with 16 more rows</span></span></span></code></pre></div>
 <p>2eme étape : rattachement du libellé de la liste D correspondant au
 DP pour la CMD du séjour</p>
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">jeu_dp_ghm_liste_D</span> <span class="op">&lt;-</span> <span class="va">jeu_dp_ghm</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="co"># extraction de la CMD du séjour</span>r</span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>cmd_rss <span class="op">=</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_sub.html" class="external-link">str_sub</a></span><span class="op">(</span><span class="va">ghm_rss</span>,<span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -844,16 +863,16 @@ DP pour la CMD du séjour</p>
 <span><span class="co">#&gt;    no_rss dp_rss ghm_rss annee_rss cmd_rss mco_fg_liste_code mco_fg_liste_lib   </span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  05M091  2020      05      D-0505            Insuffisances card~</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 S7220  08M041  2021      08      D-069             Certaines lésions ~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H269   02C05J  2021      02      D-0204            Autres affections ~</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 S7220  08M041  2020      08      D-069             Certaines lésions ~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H269   02C05J  2020      02      D-0204            Autres affections ~</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   15M05A  2020      15      <span style="color: #BB0000;">NA</span>                <span style="color: #BB0000;">NA</span>                 </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  08C471  2020      08      D-069             Certaines lésions ~</span>~</span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  01M201  2021      01      D-0121            Lésions crâniennes~</span>s~</span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   05M13T  2020      05      D-0508            Douleurs thoraciqu~</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   04M202  2020      04      D-0408            Bronchopneumopathi~</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   06C091  2021      06      D-0610            Autres affections ~</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  23M20Z  2020      23      D-2309            Autres motifs de r~</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  08C471  2020      08      D-069             Certaines lésions ~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  23M20Z  2021      23      D-2309            Autres motifs de r~</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  08C471  2021      08      D-069             Certaines lésions ~</span>~</span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  05M092  2021      05      D-0505            Insuffisances card~</span></span></code></pre></div>
 <p>Remarque : pas de libellé de liste D pour le DP Z380 “Enfant unique,
 né à l’hôpital” d’un séjour classé dans la CMD 15 “Nouveau-nés,
@@ -864,16 +883,17 @@ le groupage ne commence pas par le DP.</p>
 <div class="section level2">
 <h2 id="sources">Sources<a class="anchor" aria-label="anchor" href="#sources"></a>
 </h2>
-<p><a href="https://solidarites-sante.gouv.fr/fichiers/bos/2022/2022.5bis.vol1.BOS.pdf" class="external-link">Manuel
-de groupage GHM 2022 - Volume 1</a> (ATIH) <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045530951" class="external-link">Arrêté
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4490/volume_1.pdf" class="external-link">Manuel
+de groupage GHM 2023 - Volume 1</a> (ATIH)<br><a href="https://www.legifrance.gouv.fr/download/pdf?id=wbSfyB0QarBmS_OXWPwKuVZQxHw5YMz-RNeqeEq8Hqs=" class="external-link">Arrêté
+tarifaire MCO 2023</a> (Ministère de la Santé - Arrêté 2023)<br><a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045530951" class="external-link">Arrêté
 tarifaire MCO 2022</a> (Ministère de la Santé - Arrêté 2022)<br><a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043306334" class="external-link">Arrêté
 tarifaire MCO 2021</a> (Ministère de la Santé - Arrêté 2021)<br><a href="https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000041663256" class="external-link">Arrêté
 tarifaire MCO 2020</a> (Ministère de la Santé - Arrêté 2020)<br><a href="https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000038219729" class="external-link">Arrêté
 tarifaire MCO 2019</a> (Ministère de la Santé - Arrêté 2019)<br><a href="https://www.legifrance.gouv.fr/eli/arrete/2018/2/28/SSAH1805897A/jo/texte" class="external-link">Arrêté
 tarifaire MCO 2018</a> (Ministère de la Santé - Arrêté 2018)<br><a href="https://www.atih.sante.fr/regroupement-ghm-en-2022" class="external-link">Regroupements
 des GHM et RGHM 2022</a> (ATIH)<br><a href="https://www.atih.sante.fr/sites/default/files/public/content/4297/ovalide.zip" class="external-link">OVALIDE
-MCO - Tables de référence 2022</a> (ATIH) <a href="https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3329" class="external-link">Données
-du volume 2 du manuel des GHS 2022</a> (ATIH)</p>
+MCO - Tables de référence 2022</a> (ATIH)<br><a href="https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/16835/3627" class="external-link">Données
+du volume 2 du manuel des GHS 2023</a> (ATIH)</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>Sur cette page</h2>
     </nav></aside>
