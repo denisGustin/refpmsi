@@ -23,7 +23,7 @@ Tous les référentiels CSARR (`csarr_code`, `csarr_ponderation`, `csarr_ref`, .
 `ghm_intermediaire`, `ghs_uhcd` : version 2023  
 `ccam_pmsi` : v2 2023  
 `ccam_icr` : v1 2023  
-`lpp_ameli` : v794 (5 avril 2023)  
+`lpp_ameli` : v724 (5 avril 2023)  
 
 ### Nouveaux référentiels  
 `ghm_lib` : libellés uniques des GHM depuis 2018  
