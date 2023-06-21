@@ -14,6 +14,19 @@ knitr::opts_chunk$set(
 )
 ```
 
+## [21-06-2023]   
+### Référentiels mis à jour  
+`gme_public`, `gme_prive` : version 2023  
+`ovalide_ccaminfo` : version 2023  
+`ovalide_diaginfo` : version 2023  
+`ovalide_ghminfo_dgf`, `ovalide_ghminfo_oqn` : version 2023  
+`ovalide_racineinfo_dgf`, `ovalide_racineinfo_oqn` : version 2023  
+`me_ms_mco` : 2023 avec ajout du mode d'entrée O "Pour prélèvement d'organes" et de la provenance V "Avec passage par une structure des urgences d’une autre entité géographique et de celle de l'entité géographique de l'étbalissement"  
+`ucd_indication` : 2023 (mai) = libellés des UCD de la base Thésorimed®  
+
+### Nouveau référentiel  
+`ucd_lib` : libellés du référentiel UCD de la base de données Thésorimed® ([lien ATIH](https://www.atih.sante.fr/type-de-publication/referentiel)) 
+
 ## [11-04-2023]   
 ### Référentiels mis à jour  
 `cim` : version 2023  
