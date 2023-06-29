@@ -102,13 +102,34 @@
     
     
 <div class="section level2">
-<h2 id="chirurgie-cancer">Chirurgie cancer<a class="anchor" aria-label="anchor" href="#chirurgie-cancer"></a>
+<h2 id="chirurgie-oncologique-inca-2023">Chirurgie oncologique INCa 2023<a class="anchor" aria-label="anchor" href="#chirurgie-oncologique-inca-2023"></a>
+</h2>
+<p>Intitulé du référentiel : <strong>chirurgie_oncologique</strong></p>
+<p>Mise à jour : 28 juin 2023</p>
+<p>Référentiel non annualisé.</p>
+<div class="section level3">
+<h3 id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a>
+</h3>
+<p><strong>code</strong> = code des codes CIM-10 ou des actes CCAM des
+listes du cahier des charges INCa (voir Sources)<br><strong>type</strong> = valeur <code>cim</code> ou
+<code>ccam</code><br><strong>liste</strong> = intitulé normalisé des listes de codes CIM-10
+ou d’actes CCAM appelées par les algorithmes d’identification des
+séjours dans une chirurgie oncologique (12 listes)</p>
+<pre><code><span><span class="co">#&gt; Rows: 1,891</span></span>
+<span><span class="co">#&gt; Columns: 3</span></span>
+<span><span class="co">#&gt; $ code  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "C500", "C501", "C502", "C503", "C504", "C505", "C506", "C508", ~</span></span>
+<span><span class="co">#&gt; $ type  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "cim", "cim", "cim", "cim", "cim", "cim", "cim", "cim", "cim", "~</span></span>
+<span><span class="co">#&gt; $ liste <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "cim_tumeur_maligne_sein", "cim_tumeur_maligne_sein", "cim_tumeu~</span></span></code></pre>
+</div>
+</div>
+<div class="section level2">
+<h2 id="chirurgie-cancer-inca-2017">Chirurgie cancer INCa 2017<a class="anchor" aria-label="anchor" href="#chirurgie-cancer-inca-2017"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>cancerologie_seuil</strong></p>
 <p>Mise à jour : 11 avril 2023</p>
 <p>Référentiel non annualisé.</p>
 <div class="section level3">
-<h3 id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a>
+<h3 id="variables-1">Variables<a class="anchor" aria-label="anchor" href="#variables-1"></a>
 </h3>
 <p><strong>code_cim</strong> = code CIM-10 de chirurgie cancer<br><strong>chirurgie_cancer</strong> = libellé normalisé des chirurgies
 cancer</p>
@@ -119,7 +140,7 @@ cancer</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="cancérologie-appareil-et-organe">Cancérologie appareil et organe<a class="anchor" aria-label="anchor" href="#canc%C3%A9rologie-appareil-et-organe"></a>
+<h2 id="cancérologie-appareil-et-organe-inca-2013">Cancérologie appareil et organe INCa 2013<a class="anchor" aria-label="anchor" href="#canc%C3%A9rologie-appareil-et-organe-inca-2013"></a>
 </h2>
 <p>Intitulé du référentiel :
 <strong>cancerologie_appareil_organe</strong></p>
@@ -128,7 +149,7 @@ cancer</p>
 appareil et par groupe anatomique (organe).</p>
 <p>Référentiel non annualisé.</p>
 <div class="section level3">
-<h3 id="variables-1">Variables<a class="anchor" aria-label="anchor" href="#variables-1"></a>
+<h3 id="variables-2">Variables<a class="anchor" aria-label="anchor" href="#variables-2"></a>
 </h3>
 <p><strong>code_cim</strong> = code CIM-10 de localisations tumorales
 primitives<br><strong>appareil</strong> = libellé normalisé des appareils<br><strong>organe</strong> = libellé normalisé des organes</p>
@@ -142,7 +163,8 @@ primitives<br><strong>appareil</strong> = libellé normalisé des appareils<br><
 <div class="section level2">
 <h2 id="sources">Sources<a class="anchor" aria-label="anchor" href="#sources"></a>
 </h2>
-<p><a href="https://www.e-cancer.fr/content/download/238533/3276365/file/Mesure_des_activites_cancer_soumises_a_seuils_D%C3%A9cembre_2017_mel_20180830.pdf" class="external-link">Chirurgie
+<p><a href="https://www.lespmsi.com/2023/MESURE-DES-ACTIVITES-CANCER-SOUMISES-A-SEUILS_2022_Vdef.pdf" class="external-link">Chirurgie
+oncologique</a> (INCa 2023)<br><a href="https://www.e-cancer.fr/content/download/238533/3276365/file/Mesure_des_activites_cancer_soumises_a_seuils_D%C3%A9cembre_2017_mel_20180830.pdf" class="external-link">Chirurgie
 des cancers - seuil minimal</a> (INCa 2017)<br><a href="https://www.e-cancer.fr/content/download/63161/568597/file/Algorithme-cancer-2013-V2.pdf" class="external-link">Algorithme
 cancer</a> (INCa septembre 2013 - V2 - Annexe 7.6)</p>
 </div>

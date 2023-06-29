@@ -19,7 +19,25 @@ library(refpmsi)
 library(dplyr)
 ```
 
-## Chirurgie cancer  
+## Chirurgie oncologique INCa 2023  
+
+Intitulé du référentiel : **chirurgie_oncologique**
+
+Mise à jour : 28 juin 2023  
+
+Référentiel non annualisé.  
+
+### Variables  
+**code** = code des codes CIM-10 ou des actes CCAM des listes du cahier des charges INCa (voir Sources)  
+**type** = valeur `cim` ou `ccam`    
+**liste** = intitulé normalisé des listes de codes CIM-10 ou d'actes CCAM appelées par les algorithmes d'identification des séjours dans une chirurgie oncologique (12 listes)  
+
+```{r var_chirurgie_oncologique, echo = FALSE}
+
+refpmsi::refpmsi("chirurgie_oncologique") %>% dplyr::glimpse()
+```
+
+## Chirurgie cancer INCa 2017  
 
 Intitulé du référentiel : **cancerologie_seuil**
 
@@ -36,7 +54,7 @@ Référentiel non annualisé.
 refpmsi::refpmsi("cancerologie_seuil") %>% dplyr::glimpse()
 ```
 
-## Cancérologie appareil et organe
+## Cancérologie appareil et organe INCa 2013  
 
 Intitulé du référentiel : **cancerologie_appareil_organe**
 
@@ -57,5 +75,6 @@ refpmsi::refpmsi("cancerologie_appareil_organe") %>% dplyr::glimpse()
 ```
 
 ## Sources  
+[Chirurgie oncologique](https://www.lespmsi.com/2023/MESURE-DES-ACTIVITES-CANCER-SOUMISES-A-SEUILS_2022_Vdef.pdf) (INCa 2023)  
 [Chirurgie des cancers - seuil minimal](https://www.e-cancer.fr/content/download/238533/3276365/file/Mesure_des_activites_cancer_soumises_a_seuils_D%C3%A9cembre_2017_mel_20180830.pdf) (INCa 2017)  
 [Algorithme cancer](https://www.e-cancer.fr/content/download/63161/568597/file/Algorithme-cancer-2013-V2.pdf) (INCa septembre 2013 - V2 - Annexe 7.6)  
