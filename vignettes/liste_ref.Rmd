@@ -34,8 +34,6 @@ refpmsi::liste_refpmsi() %>%
     gt::gt(
         rowname_col = "refpmsi"
     ) %>% 
-    # gt::cols_width(c(refpmsi_article,refpmsi_periode_version) ~ gt::px(100),
-    #                c(refpmsi_source) ~ gt::px(150)) %>% 
     gt::cols_label(refpmsi_lib = "Détail",
                    refpmsi_source = "Source",
                    refpmsi_article = "Article",
