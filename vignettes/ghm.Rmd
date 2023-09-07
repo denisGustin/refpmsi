@@ -371,12 +371,12 @@ refpmsi::refpmsi("mco_fg_listes") %>% dplyr::glimpse()
 
 ## Exemples
 
-### Chargement du référentiel des GHS Public des années 2020 et 2021  
+### Chargement du référentiel des GHS Public des années 2022 et 2023  
 
 ```{r ghs_chargement_affichage, eval = TRUE, echo = TRUE}
-# Chargement du référentiel des GHS-GHM Public des années 2020 et 2021
-ghs_2020_2021 <- refpmsi::refpmsi("ghs_public",2020:2021)
-ghs_2020_2021
+# Chargement du référentiel des GHS-GHM Public des années 2022 et 2023
+ghs_2022_2023 <- refpmsi::refpmsi("ghs_public",2022:2023)
+ghs_2022_2023
 ```
 
 ### Rattachement du libellé GHM aux GHM
@@ -566,6 +566,19 @@ jeu_dp_ghm_liste_D
 ```
 
 Remarque : pas de libellé de liste D pour le DP Z380 "Enfant unique, né à l'hôpital" d'un séjour classé dans la CMD 15 "Nouveau-nés, prématurés et affections de la période périnatale" car, dans cette CMD, le groupage ne commence pas par le DP.  
+
+### Génération des regroupements GHM d'une nouvelle année
+
+Soit un jeu de données `jeu_ghm` composé de 17 RUM correspondant à 14 séjours.  
+
+```{r generation_regroupement_ghm, echo = FALSE}
+library(dplyr)
+library(refpmsi)
+ghm_regroupement <- refpmsi::refpmsi("ghm_regroupement")
+
+
+```
+
 
 ## Sources  
 

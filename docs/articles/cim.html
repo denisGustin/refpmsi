@@ -50,8 +50,6 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/base_mco.html">Base nationale MCO</a>
-    <a class="dropdown-item" href="../articles/base_ssr.html">Base nationale SSR</a>
     <a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a>
     <a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
     <a class="dropdown-item" href="../articles/csarr.html">CSARR</a>
@@ -368,41 +366,41 @@ DP de RSS mono-RUM</p>
 <pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 x 3</span></span></span>
 <span><span class="co">#&gt;    no_rss dp_rss annee_rss</span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2020</span></span></code></pre>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># chargement de la CIM-10 2020 et 2021</span></span>
 <span><span class="va">cim_2020_2021</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim"</span>,<span class="fl">2020</span><span class="op">:</span><span class="fl">2021</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># rattachement à chaque DP du libellé CIM-10 correspondant au DP et à son année PMSI</span>PMSI</span>
-<span><span class="va">jeu_dp_libelle</span> <span class="op">&lt;-</span> <span class="va">jeu_dp</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">cim_2020_2021</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_code</span>,<span class="va">cim_lib</span>,<span class="va">annee_pmsi</span><span class="op">)</span>,</span>
+<span><span class="va">jeu_dp_libelle</span> <span class="op">&lt;-</span> <span class="va">jeu_dp</span> <span class="op">%&gt;%</span> </span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">cim_2020_2021</span> <span class="op">%&gt;%</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_code</span>,<span class="va">cim_lib</span>,<span class="va">annee_pmsi</span><span class="op">)</span>,</span>
 <span>                   by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dp_rss"</span> <span class="op">=</span> <span class="st">"cim_code"</span>, <span class="st">"annee_rss"</span> <span class="op">=</span> <span class="st">"annee_pmsi"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">jeu_dp_libelle</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 x 4</span></span></span>
 <span><span class="co">#&gt;    no_rss dp_rss annee_rss cim_lib                                              </span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                                </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2021      Insuffisance ventriculaire gauche, avec fraction d'é~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2021      Dialyse extra-corporelle                             </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2020      Cataracte sénile nucléaire                           </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2020      Enfant unique, né à l'hôpital                        </span>   </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2020      Insuffisance ventriculaire gauche, avec fraction d'é~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2020      Dialyse extra-corporelle                             </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2021      Cataracte sénile nucléaire                           </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2021      Enfant unique, né à l'hôpital                        </span>   </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2020      Fracture fermée du col du fémur                      </span>  </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2020      Commotion cérébrale, sans plaie intracrânienne       </span>   </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2021      Douleur thoracique, sans précision                   </span> </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2021      Maladie pulmonaire obstructive chronique avec épisod~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2020      Maladie pulmonaire obstructive chronique avec épisod~</span>~</span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2020      Appendicites aigües, autres et non précisées         </span>   </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2021      Altération [baisse] de l'état général                </span>    </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2020      Fracture fermée du col du fémur                      </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2020      Altération [baisse] de l'état général                </span>    </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2021      Fracture fermée du col du fémur                      </span>  </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2020      Insuffisance ventriculaire gauche, avec fraction d'é~</span>~</span></code></pre></div>
 </div>
 <div class="section level3">
@@ -415,8 +413,8 @@ précédent.</p>
 <span><span class="co"># cim_2020_2021 &lt;- refpmsi::refpmsi("cim",2020:2021)</span></span>
 <span></span>
 <span><span class="co"># rattachement aux codes DP des libellés CIM-10 et des numéros de chapitre CIM-10 correspondant</span>nt</span>
-<span><span class="va">dp_chapitre</span> <span class="op">&lt;-</span> <span class="va">jeu_dp</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">cim_2020_2021</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span><span class="va">dp_chapitre</span> <span class="op">&lt;-</span> <span class="va">jeu_dp</span> <span class="op">%&gt;%</span> </span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">cim_2020_2021</span> <span class="op">%&gt;%</span> </span>
 <span>                     <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_code</span>, <span class="va">cim_lib</span>, <span class="va">cim_chapitre</span>, <span class="va">annee_pmsi</span><span class="op">)</span>,</span>
 <span>                   by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dp_rss"</span> <span class="op">=</span> <span class="st">"cim_code"</span>,</span>
 <span>                          <span class="st">"annee_rss"</span> <span class="op">=</span> <span class="st">"annee_pmsi"</span><span class="op">)</span><span class="op">)</span></span>
@@ -424,22 +422,22 @@ précédent.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 x 5</span></span></span>
 <span><span class="co">#&gt;    no_rss dp_rss annee_rss cim_lib                                       cim_c~1</span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2021      Insuffisance ventriculaire gauche, avec frac~ 9      </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2021      Dialyse extra-corporelle                      21     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2020      Cataracte sénile nucléaire                    7      </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2020      Enfant unique, né à l'hôpital                 21     </span>   </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2020      Insuffisance ventriculaire gauche, avec frac~ 9      </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2020      Dialyse extra-corporelle                      21     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2021      Cataracte sénile nucléaire                    7      </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2021      Enfant unique, né à l'hôpital                 21     </span>   </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2020      Fracture fermée du col du fémur               19     </span>  </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2020      Commotion cérébrale, sans plaie intracrânien~ 19     </span>   </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2021      Douleur thoracique, sans précision            18     </span> </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2021      Maladie pulmonaire obstructive chronique ave~ 10     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2020      Maladie pulmonaire obstructive chronique ave~ 10     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2020      Appendicites aigües, autres et non précisées  11     </span>   </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2021      Altération [baisse] de l'état général         18     </span>    </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2020      Fracture fermée du col du fémur               19     </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2020      Altération [baisse] de l'état général         18     </span>    </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2021      Fracture fermée du col du fémur               19     </span>  </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2020      Insuffisance ventriculaire gauche, avec frac~ 9      </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ... with abbreviated variable name 1: cim_chapitre</span></span></span>
 <span></span>
 <span><span class="co"># chargement du référentiel "cim_chapitre" avec les 2 variables qui nous intéressent</span>ent</span>
-<span><span class="va">cim_chapitre</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim_chapitre"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_chapitre_num</span>,<span class="va">cim_chapitre_lib</span><span class="op">)</span></span>
+<span><span class="va">cim_chapitre</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim_chapitre"</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_chapitre_num</span>,<span class="va">cim_chapitre_lib</span><span class="op">)</span></span>
 <span><span class="va">cim_chapitre</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 22 x 2</span></span></span>
 <span><span class="co">#&gt;    cim_chapitre_num cim_chapitre_lib                                            </span></span>
@@ -456,18 +454,18 @@ précédent.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 10               Maladies de l'appareil respiratoire                         </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ... with 12 more rows</span></span></span>
 <span></span>
-<span><span class="va">dp_chapitre</span> <span class="op">&lt;-</span> <span class="va">dp_chapitre</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span><span class="va">dp_chapitre</span> <span class="op">&lt;-</span> <span class="va">dp_chapitre</span> <span class="op">%&gt;%</span> </span>
 <span>  <span class="co"># rattachement des libellés de chapitre CIM-10 via le référentiel "cim_chapitre"</span>re"</span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">cim_chapitre</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cim_chapitre"</span> <span class="op">=</span> <span class="st">"cim_chapitre_num"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">cim_chapitre</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cim_chapitre"</span> <span class="op">=</span> <span class="st">"cim_chapitre_num"</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="co"># regroupement par chapitre</span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">cim_chapitre</span>,<span class="va">cim_chapitre_lib</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">cim_chapitre</span>,<span class="va">cim_chapitre_lib</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="co"># par chapitre, calcul du nombre de DP, du nombre de DP différent et de la liste des DP</span>P</span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarise</a></span><span class="op">(</span>n_dp <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html" class="external-link">n</a></span><span class="op">(</span><span class="op">)</span>,</span>
 <span>                   n_dp_diff <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/n_distinct.html" class="external-link">n_distinct</a></span><span class="op">(</span><span class="va">dp_rss</span><span class="op">)</span>,</span>
 <span>                   liste_dp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">dp_rss</span>, collapse <span class="op">=</span> <span class="st">","</span><span class="op">)</span>,</span>
-<span>                   .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>                   .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
 <span>  <span class="co"># tri descendant sur le nombre de DP</span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html" class="external-link">desc</a></span><span class="op">(</span><span class="va">n_dp</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">n_dp</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">dp_chapitre</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 7 x 5</span></span></span>
 <span><span class="co">#&gt;   cim_chapitre cim_chapitre_lib                             n_dp n_dp_~1 liste~2</span></span>
@@ -490,23 +488,23 @@ DAS.</p>
 <span><span class="co">#&gt;    no_rss das   annee_rss</span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 Z370  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 I10   2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 I10   2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 P040  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 F1725 2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 G473  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 W189  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 G473  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 W189  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R600  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 N178  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 B952  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 B952  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 D638  2020</span></span></code></pre>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># chargement de la CIM-10 2020 et 2021</span></span>
 <span><span class="co"># cim_2020_2021 &lt;- refpmsi::refpmsi("cim",2020:2021)</span></span>
 <span></span>
-<span><span class="va">das_interdit_dp_dr</span> <span class="op">&lt;-</span> <span class="va">jeu_das</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span><span class="va">das_interdit_dp_dr</span> <span class="op">&lt;-</span> <span class="va">jeu_das</span> <span class="op">%&gt;%</span> </span>
 <span>  <span class="co"># rattachement à chaque DAS du type MCO et du libellé CIM-10, correspondant à son année PMSI</span>PMSI</span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">cim_2020_2021</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_code</span>,<span class="va">cim_lib</span>,<span class="va">cim_tmco</span>,<span class="va">annee_pmsi</span><span class="op">)</span>,</span>
-<span>                   by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"das"</span> <span class="op">=</span> <span class="st">"cim_code"</span>, <span class="st">"annee_rss"</span> <span class="op">=</span> <span class="st">"annee_pmsi"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">cim_2020_2021</span> <span class="op">%&gt;%</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_code</span>,<span class="va">cim_lib</span>,<span class="va">cim_tmco</span>,<span class="va">annee_pmsi</span><span class="op">)</span>,</span>
+<span>                   by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"das"</span> <span class="op">=</span> <span class="st">"cim_code"</span>, <span class="st">"annee_rss"</span> <span class="op">=</span> <span class="st">"annee_pmsi"</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="co"># filtre sur les types MCO 1 "Diagnostic interdit en DP et DR - Autorisé ailleurs" </span> </span>
 <span>  <span class="co"># et 2 "Diagnostic interdit en DP et DR - Cause externe de morbidité" </span> </span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">cim_tmco</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
@@ -515,8 +513,8 @@ DAS.</p>
 <span><span class="co">#&gt;   no_rss das   annee_rss cim_lib                                         cim_t~1</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                             <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>      1 Z370  2021      Naissance unique, enfant vivant                       1</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>      6 W189  2020      Autre chute de plain-pied, lieu sans précision        2</span>2</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span>      9 B952  2020      Streptocoques, groupe D, et entérocoques, caus~       1</span>1</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>      6 W189  2021      Autre chute de plain-pied, lieu sans précision        2</span>2</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span>      9 B952  2021      Streptocoques, groupe D, et entérocoques, caus~       1</span>1</span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ... with abbreviated variable name 1: cim_tmco</span></span></span></code></pre></div>
 </div>
 <div class="section level3">

@@ -50,8 +50,6 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/base_mco.html">Base nationale MCO</a>
-    <a class="dropdown-item" href="../articles/base_ssr.html">Base nationale SSR</a>
     <a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a>
     <a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
     <a class="dropdown-item" href="../articles/csarr.html">CSARR</a>
@@ -486,27 +484,27 @@ PMSI<br><strong>annee_pmsi</strong> = année PMSI</p>
 <h2 id="exemples">Exemples<a class="anchor" aria-label="anchor" href="#exemples"></a>
 </h2>
 <div class="section level3">
-<h3 id="chargement-du-référentiel-des-ghs-public-des-années-2020-et-2021">Chargement du référentiel des GHS Public des années 2020 et
-2021<a class="anchor" aria-label="anchor" href="#chargement-du-r%C3%A9f%C3%A9rentiel-des-ghs-public-des-ann%C3%A9es-2020-et-2021"></a>
+<h3 id="chargement-du-référentiel-des-ghs-public-des-années-2022-et-2023">Chargement du référentiel des GHS Public des années 2022 et
+2023<a class="anchor" aria-label="anchor" href="#chargement-du-r%C3%A9f%C3%A9rentiel-des-ghs-public-des-ann%C3%A9es-2022-et-2023"></a>
 </h3>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Chargement du référentiel des GHS-GHM Public des années 2020 et 2021</span>021</span>
-<span><span class="va">ghs_2020_2021</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"ghs_public"</span>,<span class="fl">2020</span><span class="op">:</span><span class="fl">2021</span><span class="op">)</span></span>
-<span><span class="va">ghs_2020_2021</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 8,562 x 9</span></span></span>
+<code class="sourceCode R"><span><span class="co"># Chargement du référentiel des GHS-GHM Public des années 2022 et 2023</span>023</span>
+<span><span class="va">ghs_2022_2023</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"ghs_public"</span>,<span class="fl">2022</span><span class="op">:</span><span class="fl">2023</span><span class="op">)</span></span>
+<span><span class="va">ghs_2022_2023</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 11,342 x 9</span></span></span>
 <span><span class="co">#&gt;    ghs   ghm    ghm_lib            ghm_bb ghm_bh ghs_t~1 ghs_exb ghs_exh annee~2</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 22    01C031 Craniotomies pour~      0     11   <span style="text-decoration: underline;">3</span>742.      0    111.  2021   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 5071  01C031 Craniotomies pour~      0      0   <span style="text-decoration: underline;">2</span>806.      0      0   2021   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 23    01C032 Craniotomies pour~      0     19   <span style="text-decoration: underline;">6</span>644.      0     91.4 2021   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 5071  01C032 Craniotomies pour~      0      0   <span style="text-decoration: underline;">2</span>806.      0      0   2021   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 24    01C033 Craniotomies pour~      0     64  <span style="text-decoration: underline;">11</span>989.      0     71.0 2021   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 5071  01C033 Craniotomies pour~      0      0   <span style="text-decoration: underline;">2</span>806.      0      0   2021   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 25    01C034 Craniotomies pour~     12    124  <span style="text-decoration: underline;">16</span>246.    405.   301.  2021   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 5071  01C034 Craniotomies pour~      0      0   <span style="text-decoration: underline;">2</span>806.      0      0   2021   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 26    01C041 Craniotomies en d~      0     12   <span style="text-decoration: underline;">5</span>866.      0    136.  2021   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 65    01C041 Craniotomies en d~      0     12  <span style="text-decoration: underline;">12</span>962.      0    136.  2021   </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ... with 8,552 more rows, and abbreviated variable names 1: ghs_tarif,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 22    01C031 Craniotomies pour~      0     11   <span style="text-decoration: underline;">4</span>038.      0    119.  2023   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 23    01C032 Craniotomies pour~      0     19   <span style="text-decoration: underline;">7</span>170.      0     98.7 2023   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 24    01C033 Craniotomies pour~      0     64  <span style="text-decoration: underline;">12</span>939.      0     76.6 2023   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 25    01C034 Craniotomies pour~     12    124  <span style="text-decoration: underline;">17</span>534.    438.   325.  2023   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 65    01C041 Craniotomies en d~      0     12  <span style="text-decoration: underline;">13</span>993.      0    147.  2023   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 26    01C041 Craniotomies en d~      0     12   <span style="text-decoration: underline;">6</span>332.      0    147.  2023   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 66    01C042 Craniotomies en d~      0     20  <span style="text-decoration: underline;">18</span>220.      0    111.  2023   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 27    01C042 Craniotomies en d~      0     20  <span style="text-decoration: underline;">10</span>559.      0    111.  2023   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 28    01C043 Craniotomies en d~      0     43  <span style="text-decoration: underline;">15</span>246.      0     76.1 2023   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 67    01C043 Craniotomies en d~      0     43  <span style="text-decoration: underline;">22</span>907.      0     76.1 2023   </span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ... with 11,332 more rows, and abbreviated variable names 1: ghs_tarif,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   2: annee_pmsi</span></span></span></code></pre></div>
 </div>
 <div class="section level3">
@@ -809,17 +807,17 @@ l’année PMSI du séjour</p>
 <span><span class="co">#&gt;    no_rss dp_rss ghm_rss annee_rss</span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  05M091  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 S7220  08M041  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 S7220  08M041  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H269   02C05J  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   15M05A  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  08C471  2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  08C471  2020     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  01M201  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   05M13T  2021     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   04M202  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   06C091  2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  23M20Z  2020     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  08C471  2021     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  05M092  2020</span></span></code></pre>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   06C091  2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  23M20Z  2021     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  08C471  2020     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  05M092  2021</span></span></code></pre>
 <p>1ere étape : construire le tibble des diagnostics d’entrée de toutes
 les CMD concernées par une introduction de groupage par le DP</p>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
@@ -863,21 +861,27 @@ DP pour la CMD du séjour</p>
 <span><span class="co">#&gt;    no_rss dp_rss ghm_rss annee_rss cmd_rss mco_fg_liste_code mco_fg_liste_lib   </span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  05M091  2021      05      D-0505            Insuffisances card~</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 S7220  08M041  2020      08      D-069             Certaines lésions ~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 S7220  08M041  2021      08      D-069             Certaines lésions ~</span>~</span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H269   02C05J  2021      02      D-0204            Autres affections ~</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   15M05A  2021      15      <span style="color: #BB0000;">NA</span>                <span style="color: #BB0000;">NA</span>                 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  08C471  2021      08      D-069             Certaines lésions ~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  08C471  2020      08      D-069             Certaines lésions ~</span>~</span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  01M201  2021      01      D-0121            Lésions crâniennes~</span>s~</span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   05M13T  2021      05      D-0508            Douleurs thoraciqu~</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   04M202  2021      04      D-0408            Bronchopneumopathi~</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   06C091  2020      06      D-0610            Autres affections ~</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  23M20Z  2020      23      D-2309            Autres motifs de r~</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  08C471  2021      08      D-069             Certaines lésions ~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  05M092  2020      05      D-0505            Insuffisances card~</span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   06C091  2021      06      D-0610            Autres affections ~</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  23M20Z  2021      23      D-2309            Autres motifs de r~</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  08C471  2020      08      D-069             Certaines lésions ~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  05M092  2021      05      D-0505            Insuffisances card~</span></span></code></pre></div>
 <p>Remarque : pas de libellé de liste D pour le DP Z380 “Enfant unique,
 né à l’hôpital” d’un séjour classé dans la CMD 15 “Nouveau-nés,
 prématurés et affections de la période périnatale” car, dans cette CMD,
 le groupage ne commence pas par le DP.</p>
+</div>
+<div class="section level3">
+<h3 id="génération-des-regroupements-ghm-dune-nouvelle-année">Génération des regroupements GHM d’une nouvelle année<a class="anchor" aria-label="anchor" href="#g%C3%A9n%C3%A9ration-des-regroupements-ghm-dune-nouvelle-ann%C3%A9e"></a>
+</h3>
+<p>Soit un jeu de données <code>jeu_ghm</code> composé de 17 RUM
+correspondant à 14 séjours.</p>
 </div>
 </div>
 <div class="section level2">

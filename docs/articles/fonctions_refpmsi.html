@@ -50,8 +50,6 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/base_mco.html">Base nationale MCO</a>
-    <a class="dropdown-item" href="../articles/base_ssr.html">Base nationale SSR</a>
     <a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a>
     <a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
     <a class="dropdown-item" href="../articles/csarr.html">CSARR</a>
@@ -150,24 +148,25 @@ référentiels.</p>
 <span><span class="va">liste_ref</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">liste_ref</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 x 7</span></span></span>
-<span><span class="co">#&gt;   refpmsi                refpmsi_lib     refpm~1 refpm~2 refpm~3 refpm~4 refpm~5</span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> anticancereux_intraghs Médicaments an~ ATIH    2020    non     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span> </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> autorisation_mco       Autorisations ~ GENRSA  2022    non     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> autorisation_ssr       Autorisations ~ GENRHA  2022    non     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> base_mco_ccam          Dénombrement v~ ATIH    2019-2~ oui     Base n~ https:~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> base_mco_diag          Dénombrement v~ ATIH    2019-2~ oui     Base n~ https:~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> base_ssr_ae            Dénombrement v~ ATIH    2019    oui     Base n~ https:~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ... with abbreviated variable names 1: refpmsi_source,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   2: refpmsi_periode_version, 3: refpmsi_annualise, 4: refpmsi_article,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   5: refpmsi_article_lien</span></span></span></code></pre>
+<span><span class="co">#&gt;   refpmsi                      refpmsi~1 refpm~2 refpm~3 refpm~4 refpm~5 refpm~6</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> anticancereux_intraghs       Médicame~ ATIH    2020    non     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span> </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> autorisation_mco             Autorisa~ GENRSA  2022    non     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> autorisation_ssr             Autorisa~ GENRHA  2022    non     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> cancerologie_appareil_organe Algorith~ INCa (~ 2023    non     Cancér~ https:~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> cancerologie_seuil           Algorith~ INCa (~ 2023    non     Cancér~ https:~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> ccam_ameli                   Actes CC~ AMELI&lt;~ 2022 (~ oui     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ... with abbreviated variable names 1: refpmsi_lib, 2: refpmsi_source,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   3: refpmsi_periode_version, 4: refpmsi_annualise, 5: refpmsi_article,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   6: refpmsi_article_lien</span></span></span></code></pre>
 <p>Pour ne charger que la liste des intitulés des référentiels.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># affichage uniquement des intitulés des référentiels</span></span>
 <span><span class="va">liste_ref</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">refpmsi</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">liste_ref</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">#&gt; [1] "anticancereux_intraghs" "autorisation_mco"       "autorisation_ssr"      </span></span>
-<span><span class="co">#&gt; [4] "base_mco_ccam"          "base_mco_diag"          "base_ssr_ae"</span></span></code></pre>
+<pre><code><span><span class="co">#&gt; [1] "anticancereux_intraghs"       "autorisation_mco"            </span></span>
+<span><span class="co">#&gt; [3] "autorisation_ssr"             "cancerologie_appareil_organe"</span></span>
+<span><span class="co">#&gt; [5] "cancerologie_seuil"           "ccam_ameli"</span></span></code></pre>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>Sur cette page</h2>
     </nav></aside>

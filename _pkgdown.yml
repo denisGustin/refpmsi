@@ -18,10 +18,6 @@ navbar:
       href: articles/fonctions_refpmsi.html
     - text: Articles
       menu:
-      - text: Base nationale MCO
-        href: articles/base_mco.html
-      - text: Base nationale SSR
-        href: articles/base_ssr.html
       - text: Cancérologie
         href: articles/cancerologie.html
       - text: CIM-10 FR à usage PMSI
