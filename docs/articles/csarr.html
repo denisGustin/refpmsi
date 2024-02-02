@@ -212,6 +212,22 @@ pluriprofessionnels, appareillage, séance<a class="anchor" aria-label="anchor" 
 </div>
 </div>
 <div class="section level2">
+<h2 id="csarr-modulateur">CSARR modulateur<a class="anchor" aria-label="anchor" href="#csarr-modulateur"></a>
+</h2>
+<p>Intitulé du référentiel : <strong>csarr_modulateur</strong></p>
+<p>Mise à jour : 31 janvier 2024</p>
+<p>Référentiel annualisé (2018 à 2024).</p>
+<div class="section level3">
+<h3 id="variables-6">Variables<a class="anchor" aria-label="anchor" href="#variables-6"></a>
+</h3>
+<pre><code><span><span class="co">#&gt; Rows: 3,900</span></span>
+<span><span class="co">#&gt; Columns: 3</span></span>
+<span><span class="co">#&gt; $ csarr_code       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ALQ+183", "ALQ+183", "ALQ+110", "ALQ+247", "ALQ+137"~</span></span>
+<span><span class="co">#&gt; $ csarr_modulateur <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ZV", "QS", "HW", "ZV", "HW", "HW", "ZV", "ZV", "QC",~</span></span>
+<span><span class="co">#&gt; $ annee_pmsi       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2024", "2024", "2024", "2024", "2024", "2024", "2024~</span></span></code></pre>
+</div>
+</div>
+<div class="section level2">
 <h2 id="csarr-pondérations">CSARR pondérations<a class="anchor" aria-label="anchor" href="#csarr-pond%C3%A9rations"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>csarr_ponderation</strong></p>
@@ -219,7 +235,7 @@ pluriprofessionnels, appareillage, séance<a class="anchor" aria-label="anchor" 
 <p>Référentiel annualisé (2018 à 2024).</p>
 <p>Mise en format “tidy” du référentiel ATIH par nos soins</p>
 <div class="section level3">
-<h3 id="variables-6">Variables<a class="anchor" aria-label="anchor" href="#variables-6"></a>
+<h3 id="variables-7">Variables<a class="anchor" aria-label="anchor" href="#variables-7"></a>
 </h3>
 <pre><code><span><span class="co">#&gt; Rows: 8,393</span></span>
 <span><span class="co">#&gt; Columns: 8</span></span>
@@ -240,7 +256,7 @@ pluriprofessionnels, appareillage, séance<a class="anchor" aria-label="anchor" 
 <p>Mise à jour : 31 janvier 2024</p>
 <p>Référentiel annualisé (2018 à 2024).</p>
 <div class="section level3">
-<h3 id="variables-7">Variables<a class="anchor" aria-label="anchor" href="#variables-7"></a>
+<h3 id="variables-8">Variables<a class="anchor" aria-label="anchor" href="#variables-8"></a>
 </h3>
 <pre><code><span><span class="co">#&gt; Rows: 1,229</span></span>
 <span><span class="co">#&gt; Columns: 6</span></span>
@@ -259,7 +275,7 @@ pluriprofessionnels, appareillage, séance<a class="anchor" aria-label="anchor" 
 <p>Mise à jour : 31 janvier 2024</p>
 <p>Référentiel annualisé (2018 à 2024).</p>
 <div class="section level3">
-<h3 id="variables-8">Variables<a class="anchor" aria-label="anchor" href="#variables-8"></a>
+<h3 id="variables-9">Variables<a class="anchor" aria-label="anchor" href="#variables-9"></a>
 </h3>
 <pre><code><span><span class="co">#&gt; Rows: 1,126</span></span>
 <span><span class="co">#&gt; Columns: 3</span></span>
@@ -276,7 +292,7 @@ pluriprofessionnels, appareillage, séance<a class="anchor" aria-label="anchor" 
 <p>Mise à jour : 31 janvier 2024</p>
 <p>Référentiel annualisé (2020 à 2024).</p>
 <div class="section level3">
-<h3 id="variables-9">Variables<a class="anchor" aria-label="anchor" href="#variables-9"></a>
+<h3 id="variables-10">Variables<a class="anchor" aria-label="anchor" href="#variables-10"></a>
 </h3>
 <p><strong>csarr_ci_21_autorise</strong> = 1 si l’acte CSARR est
 compatible avec le type intervenant 21(Infirmier) et 0 si l’acte CSARR
@@ -301,7 +317,7 @@ n’est pas compatible avec le type intervenant 88(Autre intervenant)</p>
 <p>Mise à jour : 31 janvier 2024</p>
 <p>Référentiel non annualisé.</p>
 <div class="section level3">
-<h3 id="variables-10">Variables<a class="anchor" aria-label="anchor" href="#variables-10"></a>
+<h3 id="variables-11">Variables<a class="anchor" aria-label="anchor" href="#variables-11"></a>
 </h3>
 <pre><code><span><span class="co">#&gt; Rows: 54</span></span>
 <span><span class="co">#&gt; Columns: 4</span></span>
@@ -317,7 +333,7 @@ n’est pas compatible avec le type intervenant 88(Autre intervenant)</p>
 <div class="section level3">
 <h3 id="nouveaux-actes-csarr-pluriprofessionnels-en-2021">Nouveaux actes CSARR pluriprofessionnels en 2021<a class="anchor" aria-label="anchor" href="#nouveaux-actes-csarr-pluriprofessionnels-en-2021"></a>
 </h3>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co"># chargement du référentiel CSARR avec les actes pluriprofessionnels</span>ls</span>
 <span><span class="va">csarr_ref</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"csarr_ref"</span><span class="op">)</span></span>

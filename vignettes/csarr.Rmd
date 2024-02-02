@@ -108,6 +108,20 @@ Référentiel annualisé (2018 à 2024).
 refpmsi::refpmsi("csarr_ref") %>% dplyr::glimpse()
 ```
 
+## CSARR modulateur  
+
+Intitulé du référentiel : **csarr_modulateur**  
+
+Mise à jour : 31 janvier 2024  
+
+Référentiel annualisé (2018 à 2024).  
+
+### Variables  
+
+```{r var csarr_modulateur, echo = FALSE}
+refpmsi::refpmsi("csarr_modulateur") %>% dplyr::glimpse()
+```
+
 ## CSARR pondérations  
 
 Intitulé du référentiel : **csarr_ponderation**  
