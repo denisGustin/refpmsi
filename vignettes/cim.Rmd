@@ -23,10 +23,10 @@ library(refpmsi)
 
 Intitulé du référentiel : **cim**
 
-Mise à jour : 11 avril 2023  
+Mise à jour : 31 janvier 2024  
 
-Référentiel annualisé au sens PMSI (2018 à 2023).  
-11 variables et 254 880 lignes.  
+Référentiel annualisé au sens PMSI (2018 à 2024).  
+11 variables et 297 767 lignes.  
 
 Le chargement complet en local et/ou sa visualisation dans R Studio peuvent être longs. Il est recommandé de ne charger que la ou les années utile(s).  
 
@@ -66,7 +66,7 @@ refpmsi::refpmsi("cim") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cim_chapitre**
 
-Mise à jour : 11 avril 2023  
+Mise à jour : 31 janvier 2024  
 
 Référentiel non annualisé.  
 
@@ -87,7 +87,7 @@ refpmsi::refpmsi("cim_chapitre") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cim_groupe**
 
-Mise à jour : 11 avril 2023  
+Mise à jour : 31 janvier 2024  
 
 Référentiel non annualisé.  
 
@@ -111,7 +111,7 @@ refpmsi::refpmsi("cim_groupe") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cim_lib**
 
-Mise à jour : 11 avril 2023  
+Mise à jour : 31 janvier 2024  
 
 Tous les codes CIM-10 depuis 2018 avec la dernière version de leur libellé.   
 
@@ -197,9 +197,9 @@ refpmsi::refpmsi("cma_mco") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cma_ssr**  
 
-Mise à jour : 11 avril 2023  
+Mise à jour : 31 janvier 2024  
 
-Référentiel annualisé au sens PMSI SSR (de 2018 à 2023)  
+Référentiel annualisé au sens PMSI SSR (de 2018 à 2024)  
 
 Source : Annexe 6 du volume 1 des manuels des GME  
 

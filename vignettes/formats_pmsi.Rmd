@@ -24,7 +24,7 @@ library(dplyr)
 
 Intitulé du référentiel : **formats_mco**
 
-Mise à jour : 7 mars 2023  
+Mise à jour : 31 janvier 2024  
 
 Liste des 5 fichiers PMSI MCO dont les variables sont décrites dans le référentiel :  
 - RSS groupé  
@@ -33,7 +33,7 @@ Liste des 5 fichiers PMSI MCO dont les variables sont décrites dans le référe
 - FICHCOMP DMI  
 - VID-HOSP  
 
-Référentiel annualisé de 2018 à 2023.  
+Référentiel annualisé de 2018 à 2024.  
 
 ### Variables  
 **format_mco_lib** = libellé de la variable  
@@ -51,4 +51,4 @@ refpmsi::refpmsi("formats_mco") %>% dplyr::glimpse()
 ```
 
 ## Sources  
-[Formats MCO 2023](https://www.atih.sante.fr/sites/default/files/public/content/4429/formats_mco2023.xlsx)  
+[Formats MCO 2024](https://www.atih.sante.fr/sites/default/files/public/content/4655/formats_mco_2024.xlsx)  

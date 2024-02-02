@@ -113,17 +113,16 @@ appelé dans un 1er argument</p>
 <span><span class="va">icr</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"ccam_icr"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">icr</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 x 8</span></span></span>
-<span><span class="co">#&gt;   ccam_code ccam_phase ccam_activite ccam_icr_~1 ccam_~2 ccam_~3 ccam_~4 ccam_~5</span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> AAFA001   0          1                     655     503 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> AAFA002   0          1                     415     232 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> AAFA003   0          1                     762     579 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> AAFA004   0          1                     894     673 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> AAFA005   0          1                     473     260 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> AAFA006   0          1                     427     340 1       <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ... with abbreviated variable names 1: ccam_icr_salarie,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   2: ccam_icr_non_salarie, 3: ccam_icr_type, 4: ccam_icr_commentaire,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   5: ccam_code_extension_pmsi</span></span></span></code></pre>
+<span><span class="co">#&gt;   ccam_code ccam_phase ccam_activite ccam_icr_salarie ccam_icr_non_salarie</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> AAFA001   0          1                          655                  503</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> AAFA002   0          1                          415                  232</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> AAFA003   0          1                          762                  579</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> AAFA004   0          1                          894                  673</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> AAFA005   0          1                          473                  260</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> AAFA006   0          1                          427                  340</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># i 3 more variables: ccam_icr_type &lt;chr&gt;, ccam_icr_commentaire &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   ccam_code_extension_pmsi &lt;chr&gt;</span></span></span></code></pre>
 <p>Pour les référentiels annualisés au sens PMSI (CIM-10, GHM, GHS, GME,
 GMT, OVALIDE, CSARR, …), sélection des années via un 2eme argument.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -148,25 +147,24 @@ référentiels.</p>
 <span><span class="va">liste_ref</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">liste_ref</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 x 7</span></span></span>
-<span><span class="co">#&gt;   refpmsi                      refpmsi~1 refpm~2 refpm~3 refpm~4 refpm~5 refpm~6</span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> anticancereux_intraghs       Médicame~ ATIH    2020    non     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span> </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> autorisation_mco             Autorisa~ GENRSA  2022    non     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> autorisation_ssr             Autorisa~ GENRHA  2022    non     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> cancerologie_appareil_organe Algorith~ INCa (~ 2023    non     Cancér~ https:~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> cancerologie_seuil           Algorith~ INCa (~ 2023    non     Cancér~ https:~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> ccam_ameli                   Actes CC~ AMELI&lt;~ 2022 (~ oui     <span style="color: #BB0000;">NA</span>      <span style="color: #BB0000;">NA</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ... with abbreviated variable names 1: refpmsi_lib, 2: refpmsi_source,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   3: refpmsi_periode_version, 4: refpmsi_annualise, 5: refpmsi_article,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   6: refpmsi_article_lien</span></span></span></code></pre>
+<span><span class="co">#&gt;   refpmsi    refpmsi_lib refpmsi_source refpmsi_periode_vers~1 refpmsi_annualise</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> anticance~ Médicament~ ATIH           2020                   non              </span> </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> autorisat~ Autorisati~ ATIH           2024                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> autorisat~ Autorisati~ ATIH           2024                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> autorisat~ Autorisati~ ATIH           2023                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> cancerolo~ Algorithme~ INCa (septemb~ 2023                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> cancerolo~ Algorithme~ INCa (décembr~ 2023                   non              </span> </span>
+<span><span class="co">#&gt; <span style="color: #949494;"># i abbreviated name: 1: refpmsi_periode_version</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># i 2 more variables: refpmsi_article &lt;chr&gt;, refpmsi_article_lien &lt;chr&gt;</span></span></span></code></pre>
 <p>Pour ne charger que la liste des intitulés des référentiels.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># affichage uniquement des intitulés des référentiels</span></span>
 <span><span class="va">liste_ref</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">refpmsi</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">liste_ref</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt; [1] "anticancereux_intraghs"       "autorisation_mco"            </span></span>
-<span><span class="co">#&gt; [3] "autorisation_ssr"             "cancerologie_appareil_organe"</span></span>
-<span><span class="co">#&gt; [5] "cancerologie_seuil"           "ccam_ameli"</span></span></code></pre>
+<span><span class="co">#&gt; [3] "autorisation_smr"             "autorisation_ssr"            </span></span>
+<span><span class="co">#&gt; [5] "cancerologie_appareil_organe" "cancerologie_seuil"</span></span></code></pre>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>Sur cette page</h2>
     </nav></aside>

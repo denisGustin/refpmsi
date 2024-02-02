@@ -14,6 +14,20 @@ knitr::opts_chunk$set(
 )
 ```
 
+## [31-01-2024]   
+### Référentiels mis à jour  
+`cim` : mise à jour 2024 avec ajout de la CIM-10 2024  
+`gme_public`, `gme_prive` : ajout version 2024 des GME et GMT avec tarifs cibles 2024  
+`csarr_code`, `csarr_code_note`, `csarr_ref`,  `csarr_ponderation`, `csarr_incompatibilite_intervenant`, `csarr_hier`, `csarr_hier_note`, `csarr_gestcomp`, `csarr_eval`, `csarr_modulateur` : mise à jour 2024   
+`cma_ssr` : mise à jour 2024   
+`ccam_cma_ssr` : mise à jour 2024   
+`psy` : mise à jour 2024 des intitulés des lieux d'actes L07, L09, L10 et L12   
+`formats_mco` : mise à jour 2024   
+`autorisation_mco` : ajout des nouvelles autorisations 2024 en lien avec la réforme des autorisations en soins critiques  
+
+### Nouveau référentiel  
+`autorisation_smr` : codes et libellés des nouvelles autorisations SMR 2024  
+
 ## [21-06-2023]   
 ### Référentiels mis à jour  
 `gme_public`, `gme_prive` : version 2023  
