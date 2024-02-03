@@ -1,0 +1,214 @@
+---
+title: "Changelog"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{News}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+ 
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## [31-01-2024]   
+### Référentiels mis à jour  
+`cim` : mise à jour 2024 avec ajout de la CIM-10 2024  
+`gme_public`, `gme_prive` : ajout version 2024 des GME et GMT avec tarifs cibles 2024  
+`csarr_code`, `csarr_code_note`, `csarr_ref`,  `csarr_ponderation`, `csarr_incompatibilite_intervenant`, `csarr_hier`, `csarr_hier_note`, `csarr_gestcomp`, `csarr_eval` : mise à jour 2024   
+`cma_ssr` : mise à jour 2024   
+`ccam_cma_ssr` : mise à jour 2024   
+`psy` : mise à jour 2024 des intitulés des lieux d'actes L07, L09, L10 et L12   
+`formats_mco` : mise à jour 2024   
+`autorisation_mco` : ajout des nouvelles autorisations 2024 en lien avec la réforme des autorisations en soins critiques  
+
+### Nouveau référentiel  
+`csarr_modulateur` : modulateur autorisé par acte CSARR. Référentiel annualisé de 2018 à 2024. [Descriptif](https://denisgustin.github.io/refpmsi/articles/csarr.html#csarr-modulateur)  
+`autorisation_smr` : codes et libellés des nouvelles autorisations SMR 2024  
+
+## [21-06-2023]   
+### Référentiels mis à jour  
+`gme_public`, `gme_prive` : version 2023  
+`ovalide_ccaminfo` : version 2023  
+`ovalide_diaginfo` : version 2023  
+`ovalide_ghminfo_dgf`, `ovalide_ghminfo_oqn` : version 2023  
+`ovalide_racineinfo_dgf`, `ovalide_racineinfo_oqn` : version 2023  
+`me_ms_mco` : 2023 avec ajout du mode d'entrée O "Pour prélèvement d'organes" et de la provenance V "Avec passage par une structure des urgences d’une autre entité géographique et de celle de l'entité géographique de l'étbalissement"  
+`ucd_indication` : 2023 (mai) = libellés des UCD de la base Thésorimed®  
+
+### Nouveau référentiel  
+`ucd_lib` : libellés du référentiel UCD de la base de données Thésorimed® ([lien ATIH](https://www.atih.sante.fr/type-de-publication/referentiel)) 
+
+## [11-04-2023]   
+### Référentiels mis à jour  
+`cim` : version 2023  
+Tous les référentiels CSARR (`csarr_code`, `csarr_ponderation`, `csarr_ref`, ...) : version 2023  
+`ghs_public`, `ghs_prive` : version 2023  
+`supp_mco_public`, `supp_mco_prive` : version 2023  
+`ghm_intermediaire`, `ghs_uhcd` : version 2023  
+`ccam_pmsi` : v2 2023  
+`ccam_icr` : v1 2023  
+`lpp_ameli` : v724 (5 avril 2023)  
+
+### Nouveaux référentiels  
+`ghm_lib` : libellés uniques des GHM depuis 2018  
+`cancerologie_appareil_organe` : codes CIM-10 de localisations tumorales primitives, par appareil et par groupe anatomique (organe)  
+`cancerologie_seuil` :  codes CIM-10 des chirurgie cancer  
+`lpp_ameli_hier` :  hiérarchie sur 3 arborescences des LPP  
+
+### Evolutions référentiels
+`lpp` a été renommé `lpp_ameli`  
+
+### Documentation  
+[Nouvel article "DMI-LPP"](https://denisgustin.github.io/refpmsi/articles/dmi_lpp.html)  
+[Nouvel article "Cancérologie"](https://denisgustin.github.io/refpmsi/articles/cancerologie.html)  
+[Ajout de l'exemple "Comparaison CIM-10 2023 et 2022"](https://denisgustin.github.io/refpmsi/articles/cim.html#comparaison-cim-10-2023-et-2022)  
+Ajout de la colonne "Annualisé" dans la [liste des référentiels](https://denisgustin.github.io/refpmsi/articles/liste_ref.html) pour indiquer si le référentiel est annualisé ou non  
+
+## [07-03-2023]   
+### Référentiels mis à jour  
+`cma_mco` : version 2023 des CMA MCO   
+`spe_pharma_ssr` : Version 2 mars 2023 des spécialités pharmaceutiques SSR  
+
+### Nouveaux référentiels  
+`ucd_en_sus_lib` : libellés des UCD en sus avec 1 ligne par UCD en sus  
+`spe_pharma_ssr_lib` : libellés des spécialités pharmaceutiques SSR avec 1 ligne par spécialité pharmaceutique SSR  
+`formats_mco` : descriptif des variables de 5 formats PMSI MCO (RSS groupé, fichier d'information des UM, FICHCOMP LES, FICHCOMP DMI, VID-HOSP)  
+`ccam_dm_compatibilite` : liste d'incompatibilité entre acte CCAM et DMI [(source)](https://www.atih.sante.fr/compatibilite-entre-actes-ccam-et-groupes-de-dm)  
+`dmi_en_sus` : liste des DMI en sus avec historique des évènements par DMI  
+`dmi_en_sus_lib` : libellés des DMI en sus avec 1 libellé par DMI  
+`ucd_ap_ac_lib` : libellés des ATU et post-ATU avec 1 libellé par UCD  
+
+### Evolutions référentiels
+`spe_pharma_ssr` : historique depuis 2017 et non plus seulement dernière version.  Ajout des 2 variables `date_debut` et `date_fin` de validité  
+`ucd_en_sus` : renommage du référentiel `ucd` maintenant supprimé en `ucd_en_sus`. Renommage des variables désormais préfixées `ucd_en_sus_`   
+`ucd_ap_ac` : renommage du référentiel `atu` maintenant supprimé en `ucd_ap_ac`. Renommage des variables désormais préfixées `ucd_ap_ac_`   
+
+### Suppression référentiels  
+`ucd` : voir ci-dessus le référentiel `ucd_en_sus`  
+`atu` : voir ci-dessus le référentiel `ucd_ap_ac`  
+
+### Documentation  
+[Descriptif du référentiel `cma_mco`](https://denisgustin.github.io/refpmsi/articles/cim.html#cma-mco)  
+[Descriptif du référentiel `cma_ssr`](https://denisgustin.github.io/refpmsi/articles/cim.html#cma-ssr)  
+[Ajout de l'exemple d'utilisation "Listes des CMA MCO par niveau - sortie Excel"](https://denisgustin.github.io/refpmsi/articles/cim.html#listes-des-cma-mco-par-niveau---sortie-excel)  
+[Descriptif du référentiel `spe_pharma_ss_lib`](https://denisgustin.github.io/refpmsi/articles/specialites_pharmaceutiques_ssr.html#spécialités-pharmaceutiques-ssr-libellés)  
+[Descriptif du référentiel `formats_mco`](https://denisgustin.github.io/refpmsi/articles/formats)  
+
+## [28-11-2022]   
+### Référentiels mis à jour  
+`ccam_pmsi` : V2 2022 de la CCAM à usage PMSI  
+`ccam_icr` : V2 2022  
+`ccam_ameli` : V69 applicable au 01/04/2022  
+`cim` : [version 2022 de CIM-10 FR à usage PMSI](https://denisgustin.github.io/refpmsi/articles/cim.html#cim-10-fr-usage-pmsi) post 04-10-2022 (cf autorisation A49X en DP/DR et code spécial U079 alerte sanitaire)  
+`cma_mco` : CMA MCO 2022  
+`cma_ssr` : CMA SSR 2022  
+`csarr_code`, `csarr_code_note`, `csarr_eval`, `csarr_gestocomp`, `csarr_hier`, `csarr_hier_note`, `csarr_incompatibilite_intervenant`, `csarr_ponderation`, `csarr_ref` : [2022](https://denisgustin.github.io/refpmsi/articles/csarr.html)  
+`ghm_regroupement` : [2022](https://denisgustin.github.io/refpmsi/articles/ghm.html#regroupements-ghm-1)  
+`ghs_public` et `ghs_prive` : [2022](https://denisgustin.github.io/refpmsi/articles/ghm.html)  
+`gme_public` et `gme_prive` : 2022  
+`me_ms_mco` : ajout provenance U "Avec passage dans une structure d’accueil des urgences d’une autre entité géographique"  
+`me_ms_ssr` : ajout provenance U "Avec passage dans une structure d’accueil des urgences d’une autre entité géographique"  
+`ovalide_ccaminfo`, `ovalide_diaginfo`, `ovalide_ghminfo_dgf`, `ovalide_ghminfo_oqn`, `ovalide_racineinfo_dgf`, `ovalide_racineinfo_oqn` : 2022  
+`psy` : nouvelles FA 2022 et nouveaux lieux d'acte 2022  
+`rghm_regroupement` : [2022](https://denisgustin.github.io/refpmsi/articles/ghm.html#regroupements-des-racines-de-ghm-1)  
+`supp_mco_public` et `supp_mco_oqn` : suppléments MCO 2022  
+
+### Nouveau référentiel  
+`cim_lib` : libellés de tous les codes CIM-10 depuis 2018 dans leur dernière version  
+
+### Evolutions référentiels
+`gme_public` et `gme_prive` : nouvelles variables liées à la version 2022 des GME. [En savoir plus](https://gist.github.com/denisGustin/581e7abf5dd09756008442b0a1b0d01d)  
+`cim_polyhandicap` : correction de libellés  
+`csarr_ref` : suppression variable csarr_lib (voir csarr_code)  
+
+### Suppression référentiels  
+`csarr_extdoc` : voir csarr_code hiérarchie 12.03.01 et 12.03.02  
+`csarr_modulateur` : voir csarr_code hiérarchie 12.02  
+`ghm_monorum_uhcd_public` et `ghm_monorum_uhcd_prive` : voir nouveau référentiel ghs_uhcd  
+
+## [18-11-2021]  
+### Référentiels mis à jour  
+csarr_ponderation : [Pondération CSARR V2022 SSR](https://denisgustin.github.io/refpmsi/articles/csarr.html#csarr-pond-rations)
+open_ccam : [données de l'année 2020](https://denisgustin.github.io/refpmsi/articles/base_mco.html#open-ccam-1)  
+base_mco_diag : [année 2020](https://denisgustin.github.io/refpmsi/articles/base_mco.html)
+base_mco_ccam : [année 2020](https://denisgustin.github.io/refpmsi/articles/base_mco.html)
+
+### Nouveaux référentiels  
+gl : groupes de lourdeur (GL) de la version 2022 des GME  
+gr : groupes de réadaptation (GR) de la version 2022 des GME  
+
+## [08-10-2021]  
+### Nouveau référentiel
+mco_fg_listes : [Listes D et listes A de groupage MCO dans les CMD](https://denisgustin.github.io/refpmsi/articles/ghm.html#listes-en-d-et-en-a-de-l-algorithme-de-groupage-mco)  
+
+### Evolution référentiel  
+cim : nouvelle variable logique cim_precision qui indique si le code CIM-10 a un ou des code(s) fils plus précis ou non. [En savoir plus](https://denisgustin.github.io/refpmsi/articles/cim.html)
+
+## [23-06-2021]  
+### Nouveaux référentiels  
+ghm_monorum_uhcd_public et ghm_monorum_uhcd_prive : en lien avec la réforme de financement des urgences qui créé, à partir du 1er mars 2021, des GHS dédiés pour chaque racine de GHM, dès que le séjour a lieu uniquement en UHCD et que son mode d'entrée et de sortie est le domicile ([Notice technique ATIH 234-7-2021](https://www.atih.sante.fr/sites/default/files/public/content/4004/notice_technique_n_atih-234-7-2021_nouveautes_financement_2021-hh.pdf)). *Maj 28-11-2022 : référentiels supprimés et remplacés par le référentiel ghs_uhcd*
+
+## [07-06-2021]  
+### Référentiels mis à jour  
+6 référentiels OVALIDE MCO (ovalide_racineinfo_dgf, ovalide_racineinfo_oqn, ovalide_ghminfo_dgf, ovalide_ghminfo_oqn, ovalide_ccaminfo, ovalide_diaginfo) : année 2021    
+ghm_regroupement : [2021](https://denisgustin.github.io/refpmsi/articles/ghm.html#regroupements-ghm-1)
+rghm_regroupement : [2021](https://denisgustin.github.io/refpmsi/articles/ghm.html#regroupements-des-racines-de-ghm-1)
+csarr_incompatibilite_intervenant : [2021](https://denisgustin.github.io/refpmsi/articles/csarr.html#csarr-incompatibilit-s-intervenants)  
+
+## [24-04-2021]  
+### Référentiels mis à jour  
+ccam_pmsi : V2 2021 de la CCAM à usage PMSI  
+ccam_icr : V2 2021 de la CCAM à usage PMSI  
+
+## [15-04-2021]  
+**VERSION STABLE du package**  
+Normalisation des noms et des types des variables des référentiels.  
+
+### Nouveaux référentiels  
+ghm_intermediaire : 
+csarr_hier_note : 
+csarr_code_note : 
+
+### Référentiels mis à jour  
+cim : 2021  
+ccam_pmsi : V1 2021  
+ghs_public, ghs_prive: 2022
+csarr_code : V2021  
+
+## [12-12-2020]  
+### Nouveau référentiel  
+anticancereux_intraghs : liste des médicaments anticancéreux non-inscrits sur la liste en sus ou intra-GHS.Expérimentation article 51.  
+Version du 9 novembre 2020.  
+
+## [03-08-2020]  
+### Nouveau référentiel  
+spe_pharma_ssr : spécialités pharmaceutiques SSR version 2017 et version 2020   
+
+## [26-07-2020]  
+### Nouveaux référentiels  
+5 référentiels issus de dénombrements de la base nationale PMSI SSR 2019  
+base_ssr_mp : nombre de séjours ou séances par MMP  
+base_ssr_ae : nombre de séjours ou séances par AE  
+base_ssr_das : nombre de séjours ou séances par DAS  
+base_ssr_csarr : nombre de séjours ou séances par acte CSARR  
+base_ssr_ccam : nombre de séjours ou séances par acte CCAM  
+
+3 référentiels issus de dénombrements de la base nationale PMSI MCO 2019  
+base_mco_ccam : nombre de séjours ou séances par acte CCAM  
+base_mco_diag : nombre de séjours ou séances par diagnostic (DP, DR ou DAS)    
+base_mco_ghs : nombre de séjours ou séances par GHS  
+
+open_ccam : par acte CCAM de la base nationale PMSI MCO 2019 (nombre d'actes CCAM, nombre de séjours ou séances, nombre d'actes ambulatoires, nombre de séjours 0 nuit)  
+
+4 référentiels PMSI HAD  
+ght_oqn : tarifs GHT OQN (de 2016 à 2020)  
+ght_dgf : tarifs GHT DGF (de 2016 à 2020)  
+me_ms_had : codes et libellés des modes d'entrée, sortie, provenance et destination en HAD  
+had : codes et libellés des natures du séjour, types de lieu de domicile et des modes de prises en charge (MPP, MPA, MPD)  
+
+## [07-05-2020]  
+**Mise en ligne du package refpmsi** 

@@ -3,8 +3,8 @@ pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   cancerologie: cancerologie.html
+  changelog: changelog.html
   cim: cim.html
-  code_pmsi: code_pmsi.html
   csarr: csarr.html
   dmi_lpp: dmi_lpp.html
   fonctions_refpmsi: fonctions_refpmsi.html
@@ -14,7 +14,7 @@ articles:
   liste_ref: liste_ref.html
   news: news.html
   specialites_pharmaceutiques_ssr: specialites_pharmaceutiques_ssr.html
-last_built: 2024-02-02T15:46Z
+last_built: 2024-02-03T04:39Z
 urls:
   reference: https://denisgustin.github.io/refpmsi/reference
   article: https://denisgustin.github.io/refpmsi/articles
