@@ -14,10 +14,101 @@ knitr::opts_chunk$set(
 )
 ```
 
+## [05-06-2024]   
+### Référentiels mis à jour  
+**MCO : **  
+`ghs_public` et `ghs_prive` : ajout de l'année PMSI MCO 2024.  
+`ovalide_ghminfo_dgf` et `ovalide_ghminfo_oqn` : ajout de l'année PMSI MCO 2024.  
+`ghm_intermediaire` et `ghs_monouhcd` : ajout de l'année PMSI MCO 2024.  
+`cma_mco` : ajout de l'année PMSI MCO 2024.  
+`ghm_regroupement`  et `rghm_regroupement`: année PMSI MCO 2023 avec la version ATIH et projection de l'année 2023 en 2024 en attendant la publication de la version 2024 par l'ATIH.  
+`supplements_mco_public` et `supplements_mco_prive`: ajout de l'année PMSI MCO 2024.  
+`ccam_pmsi` : V2 2024.  
+`ccam_icr` : V2 2024.  
+`ccam_ameli` : version 75 du 1er mars 2024.  
+`dmi_en_sus` : version avril 2024.  
+`lpp_ameli` : version 769 du 12 mars 2024.  
+`ucd_en_sus` et `ucd_ap_ac_cpc` : version avril 2024.  
+`ucd_indication` : version mars 2024.  
+`ucd_libelle` : version février. [source](https://www.atih.sante.fr/sites/default/files/public/content/4710/ref_ucd_2024.xlsx).  
+
+**SMR : **  
+`gme_public` : tarifs 2024 actifs à partir du 1er mars 2024 (pour la période Janvier-Février 2024, diviser les tarifs par 1,0307)   
+`gme_prive` : tarifs 2024 actifs à partir du 1er mars 2024 (pour la période Janvier-Février 2024, diviser les tarifs par 1,0102)  
+`gl` : ajout année 2024 (idem 2023)  
+`gr` : ajout année 2024 (idem 2023)  
+`gn` : ajout année 2024 (idem 2023)  
+`specialites_pharmaceutiques_smr` : version 4 mars 2024  
+
+**PSY : **  
+`psy` : ajout des 5 codes type_secteur_dispositif_intersectoriel (G,I,P,Z,D) avec leur libellé.  
+
+### Nouveau référentiel `sous_cmd`  
+Pour chaque sous-CMD, son code (01C, 01K, ..), son libellé, le code CMD sous_jacent et le code CMKZ. Référentiel pratique pour rapatrier les libellés de sous-CMD dans un script.  
+[Documentation](https://denisgustin.github.io/refpmsi/articles/ghm.html#sous-cmd)  
+
+### Normalisation des intitulés de variables  
+Un certain nombre de variables était jusqu'alors nommé avec des parties d'intitulés raccourcis (ex : cim_lib). Toutes ces variables ont été renommées avec des intitulés explicites (ex : cim_libelle).  
+
+Raccourcis concernés et leur normalisation :  
+_lib en _libelle  
+_niv en _niveau  
+_num en _no  
+_arbo en _arborescence  
+_hier en _hierarchie  
+_eval en _evaluation  
+_topo en _topographie  
+
+Référentiels concernés :  
+`ccam_cma_smr`, `ccam_codification`, `ccam_pmsi`, `ccam_regroupement`, `cim`, `cim_chapitre`, `cim_groupe`, `cim_libelle`, `cm`, `cmd`, `csarr_code`, `csarr_code_note`, `csarr_evaluation`, `csarr_geste_complementaire`, `csarr_hierarchie`, `csarr_hierarchie_note`, `csarr_intervenant`, `dmi_en_sus`, `ghm_regroupement`, `gl`, `gn`, `gr`, `lpp_ameli`, `lpp_ameli_hierarchie`, `rghm_regroupement`, `specialites_pharmaceutiques_smr`, `ucd_en_sus`, `ucd_libelle`
+
+Si vous faîtes appel à `refpmsi::` dans vos scripts, invitation à les relire pour tenir compte de cette normalisation généralisée. En pratique, la plupart du temps, il s'agira de modifier le nom d'une variable (ex : `cim_libelle`au lieu de `cim_lib)`.  
+
+### Référentiels renommés  
+Dans la logique de la normalisation des intitulés de variables et pour tenir compte de changement de dénomination du SSR en SMR, renommage de 17 référentiels :  
+`ccam_cma_smr` en `ccam_cma_smr`  
+`ccam_regroupement_lib` en `ccam_regroupement`  
+`ccam_ssr_ponderation` en `ccam_smr_ponderation`  
+`cim_lib` en `cim_libelle`  
+`cma_ssr` en `cma_smr`  
+`csarr_eval` en `csarr_evaluation`  
+`csarr_gestcomp` en `csarr_geste_complementaire`  
+`csarr_hier` en `csarr_hierarchie`  
+`csarr_hier_note` en `csarr_hierarchie_note`  
+`csarr_ref` en `csarr_type`  
+`ghs_uhcd` en `ghs_monouhcd`  
+`lpp_ameli_hier` en `lpp_ameli_hierarchie`  
+`spe_pharma_ssr` en `specialites_pharmaceutiques_smr`  
+`supp_mco_prive` en `supplements_mco_prive`  
+`supp_mco_public` en `supplements_mco_public`  
+`ucd_ap_ac` en `ucd_ap_ac_cpc`  
+`ucd_lib` en `ucd_libelle`  
+
+### Référentiels supprimés  
+Suppression de 6 référentiels de libellés largement redondant avec leurs référentiels liés :   
+`dmi_en_sus_lib`, `ghm_lib`, `ghm_regroupement_lib`, `spe_pharma_ssr_lib`, `ucd_ap_ac_lib`, `ucd_en_sus_lib`  
+
+Par exemple, les libellés des regroupements en DA s'obtiennent facilement via ce [mini-script](https://denisgustin.github.io/refpmsi/articles/ghm.html#r%C3%A9f%C3%A9rentiel-des-libell%C3%A9s-des-ga).  
+
+Suppression du référentiel `rgme` qui correspondait aux racines GME de l'ancienne classification GME remplacée en 2022.   
+
+### Autres modifications  
+Dans le référentiel `csarr_type`, les 5 variables csarr_dedie, csarr_non_dedie, csarr_collectif, csarr_pluriprofessionnel et csarr_appareillage sont maintenant des variables logiques, plus facilement manipulables.  
+
+Idem dans le référentiel `csarr_evaluation`pour les 4 variables csarr_evaluation_initiale, csarr_evaluation_intermediaire, csarr_evaluation_finale, csarr_evaluation_autres  
+
+### Documentation mise à jour  
+`CIM-10 FR à usage PMSI` : mise à jour du code des [exemples](https://denisgustin.github.io/refpmsi/articles/cim.html#exemples).  
+`CSARR` : mise à jour du code des [exemples](https://denisgustin.github.io/refpmsi/articles/csarr.html#exemples).  
+`GHM` : mise à jour du code des [exemples](https://denisgustin.github.io/refpmsi/articles/ghm.html#exemples) et documentation du nouveau référentiel `sous_cmd`.  
+`DMI LPP` : ajout d'un premier exemple de code ["Référentiel de libellé DMI en sus"](https://denisgustin.github.io/refpmsi/articles/dmi_lpp.html#exemples).  
+`Spécialités pharmaceutiques SMR` : mise à jour du code des [exemples](https://denisgustin.github.io/refpmsi/articles/specialites_pharmaceutiques_ssr.html#exemples).  
+
+
 ## [31-01-2024]   
 ### Référentiels mis à jour  
 `cim` : mise à jour 2024 avec ajout de la CIM-10 2024  
-`gme_public`, `gme_prive` : ajout version 2024 des GME et GMT avec tarifs cibles 2024  
+`gme_public`, `gme_prive` : ajout version 2024 des GME et GMT avec tarifs cibles 2024. Ajout de la variable logique `gmt_7` qui identifie les GMT hebdomadaires associés à un GMT.  
 `csarr_code`, `csarr_code_note`, `csarr_ref`,  `csarr_ponderation`, `csarr_incompatibilite_intervenant`, `csarr_hier`, `csarr_hier_note`, `csarr_gestcomp`, `csarr_eval` : mise à jour 2024   
 `cma_ssr` : mise à jour 2024   
 `ccam_cma_ssr` : mise à jour 2024   
@@ -25,7 +116,7 @@ knitr::opts_chunk$set(
 `formats_mco` : mise à jour 2024   
 `autorisation_mco` : ajout des nouvelles autorisations 2024 en lien avec la réforme des autorisations en soins critiques  
 
-### Nouveau référentiel  
+### Nouveaux référentiels  
 `csarr_modulateur` : modulateur autorisé par acte CSARR. Référentiel annualisé de 2018 à 2024. [Descriptif](https://denisgustin.github.io/refpmsi/articles/csarr.html#csarr-modulateur)  
 `autorisation_smr` : codes et libellés des nouvelles autorisations SMR 2024  
 

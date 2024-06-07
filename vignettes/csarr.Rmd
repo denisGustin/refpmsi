@@ -20,13 +20,13 @@ library(stringr)
 library(refpmsi)
 ```
 
-Le package `refpmsi` comprend 11 référentiels CSARR.  
+Le package `refpmsi` comprend 12 référentiels CSARR.  
 
-## CSARR codes    
+## CSARR code    
 
 Intitulé du référentiel : **csarr_code**  
 
-Mise à jour : 31 janvier 2024  
+Mise à jour : 25 mai 2024  
 
 Référentiel annualisé (2018 à 2024).  
 
@@ -36,11 +36,11 @@ Référentiel annualisé (2018 à 2024).
 refpmsi::refpmsi("csarr_code") %>% dplyr::glimpse()
 ```
 
-## CSARR codes notes
+## CSARR code note
 
 Intitulé du référentiel : **csarr_code_note**  
 
-Mise à jour : 31 janvier 2024  
+Mise à jour : 25 mai 2024  
 
 Référentiel annualisé (2018 à 2024).  
 
@@ -52,37 +52,37 @@ refpmsi::refpmsi("csarr_code_note") %>% dplyr::glimpse()
 
 ## CSARR hiérarchie  
 
-Intitulé du référentiel : **csarr_hier**  
+Intitulé du référentiel : **csarr_hierarchie**  
 
-Mise à jour : 31 janvier 2024  
+Mise à jour : 25 mai 2024  
 
 Référentiel annualisé (2018 à 2024).  
 
 ### Variables  
 
 ```{r var csarr_hier, echo = FALSE}
-refpmsi::refpmsi("csarr_hier") %>% dplyr::glimpse()
+refpmsi::refpmsi("csarr_hierarchie") %>% dplyr::glimpse()
 ```
 
-## CSARR hiérarchie notes  
+## CSARR hiérarchie note  
 
-Intitulé du référentiel : **csarr_hier_note**  
+Intitulé du référentiel : **csarr_hierarchie_note**  
 
-Mise à jour : 31 janvier 2024  
+Mise à jour : 25 mai 2024  
 
 Référentiel annualisé (2018 à 2024).  
 
 ### Variables  
 
 ```{r var csarr_hier_note, echo = FALSE}
-refpmsi::refpmsi("csarr_hier_note") %>% dplyr::glimpse()
+refpmsi::refpmsi("csarr_hierarchie_note") %>% dplyr::glimpse()
 ```
 
 ## CSARR intervenant    
 
 Intitulé du référentiel : **csarr_intervenant**  
 
-Mise à jour : 31 janvier 2024  
+Mise à jour : 25 mai 2024  
 
 Référentiel non annualisé  
 
@@ -94,18 +94,18 @@ Note : l'intervenant "29 (Neuro)psychorééducateur" supprimé à partir de l'an
 refpmsi::refpmsi("csarr_intervenant") %>% dplyr::glimpse()
 ```
 
-## CSARR individuels dédiés, non dédiés, collectifs, pluriprofessionnels, appareillage, séance       
+## CSARR type    
 
-Intitulé du référentiel : **csarr_ref**  
+Intitulé du référentiel : **csarr_type**  
 
-Mise à jour : 31 janvier 2024  
+Mise à jour : 25 mai 2024  
 
 Référentiel annualisé (2018 à 2024).  
 
 ### Variables  
 
-```{r var csarr_ref, echo = FALSE}
-refpmsi::refpmsi("csarr_ref") %>% dplyr::glimpse()
+```{r var csarr_type, echo = FALSE}
+refpmsi::refpmsi("csarr_type") %>% dplyr::glimpse()
 ```
 
 ## CSARR modulateur  
@@ -122,7 +122,7 @@ Référentiel annualisé (2018 à 2024).
 refpmsi::refpmsi("csarr_modulateur") %>% dplyr::glimpse()
 ```
 
-## CSARR pondérations  
+## CSARR pondération  
 
 Intitulé du référentiel : **csarr_ponderation**  
 
@@ -138,35 +138,35 @@ Mise en format "tidy" du référentiel ATIH par nos soins
 refpmsi::refpmsi("csarr_ponderation") %>% dplyr::glimpse()
 ```
 
-## CSARR évaluations    
+## CSARR évaluation    
 
-Intitulé du référentiel : **csarr_eval**  
+Intitulé du référentiel : **csarr_evaluation**  
 
-Mise à jour : 31 janvier 2024  
-
-Référentiel annualisé (2018 à 2024).  
-
-### Variables  
-
-```{r var csarr_eval, echo = FALSE}
-refpmsi::refpmsi("csarr_eval") %>% dplyr::glimpse()
-```
-
-## CSARR gestes complémentaires      
-
-Intitulé du référentiel : **csarr_gestcomp**  
-
-Mise à jour : 31 janvier 2024  
+Mise à jour : 25 mai 2024  
 
 Référentiel annualisé (2018 à 2024).  
 
 ### Variables  
 
-```{r var csarr_gestcomp, echo = FALSE}
-refpmsi::refpmsi("csarr_gestcomp") %>% dplyr::glimpse()
+```{r var csarr_evaluation, echo = FALSE}
+refpmsi::refpmsi("csarr_evaluation") %>% dplyr::glimpse()
 ```
 
-## CSARR incompatibilités intervenants        
+## CSARR geste complémentaire  
+
+Intitulé du référentiel : **csarr_geste_complementaire**  
+
+Mise à jour : 25 mai 2024  
+
+Référentiel annualisé (2018 à 2024).  
+
+### Variables  
+
+```{r var csarr_geste_complementaire, echo = FALSE}
+refpmsi::refpmsi("csarr_geste_complementaire") %>% dplyr::glimpse()
+```
+
+## CSARR incompatibilité intervenant  
 
 Intitulé du référentiel : **csarr_incompatibilite_intervenant**  
 
@@ -187,7 +187,7 @@ refpmsi::refpmsi("csarr_incompatibilite_intervenant") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_topographie**  
 
-Mise à jour : 31 janvier 2024  
+Mise à jour : 25 mai 2024  
 
 Référentiel non annualisé.  
 
@@ -202,20 +202,17 @@ refpmsi::refpmsi("csarr_topographie") %>% dplyr::glimpse()
 ### Nouveaux actes CSARR pluriprofessionnels en 2021  
 
 ```{r csarr_pluriprofessionnel_new, eval = TRUE, echo = TRUE}
-
 # chargement du référentiel CSARR avec les actes pluriprofessionnels
-csarr_ref <- refpmsi::refpmsi("csarr_ref")
+csarr_type <- refpmsi::refpmsi("csarr_type")
 
 # repérage des actes pluriprofessionnels en 2021 qui ne l'étaient pas en 2020
-csarr_pluriprofessionnel_new_2021 <- csarr_ref %>% 
-  dplyr::filter(annee_pmsi == "2021", csarr_pluriprofessionnel == "1") %>% 
-  dplyr::select(csarr_code,csarr_pluriprofessionnel) %>% 
-  dplyr::anti_join(csarr_ref %>% 
-                      dplyr::filter(annee_pmsi == "2020",
-                                    csarr_pluriprofessionnel == "1") %>% 
-                      dplyr::select(csarr_code,csarr_pluriprofessionnel),
-                    by = c("csarr_code" = "csarr_code"))
-
+csarr_pluriprofessionnel_new_2021 <- csarr_type %>% 
+    dplyr::filter(annee_pmsi == "2021", csarr_pluriprofessionnel) %>% 
+    dplyr::select(csarr_code,csarr_pluriprofessionnel) %>% 
+    dplyr::anti_join(csarr_type %>% 
+                         dplyr::filter(annee_pmsi == "2020", csarr_pluriprofessionnel) %>% 
+                         dplyr::select(csarr_code,csarr_pluriprofessionnel),
+                     join_by(csarr_code == csarr_code))
 csarr_pluriprofessionnel_new_2021
 ```
 

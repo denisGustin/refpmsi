@@ -60,9 +60,6 @@
     <a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a>
   </div>
 </li>
-<li class="nav-item">
-  <a class="nav-link" href="../articles/news.html">Nouveautés</a>
-</li>
 <li class="active nav-item">
   <a class="nav-link" href="../articles/changelog.html">Changelog</a>
 </li>
@@ -100,14 +97,124 @@
     
     
 <div class="section level2">
-<h2 id="section">[31-01-2024]<a class="anchor" aria-label="anchor" href="#section"></a>
+<h2 id="section">[05-06-2024]<a class="anchor" aria-label="anchor" href="#section"></a>
 </h2>
 <div class="section level3">
 <h3 id="référentiels-mis-à-jour">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour"></a>
 </h3>
+<p><strong>MCO : </strong><br><code>ghs_public</code> et <code>ghs_prive</code> : ajout de l’année
+PMSI MCO 2024.<br><code>ovalide_ghminfo_dgf</code> et <code>ovalide_ghminfo_oqn</code> :
+ajout de l’année PMSI MCO 2024.<br><code>ghm_intermediaire</code> et <code>ghs_monouhcd</code> : ajout de
+l’année PMSI MCO 2024.<br><code>cma_mco</code> : ajout de l’année PMSI MCO 2024.<br><code>ghm_regroupement</code> et <code>rghm_regroupement</code>: année
+PMSI MCO 2023 avec la version ATIH et projection de l’année 2023 en 2024
+en attendant la publication de la version 2024 par l’ATIH.<br><code>supplements_mco_public</code> et
+<code>supplements_mco_prive</code>: ajout de l’année PMSI MCO
+2024.<br><code>ccam_pmsi</code> : V2 2024.<br><code>ccam_icr</code> : V2 2024.<br><code>ccam_ameli</code> : version 75 du 1er mars 2024.<br><code>dmi_en_sus</code> : version avril 2024.<br><code>lpp_ameli</code> : version 769 du 12 mars 2024.<br><code>ucd_en_sus</code> et <code>ucd_ap_ac_cpc</code> : version avril
+2024.<br><code>ucd_indication</code> : version mars 2024.<br><code>ucd_libelle</code> : version février. <a href="https://www.atih.sante.fr/sites/default/files/public/content/4710/ref_ucd_2024.xlsx" class="external-link">source</a>.</p>
+<p><strong>SMR : </strong><br><code>gme_public</code> : tarifs 2024 actifs à partir du 1er mars 2024
+(pour la période Janvier-Février 2024, diviser les tarifs par
+1,0307)<br><code>gme_prive</code> : tarifs 2024 actifs à partir du 1er mars 2024
+(pour la période Janvier-Février 2024, diviser les tarifs par
+1,0102)<br><code>gl</code> : ajout année 2024 (idem 2023)<br><code>gr</code> : ajout année 2024 (idem 2023)<br><code>gn</code> : ajout année 2024 (idem 2023)<br><code>specialites_pharmaceutiques_smr</code> : version 4 mars 2024</p>
+<p><strong>PSY : </strong><br><code>psy</code> : ajout des 5 codes
+type_secteur_dispositif_intersectoriel (G,I,P,Z,D) avec leur
+libellé.</p>
+</div>
+<div class="section level3">
+<h3 id="nouveau-référentiel-sous_cmd">Nouveau référentiel <code>sous_cmd</code><a class="anchor" aria-label="anchor" href="#nouveau-r%C3%A9f%C3%A9rentiel-sous_cmd"></a>
+</h3>
+<p>Pour chaque sous-CMD, son code (01C, 01K, ..), son libellé, le code
+CMD sous_jacent et le code CMKZ. Référentiel pratique pour rapatrier les
+libellés de sous-CMD dans un script.<br><a href="https://denisgustin.github.io/refpmsi/articles/ghm.html#sous-cmd">Documentation</a></p>
+</div>
+<div class="section level3">
+<h3 id="normalisation-des-intitulés-de-variables">Normalisation des intitulés de variables<a class="anchor" aria-label="anchor" href="#normalisation-des-intitul%C3%A9s-de-variables"></a>
+</h3>
+<p>Un certain nombre de variables était jusqu’alors nommé avec des
+parties d’intitulés raccourcis (ex : cim_lib). Toutes ces variables ont
+été renommées avec des intitulés explicites (ex : cim_libelle).</p>
+<p>Raccourcis concernés et leur normalisation :<br>
+_lib en _libelle<br>
+_niv en _niveau<br>
+_num en _no<br>
+_arbo en _arborescence<br>
+_hier en _hierarchie<br>
+_eval en _evaluation<br>
+_topo en _topographie</p>
+<p>Référentiels concernés :<br><code>ccam_cma_smr</code>, <code>ccam_codification</code>,
+<code>ccam_pmsi</code>, <code>ccam_regroupement</code>,
+<code>cim</code>, <code>cim_chapitre</code>, <code>cim_groupe</code>,
+<code>cim_libelle</code>, <code>cm</code>, <code>cmd</code>,
+<code>csarr_code</code>, <code>csarr_code_note</code>,
+<code>csarr_evaluation</code>, <code>csarr_geste_complementaire</code>,
+<code>csarr_hierarchie</code>, <code>csarr_hierarchie_note</code>,
+<code>csarr_intervenant</code>, <code>dmi_en_sus</code>,
+<code>ghm_regroupement</code>, <code>gl</code>, <code>gn</code>,
+<code>gr</code>, <code>lpp_ameli</code>,
+<code>lpp_ameli_hierarchie</code>, <code>rghm_regroupement</code>,
+<code>specialites_pharmaceutiques_smr</code>, <code>ucd_en_sus</code>,
+<code>ucd_libelle</code></p>
+<p>Si vous faîtes appel à <code>refpmsi::</code> dans vos scripts,
+invitation à les relire pour tenir compte de cette normalisation
+généralisée. En pratique, la plupart du temps, il s’agira de modifier le
+nom d’une variable (ex : <code>cim_libelle</code>au lieu de
+<code>cim_lib)</code>.</p>
+</div>
+<div class="section level3">
+<h3 id="référentiels-renommés">Référentiels renommés<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-renomm%C3%A9s"></a>
+</h3>
+<p>Dans la logique de la normalisation des intitulés de variables et
+pour tenir compte de changement de dénomination du SSR en SMR, renommage
+de 17 référentiels :<br><code>ccam_cma_smr</code> en <code>ccam_cma_smr</code><br><code>ccam_regroupement_lib</code> en
+<code>ccam_regroupement</code><br><code>ccam_ssr_ponderation</code> en
+<code>ccam_smr_ponderation</code><br><code>cim_lib</code> en <code>cim_libelle</code><br><code>cma_ssr</code> en <code>cma_smr</code><br><code>csarr_eval</code> en <code>csarr_evaluation</code><br><code>csarr_gestcomp</code> en
+<code>csarr_geste_complementaire</code><br><code>csarr_hier</code> en <code>csarr_hierarchie</code><br><code>csarr_hier_note</code> en <code>csarr_hierarchie_note</code><br><code>csarr_ref</code> en <code>csarr_type</code><br><code>ghs_uhcd</code> en <code>ghs_monouhcd</code><br><code>lpp_ameli_hier</code> en <code>lpp_ameli_hierarchie</code><br><code>spe_pharma_ssr</code> en
+<code>specialites_pharmaceutiques_smr</code><br><code>supp_mco_prive</code> en <code>supplements_mco_prive</code><br><code>supp_mco_public</code> en
+<code>supplements_mco_public</code><br><code>ucd_ap_ac</code> en <code>ucd_ap_ac_cpc</code><br><code>ucd_lib</code> en <code>ucd_libelle</code></p>
+</div>
+<div class="section level3">
+<h3 id="référentiels-supprimés">Référentiels supprimés<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-supprim%C3%A9s"></a>
+</h3>
+<p>Suppression de 6 référentiels de libellés largement redondant avec
+leurs référentiels liés :<br><code>dmi_en_sus_lib</code>, <code>ghm_lib</code>,
+<code>ghm_regroupement_lib</code>, <code>spe_pharma_ssr_lib</code>,
+<code>ucd_ap_ac_lib</code>, <code>ucd_en_sus_lib</code></p>
+<p>Par exemple, les libellés des regroupements en DA s’obtiennent
+facilement via ce <a href="https://denisgustin.github.io/refpmsi/articles/ghm.html#r%C3%A9f%C3%A9rentiel-des-libell%C3%A9s-des-ga">mini-script</a>.</p>
+<p>Suppression du référentiel <code>rgme</code> qui correspondait aux
+racines GME de l’ancienne classification GME remplacée en 2022.</p>
+</div>
+<div class="section level3">
+<h3 id="autres-modifications">Autres modifications<a class="anchor" aria-label="anchor" href="#autres-modifications"></a>
+</h3>
+<p>Dans le référentiel <code>csarr_type</code>, les 5 variables
+csarr_dedie, csarr_non_dedie, csarr_collectif, csarr_pluriprofessionnel
+et csarr_appareillage sont maintenant des variables logiques, plus
+facilement manipulables.</p>
+<p>Idem dans le référentiel <code>csarr_evaluation</code>pour les 4
+variables csarr_evaluation_initiale, csarr_evaluation_intermediaire,
+csarr_evaluation_finale, csarr_evaluation_autres</p>
+</div>
+<div class="section level3">
+<h3 id="documentation-mise-à-jour">Documentation mise à jour<a class="anchor" aria-label="anchor" href="#documentation-mise-%C3%A0-jour"></a>
+</h3>
+<p><code>CIM-10 FR à usage PMSI</code> : mise à jour du code des <a href="https://denisgustin.github.io/refpmsi/articles/cim.html#exemples">exemples</a>.<br><code>CSARR</code> : mise à jour du code des <a href="https://denisgustin.github.io/refpmsi/articles/csarr.html#exemples">exemples</a>.<br><code>GHM</code> : mise à jour du code des <a href="https://denisgustin.github.io/refpmsi/articles/ghm.html#exemples">exemples</a>
+et documentation du nouveau référentiel <code>sous_cmd</code>.<br><code>DMI LPP</code> : ajout d’un premier exemple de code <a href="https://denisgustin.github.io/refpmsi/articles/dmi_lpp.html#exemples">“Référentiel
+de libellé DMI en sus”</a>.<br><code>Spécialités pharmaceutiques SMR</code> : mise à jour du code des
+<a href="https://denisgustin.github.io/refpmsi/articles/specialites_pharmaceutiques_ssr.html#exemples">exemples</a>.</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="section-1">[31-01-2024]<a class="anchor" aria-label="anchor" href="#section-1"></a>
+</h2>
+<div class="section level3">
+<h3 id="référentiels-mis-à-jour-1">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-1"></a>
+</h3>
 <p><code>cim</code> : mise à jour 2024 avec ajout de la CIM-10
 2024<br><code>gme_public</code>, <code>gme_prive</code> : ajout version 2024 des
-GME et GMT avec tarifs cibles 2024<br><code>csarr_code</code>, <code>csarr_code_note</code>,
+GME et GMT avec tarifs cibles 2024. Ajout de la variable logique
+<code>gmt_7</code> qui identifie les GMT hebdomadaires associés à un
+GMT.<br><code>csarr_code</code>, <code>csarr_code_note</code>,
 <code>csarr_ref</code>, <code>csarr_ponderation</code>,
 <code>csarr_incompatibilite_intervenant</code>, <code>csarr_hier</code>,
 <code>csarr_hier_note</code>, <code>csarr_gestcomp</code>,
@@ -116,7 +223,7 @@ L09, L10 et L12<br><code>formats_mco</code> : mise à jour 2024<br><code>autoris
 en lien avec la réforme des autorisations en soins critiques</p>
 </div>
 <div class="section level3">
-<h3 id="nouveau-référentiel">Nouveau référentiel<a class="anchor" aria-label="anchor" href="#nouveau-r%C3%A9f%C3%A9rentiel"></a>
+<h3 id="nouveaux-référentiels">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels"></a>
 </h3>
 <p><code>csarr_modulateur</code> : modulateur autorisé par acte CSARR.
 Référentiel annualisé de 2018 à 2024. <a href="https://denisgustin.github.io/refpmsi/articles/csarr.html#csarr-modulateur">Descriptif</a><br><code>autorisation_smr</code> : codes et libellés des nouvelles
@@ -124,10 +231,10 @@ autorisations SMR 2024</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-1">[21-06-2023]<a class="anchor" aria-label="anchor" href="#section-1"></a>
+<h2 id="section-2">[21-06-2023]<a class="anchor" aria-label="anchor" href="#section-2"></a>
 </h2>
 <div class="section level3">
-<h3 id="référentiels-mis-à-jour-1">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-1"></a>
+<h3 id="référentiels-mis-à-jour-2">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-2"></a>
 </h3>
 <p><code>gme_public</code>, <code>gme_prive</code> : version 2023<br><code>ovalide_ccaminfo</code> : version 2023<br><code>ovalide_diaginfo</code> : version 2023<br><code>ovalide_ghminfo_dgf</code>, <code>ovalide_ghminfo_oqn</code> :
 version 2023<br><code>ovalide_racineinfo_dgf</code>, <code>ovalide_racineinfo_oqn</code>
@@ -138,7 +245,7 @@ l’entité géographique de l’étbalissement”<br><code>ucd_indication</code
 Thésorimed®</p>
 </div>
 <div class="section level3">
-<h3 id="nouveau-référentiel-1">Nouveau référentiel<a class="anchor" aria-label="anchor" href="#nouveau-r%C3%A9f%C3%A9rentiel-1"></a>
+<h3 id="nouveau-référentiel">Nouveau référentiel<a class="anchor" aria-label="anchor" href="#nouveau-r%C3%A9f%C3%A9rentiel"></a>
 </h3>
 <p><code>ucd_lib</code> : libellés du référentiel UCD de la base de
 données Thésorimed® (<a href="https://www.atih.sante.fr/type-de-publication/referentiel" class="external-link">lien
@@ -146,10 +253,10 @@ ATIH</a>)</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-2">[11-04-2023]<a class="anchor" aria-label="anchor" href="#section-2"></a>
+<h2 id="section-3">[11-04-2023]<a class="anchor" aria-label="anchor" href="#section-3"></a>
 </h2>
 <div class="section level3">
-<h3 id="référentiels-mis-à-jour-2">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-2"></a>
+<h3 id="référentiels-mis-à-jour-3">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-3"></a>
 </h3>
 <p><code>cim</code> : version 2023<br>
 Tous les référentiels CSARR (<code>csarr_code</code>,
@@ -159,7 +266,7 @@ Tous les référentiels CSARR (<code>csarr_code</code>,
 2023<br><code>ccam_pmsi</code> : v2 2023<br><code>ccam_icr</code> : v1 2023<br><code>lpp_ameli</code> : v724 (5 avril 2023)</p>
 </div>
 <div class="section level3">
-<h3 id="nouveaux-référentiels">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels"></a>
+<h3 id="nouveaux-référentiels-1">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels-1"></a>
 </h3>
 <p><code>ghm_lib</code> : libellés uniques des GHM depuis 2018<br><code>cancerologie_appareil_organe</code> : codes CIM-10 de
 localisations tumorales primitives, par appareil et par groupe
@@ -184,16 +291,16 @@ non</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-3">[07-03-2023]<a class="anchor" aria-label="anchor" href="#section-3"></a>
+<h2 id="section-4">[07-03-2023]<a class="anchor" aria-label="anchor" href="#section-4"></a>
 </h2>
 <div class="section level3">
-<h3 id="référentiels-mis-à-jour-3">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-3"></a>
+<h3 id="référentiels-mis-à-jour-4">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-4"></a>
 </h3>
 <p><code>cma_mco</code> : version 2023 des CMA MCO<br><code>spe_pharma_ssr</code> : Version 2 mars 2023 des spécialités
 pharmaceutiques SSR</p>
 </div>
 <div class="section level3">
-<h3 id="nouveaux-référentiels-1">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels-1"></a>
+<h3 id="nouveaux-référentiels-2">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels-2"></a>
 </h3>
 <p><code>ucd_en_sus_lib</code> : libellés des UCD en sus avec 1 ligne
 par UCD en sus<br><code>spe_pharma_ssr_lib</code> : libellés des spécialités
@@ -236,10 +343,10 @@ du référentiel <code>formats_mco</code></a></p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-4">[28-11-2022]<a class="anchor" aria-label="anchor" href="#section-4"></a>
+<h2 id="section-5">[28-11-2022]<a class="anchor" aria-label="anchor" href="#section-5"></a>
 </h2>
 <div class="section level3">
-<h3 id="référentiels-mis-à-jour-4">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-4"></a>
+<h3 id="référentiels-mis-à-jour-5">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-5"></a>
 </h3>
 <p><code>ccam_pmsi</code> : V2 2022 de la CCAM à usage PMSI<br><code>ccam_icr</code> : V2 2022<br><code>ccam_ameli</code> : V69 applicable au 01/04/2022<br><code>cim</code> : <a href="https://denisgustin.github.io/refpmsi/articles/cim.html#cim-10-fr-usage-pmsi">version
 2022 de CIM-10 FR à usage PMSI</a> post 04-10-2022 (cf autorisation A49X
@@ -256,7 +363,7 @@ structure d’accueil des urgences d’une autre entité géographique”<br><co
 MCO 2022</p>
 </div>
 <div class="section level3">
-<h3 id="nouveau-référentiel-2">Nouveau référentiel<a class="anchor" aria-label="anchor" href="#nouveau-r%C3%A9f%C3%A9rentiel-2"></a>
+<h3 id="nouveau-référentiel-1">Nouveau référentiel<a class="anchor" aria-label="anchor" href="#nouveau-r%C3%A9f%C3%A9rentiel-1"></a>
 </h3>
 <p><code>cim_lib</code> : libellés de tous les codes CIM-10 depuis 2018
 dans leur dernière version</p>
@@ -279,10 +386,10 @@ ghs_uhcd</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-5">[18-11-2021]<a class="anchor" aria-label="anchor" href="#section-5"></a>
+<h2 id="section-6">[18-11-2021]<a class="anchor" aria-label="anchor" href="#section-6"></a>
 </h2>
 <div class="section level3">
-<h3 id="référentiels-mis-à-jour-5">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-5"></a>
+<h3 id="référentiels-mis-à-jour-6">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-6"></a>
 </h3>
 <p>csarr_ponderation : <a href="https://denisgustin.github.io/refpmsi/articles/csarr.html#csarr-pond-rations">Pondération
 CSARR V2022 SSR</a> open_ccam : <a href="https://denisgustin.github.io/refpmsi/articles/base_mco.html#open-ccam-1">données
@@ -292,17 +399,17 @@ base_mco_diag : <a href="https://denisgustin.github.io/refpmsi/articles/base_mco
 2020</a></p>
 </div>
 <div class="section level3">
-<h3 id="nouveaux-référentiels-2">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels-2"></a>
+<h3 id="nouveaux-référentiels-3">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels-3"></a>
 </h3>
 <p>gl : groupes de lourdeur (GL) de la version 2022 des GME<br>
 gr : groupes de réadaptation (GR) de la version 2022 des GME</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-6">[08-10-2021]<a class="anchor" aria-label="anchor" href="#section-6"></a>
+<h2 id="section-7">[08-10-2021]<a class="anchor" aria-label="anchor" href="#section-7"></a>
 </h2>
 <div class="section level3">
-<h3 id="nouveau-référentiel-3">Nouveau référentiel<a class="anchor" aria-label="anchor" href="#nouveau-r%C3%A9f%C3%A9rentiel-3"></a>
+<h3 id="nouveau-référentiel-2">Nouveau référentiel<a class="anchor" aria-label="anchor" href="#nouveau-r%C3%A9f%C3%A9rentiel-2"></a>
 </h3>
 <p>mco_fg_listes : <a href="https://denisgustin.github.io/refpmsi/articles/ghm.html#listes-en-d-et-en-a-de-l-algorithme-de-groupage-mco">Listes
 D et listes A de groupage MCO dans les CMD</a></p>
@@ -316,10 +423,10 @@ plus</a></p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-7">[23-06-2021]<a class="anchor" aria-label="anchor" href="#section-7"></a>
+<h2 id="section-8">[23-06-2021]<a class="anchor" aria-label="anchor" href="#section-8"></a>
 </h2>
 <div class="section level3">
-<h3 id="nouveaux-référentiels-3">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels-3"></a>
+<h3 id="nouveaux-référentiels-4">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels-4"></a>
 </h3>
 <p>ghm_monorum_uhcd_public et ghm_monorum_uhcd_prive : en lien avec la
 réforme de financement des urgences qui créé, à partir du 1er mars 2021,
@@ -331,10 +438,10 @@ supprimés et remplacés par le référentiel ghs_uhcd</em></p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-8">[07-06-2021]<a class="anchor" aria-label="anchor" href="#section-8"></a>
+<h2 id="section-9">[07-06-2021]<a class="anchor" aria-label="anchor" href="#section-9"></a>
 </h2>
 <div class="section level3">
-<h3 id="référentiels-mis-à-jour-6">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-6"></a>
+<h3 id="référentiels-mis-à-jour-7">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-7"></a>
 </h3>
 <p>6 référentiels OVALIDE MCO (ovalide_racineinfo_dgf,
 ovalide_racineinfo_oqn, ovalide_ghminfo_dgf, ovalide_ghminfo_oqn,
@@ -345,27 +452,27 @@ csarr_incompatibilite_intervenant : <a href="https://denisgustin.github.io/refpm
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-9">[24-04-2021]<a class="anchor" aria-label="anchor" href="#section-9"></a>
+<h2 id="section-10">[24-04-2021]<a class="anchor" aria-label="anchor" href="#section-10"></a>
 </h2>
 <div class="section level3">
-<h3 id="référentiels-mis-à-jour-7">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-7"></a>
+<h3 id="référentiels-mis-à-jour-8">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-8"></a>
 </h3>
 <p>ccam_pmsi : V2 2021 de la CCAM à usage PMSI<br>
 ccam_icr : V2 2021 de la CCAM à usage PMSI</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-10">[15-04-2021]<a class="anchor" aria-label="anchor" href="#section-10"></a>
+<h2 id="section-11">[15-04-2021]<a class="anchor" aria-label="anchor" href="#section-11"></a>
 </h2>
 <p><strong>VERSION STABLE du package</strong><br>
 Normalisation des noms et des types des variables des référentiels.</p>
 <div class="section level3">
-<h3 id="nouveaux-référentiels-4">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels-4"></a>
+<h3 id="nouveaux-référentiels-5">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels-5"></a>
 </h3>
 <p>ghm_intermediaire : csarr_hier_note : csarr_code_note :</p>
 </div>
 <div class="section level3">
-<h3 id="référentiels-mis-à-jour-8">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-8"></a>
+<h3 id="référentiels-mis-à-jour-9">Référentiels mis à jour<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiels-mis-%C3%A0-jour-9"></a>
 </h3>
 <p>cim : 2021<br>
 ccam_pmsi : V1 2021<br>
@@ -373,10 +480,10 @@ ghs_public, ghs_prive: 2022 csarr_code : V2021</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-11">[12-12-2020]<a class="anchor" aria-label="anchor" href="#section-11"></a>
+<h2 id="section-12">[12-12-2020]<a class="anchor" aria-label="anchor" href="#section-12"></a>
 </h2>
 <div class="section level3">
-<h3 id="nouveau-référentiel-4">Nouveau référentiel<a class="anchor" aria-label="anchor" href="#nouveau-r%C3%A9f%C3%A9rentiel-4"></a>
+<h3 id="nouveau-référentiel-3">Nouveau référentiel<a class="anchor" aria-label="anchor" href="#nouveau-r%C3%A9f%C3%A9rentiel-3"></a>
 </h3>
 <p>anticancereux_intraghs : liste des médicaments anticancéreux
 non-inscrits sur la liste en sus ou intra-GHS.Expérimentation article
@@ -385,20 +492,20 @@ Version du 9 novembre 2020.</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-12">[03-08-2020]<a class="anchor" aria-label="anchor" href="#section-12"></a>
+<h2 id="section-13">[03-08-2020]<a class="anchor" aria-label="anchor" href="#section-13"></a>
 </h2>
 <div class="section level3">
-<h3 id="nouveau-référentiel-5">Nouveau référentiel<a class="anchor" aria-label="anchor" href="#nouveau-r%C3%A9f%C3%A9rentiel-5"></a>
+<h3 id="nouveau-référentiel-4">Nouveau référentiel<a class="anchor" aria-label="anchor" href="#nouveau-r%C3%A9f%C3%A9rentiel-4"></a>
 </h3>
 <p>spe_pharma_ssr : spécialités pharmaceutiques SSR version 2017 et
 version 2020</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-13">[26-07-2020]<a class="anchor" aria-label="anchor" href="#section-13"></a>
+<h2 id="section-14">[26-07-2020]<a class="anchor" aria-label="anchor" href="#section-14"></a>
 </h2>
 <div class="section level3">
-<h3 id="nouveaux-référentiels-5">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels-5"></a>
+<h3 id="nouveaux-référentiels-6">Nouveaux référentiels<a class="anchor" aria-label="anchor" href="#nouveaux-r%C3%A9f%C3%A9rentiels-6"></a>
 </h3>
 <p>5 référentiels issus de dénombrements de la base nationale PMSI SSR
 2019<br>
@@ -426,7 +533,7 @@ et des modes de prises en charge (MPP, MPA, MPD)</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="section-14">[07-05-2020]<a class="anchor" aria-label="anchor" href="#section-14"></a>
+<h2 id="section-15">[07-05-2020]<a class="anchor" aria-label="anchor" href="#section-15"></a>
 </h2>
 <p><strong>Mise en ligne du package refpmsi</strong></p>
 </div>

@@ -34,7 +34,5 @@ navbar:
         href: articles/had.html
       - text: Spécialités pharmaceutiques SSR
         href: articles/specialites_pharmaceutiques_ssr.html
-    - text: Nouveautés
-      href: articles/news.html
     - text: Changelog
       href: articles/changelog.html

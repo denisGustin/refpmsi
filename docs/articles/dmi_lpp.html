@@ -61,9 +61,6 @@
   </div>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="../articles/news.html">Nouveautés</a>
-</li>
-<li class="nav-item">
   <a class="nav-link" href="../articles/changelog.html">Changelog</a>
 </li>
       </ul>
@@ -103,93 +100,106 @@
 <h2 id="dmi-en-sus">DMI en sus<a class="anchor" aria-label="anchor" href="#dmi-en-sus"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>dmi_en_sus</strong></p>
-<p>Mise à jour : 7 mars 2023</p>
-<p>Version du 1er mars 2023<br>
-Référentiel non annualisé</p>
+<p>Mise à jour : 25 mai 2024</p>
+<p>Version Avril 2024</p>
+<p>Référentiel non annualisé</p>
 <div class="section level3">
 <h3 id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a>
 </h3>
 <p><strong>dmi_en_sus_code</strong> = code LPP des dispositifs médicaux
-pris en charge en sus<br><strong>dmi_en_sus_lib</strong> = libellé des DMI en sus<br><strong>dmi_en_sus_evenement</strong> = inscription, suppression du DMI
+pris en charge en sus<br><strong>dmi_en_sus_libelle</strong> = libellé des DMI en sus<br><strong>dmi_en_sus_evenement</strong> = inscription, suppression du DMI
 de la liste des DMI en sus<br><strong>dmi_en_sus_date_publication</strong> = date de publication au
 JO<br><strong>dmi_en_sus_date_effet</strong> = date d’entrée en vigueur du DMI
 en sus (note : les dates d’effet non affichées de la source ont été
 calculées par nos soins au lendemain de la date de publication)</p>
-<pre><code><span><span class="co">#&gt; Rows: 7,600</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 7,918</span></span>
 <span><span class="co">#&gt; Columns: 5</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_date_effet       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2019-11-01", "2019-11-01", "2019-11-01", ~</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_lib              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "IMPLANT PLASTIE ENDOCANALAIRE, DIGESTIVE,~</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_code             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "8117813", "8158597", "8187647", "8196333"~</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_evenement        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "inscription", "inscription", "inscription~</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_date_publication <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, "2023-01-26", "2023-01~</span></span></code></pre>
-</div>
-</div>
-<div class="section level2">
-<h2 id="dmi-en-sus-libellés">DMI en sus Libellés<a class="anchor" aria-label="anchor" href="#dmi-en-sus-libell%C3%A9s"></a>
-</h2>
-<p>Intitulé du référentiel : <strong>dmi_en_sus_lib</strong></p>
-<p>Mise à jour : 7 mars 2023</p>
-<p>Référentiel non annualisé</p>
-<div class="section level3">
-<h3 id="variables-1">Variables<a class="anchor" aria-label="anchor" href="#variables-1"></a>
-</h3>
-<p><strong>dmi_en_sus_code</strong> = code LPP des dispositifs médicaux
-pris en charge en sus. Liste dédoublonnée des codes LPP.<br><strong>dmi_en_sus_lib</strong> = libellé correspondant à l’évènement le
-plus récent de chaque DMI en sus</p>
-<pre><code><span><span class="co">#&gt; Rows: 5,869</span></span>
-<span><span class="co">#&gt; Columns: 2</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_code <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "8117813", "8158597", "8187647", "8196333", "8198190",~</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_lib  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "IMPLANT PLASTIE ENDOCANALAIRE, DIGESTIVE, NON METALLI~</span></span></code></pre>
+<span><span class="co">#&gt; $ dmi_en_sus_date_publication <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2024-04-30", "2024-04-30", "2024-04-30", ~</span></span>
+<span><span class="co">#&gt; $ dmi_en_sus_date_effet       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2024-05-12", "2024-05-12", "2024-05-12", ~</span></span>
+<span><span class="co">#&gt; $ dmi_en_sus_libelle          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Implants vasculaires", "Implants vasculai~</span></span>
+<span><span class="co">#&gt; $ dmi_en_sus_code             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "3171825", "3168415", "3152650", "3147034"~</span></span>
+<span><span class="co">#&gt; $ dmi_en_sus_evenement        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "suppression", "suppression", "suppression~</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
 <h2 id="lpp-ameli">LPP AMELI<a class="anchor" aria-label="anchor" href="#lpp-ameli"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>lpp_ameli</strong></p>
-<p>Mise à jour : 11 avril 2023<br>
-Version 724 du 5 avril 2023</p>
+<p>Mise à jour : 25 mai 2024</p>
+<p>Version 769 du 12 mars 2024</p>
 <p>Référentiel non annualisé</p>
 <div class="section level3">
-<h3 id="variables-2">Variables<a class="anchor" aria-label="anchor" href="#variables-2"></a>
+<h3 id="variables-1">Variables<a class="anchor" aria-label="anchor" href="#variables-1"></a>
 </h3>
-<p><strong>lpp_code</strong> = code LPP<br><strong>lpp_lib</strong> = libellé LPP<br><strong>lpp_arbo1</strong> = 1er niveau d’arborescence de la hiérarchie
-des LPP<br><strong>lpp_arbo2</strong> = 2eme niveau d’arborescence de la hiérarchie
-des LPP<br><strong>lpp_arbo3</strong> = 3eme niveau d’arborescence de la hiérarchie
-des LPP<br><strong>lpp_date_fin</strong> = date de fin du code LPP</p>
-<pre><code><span><span class="co">#&gt; Rows: 32,028</span></span>
+<p><strong>lpp_code</strong> = code LPP<br><strong>lpp_libelle</strong> = libellé LPP<br><strong>lpp_arborescence_1</strong> = 1er niveau d’arborescence de la
+hiérarchie des LPP<br><strong>lpp_arborescence_2</strong> = 2eme niveau d’arborescence de la
+hiérarchie des LPP<br><strong>lpp_arborescence_3</strong> = 3eme niveau d’arborescence de la
+hiérarchie des LPP<br><strong>lpp_date_fin</strong> = date de fin du code LPP</p>
+<pre><code><span><span class="co">#&gt; Rows: 30,346</span></span>
 <span><span class="co">#&gt; Columns: 6</span></span>
-<span><span class="co">#&gt; $ lpp_code     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1303889", "1303961", "1304216", "1304363", "1304498", "1~</span></span>
-<span><span class="co">#&gt; $ lpp_lib      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "bande de contention elastique en 1 sens : v20 en 8 cm de~</span></span>
-<span><span class="co">#&gt; $ lpp_arbo1    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ~</span></span>
-<span><span class="co">#&gt; $ lpp_arbo2    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ~</span></span>
-<span><span class="co">#&gt; $ lpp_arbo3    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, ~</span></span>
-<span><span class="co">#&gt; $ lpp_date_fin <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, "2017-12-31", NA, NA, "2016-09-01", NA, "2017-01-~</span></span></code></pre>
+<span><span class="co">#&gt; $ lpp_code           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2733563", "2733617", "2733698", "2733706", "273372~</span></span>
+<span><span class="co">#&gt; $ lpp_libelle        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "vi4zg23", "ri8902", "ri1098", "rt29c14", "ai3t002"~</span></span>
+<span><span class="co">#&gt; $ lpp_arborescence_1 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, ~</span></span>
+<span><span class="co">#&gt; $ lpp_arborescence_2 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, ~</span></span>
+<span><span class="co">#&gt; $ lpp_arborescence_3 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 2, 4, 4, 4, 2, 4, 4, 1, 2, 4, 4, 2, 2, 2, 4, 2, 1, ~</span></span>
+<span><span class="co">#&gt; $ lpp_date_fin       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,~</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
 <h2 id="lpp-ameli-hiérarchie">LPP AMELI Hiérarchie<a class="anchor" aria-label="anchor" href="#lpp-ameli-hi%C3%A9rarchie"></a>
 </h2>
-<p>Intitulé du référentiel : <strong>lpp_ameli_hier</strong></p>
+<p>Intitulé du référentiel : <strong>lpp_ameli_hierarchie</strong></p>
 <p>Mise à jour : 11 avril 2023</p>
 <p>Hiérarchie LPP extraite de la base Open LPP (version 2021)</p>
 <p>Référentiel non annualisé</p>
 <div class="section level3">
-<h3 id="variables-3">Variables<a class="anchor" aria-label="anchor" href="#variables-3"></a>
+<h3 id="variables-2">Variables<a class="anchor" aria-label="anchor" href="#variables-2"></a>
 </h3>
 <p><strong>titre</strong> = code des titres LPP. Correspond au 1er
-niveau d’arborescence LPP<br><strong>titre_lib</strong> = libellé des titres LPP<br><strong>sous_chapitre_niveau_1</strong> = code du 1er niveau des
-sous-chapitres LPP. Correspond au 2eme niveau d’arborescence LPP<br><strong>sous_chapitre_niveau_1_lib</strong> = libellé des codes du 1er
-niveau des sous-chapitres LPP.<br><strong>sous_chapitre_niveau_2</strong> = code du 2eme niveau des
-sous-chapitres LPP. Correspond au 3eme niveau d’arborescence LPP<br><strong>sous_chapitre_niveau_1_lib</strong> = libellé des codes du 2eme
-niveau des sous-chapitres LPP.</p>
-<pre><code><span><span class="co">#&gt; Rows: 95</span></span>
+niveau d’arborescence LPP<br><strong>titre_libelle</strong> = libellé des titres LPP<br><strong>sous_chapitre_niveau_1</strong> = code du 1er niveau des
+sous-chapitres LPP. Correspond au 2eme niveau d’arborescence LPP<br><strong>sous_chapitre_niveau_1_libelle</strong> = libellé des codes du
+1er niveau des sous-chapitres LPP.<br><strong>sous_chapitre_niveau_2</strong> = code du 2eme niveau des
+sous-chapitres LPP. Correspond au 3eme niveau d’arborescence LPP<br><strong>sous_chapitre_niveau_1_libelle</strong> = libellé des codes du
+2eme niveau des sous-chapitres LPP.</p>
+<pre><code><span><span class="co">#&gt; Rows: 93</span></span>
 <span><span class="co">#&gt; Columns: 6</span></span>
-<span><span class="co">#&gt; $ titre                      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1", "1", "1", "1", "1", "1", "1", "1", "1"~</span></span>
-<span><span class="co">#&gt; $ titre_lib                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dm pour traitements, aides a la vie, alime~</span></span>
-<span><span class="co">#&gt; $ sous_chapitre_niveau_1     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1_1", "1_1", "1_1", "1_1", "1_1", "1_1", "~</span></span>
-<span><span class="co">#&gt; $ sous_chapitre_niveau_1_lib <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dm, materiels et produits pour le traiteme~</span></span>
-<span><span class="co">#&gt; $ sous_chapitre_niveau_2     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1_1_1", "1_1_2", "1_1_3", "1_1_4", "1_1_5"~</span></span>
-<span><span class="co">#&gt; $ sous_chapitre_niveau_2_lib <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dm pour traitement des maladies respiratoi~</span></span></code></pre>
+<span><span class="co">#&gt; $ titre                          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1", "1", "1", "1", "1", "1", "1", "1",~</span></span>
+<span><span class="co">#&gt; $ titre_libelle                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dm pour traitements, aides a la vie, a~</span></span>
+<span><span class="co">#&gt; $ sous_chapitre_niveau_1         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1_1", "1_1", "1_1", "1_1", "1_1", "1_1~</span></span>
+<span><span class="co">#&gt; $ sous_chapitre_niveau_1_libelle <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dm, materiels et produits pour le trai~</span></span>
+<span><span class="co">#&gt; $ sous_chapitre_niveau_2         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1_1_1", "1_1_2", "1_1_3", "1_1_4", "1_~</span></span>
+<span><span class="co">#&gt; $ sous_chapitre_niveau_2_libelle <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dm pour traitement des maladies respir~</span></span></code></pre>
+</div>
+</div>
+<div class="section level2">
+<h2 id="exemples">Exemples<a class="anchor" aria-label="anchor" href="#exemples"></a>
+</h2>
+<div class="section level3">
+<h3 id="référentiel-des-libellés-des-dmi-en-sus">Référentiel des libellés des DMI en sus<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiel-des-libell%C3%A9s-des-dmi-en-sus"></a>
+</h3>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># on retient pour chaque DMI en sus la version du libellé le plus récent par rapport au code du DMI</span>MI</span>
+<span><span class="va">dmi_en_sus</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"dmi_en_sus"</span><span class="op">)</span></span>
+<span><span class="va">dmi_en_sus_libelle</span> <span class="op">&lt;-</span> <span class="va">dmi_en_sus</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">dmi_en_sus_date_effet</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">dmi_en_sus_date_effet</span><span class="op">)</span>,</span>
+<span>                  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/row_number.html" class="external-link">row_number</a></span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="fl">1L</span>,</span>
+<span>                  .by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">dmi_en_sus_code</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html" class="external-link">distinct</a></span><span class="op">(</span><span class="va">dmi_en_sus_code</span>, <span class="va">dmi_en_sus_libelle</span><span class="op">)</span></span>
+<span><span class="va">dmi_en_sus_libelle</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6,057 x 2</span></span></span>
+<span><span class="co">#&gt;    dmi_en_sus_code dmi_en_sus_libelle  </span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 3171825         Implants vasculaires</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 3168415         Implants vasculaires</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 3152650         Implants vasculaires</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 3147034         Implants vasculaires</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 3110166         Implants vasculaires</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 3107856         Implants vasculaires</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 5171203         Stents retrievers   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 5175862         Stents retrievers   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 3169952         Substituts osseux   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 3196660         Substituts osseux   </span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># i 6,047 more rows</span></span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">

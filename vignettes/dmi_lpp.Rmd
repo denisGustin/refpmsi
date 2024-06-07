@@ -23,14 +23,15 @@ library(dplyr)
 
 Intitulé du référentiel : **dmi_en_sus**  
 
-Mise à jour : 7 mars 2023  
+Mise à jour : 25 mai 2024  
 
-Version du 1er mars 2023  
+Version Avril 2024  
+
 Référentiel non annualisé   
 
 ### Variables  
 **dmi_en_sus_code** = code LPP des dispositifs médicaux pris en charge en sus  
-**dmi_en_sus_lib** = libellé des DMI en sus    
+**dmi_en_sus_libelle** = libellé des DMI en sus    
 **dmi_en_sus_evenement** = inscription, suppression du DMI de la liste des DMI en sus  
 **dmi_en_sus_date_publication** = date de publication au JO  
 **dmi_en_sus_date_effet** = date d'entrée en vigueur du DMI en sus (note : les dates d'effet non affichées de la source ont été calculées par nos soins au lendemain de la date de publication)  
@@ -40,48 +41,31 @@ Référentiel non annualisé
 refpmsi::refpmsi("dmi_en_sus") %>% dplyr::glimpse()
 ```
 
-## DMI en sus Libellés  
-
-Intitulé du référentiel : **dmi_en_sus_lib**  
-
-Mise à jour : 7 mars 2023  
-
-Référentiel non annualisé   
-
-### Variables  
-**dmi_en_sus_code** = code LPP des dispositifs médicaux pris en charge en sus. Liste dédoublonnée des codes LPP.  
-**dmi_en_sus_lib** = libellé correspondant à l'évènement le plus récent de chaque DMI en sus  
-
-```{r var_dmi_en_sus_lib, echo = FALSE}
-
-refpmsi::refpmsi("dmi_en_sus_lib") %>% dplyr::glimpse()
-```
-
 ## LPP AMELI    
 
 Intitulé du référentiel : **lpp_ameli**  
 
-Mise à jour : 11 avril 2023  
-Version 724 du 5 avril 2023  
+Mise à jour : 25 mai 2024  
+
+Version 769 du 12 mars 2024  
 
 Référentiel non annualisé   
 
 ### Variables  
 **lpp_code** = code LPP  
-**lpp_lib** = libellé LPP  
-**lpp_arbo1** = 1er niveau d'arborescence de la hiérarchie des LPP  
-**lpp_arbo2** = 2eme niveau d'arborescence de la hiérarchie des LPP  
-**lpp_arbo3** = 3eme niveau d'arborescence de la hiérarchie des LPP   
+**lpp_libelle** = libellé LPP  
+**lpp_arborescence_1** = 1er niveau d'arborescence de la hiérarchie des LPP  
+**lpp_arborescence_2** = 2eme niveau d'arborescence de la hiérarchie des LPP  
+**lpp_arborescence_3** = 3eme niveau d'arborescence de la hiérarchie des LPP   
 **lpp_date_fin** = date de fin du code LPP  
 
 ```{r var_lpp_ameli, echo = FALSE}
-
 refpmsi::refpmsi("lpp_ameli") %>% dplyr::glimpse()
 ```
 
 ## LPP AMELI Hiérarchie  
 
-Intitulé du référentiel : **lpp_ameli_hier**  
+Intitulé du référentiel : **lpp_ameli_hierarchie**  
 
 Mise à jour : 11 avril 2023  
 
@@ -91,15 +75,29 @@ Référentiel non annualisé
 
 ### Variables  
 **titre** = code des titres LPP. Correspond au 1er niveau d'arborescence LPP  
-**titre_lib** = libellé des titres LPP  
+**titre_libelle** = libellé des titres LPP  
 **sous_chapitre_niveau_1** = code du 1er niveau des sous-chapitres LPP. Correspond au 2eme niveau d'arborescence LPP  
-**sous_chapitre_niveau_1_lib** = libellé des codes du 1er niveau des sous-chapitres LPP.  
+**sous_chapitre_niveau_1_libelle** = libellé des codes du 1er niveau des sous-chapitres LPP.  
 **sous_chapitre_niveau_2** = code du 2eme niveau des sous-chapitres LPP. Correspond au 3eme niveau d'arborescence LPP  
-**sous_chapitre_niveau_1_lib** = libellé des codes du 2eme niveau des sous-chapitres LPP.  
+**sous_chapitre_niveau_1_libelle** = libellé des codes du 2eme niveau des sous-chapitres LPP.  
 
-```{r var_lpp_ameli_hier, echo = FALSE}
+```{r var_lpp_ameli_hierarchie, echo = FALSE}
+refpmsi::refpmsi("lpp_ameli_hierarchie") %>% dplyr::glimpse()
+```
 
-refpmsi::refpmsi("lpp_ameli_hier") %>% dplyr::glimpse()
+## Exemples
+
+### Référentiel des libellés des DMI en sus  
+
+```{r referentiel_dmi_en_sus_libelle, eval = TRUE, echo = TRUE}
+# on retient pour chaque DMI en sus la version du libellé le plus récent par rapport au code du DMI
+dmi_en_sus <- refpmsi("dmi_en_sus")
+dmi_en_sus_libelle <- dmi_en_sus %>% 
+    dplyr::filter(dmi_en_sus_date_effet == max(dmi_en_sus_date_effet),
+                  dplyr::row_number() == 1L,
+                  .by = c(dmi_en_sus_code)) %>% 
+    dplyr::distinct(dmi_en_sus_code, dmi_en_sus_libelle)
+dmi_en_sus_libelle
 ```
 
 ## Sources  
