@@ -52,6 +52,7 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a>
     <a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
+    <a class="dropdown-item" href="../articles/csar.html">CSAR</a>
     <a class="dropdown-item" href="../articles/csarr.html">CSARR</a>
     <a class="dropdown-item" href="../articles/dmi_lpp.html">DMI en sus et LPP</a>
     <a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a>
@@ -839,18 +840,18 @@ l’année PMSI du séjour</p>
 <pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 x 4</span></span></span>
 <span><span class="co">#&gt;    no_rss dp_rss ghm_rss annee_rss</span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  05M091  2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 S7220  08M041  2024     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  05M091  2023     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 S7220  08M041  2023     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H269   02C05J  2024     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   15M05A  2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  08C471  2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  01M201  2023     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   05M13T  2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   04M202  2024     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  08C471  2023     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  01M201  2024     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   05M13T  2023     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   04M202  2023     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   06C091  2024     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  23M20Z  2024     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  08C471  2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  05M092  2024</span></span></code></pre>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  05M092  2023</span></span></code></pre>
 <p>1ere étape : construire le tibble des diagnostics d’entrée de toutes
 les CMD concernées par une introduction de groupage par le DP</p>
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
@@ -891,18 +892,18 @@ DP pour la CMD du séjour</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 x 7</span></span></span>
 <span><span class="co">#&gt;    no_rss dp_rss ghm_rss annee_rss cmd_rss mco_fg_liste_code mco_fg_liste_lib   </span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  05M091  2024      05      D-0505            Insuffisances card~</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 S7220  08M041  2024      08      D-069             Certaines lésions ~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  05M091  2023      05      D-0505            Insuffisances card~</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 S7220  08M041  2023      08      D-069             Certaines lésions ~</span>~</span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H269   02C05J  2024      02      D-0204            Autres affections ~</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   15M05A  2024      15      <span style="color: #BB0000;">NA</span>                <span style="color: #BB0000;">NA</span>                 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  08C471  2024      08      D-069             Certaines lésions ~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  01M201  2023      01      D-0121            Lésions crâniennes~</span>s~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   05M13T  2024      05      D-0508            Douleurs thoraciqu~</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   04M202  2024      04      D-0408            Bronchopneumopathi~</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  08C471  2023      08      D-069             Certaines lésions ~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  01M201  2024      01      D-0121            Lésions crâniennes~</span>s~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   05M13T  2023      05      D-0508            Douleurs thoraciqu~</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   04M202  2023      04      D-0408            Bronchopneumopathi~</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   06C091  2024      06      D-0610            Autres affections ~</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  23M20Z  2024      23      D-2309            Autres motifs de r~</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  08C471  2024      08      D-069             Certaines lésions ~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  05M092  2024      05      D-0505            Insuffisances card~</span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  05M092  2023      05      D-0505            Insuffisances card~</span></span></code></pre></div>
 <p>Remarque : pas de libellé de liste D pour le DP Z380 “Enfant unique,
 né à l’hôpital” d’un séjour classé dans la CMD 15 “Nouveau-nés,
 prématurés et affections de la période périnatale” car, dans cette CMD,
