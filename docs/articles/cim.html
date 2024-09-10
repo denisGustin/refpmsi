@@ -294,12 +294,29 @@ d’exclusions entre racines de GHM et CMA<br><strong>annee_pmsi</strong> = ann�
 </div>
 </div>
 <div class="section level2">
+<h2 id="dénombrement-base-nationale-mco-des-diagnostics">Dénombrement Base nationale MCO des diagnostics<a class="anchor" aria-label="anchor" href="#d%C3%A9nombrement-base-nationale-mco-des-diagnostics"></a>
+</h2>
+<p>Intitulé du référentiel :
+<strong>denombrement_mco_diagnostic</strong></p>
+<p>Mise à jour : 10 septembre 2024</p>
+<p>Dernière version (2023)</p>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx" class="external-link">Source</a></p>
+<div class="section level3">
+<h3 id="variables-8">Variables<a class="anchor" aria-label="anchor" href="#variables-8"></a>
+</h3>
+<pre><code><span><span class="co">#&gt; Rows: 20,794</span></span>
+<span><span class="co">#&gt; Columns: 2</span></span>
+<span><span class="co">#&gt; $ diagnostic              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A000", "A001", "A009", "A010", "A011", "A014"~</span></span>
+<span><span class="co">#&gt; $ denombrement_diagnostic <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 14, NA, 14, 147, NA, NA, 3621, 497, 218, 256, ~</span></span></code></pre>
+</div>
+</div>
+<div class="section level2">
 <h2 id="exemples">Exemples<a class="anchor" aria-label="anchor" href="#exemples"></a>
 </h2>
 <div class="section level3">
 <h3 id="chargement-de-la-cim-10-2024">Chargement de la CIM-10 2024<a class="anchor" aria-label="anchor" href="#chargement-de-la-cim-10-2024"></a>
 </h3>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Chargement de la CIM-10 de l'année 2024 dans la variable cim_2024</span>4</span>
 <span><span class="va">cim_2024</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim"</span>,<span class="fl">2024</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">cim_2024</span><span class="op">)</span></span>
@@ -318,7 +335,7 @@ d’exclusions entre racines de GHM et CMA<br><strong>annee_pmsi</strong> = ann�
 <div class="section level3">
 <h3 id="chargement-de-la-cim-10-des-années-2023-et-2024">Chargement de la CIM-10 des années 2023 et 2024<a class="anchor" aria-label="anchor" href="#chargement-de-la-cim-10-des-ann%C3%A9es-2023-et-2024"></a>
 </h3>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Chargement de la CIM-10 des années 2023 et 2024</span>4</span>
 <span><span class="va">cim_2023_2024</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim"</span>,<span class="fl">2023</span><span class="op">:</span><span class="fl">2024</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">cim_2023_2024</span><span class="op">)</span></span>
@@ -338,7 +355,7 @@ d’exclusions entre racines de GHM et CMA<br><strong>annee_pmsi</strong> = ann�
 <h3 id="génération-du-référentiel-cim_libelle-à-partir-du-référentiel-cim">Génération du référentiel cim_libelle à partir du référentiel
 cim<a class="anchor" aria-label="anchor" href="#g%C3%A9n%C3%A9ration-du-r%C3%A9f%C3%A9rentiel-cim_libelle-%C3%A0-partir-du-r%C3%A9f%C3%A9rentiel-cim"></a>
 </h3>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">cim</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim"</span><span class="op">)</span></span>
 <span><span class="va">cim_libelle</span> <span class="op">&lt;-</span> <span class="va">cim</span> <span class="op">%&gt;%</span> </span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_code</span>,<span class="va">cim_libelle</span>,<span class="va">annee_pmsi</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
@@ -368,17 +385,17 @@ DP de RSS mono-RUM</p>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2023     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2023     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2023     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2023     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2023     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2024</span></span></code></pre>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2023     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2024     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2024     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2023     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2023     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2023     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2024     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2023     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2024     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2023</span></span></code></pre>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># chargement de la CIM-10 2023 et 2024</span></span>
 <span><span class="va">cim_2023_2024</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim"</span>,<span class="fl">2023</span><span class="op">:</span><span class="fl">2024</span><span class="op">)</span></span>
 <span></span>
@@ -392,23 +409,23 @@ DP de RSS mono-RUM</p>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                                </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2023      Insuffisance ventriculaire gauche, avec fraction d'é~</span>~</span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2024      Dialyse extra-corporelle                             </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2024      Cataracte sénile nucléaire                           </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2023      Enfant unique, né à l'hôpital                        </span>   </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2023      Fracture fermée du col du fémur                      </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2024      Commotion cérébrale, sans plaie intracrânienne       </span>   </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2024      Douleur thoracique, sans précision                   </span> </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2024      Maladie pulmonaire obstructive chronique avec épisod~</span>~</span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2023      Appendicites aigües, autres et non précisées         </span>   </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2024      Altération [baisse] de l'état général                </span>    </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2023      Fracture fermée du col du fémur                      </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2024      Insuffisance ventriculaire gauche, avec fraction d'é~</span>~</span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2023      Cataracte sénile nucléaire                           </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2024      Enfant unique, né à l'hôpital                        </span>   </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2024      Fracture fermée du col du fémur                      </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2023      Commotion cérébrale, sans plaie intracrânienne       </span>   </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2023      Douleur thoracique, sans précision                   </span> </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2023      Maladie pulmonaire obstructive chronique avec épisod~</span>~</span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2024      Appendicites aigües, autres et non précisées         </span>   </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2023      Altération [baisse] de l'état général                </span>    </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2024      Fracture fermée du col du fémur                      </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2023      Insuffisance ventriculaire gauche, avec fraction d'é~</span>~</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="case-mix-par-chapitre-cim-10">Case mix par chapitre CIM-10<a class="anchor" aria-label="anchor" href="#case-mix-par-chapitre-cim-10"></a>
 </h3>
 <p>Avec le jeu de données <code>jeu_dp</code> de l’exemple
 précédent.</p>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># chargement de la CIM-10 2023 et 2024</span></span>
 <span><span class="va">cim_2023_2024</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim"</span>,<span class="fl">2023</span><span class="op">:</span><span class="fl">2024</span><span class="op">)</span></span>
 <span></span>
@@ -422,16 +439,16 @@ précédent.</p>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 I5010  2023      Insuffisance ventriculaire gauche, avec~ 9           </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 Z491   2024      Dialyse extra-corporelle                 21          </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2024      Cataracte sénile nucléaire               7           </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2023      Enfant unique, né à l'hôpital            21          </span>   </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2023      Fracture fermée du col du fémur          19          </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2024      Commotion cérébrale, sans plaie intracr~ 19          </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2024      Douleur thoracique, sans précision       18          </span> </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2024      Maladie pulmonaire obstructive chroniqu~ 10          </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2023      Appendicites aigües, autres et non préc~ 11          </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2024      Altération [baisse] de l'état général    18          </span>    </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2023      Fracture fermée du col du fémur          19          </span>  </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2024      Insuffisance ventriculaire gauche, avec~ 9</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 H251   2023      Cataracte sénile nucléaire               7           </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 Z380   2024      Enfant unique, né à l'hôpital            21          </span>   </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 S7200  2024      Fracture fermée du col du fémur          19          </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 S0600  2023      Commotion cérébrale, sans plaie intracr~ 19          </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R074   2023      Douleur thoracique, sans précision       18          </span> </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 J441   2023      Maladie pulmonaire obstructive chroniqu~ 10          </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 K358   2024      Appendicites aigües, autres et non préc~ 11          </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 R53+0  2023      Altération [baisse] de l'état général    18          </span>    </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11 S7200  2024      Fracture fermée du col du fémur          19          </span>  </span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12 I5011  2023      Insuffisance ventriculaire gauche, avec~ 9</span></span>
 <span></span>
 <span><span class="co"># chargement du référentiel "cim_chapitre" avec les 2 variables qui nous intéressent</span>ent</span>
 <span><span class="va">cim_chapitre</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim_chapitre"</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">cim_chapitre_no</span>,<span class="va">cim_chapitre_libelle</span><span class="op">)</span></span>
@@ -483,17 +500,17 @@ DAS.</p>
 <pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 x 3</span></span></span>
 <span><span class="co">#&gt;    no_rss das   annee_rss</span></span>
 <span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 Z370  2023     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1 Z370  2024     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2 I10   2023     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3 P040  2023     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4 F1725 2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 G473  2024     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5 G473  2023     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6 W189  2024     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7 R600  2023     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8 N178  2024     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9 B952  2024     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 D638  2023</span></span></code></pre>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10 D638  2024</span></span></code></pre>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># chargement de la CIM-10 2023 et 2024</span></span>
 <span><span class="va">cim_2023_2024</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"cim"</span>,<span class="fl">2023</span><span class="op">:</span><span class="fl">2024</span><span class="op">)</span></span>
 <span></span>
@@ -508,14 +525,14 @@ DAS.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 3 x 5</span></span></span>
 <span><span class="co">#&gt;   no_rss das   annee_rss cim_libelle                                    cim_tmco</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>      1 Z370  2023      Naissance unique, enfant vivant                1       </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>      1 Z370  2024      Naissance unique, enfant vivant                1       </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>      6 W189  2024      Autre chute de plain-pied, lieu sans précision 2       </span> </span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span>      9 B952  2024      Streptocoques, groupe D, et entérocoques, cau~ 1</span>1</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="listes-des-cma-mco-par-niveau---sortie-excel">Listes des CMA MCO par niveau - sortie Excel<a class="anchor" aria-label="anchor" href="#listes-des-cma-mco-par-niveau---sortie-excel"></a>
 </h3>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://denisgustin.github.io/refpmsi/">refpmsi</a></span><span class="op">)</span></span>
 <span></span>
@@ -539,7 +556,7 @@ DAS.</p>
 <div class="section level3">
 <h3 id="comparaison-cim-10-2023-et-2022">Comparaison CIM-10 2023 et 2022<a class="anchor" aria-label="anchor" href="#comparaison-cim-10-2023-et-2022"></a>
 </h3>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://denisgustin.github.io/refpmsi/">refpmsi</a></span><span class="op">)</span></span>
 <span></span>

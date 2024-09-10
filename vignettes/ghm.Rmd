@@ -331,28 +331,70 @@ Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).
 refpmsi::refpmsi("ovalide_racineinfo_oqn") %>% dplyr::glimpse()
 ```
 
-## Listes en D et en A de l'algorithme de groupage MCO  
+## Liste des actes CCAM de classification en CMD    
 
-Intitulé du référentiel : **mco_fg_listes**
+Intitulé du référentiel : **liste_A_mco**  
 
-Mise à jour : 8 octobre 2021  
+Mise à jour : 10 septembre 2024  
 
-Année 2021.  
+Dernière version (2024)  
 
-### Variables du référentiel  
+[Source](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/17904/3913)  
 
-**mco_fg_liste_code** = code des listes  
-**mco_fg_liste_lib** = libellé des listes  
-**mco_fg_liste_type** = D pour les listes en D et A pour les listes en A  
-**mco_fg_cmd** = CMD dans laquelle la liste participe au groupage des séjours  
-**mco_fg_code** = code CIM-10 (liste en D) ou code acte CCAM PMSI (liste en A)  
-**mco_fg_ccam_pmsi_extension** = extension PMSI des actes CCAM PMSI  
-**mco_fg_ccam_pmsi_phase** = phase des actes CCAM PMSI  
-**annee_pmsi** = année PMSI  
+### Variables  
 
-```{r mco_fg_listes, echo = FALSE}
-refpmsi::refpmsi("mco_fg_listes") %>% dplyr::glimpse()
+```{r var liste_A_mco, echo = FALSE}
+refpmsi::refpmsi("liste_A_mco") %>% dplyr::glimpse()
 ```
+
+## Liste des diagnostics CIM de classification en CMD    
+
+Intitulé du référentiel : **liste_D_mco**  
+
+Mise à jour : 10 septembre 2024  
+
+Dernière version (2024)  
+
+[Source](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/17904/3913)  
+
+### Variables  
+
+```{r var liste_D_mco, echo = FALSE}
+refpmsi::refpmsi("liste_D_mco") %>% dplyr::glimpse()
+```
+
+## Dénombrement Base nationale MCO des GHM    
+
+Intitulé du référentiel : **denombrement_mco_ghm**  
+
+Mise à jour : 10 septembre 2024  
+
+Dernière version (2023)  
+
+[Source](https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx)  
+
+### Variables  
+
+```{r var denombrement_mco_ghm, echo = FALSE}
+refpmsi::refpmsi("denombrement_mco_ghm") %>% dplyr::glimpse()
+```
+
+## Dénombrement Base nationale MCO des GHS    
+
+Intitulé du référentiel : **denombrement_mco_ghs**  
+
+Mise à jour : 10 septembre 2024  
+
+Dernière version (2023)  
+
+[Source](https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx)  
+
+### Variables  
+
+```{r var denombrement_mco_ghs, echo = FALSE}
+refpmsi::refpmsi("denombrement_mco_ghs") %>% dplyr::glimpse()
+```
+
 
 ## Exemples
 

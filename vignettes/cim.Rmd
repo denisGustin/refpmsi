@@ -202,6 +202,22 @@ Source : Annexe 6 du volume 1 des manuels des GME
 refpmsi::refpmsi("cma_smr") %>% dplyr::glimpse()
 ```
 
+## Dénombrement Base nationale MCO des diagnostics    
+
+Intitulé du référentiel : **denombrement_mco_diagnostic**  
+
+Mise à jour : 10 septembre 2024  
+
+Dernière version (2023)  
+
+[Source](https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx)  
+
+### Variables  
+
+```{r var denombrement_mco_diagnostic, echo = FALSE}
+refpmsi::refpmsi("denombrement_mco_diagnostic") %>% dplyr::glimpse()
+```
+
 ## Exemples  
 
 ### Chargement de la CIM-10 2024

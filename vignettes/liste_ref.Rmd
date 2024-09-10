@@ -19,9 +19,9 @@ library(refpmsi)
 library(gt)
 ```
 
-80 référentiels PMSI disponibles  
+83 référentiels PMSI disponibles  
   
-[Derniers référentiels ajoutés ou mis à jour](https://denisgustin.github.io/refpmsi/articles/news.html)  
+[Derniers référentiels ajoutés ou mis à jour](https://denisgustin.github.io/refpmsi/articles/changelog.html)  
 
 
 ```{r liste_refpmsi, echo = FALSE, warning = FALSE}

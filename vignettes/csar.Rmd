@@ -1,0 +1,57 @@
+---
+title: "CSAR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{csarr}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
+library(dplyr)
+library(stringr)
+library(refpmsi)
+```
+
+Le package `refpmsi` comprend 2 référentiels CSAR.  
+
+## CSAR code    
+
+Intitulé du référentiel : **csar_code**  
+
+Mise à jour : 10 septembre 2024  
+
+Référentiel annualisé.  
+
+### Variables  
+
+```{r var csar_code, echo = FALSE}
+refpmsi::refpmsi("csar_code") %>% dplyr::glimpse()
+```
+
+## CSAR transcodage  
+
+Intitulé du référentiel : **csar_transcodage**  
+
+Mise à jour : 10 septembre 2024  
+
+Référentiel annualisé.  
+
+### Variables  
+
+```{r var csar_transcodage, echo = FALSE}
+refpmsi::refpmsi("csar_transcodage") %>% dplyr::glimpse()
+```
+
+## Sources  
+
+[Guide CSAR](https://www.atih.sante.fr/sites/default/files/public/content/4820/guide_csar_version_provisoire_pour_publication_vf.pdf) (ATIH)  
+[Fichier associé CSAR](https://www.atih.sante.fr/sites/default/files/public/content/4820/fichier_associe_pour_publication_vf.xlsx) (ATIH)  
+

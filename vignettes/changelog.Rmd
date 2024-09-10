@@ -14,6 +14,25 @@ knitr::opts_chunk$set(
 )
 ```
 
+## [10-09-2024]   
+### Référentiels mis à jour  
+**MCO : **  
+`ccam_pmsi` et `ccam_ice` : V4 2024.  
+`denombrement_mco_ghs` : données 2023 issues de la base nationale MCO. [source](https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx).  
+`denombrement_mco_ghm` : données 2023 issues de la base nationale MCO. [source](https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx).  
+`denombrement_mco_diagnostic` : données 2023 issues de la base nationale MCO. [source](https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx).  
+`denombrement_mco_ccam` : données 2023 issues de la base nationale MCO. [source](https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx).  
+
+### Nouveaux référentiels `csar_code` et `csar_transcodage`  
+En lien avec l'arrivée du nouveau référentiel CSAR qui va prendre le relais à partir de mars 2025 du référentiel CSARR pour le codage de l'activité de RR en SMR.  
+[Documentation](https://denisgustin.github.io/refpmsi/articles/csar.html)  
+
+### Nouveaux référentiels `liste_A_mco` et `liste_D_mco`  
+La liste des actes CCAM de classification en CMD dans la version 2024 du manuel de groupage MCO (liste dite "en -A").  
+La liste des diagnostics CIM de classification en CMD dans la version 2024 du manuel de groupage MCO (liste dite en "-D").  
+[Documentation](https://denisgustin.github.io/refpmsi/articles/ghm.html)  
+
+
 ## [05-06-2024]   
 ### Référentiels mis à jour  
 **MCO : **  
