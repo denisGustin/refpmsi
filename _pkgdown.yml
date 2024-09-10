@@ -22,6 +22,8 @@ navbar:
         href: articles/cancerologie.html
       - text: CIM-10 FR à usage PMSI
         href: articles/cim.html
+      - text: CSAR
+        href: articles/csar.html
       - text: CSARR
         href: articles/csarr.html
       - text: DMI en sus et LPP
