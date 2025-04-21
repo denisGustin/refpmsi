@@ -5,81 +5,58 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="refpmsi">
 <title>DMI - LPP • refpmsi</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="DMI - LPP">
-<meta property="og:description" content="refpmsi">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="DMI - LPP">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Passer au contenu</a>
-    
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
-    
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Navigation sur le site"><div class="container">
+
     <a class="navbar-brand me-2" href="../index.html">refpmsi</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
-    
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Activer la navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item">
-  <a class="nav-link" href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="../articles/liste_ref.html">Référentiels PMSI</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="../articles/fonctions_refpmsi.html">Fonctions refpmsi</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../index.html"><span class="fa fa-home fa-lg"></span></a></li>
+<li class="nav-item"><a class="nav-link" href="../articles/liste_ref.html">Référentiels PMSI</a></li>
+<li class="nav-item"><a class="nav-link" href="../articles/fonctions_refpmsi.html">Fonctions refpmsi</a></li>
 <li class="active nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a>
-    <a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
-    <a class="dropdown-item" href="../articles/csar.html">CSAR</a>
-    <a class="dropdown-item" href="../articles/csarr.html">CSARR</a>
-    <a class="dropdown-item" href="../articles/dmi_lpp.html">DMI en sus et LPP</a>
-    <a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a>
-    <a class="dropdown-item" href="../articles/ghm.html">GHM</a>
-    <a class="dropdown-item" href="../articles/had.html">HAD</a>
-    <a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a>
-  </div>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a></li>
+    <li><a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a></li>
+    <li><a class="dropdown-item" href="../articles/csar.html">CSAR</a></li>
+    <li><a class="dropdown-item" href="../articles/csarr.html">CSARR</a></li>
+    <li><a class="dropdown-item" href="../articles/dmi_lpp.html">DMI en sus et LPP</a></li>
+    <li><a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a></li>
+    <li><a class="dropdown-item" href="../articles/ghm.html">GHM</a></li>
+    <li><a class="dropdown-item" href="../articles/had.html">HAD</a></li>
+    <li><a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a></li>
+  </ul>
 </li>
-<li class="nav-item">
-  <a class="nav-link" href="../articles/changelog.html">Changelog</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../articles/changelog.html">Changelog</a></li>
       </ul>
-<form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control me-sm-2" aria-label="Activer la navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Rechercher" autocomplete="off">
-</form>
-
-      <ul class="navbar-nav">
-<li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/denisGustin/refpmsi/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+<ul class="navbar-nav">
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Rechercher sur le site" placeholder="Rechercher" data-search-index="../search.json">
+</form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/denisGustin/refpmsi/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
-    
+
   </div>
 </nav><div class="container template-article">
 
@@ -88,7 +65,8 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>DMI - LPP</h1>
+
+      <h1>DMI - LPP</h1>
             
       
       <small class="dont-index">Source : <a href="https://github.com/denisGustin/refpmsi/blob/HEAD/vignettes/dmi_lpp.Rmd" class="external-link"><code>vignettes/dmi_lpp.Rmd</code></a></small>
@@ -101,8 +79,8 @@
 <h2 id="dmi-en-sus">DMI en sus<a class="anchor" aria-label="anchor" href="#dmi-en-sus"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>dmi_en_sus</strong></p>
-<p>Mise à jour : 25 mai 2024</p>
-<p>Version Avril 2024</p>
+<p>Mise à jour : 18 avril 2025</p>
+<p>Version mars 2025</p>
 <p>Référentiel non annualisé</p>
 <div class="section level3">
 <h3 id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a>
@@ -113,21 +91,21 @@ de la liste des DMI en sus<br><strong>dmi_en_sus_date_publication</strong> = dat
 JO<br><strong>dmi_en_sus_date_effet</strong> = date d’entrée en vigueur du DMI
 en sus (note : les dates d’effet non affichées de la source ont été
 calculées par nos soins au lendemain de la date de publication)</p>
-<pre><code><span><span class="co">#&gt; Rows: 7,918</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 8,180</span></span>
 <span><span class="co">#&gt; Columns: 5</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_date_publication <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2024-04-30", "2024-04-30", "2024-04-30", ~</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_date_effet       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2024-05-12", "2024-05-12", "2024-05-12", ~</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_libelle          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Implants vasculaires", "Implants vasculai~</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_code             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "3171825", "3168415", "3152650", "3147034"~</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_evenement        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "suppression", "suppression", "suppression~</span></span></code></pre>
+<span><span class="co">#&gt; $ dmi_en_sus_date_effet       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2019-11-01", "2019-11-01", "2019-11-01", …</span></span>
+<span><span class="co">#&gt; $ dmi_en_sus_libelle          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "IMPLANT OSSEUX, GEOMETRIQUE, &gt; 5 CM3 ET &lt;…</span></span>
+<span><span class="co">#&gt; $ dmi_en_sus_code             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "8156316", "8172195", "8175259", "3100363"…</span></span>
+<span><span class="co">#&gt; $ dmi_en_sus_evenement        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "inscription", "inscription", "inscription…</span></span>
+<span><span class="co">#&gt; $ dmi_en_sus_date_publication <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, "2025-03-12", "2025-03-12", "2…</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
 <h2 id="lpp-ameli">LPP AMELI<a class="anchor" aria-label="anchor" href="#lpp-ameli"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>lpp_ameli</strong></p>
-<p>Mise à jour : 25 mai 2024</p>
-<p>Version 769 du 12 mars 2024</p>
+<p>Mise à jour : 18 avril 2025</p>
+<p>Version 828 du 15 avril 2025</p>
 <p>Référentiel non annualisé</p>
 <div class="section level3">
 <h3 id="variables-1">Variables<a class="anchor" aria-label="anchor" href="#variables-1"></a>
@@ -136,14 +114,14 @@ calculées par nos soins au lendemain de la date de publication)</p>
 hiérarchie des LPP<br><strong>lpp_arborescence_2</strong> = 2eme niveau d’arborescence de la
 hiérarchie des LPP<br><strong>lpp_arborescence_3</strong> = 3eme niveau d’arborescence de la
 hiérarchie des LPP<br><strong>lpp_date_fin</strong> = date de fin du code LPP</p>
-<pre><code><span><span class="co">#&gt; Rows: 30,346</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 31,950</span></span>
 <span><span class="co">#&gt; Columns: 6</span></span>
-<span><span class="co">#&gt; $ lpp_code           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2733563", "2733617", "2733698", "2733706", "273372~</span></span>
-<span><span class="co">#&gt; $ lpp_libelle        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "vi4zg23", "ri8902", "ri1098", "rt29c14", "ai3t002"~</span></span>
-<span><span class="co">#&gt; $ lpp_arborescence_1 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, ~</span></span>
-<span><span class="co">#&gt; $ lpp_arborescence_2 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, ~</span></span>
-<span><span class="co">#&gt; $ lpp_arborescence_3 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 2, 4, 4, 4, 2, 4, 4, 1, 2, 4, 4, 2, 2, 2, 4, 2, 1, ~</span></span>
-<span><span class="co">#&gt; $ lpp_date_fin       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,~</span></span></code></pre>
+<span><span class="co">#&gt; $ lpp_code           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1170260", "1170419", "1170684", "1170862", "117098…</span></span>
+<span><span class="co">#&gt; $ lpp_libelle        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "seringue hypodermique en cristal, 5 ml", "perfusio…</span></span>
+<span><span class="co">#&gt; $ lpp_arborescence_1 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …</span></span>
+<span><span class="co">#&gt; $ lpp_arborescence_2 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …</span></span>
+<span><span class="co">#&gt; $ lpp_arborescence_3 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 7, 2, 7, 3, 3, 4, 1, 2, 5, 5, 1, 3, 5, 5, 1, 4, 1, …</span></span>
+<span><span class="co">#&gt; $ lpp_date_fin       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, "2020-05-01", NA, NA, NA, "2019…</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
@@ -164,12 +142,12 @@ sous-chapitres LPP. Correspond au 3eme niveau d’arborescence LPP<br><strong>so
 2eme niveau des sous-chapitres LPP.</p>
 <pre><code><span><span class="co">#&gt; Rows: 93</span></span>
 <span><span class="co">#&gt; Columns: 6</span></span>
-<span><span class="co">#&gt; $ titre                          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1", "1", "1", "1", "1", "1", "1", "1",~</span></span>
-<span><span class="co">#&gt; $ titre_libelle                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dm pour traitements, aides a la vie, a~</span></span>
-<span><span class="co">#&gt; $ sous_chapitre_niveau_1         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1_1", "1_1", "1_1", "1_1", "1_1", "1_1~</span></span>
-<span><span class="co">#&gt; $ sous_chapitre_niveau_1_libelle <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dm, materiels et produits pour le trai~</span></span>
-<span><span class="co">#&gt; $ sous_chapitre_niveau_2         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1_1_1", "1_1_2", "1_1_3", "1_1_4", "1_~</span></span>
-<span><span class="co">#&gt; $ sous_chapitre_niveau_2_libelle <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dm pour traitement des maladies respir~</span></span></code></pre>
+<span><span class="co">#&gt; $ titre                          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1", "1", "1", "1", "1", "1", "1", "1",…</span></span>
+<span><span class="co">#&gt; $ titre_libelle                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dm pour traitements, aides a la vie, a…</span></span>
+<span><span class="co">#&gt; $ sous_chapitre_niveau_1         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1_1", "1_1", "1_1", "1_1", "1_1", "1_1…</span></span>
+<span><span class="co">#&gt; $ sous_chapitre_niveau_1_libelle <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dm, materiels et produits pour le trai…</span></span>
+<span><span class="co">#&gt; $ sous_chapitre_niveau_2         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1_1_1", "1_1_2", "1_1_3", "1_1_4", "1_…</span></span>
+<span><span class="co">#&gt; $ sous_chapitre_niveau_2_libelle <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "dm pour traitement des maladies respir…</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
@@ -179,28 +157,31 @@ sous-chapitres LPP. Correspond au 3eme niveau d’arborescence LPP<br><strong>so
 <h3 id="référentiel-des-libellés-des-dmi-en-sus">Référentiel des libellés des DMI en sus<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rentiel-des-libell%C3%A9s-des-dmi-en-sus"></a>
 </h3>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># on retient pour chaque DMI en sus la version du libellé le plus récent par rapport au code du DMI</span>MI</span>
-<span><span class="va">dmi_en_sus</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"dmi_en_sus"</span><span class="op">)</span></span>
-<span><span class="va">dmi_en_sus_libelle</span> <span class="op">&lt;-</span> <span class="va">dmi_en_sus</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<code class="sourceCode R"><span><span class="co"># library(dplyr)</span></span>
+<span></span>
+<span><span class="co"># on retient pour chaque DMI en sus la version du libellé le plus récent par rapport au code du DMI</span></span>
+<span><span class="va">dmi_en_sus</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"dmi_en_sus"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">dmi_en_sus_libelle</span> <span class="op">&lt;-</span> <span class="va">dmi_en_sus</span> <span class="op">%&gt;%</span> </span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">dmi_en_sus_date_effet</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">dmi_en_sus_date_effet</span><span class="op">)</span>,</span>
 <span>                  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/row_number.html" class="external-link">row_number</a></span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="fl">1L</span>,</span>
-<span>                  .by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">dmi_en_sus_code</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>                  .by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">dmi_en_sus_code</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html" class="external-link">distinct</a></span><span class="op">(</span><span class="va">dmi_en_sus_code</span>, <span class="va">dmi_en_sus_libelle</span><span class="op">)</span></span>
 <span><span class="va">dmi_en_sus_libelle</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6,057 x 2</span></span></span>
-<span><span class="co">#&gt;    dmi_en_sus_code dmi_en_sus_libelle  </span></span>
-<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 3171825         Implants vasculaires</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 3168415         Implants vasculaires</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 3152650         Implants vasculaires</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 3147034         Implants vasculaires</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 3110166         Implants vasculaires</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 3107856         Implants vasculaires</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 5171203         Stents retrievers   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 5175862         Stents retrievers   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 3169952         Substituts osseux   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 3196660         Substituts osseux   </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># i 6,047 more rows</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6,256 × 2</span></span></span>
+<span><span class="co">#&gt;    dmi_en_sus_code dmi_en_sus_libelle                                           </span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                                        </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 8156316         IMPLANT OSSEUX, GEOMETRIQUE, &gt; 5 CM3 ET &lt; OU = 15 CM3,FR RAC…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 8172195         IMPLANT OSSEUX, GEOMETRIQUE, &gt; 15 CM3,FR RACHIS DD           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 8175259         DOIGT, IMPLANT PHALANGIEN, NON METALLIQUE,IMPLANT TECHNO     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 3100363         Implants vasculaires                                         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 3159391         Implants vasculaires                                         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 3165300         Implants vasculaires                                         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 3185342         Implants vasculaires                                         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 3120555         Implants vasculaires                                         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 8123127         IMPLANT OSSEUX, GÉOMÉTRIQUE, &gt;1 CM3 ET &lt; OU = 5CM3,FR RACHIS…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 8127958         IMPLANT OSSEUX, GÉOMÉTRIQUE, &gt;1 CM3 ET &lt; OU = 5CM3,ZIMMER BI…</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 6,246 more rows</span></span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
@@ -211,28 +192,26 @@ en sus</a> (ATIH)<br><a href="http://www.codage.ext.cnamts.fr/codif/tips//telech
 Ameli</a> (AMELI - fichier LPP_fiche_totxxx.dbf)<br><a href="https://assurance-maladie.ameli.fr/etudes-et-donnees/open-lpp-base-complete-depenses-dispositifs-medicaux" class="external-link">Open
 LPP</a> (AMELI)</p>
 </div>
-  </main><aside class="col-md-3"><nav id="toc"><h2>Sur cette page</h2>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table des matières"><h2>Sur cette page</h2>
     </nav></aside>
 </div>
 
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p>
-<p>Développé par denis GUSTIN.</p>
+  <p>Développé par denis GUSTIN.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p>
-<p>Site créé avec <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+  <p>Site créé avec <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer>
 </div>
 
-  
 
-  
+
+
 
   </body>
 </html>

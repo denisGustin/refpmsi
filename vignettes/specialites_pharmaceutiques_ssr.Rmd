@@ -23,11 +23,11 @@ library(refpmsi)
 
 Intitulé du référentiel : **specialites_pharmaceutiques_smr**
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel des spécialités pharmaceutiques SMR enrichi avec les libellés des UCD.  
+Référentiel des spécialités pharmaceutiques SMR enrichi, par nos soins, avec les libellés des UCD.  
 
-Version février 2024  
+Version mars 2025  
 
 ### Variables  
 **ucd_7** = code UCD sur 7 positions  
@@ -43,45 +43,39 @@ refpmsi::refpmsi("specialites_pharmaceutiques_smr") %>% dplyr::glimpse()
 
 ## Exemples  
 
-Soit `jeu_ucd` le jeu de données suivant composé manuellement avec des variables que l'on peut retrouver dans un FICHCOMP "médicaments (UCD)" SSR   
+Soit `jeu_specialites_pharmaceutiques_smr` le jeu de données suivant composé manuellement avec des variables que l'on peut retrouver dans un FICHCOMP LES SMR   
 
-```{r jeu_ucd, echo = FALSE}
-jeu_ucd <- tibble::tibble(nas = as.integer(c(1:3)),
-                          ucd = c("9426485","9289746","9360734"),
-                          nb_adm = as.integer(c(3,2,1)))
-jeu_ucd
+```{r jeu_specialites_pharmaceutiques_smr, echo = FALSE}
+jeu_specialites_pharmaceutiques_smr <- tibble::tibble(nas = as.integer(c(1:3)),
+                                                      ucd = c("9426485","9289746","9360734"),
+                                                      nb_administre = as.integer(c(3,2,1)))
+jeu_specialites_pharmaceutiques_smr
 ```
 
-### Attribution du libellé aux UCD  
+### Attribution du libellé aux spécialités pharmaceutiques SMR  
 
-```{r lib_ucd, eval = FALSE}
-library(refpmsi)
-library(dplyr)
+```{r libelle_specialites_pharmaceutiques_smr, eval = TRUE, echo = TRUE}
+# library(dplyr)
 
-jeu_ucd_libelle <- jeu_ucd %>% 
-    dplyr::left_join(refpmsi::refpmsi("specialites_pharmaceutiques_smr") %>% 
+specialites_pharmaceutiques_smr <- refpmsi::refpmsi(specialites_pharmaceutiques_smr)
+
+jeu_specialites_pharmaceutiques_smr_libelle <- jeu_specialites_pharmaceutiques_smr %>% 
+    dplyr::left_join(specialites_pharmaceutiques_smr %>% 
+                         # distinct() car les code_les produisent des doublons par ucd dans le référentiel
                          dplyr::distinct(ucd_7,ucd_libelle),
                      join_by(ucd == ucd_7))
-jeu_ucd_libelle
+jeu_specialites_pharmaceutiques_smr_libelle
 ```
 
+### Case mix spécialités pharmaceutiques SMR en DCI  
 
-```{r lib_ucd_eval, echo = FALSE}
-jeu_ucd_libelle <- jeu_ucd %>% 
-    dplyr::left_join(refpmsi::refpmsi("specialites_pharmaceutiques_smr") %>% 
-                         dplyr::distinct(ucd_7,ucd_libelle),
-                     join_by(ucd == ucd_7))
-jeu_ucd_libelle
-```
+```{r case_mix_specialites_pharmaceutiques_smr_dci, eval = TRUE, echo = TRUE}
+# library(dplyr)
 
-### Case mix en DCI  
+specialites_pharmaceutiques_smr <- refpmsi::refpmsi(specialites_pharmaceutiques_smr)
 
-```{r case_mix_dci, eval = FALSE}
-library(refpmsi)
-library(dplyr)
-
-case_mix_dci <- jeu_ucd %>%
-    dplyr::left_join(refpmsi::refpmsi("specialites_pharmaceutiques_smr") %>% 
+casemix_specialites_pharmaceutiques_smr_dci <- jeu_specialites_pharmaceutiques_smr %>%
+    dplyr::left_join(specialites_pharmaceutiques_smr %>% 
                          dplyr::select(ucd_7, denomination_commune_internationale) %>% 
                          # dédoublonnage en faisant l'hypothèse que la DCI d'un UCD ne change pas
                          dplyr::distinct(),
@@ -90,30 +84,13 @@ case_mix_dci <- jeu_ucd %>%
     # calcul du nombre de NAS différents avec au moins 1 UCD
     # calcul du nombre d'UCD différentes
     # calcul du nombre total des administrations des UCD
-    dplyr::group_by(denomination_commune_internationale) %>% 
-    dplyr::summarise(nb_nas = dplyr::n_distinct(nas),
+    dplyr::summarise(.by = denomination_commune_internationale,
+                     nb_nas = dplyr::n_distinct(nas),
                      nb_ucd = dplyr::n_distinct(ucd),
-                     nb_adm = sum(nb_adm))
-case_mix_dci
-```
-
-```{r case_mix_dci_eval, echo = FALSE}
-case_mix_dci <- jeu_ucd %>%
-    dplyr::left_join(refpmsi::refpmsi("specialites_pharmaceutiques_smr") %>% 
-                         dplyr::select(ucd_7, denomination_commune_internationale) %>% 
-                         # dédoublonnage en faisant l'hypothèse que la DCI d'un UCD ne change pas
-                         dplyr::distinct(),
-                     join_by(ucd == ucd_7)) %>%
-    # regroupement par DCI
-    # calcul du nombre de NAS différents avec au moins 1 UCD
-    # calcul du nombre d'UCD différentes
-    # calcul du nombre total des administrations des UCD
-    dplyr::group_by(denomination_commune_internationale) %>% 
-    dplyr::summarise(nb_nas = dplyr::n_distinct(nas),
-                     nb_ucd = dplyr::n_distinct(ucd),
-                     nb_adm = sum(nb_adm))
-case_mix_dci
+                     # argument na.rm = TRUE pour gérer les situations où pas de nb_administre
+                     nb_administre = sum(nb_administre, na.rm = TRUE))
+casemix_specialites_pharmaceutiques_smr_dci
 ```
 
 ## Source  
-["Spécialités pharmaceutiques SMR" version février 2024](https://sante.gouv.fr/soins-et-maladies/medicaments/professionnels-de-sante/autorisation-de-mise-sur-le-marche/la-liste-en-sus/article/referentiel-des-indications-des-specialites-pharmaceutiques-inscrites-sur-la)  
+[Spécialités pharmaceutiques SMR version mars 2025](https://sante.gouv.fr/soins-et-maladies/medicaments/professionnels-de-sante/autorisation-de-mise-sur-le-marche/la-liste-en-sus/article/referentiel-des-indications-des-specialites-pharmaceutiques-inscrites-sur-la)  

@@ -5,81 +5,58 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="refpmsi">
 <title>CSAR • refpmsi</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="CSAR">
-<meta property="og:description" content="refpmsi">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="CSAR">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Passer au contenu</a>
-    
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
-    
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Navigation sur le site"><div class="container">
+
     <a class="navbar-brand me-2" href="../index.html">refpmsi</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
-    
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Activer la navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item">
-  <a class="nav-link" href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="../articles/liste_ref.html">Référentiels PMSI</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="../articles/fonctions_refpmsi.html">Fonctions refpmsi</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../index.html"><span class="fa fa-home fa-lg"></span></a></li>
+<li class="nav-item"><a class="nav-link" href="../articles/liste_ref.html">Référentiels PMSI</a></li>
+<li class="nav-item"><a class="nav-link" href="../articles/fonctions_refpmsi.html">Fonctions refpmsi</a></li>
 <li class="active nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a>
-    <a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
-    <a class="dropdown-item" href="../articles/csar.html">CSAR</a>
-    <a class="dropdown-item" href="../articles/csarr.html">CSARR</a>
-    <a class="dropdown-item" href="../articles/dmi_lpp.html">DMI en sus et LPP</a>
-    <a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a>
-    <a class="dropdown-item" href="../articles/ghm.html">GHM</a>
-    <a class="dropdown-item" href="../articles/had.html">HAD</a>
-    <a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a>
-  </div>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a></li>
+    <li><a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a></li>
+    <li><a class="dropdown-item" href="../articles/csar.html">CSAR</a></li>
+    <li><a class="dropdown-item" href="../articles/csarr.html">CSARR</a></li>
+    <li><a class="dropdown-item" href="../articles/dmi_lpp.html">DMI en sus et LPP</a></li>
+    <li><a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a></li>
+    <li><a class="dropdown-item" href="../articles/ghm.html">GHM</a></li>
+    <li><a class="dropdown-item" href="../articles/had.html">HAD</a></li>
+    <li><a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a></li>
+  </ul>
 </li>
-<li class="nav-item">
-  <a class="nav-link" href="../articles/changelog.html">Changelog</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../articles/changelog.html">Changelog</a></li>
       </ul>
-<form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control me-sm-2" aria-label="Activer la navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Rechercher" autocomplete="off">
-</form>
-
-      <ul class="navbar-nav">
-<li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/denisGustin/refpmsi/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+<ul class="navbar-nav">
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Rechercher sur le site" placeholder="Rechercher" data-search-index="../search.json">
+</form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/denisGustin/refpmsi/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
-    
+
   </div>
 </nav><div class="container template-article">
 
@@ -88,7 +65,8 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>CSAR</h1>
+
+      <h1>CSAR</h1>
             
       
       <small class="dont-index">Source : <a href="https://github.com/denisGustin/refpmsi/blob/HEAD/vignettes/csar.Rmd" class="external-link"><code>vignettes/csar.Rmd</code></a></small>
@@ -102,73 +80,125 @@
 <h2 id="csar-code">CSAR code<a class="anchor" aria-label="anchor" href="#csar-code"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>csar_code</strong></p>
-<p>Mise à jour : 10 septembre 2024</p>
-<p>Référentiel annualisé.</p>
+<p>Mise à jour : 18 avril 2025</p>
+<p>Référentiel non annualisé : version 2025.</p>
 <div class="section level3">
 <h3 id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a>
 </h3>
 <pre><code><span><span class="co">#&gt; Rows: 146</span></span>
 <span><span class="co">#&gt; Columns: 14</span></span>
-<span><span class="co">#&gt; $ csar_code    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01E01", "01E02", "01E03", "01E04", "01E05", "01E06", "01~</span></span>
-<span><span class="co">#&gt; $ csar_libelle <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Evaluation analytique des fonctions cognitives", "Evalua~</span></span>
-<span><span class="co">#&gt; $ csar_temps   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, FALSE, FALSE~</span></span>
-<span><span class="co">#&gt; $ csar_L1      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F~</span></span>
-<span><span class="co">#&gt; $ csar_L2      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F~</span></span>
-<span><span class="co">#&gt; $ csar_L3      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL~</span></span>
-<span><span class="co">#&gt; $ csar_M1      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TR~</span></span>
-<span><span class="co">#&gt; $ csar_M2      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TRU~</span></span>
-<span><span class="co">#&gt; $ csar_QM      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F~</span></span>
-<span><span class="co">#&gt; $ csar_QI      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F~</span></span>
-<span><span class="co">#&gt; $ csar_QF      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F~</span></span>
-<span><span class="co">#&gt; $ csar_QS      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F~</span></span>
-<span><span class="co">#&gt; $ csar_QQ      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F~</span></span>
-<span><span class="co">#&gt; $ csar_QC      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL~</span></span></code></pre>
+<span><span class="co">#&gt; $ csar_code    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01E01", "01E02", "01E03", "01E04", "01E05", "01E06", "01…</span></span>
+<span><span class="co">#&gt; $ csar_libelle <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Evaluation analytique des fonctions cognitives", "Evalua…</span></span>
+<span><span class="co">#&gt; $ csar_temps   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, FALSE, FALSE, FALSE…</span></span>
+<span><span class="co">#&gt; $ csar_L1      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F…</span></span>
+<span><span class="co">#&gt; $ csar_L2      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F…</span></span>
+<span><span class="co">#&gt; $ csar_L3      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</span></span>
+<span><span class="co">#&gt; $ csar_M1      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TR…</span></span>
+<span><span class="co">#&gt; $ csar_M2      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TRU…</span></span>
+<span><span class="co">#&gt; $ csar_QM      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F…</span></span>
+<span><span class="co">#&gt; $ csar_QI      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F…</span></span>
+<span><span class="co">#&gt; $ csar_QF      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F…</span></span>
+<span><span class="co">#&gt; $ csar_QS      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F…</span></span>
+<span><span class="co">#&gt; $ csar_QQ      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F…</span></span>
+<span><span class="co">#&gt; $ csar_QC      <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
 <h2 id="csar-transcodage">CSAR transcodage<a class="anchor" aria-label="anchor" href="#csar-transcodage"></a>
 </h2>
 <p>Intitulé du référentiel : <strong>csar_transcodage</strong></p>
-<p>Mise à jour : 10 septembre 2024</p>
-<p>Référentiel annualisé.</p>
+<p>Mise à jour : 18 avril 2025</p>
+<p>Référentiel non annualisé : version 2025.</p>
 <div class="section level3">
 <h3 id="variables-1">Variables<a class="anchor" aria-label="anchor" href="#variables-1"></a>
 </h3>
 <pre><code><span><span class="co">#&gt; Rows: 521</span></span>
 <span><span class="co">#&gt; Columns: 2</span></span>
-<span><span class="co">#&gt; $ csarr_code <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ALQ+001", "ALQ+065", "ALQ+110", "ALQ+111", "ALQ+176", "ALQ~</span></span>
-<span><span class="co">#&gt; $ csar_code  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01E01", "01E01", "01E01", "01E01", "01E01", "01E01", "01E0~</span></span></code></pre>
+<span><span class="co">#&gt; $ csarr_code <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ALQ+001", "ALQ+065", "ALQ+110", "ALQ+111", "ALQ+176", "ALQ…</span></span>
+<span><span class="co">#&gt; $ csar_code  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01E01", "01E01", "01E01", "01E01", "01E01", "01E01", "01E0…</span></span></code></pre>
+</div>
+</div>
+<div class="section level2">
+<h2 id="exemples">Exemples<a class="anchor" aria-label="anchor" href="#exemples"></a>
+</h2>
+<div class="section level3">
+<h3 id="actes-csarr-de-préparationssuivi-de-dossier-dans-le-nouveau-csar-1r">Actes CSARR de préparations/suivi de dossier dans le nouveau CSAR
+“1R”<a class="anchor" aria-label="anchor" href="#actes-csarr-de-pr%C3%A9parationssuivi-de-dossier-dans-le-nouveau-csar-1r"></a>
+</h3>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># library(dplyr)</span></span>
+<span><span class="co"># library(refpmsi)</span></span>
+<span></span>
+<span><span class="va">csarr_code</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="va">csarr_code</span><span class="op">)</span></span>
+<span><span class="va">csar_transcodage</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="va">csar_transcodage</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># repérage des actes CSAR de préparation via la 3eme position signifiante en P</span></span>
+<span><span class="va">csar_transcodage_is_P</span> <span class="op">&lt;-</span> <span class="va">csar_transcodage</span> <span class="op">%&gt;%</span> </span>
+<span>    <span class="co"># création de la variable logique is_acte_csar_P</span></span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>is_acte_csar_P <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_sub.html" class="external-link">str_sub</a></span><span class="op">(</span><span class="va">csar_code</span>,<span class="fl">3</span>,<span class="fl">3</span><span class="op">)</span> <span class="op">==</span> <span class="st">"P"</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">csar_transcodage_is_P</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 521 × 3</span></span></span>
+<span><span class="co">#&gt;    csarr_code csar_code is_acte_csar_P</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> ALQ+001    01E01     FALSE         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> ALQ+065    01E01     FALSE         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> ALQ+110    01E01     FALSE         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> ALQ+111    01E01     FALSE         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> ALQ+176    01E01     FALSE         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> ALQ+183    01E01     FALSE         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> ALQ+285    01E01     FALSE         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> ANQ+029    01E01     FALSE         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> ANQ+411    01E01     FALSE         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> ANQ+462    01E01     FALSE         </span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 511 more rows</span></span></span>
+<span></span>
+<span><span class="va">csarr_preparations_suivi_dossier_csar</span> <span class="op">&lt;-</span> <span class="va">csarr_code</span> <span class="op">%&gt;%</span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">csarr_code</span>,<span class="va">csarr_libelle</span>,<span class="va">annee_pmsi</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
+<span>    <span class="co"># filtrage sur les seuls actes CSARR de l'année 2025</span></span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">annee_pmsi</span> <span class="op">==</span> <span class="st">"2025"</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">csar_transcodage_is_P</span>, <span class="fu">join_by</span><span class="op">(</span><span class="va">csarr_code</span> <span class="op">==</span> <span class="va">csarr_code</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">is_acte_csar_P</span><span class="op">)</span></span>
+<span><span class="va">csarr_preparations_suivi_dossier_csar</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 7 × 5</span></span></span>
+<span><span class="co">#&gt;   csarr_code csarr_libelle                   annee_pmsi csar_code is_acte_csar_P</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> ZGM+105    Préparation et suivi de l'avan… 2025       11P01     TRUE          </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> ZGM+247    Préparation et suivi de l'avan… 2025       11P01     TRUE          </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> ZZM+143    Préparation et/ou suivi de l'a… 2025       11P04     TRUE          </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> ZZM+066    Préparation et/ou suivi de l'a… 2025       11P02     TRUE          </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> ZZM+161    Préparation et suivi de l'avan… 2025       11P02     TRUE          </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> ZZM+159    Préparation et suivi de l'avan… 2025       11P03     TRUE          </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">7</span> ZZE+026    Déplacement hors de l'établiss… 2025       11P02     TRUE</span></span>
+<span><span class="co"># on a repéré les 7 actes CSARR concernés</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
 <h2 id="sources">Sources<a class="anchor" aria-label="anchor" href="#sources"></a>
 </h2>
-<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4820/guide_csar_version_provisoire_pour_publication_vf.pdf" class="external-link">Guide
-CSAR</a> (ATIH)<br><a href="https://www.atih.sante.fr/sites/default/files/public/content/4820/fichier_associe_pour_publication_vf.xlsx" class="external-link">Fichier
-associé CSAR</a> (ATIH)</p>
+<p><a href="https://www.atih.sante.fr/sites/default/files/public/content/4947/guide_csar_version_2025_.pdf" class="external-link">Guide
+CSAR 2025</a> (ATIH)<br><a href="https://www.atih.sante.fr/sites/default/files/public/content/4947/fichier_associe_csar_version_2025_200225.xlsx" class="external-link">Fichier
+associé CSAR 2025</a> (ATIH)</p>
 </div>
-  </main><aside class="col-md-3"><nav id="toc"><h2>Sur cette page</h2>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table des matières"><h2>Sur cette page</h2>
     </nav></aside>
 </div>
 
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p>
-<p>Développé par denis GUSTIN.</p>
+  <p>Développé par denis GUSTIN.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p>
-<p>Site créé avec <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+  <p>Site créé avec <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer>
 </div>
 
-  
 
-  
+
+
 
   </body>
 </html>

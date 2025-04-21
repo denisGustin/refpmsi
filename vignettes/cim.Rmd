@@ -23,10 +23,9 @@ library(refpmsi)
 
 Intitulé du référentiel : **cim**
 
-Mise à jour : 23 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé au sens PMSI (2018 à 2024).  
-11 variables et 297 767 lignes.  
+Référentiel annualisé au sens PMSI (2019 à 2025)  
 
 Le chargement complet en local et/ou sa visualisation dans R Studio peuvent être longs. Il est recommandé de ne charger que la ou les années utile(s).  
 
@@ -66,9 +65,9 @@ refpmsi::refpmsi("cim") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cim_chapitre**
 
-Mise à jour : 23 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel non annualisé.  
+Référentiel non annualisé  
 
 Basé sur la dernière version de la CIM-10 FR à usage PMSI.  
 
@@ -85,7 +84,7 @@ refpmsi::refpmsi("cim_chapitre") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cim_groupe**
 
-Mise à jour : 23 mai 2024  
+Mise à jour : 18 avril 2025  
 
 Référentiel non annualisé.  
 
@@ -104,9 +103,9 @@ refpmsi::refpmsi("cim_groupe") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cim_libelle**
 
-Mise à jour : 23 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Tous les codes CIM-10 depuis 2018 avec la dernière version de leur libellé. 
+Tous les codes CIM-10 depuis 2019 avec la dernière version de leur libellé. 
 
 Référentiel non annualisé.  
 
@@ -165,9 +164,9 @@ refpmsi::refpmsi("cim_polyhandicap") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cma_mco**  
 
-Mise à jour : 23 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé au sens PMSI MCO (de 2018 à 2024)  
+Référentiel annualisé au sens PMSI (2019 à 2025)  
 
 Source : Annexe 4 du volume 1 des manuels des GHM  
 
@@ -187,9 +186,9 @@ refpmsi::refpmsi("cma_mco") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **cma_ssr**  
 
-Mise à jour : 31 janvier 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé au sens PMSI SSR (de 2018 à 2024)  
+Référentiel annualisé au sens PMSI (2019 à 2025)  
 
 Source : Annexe 6 du volume 1 des manuels des GME  
 
@@ -220,30 +219,35 @@ refpmsi::refpmsi("denombrement_mco_diagnostic") %>% dplyr::glimpse()
 
 ## Exemples  
 
-### Chargement de la CIM-10 2024
+### Chargement de la CIM-10 2025
 
 ```{r cim_chargement_one_year, eval = TRUE, echo = TRUE}
-# Chargement de la CIM-10 de l'année 2024 dans la variable cim_2024
-cim_2024 <- refpmsi::refpmsi("cim",2024)
-head(cim_2024)
+# Chargement de la CIM-10 de l'année 2025 dans la variable cim_2025
+cim_2025 <- refpmsi::refpmsi(cim,2025)
+glimpse(cim_2025)
 ```
 
 ### Chargement de la CIM-10 des années 2023 et 2024
 
 ```{r cim_chargement, eval = TRUE, echo = TRUE}
 # Chargement de la CIM-10 des années 2023 et 2024
-cim_2023_2024 <- refpmsi::refpmsi("cim",2023:2024)
+cim_2023_2024 <- refpmsi::refpmsi(cim,2023:2024)
 head(cim_2023_2024)
 ```
 
 ### Génération du référentiel cim_libelle à partir du référentiel cim
 
 ```{r cim_libelle, eval = TRUE, echo = TRUE}
-cim <- refpmsi::refpmsi("cim")
+# library(dplyr)
+
+cim <- refpmsi::refpmsi(cim)
+
 cim_libelle <- cim %>% 
   dplyr::select(cim_code,cim_libelle,annee_pmsi) %>%
   dplyr::group_by(cim_code) %>%
+  # tri descendant selon les années pour chaque codage CIM
   dplyr::arrange(desc(annee_pmsi), by_groups = TRUE) %>% 
+  # filtrage de la 1ere ligne de chaque regroupement CIM
   dplyr::filter(dplyr::row_number() == 1) %>%
   dplyr::ungroup() %>% 
   dplyr::select(cim_code,cim_libelle)
@@ -264,8 +268,10 @@ jeu_dp
 ```
 
 ```{r cim_association_libelle, eval = TRUE, echo = TRUE}
+# library(dplyr)
+
 # chargement de la CIM-10 2023 et 2024
-cim_2023_2024 <- refpmsi::refpmsi("cim",2023:2024)
+cim_2023_2024 <- refpmsi::refpmsi(cim,2023:2024)
 
 # rattachement à chaque DP du libellé CIM-10 correspondant au DP et à son année PMSI
 jeu_dp_libelle <- jeu_dp %>% 
@@ -279,8 +285,10 @@ jeu_dp_libelle
 Avec le jeu de données `jeu_dp` de l'exemple précédent.  
 
 ```{r case_mix_chapitre, eval = TRUE, echo = TRUE}
+# library(dplyr)
+
 # chargement de la CIM-10 2023 et 2024
-cim_2023_2024 <- refpmsi::refpmsi("cim",2023:2024)
+cim_2023_2024 <- refpmsi::refpmsi(cim,2023:2024)
 
 # rattachement aux codes DP des libellés CIM-10 et des numéros de chapitre CIM-10 correspondant
 dp_chapitre <- jeu_dp %>% 
@@ -293,19 +301,19 @@ cim_chapitre <- refpmsi::refpmsi("cim_chapitre") %>% dplyr::select(cim_chapitre_
 cim_chapitre
 
 casemix_chapitre <- dp_chapitre %>% 
-  # rattachement des libellés de chapitre CIM-10 via le référentiel "cim_chapitre"
-  dplyr::left_join(cim_chapitre, join_by(cim_chapitre == cim_chapitre_no)) %>%
-  # regroupement par chapitre
-  dplyr::group_by(cim_chapitre,cim_chapitre_libelle) %>%
-  # par chapitre, calcul du nombre de DP, du nombre de DP différent et de la liste des DP
-  dplyr::summarise(nb_dp = dplyr::n(),
-                   nb_dp_different = dplyr::n_distinct(dp_rss),
-                   liste_dp = paste0(dp_rss, collapse = ","),
-                   .groups = "drop") %>% 
-  # tri descendant sur le nombre de DP
-  dplyr::arrange(desc(nb_dp))
+    # par chapitre, calcul du nombre de DP, du nombre de DP différent et de la liste des DP
+    dplyr::summarise(.by = c(cim_chapitre),
+                     nb_dp = dplyr::n(),
+                     nb_dp_different = dplyr::n_distinct(dp_rss),
+                     liste_dp = paste0(dp_rss, collapse = ",")
+                     ) %>% 
+    # rattachement des libellés de chapitre CIM-10 via le référentiel "cim_chapitre"
+    dplyr::left_join(cim_chapitre, join_by(cim_chapitre == cim_chapitre_no)) %>%
+    # tri descendant sur le nombre de DP
+    dplyr::arrange(desc(nb_dp)) %>% 
+    # réorganisation de l'ordre des variables
+    dplyr::select(cim_chapitre,cim_chapitre_libelle,nb_dp,nb_dp_different,liste_dp)
 casemix_chapitre
-
 ```
 
 ### Repérage des DAS interdits en DP et DR
@@ -322,8 +330,10 @@ jeu_das
 ```
 
 ```{r das_interdits_dp_dr_affichage, eval = TRUE, echo = TRUE}
+# library(dplyr)
+
 # chargement de la CIM-10 2023 et 2024
-cim_2023_2024 <- refpmsi::refpmsi("cim",2023:2024)
+cim_2023_2024 <- refpmsi::refpmsi(cim,2023:2024)
 
 das_interdit_dp_dr <- jeu_das %>% 
   # rattachement à chaque DAS du type MCO et du libellé CIM-10, correspondant à son année PMSI
@@ -333,21 +343,19 @@ das_interdit_dp_dr <- jeu_das %>%
   # et 2 "Diagnostic interdit en DP et DR - Cause externe de morbidité" 
   dplyr::filter(cim_tmco %in% c(1,2))
 das_interdit_dp_dr
-
 ```
 
 ### Listes des CMA MCO par niveau - sortie Excel  
 
 ```{r listes_cma_mco_niveau_excel, echo = TRUE, eval = FALSE}
-library(dplyr)
-library(refpmsi)
+# library(dplyr)
 
-cim_libelle <- refpmsi::refpmsi("cim_libelle")
-cma_mco <- refpmsi::refpmsi("cma_mco")
+cim_libelle <- refpmsi::refpmsi(cim_libelle)
+cma_mco <- refpmsi::refpmsi(cma_mco)
 
 # liste de 3 tibbles correspondant aux 3 listes de CMA par niveau
 cma_mco_niveau <- cma_mco %>% 
-  dplyr::filter(annee_pmsi == "2023") %>% 
+  dplyr::filter(annee_pmsi == "2025") %>% 
   dplyr::select(cma_mco_code,cma_mco_severite) %>% 
   dplyr::left_join(cim_libelle %>% dplyr::select(cim_code,cim_libelle),
                    join_by(cma_mco_code == cim_code)) %>% 
@@ -363,11 +371,10 @@ cma_mco_niveau %>%
 ### Comparaison CIM-10 2023 et 2022  
 
 ```{r comparaison_cim_2023_2022, echo = TRUE, eval = FALSE}
-library(dplyr)
-library(refpmsi)
+# library(dplyr)
 
 # Y-a-t-il des codes CIM-10 2023 avec un type mco (tmco) différent de leur tmco 2022 ?
-cim <- refpmsi::refpmsi("cim")
+cim <- refpmsi::refpmsi(cim)
 cim_2022 <- cim %>% dplyr::filter(annee_pmsi == "2022") %>% dplyr::select(cim_code,cim_tmco)
 cim_2023 <- cim %>% dplyr::filter(annee_pmsi == "2023") %>% dplyr::select(cim_code,cim_tmco_2023 = cim_tmco)
 cim_2022 %>% 
@@ -385,19 +392,11 @@ cim_2022 %>%
 ```
 
 ## Sources  
-[Nomenclature CIM-10 2023 : Fichiers nomenclature CIM10 pour les champs MCO,HAD, SSR et PSY](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/16958/456) (ATIH)  
-[CIM-10 FR à usage PMSI 2024 - version du 31 mars 2024](https://www.atih.sante.fr/sites/default/files/public/content/4674/cim-10_2024_version_provisoire.pdf) (ATIH) 
+[CIM-10 FR à usage PMSI 2025 - version du 20 décembre 2024](https://www.atih.sante.fr/sites/default/files/public/content/4901/cim-10-fr_2025_a_usage_pmsi_provisoire.pdf) (ATIH)  
+[CIM-10 FR à usage PMSI 2024 - version du 31 mars 2024](https://www.atih.sante.fr/sites/default/files/public/content/4674/cim-10_2024_version_provisoire.pdf) (ATIH)  
 [CIM-10 FR à usage PMSI 2023 - version du 31 mars 2023](https://solidarites-sante.gouv.fr/fichiers/bos/2022/2022.9bis.BOS.pdf) (ATIH)  
 [CIM-10 FR à usage PMSI 2022 - version du 04 octobre 2022](https://solidarites-sante.gouv.fr/fichiers/bos/2022/2022.9bis.BOS.pdf) (ATIH)  
 [CIM-10 FR à usage PMSI 2021 - version du 12 mars 2021](https://www.atih.sante.fr/sites/default/files/public/content/3963/cim-10_2021_1.pdf) (ATIH)  
 [CIM-10 FR à usage PMSI 2020 - version du 21 août 2020](https://www.atih.sante.fr/sites/default/files/public/content/3706/cim-10_2020_bo.pdf) (ATIH)  
 [CIM-10 FR à usage PMSI 2019 - version du 21 novembre 2019 mars 2019](https://www.atih.sante.fr/sites/default/files/public/content/3502/cim-10fr_2019_actualisation_oms_24-09-2019.pdf) (ATIH)  
-[CIM-10 FR à usage PMSI 2018 - version du 23 avril 2018](https://solidarites-sante.gouv.fr/fichiers/bos/2018/sts_20180009_0001_p000.pdf) (ATIH)  
 [Guide de lecture OVALIDE MCO 2024](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_MCO_DGF_2024.pdf) (ATIH)  
-[Manuel des GHM 2024 - Volume 1](https://www.atih.sante.fr/sites/default/files/public/content/4713/volume_1_14_02_2024.pdf) (ATIH)  
-[Manuel des GHM 2023 - Volume 1](https://www.atih.sante.fr/sites/default/files/public/content/4490/volume_1.pdf) (ATIH)  
-[Manuel des GHM 2022 - Volume 1](https://solidarites-sante.gouv.fr/fichiers/bos/2022/2022.5bis.vol1.BOS.pdf) (ATIH)  
-[Manuel des GHM 2021 - Volume 1](https://solidarites-sante.gouv.fr/fichiers/bos/2021/2021.5bis.vol1.BOS.pdf) (ATIH)  
-[Manuel des GHM 2020 - Volume 1](https://solidarites-sante.gouv.fr/fichiers/bos/2020/sts_20200005_0001_p000.pdf) (ATIH)  
-[Manuel des GHM 2019 - Volume 1](https://solidarites-sante.gouv.fr/fichiers/bos/2019/sts_20190005_0001_p000.pdf) (ATIH)  
-[Manuel des GHM 2018 - Volume 1](http://solidarites-sante.gouv.fr/fichiers/bos/2018/sts_20180005_0001_p000.pdf) (ATIH)  

@@ -26,9 +26,9 @@ Le package `refpmsi` comprend 2 référentiels CSAR.
 
 Intitulé du référentiel : **csar_code**  
 
-Mise à jour : 10 septembre 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé.  
+Référentiel non annualisé : version 2025.  
 
 ### Variables  
 
@@ -40,9 +40,9 @@ refpmsi::refpmsi("csar_code") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csar_transcodage**  
 
-Mise à jour : 10 septembre 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé.  
+Référentiel non annualisé : version 2025.  
 
 ### Variables  
 
@@ -50,8 +50,34 @@ Référentiel annualisé.
 refpmsi::refpmsi("csar_transcodage") %>% dplyr::glimpse()
 ```
 
+## Exemples  
+
+### Actes CSARR de préparations/suivi de dossier dans le nouveau CSAR "1R"  
+
+```{r csarr_preparations_suivi_dossier_csar, eval = TRUE, echo = TRUE}
+# library(dplyr)
+# library(refpmsi)
+
+csarr_code <- refpmsi::refpmsi(csarr_code)
+csar_transcodage <- refpmsi::refpmsi(csar_transcodage)
+
+# repérage des actes CSAR de préparation via la 3eme position signifiante en P
+csar_transcodage_is_P <- csar_transcodage %>% 
+    # création de la variable logique is_acte_csar_P
+    dplyr::mutate(is_acte_csar_P = ifelse(stringr::str_sub(csar_code,3,3) == "P", TRUE, FALSE))
+csar_transcodage_is_P
+
+csarr_preparations_suivi_dossier_csar <- csarr_code %>% 
+    dplyr::select(csarr_code,csarr_libelle,annee_pmsi) %>% 
+    # filtrage sur les seuls actes CSARR de l'année 2025
+    dplyr::filter(annee_pmsi == "2025") %>% 
+    dplyr::left_join(csar_transcodage_is_P, join_by(csarr_code == csarr_code)) %>% 
+    dplyr::filter(is_acte_csar_P)
+csarr_preparations_suivi_dossier_csar
+# on a repéré les 7 actes CSARR concernés
+```
+
 ## Sources  
 
-[Guide CSAR](https://www.atih.sante.fr/sites/default/files/public/content/4820/guide_csar_version_provisoire_pour_publication_vf.pdf) (ATIH)  
-[Fichier associé CSAR](https://www.atih.sante.fr/sites/default/files/public/content/4820/fichier_associe_pour_publication_vf.xlsx) (ATIH)  
-
+[Guide CSAR 2025](https://www.atih.sante.fr/sites/default/files/public/content/4947/guide_csar_version_2025_.pdf) (ATIH)  
+[Fichier associé CSAR 2025](https://www.atih.sante.fr/sites/default/files/public/content/4947/fichier_associe_csar_version_2025_200225.xlsx) (ATIH)  

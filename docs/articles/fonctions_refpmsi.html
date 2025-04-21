@@ -5,81 +5,58 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="refpmsi">
 <title>Fonctions refpmsi • refpmsi</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Fonctions refpmsi">
-<meta property="og:description" content="refpmsi">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Fonctions refpmsi">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Passer au contenu</a>
-    
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
-    
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Navigation sur le site"><div class="container">
+
     <a class="navbar-brand me-2" href="../index.html">refpmsi</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
-    
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Activer la navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item">
-  <a class="nav-link" href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="../articles/liste_ref.html">Référentiels PMSI</a>
-</li>
-<li class="active nav-item">
-  <a class="nav-link" href="../articles/fonctions_refpmsi.html">Fonctions refpmsi</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../index.html"><span class="fa fa-home fa-lg"></span></a></li>
+<li class="nav-item"><a class="nav-link" href="../articles/liste_ref.html">Référentiels PMSI</a></li>
+<li class="active nav-item"><a class="nav-link" href="../articles/fonctions_refpmsi.html">Fonctions refpmsi</a></li>
 <li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a>
-    <a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a>
-    <a class="dropdown-item" href="../articles/csar.html">CSAR</a>
-    <a class="dropdown-item" href="../articles/csarr.html">CSARR</a>
-    <a class="dropdown-item" href="../articles/dmi_lpp.html">DMI en sus et LPP</a>
-    <a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a>
-    <a class="dropdown-item" href="../articles/ghm.html">GHM</a>
-    <a class="dropdown-item" href="../articles/had.html">HAD</a>
-    <a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a>
-  </div>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><a class="dropdown-item" href="../articles/cancerologie.html">Cancérologie</a></li>
+    <li><a class="dropdown-item" href="../articles/cim.html">CIM-10 FR à usage PMSI</a></li>
+    <li><a class="dropdown-item" href="../articles/csar.html">CSAR</a></li>
+    <li><a class="dropdown-item" href="../articles/csarr.html">CSARR</a></li>
+    <li><a class="dropdown-item" href="../articles/dmi_lpp.html">DMI en sus et LPP</a></li>
+    <li><a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a></li>
+    <li><a class="dropdown-item" href="../articles/ghm.html">GHM</a></li>
+    <li><a class="dropdown-item" href="../articles/had.html">HAD</a></li>
+    <li><a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a></li>
+  </ul>
 </li>
-<li class="nav-item">
-  <a class="nav-link" href="../articles/changelog.html">Changelog</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../articles/changelog.html">Changelog</a></li>
       </ul>
-<form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control me-sm-2" aria-label="Activer la navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Rechercher" autocomplete="off">
-</form>
-
-      <ul class="navbar-nav">
-<li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/denisGustin/refpmsi/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+<ul class="navbar-nav">
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Rechercher sur le site" placeholder="Rechercher" data-search-index="../search.json">
+</form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/denisGustin/refpmsi/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
-    
+
   </div>
 </nav><div class="container template-article">
 
@@ -88,7 +65,8 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>Fonctions refpmsi</h1>
+
+      <h1>Fonctions refpmsi</h1>
             
       
       <small class="dont-index">Source : <a href="https://github.com/denisGustin/refpmsi/blob/HEAD/vignettes/fonctions_refpmsi.Rmd" class="external-link"><code>vignettes/fonctions_refpmsi.Rmd</code></a></small>
@@ -110,7 +88,7 @@ appelé dans un 1er argument</p>
 <code class="sourceCode R"><span><span class="co"># récupération du référentiel des ICR</span></span>
 <span><span class="va">icr</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="st">"ccam_icr"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">icr</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 x 8</span></span></span>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 8</span></span></span>
 <span><span class="co">#&gt;   ccam_code ccam_phase ccam_activite ccam_icr_salarie ccam_icr_non_salarie</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> AAFA001   0          1                          655                  503</span></span>
@@ -119,7 +97,7 @@ appelé dans un 1er argument</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> AAFA002   0          4                          189                  189</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> AAFA003   0          1                          762                  579</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> AAFA003   0          4                          246                  246</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># i 3 more variables: ccam_icr_type &lt;chr&gt;, ccam_icr_commentaire &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 3 more variables: ccam_icr_type &lt;chr&gt;, ccam_icr_commentaire &lt;chr&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   ccam_code_extension_pmsi &lt;chr&gt;</span></span></span></code></pre>
 <p>Pour les référentiels annualisés au sens PMSI (CIM-10, GHM, GHS, GME,
 GMT, OVALIDE, CSARR, …), sélection des années via un 2eme argument.</p>
@@ -144,17 +122,17 @@ référentiels.</p>
 <code class="sourceCode R"><span><span class="co"># affichage de la liste documentée des référentiels du package refpmsi::</span></span>
 <span><span class="va">liste_ref</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">liste_ref</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 x 7</span></span></span>
-<span><span class="co">#&gt;   refpmsi    refpmsi_lib refpmsi_source refpmsi_periode_vers~1 refpmsi_annualise</span></span>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 7</span></span></span>
+<span><span class="co">#&gt;   refpmsi    refpmsi_lib refpmsi_source refpmsi_periode_vers…¹ refpmsi_annualise</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> anticance~ Médicament~ ATIH           2020                   non              </span> </span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> autorisat~ Autorisati~ ATIH           2024                   non              </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> autorisat~ Autorisati~ ATIH           2024                   non              </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> autorisat~ Autorisati~ ATIH           2023                   non              </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> cancerolo~ Algorithme~ INCa (septemb~ 2023                   non              </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> cancerolo~ Algorithme~ INCa (décembr~ 2023                   non              </span> </span>
-<span><span class="co">#&gt; <span style="color: #949494;"># i abbreviated name: 1: refpmsi_periode_version</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># i 2 more variables: refpmsi_article &lt;chr&gt;, refpmsi_article_lien &lt;chr&gt;</span></span></span></code></pre>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> anticance… Médicament… ATIH           2020                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> autorisat… Autorisati… ATIH           2025                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> autorisat… Autorisati… ATIH           2025                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> autorisat… Autorisati… ATIH           2023                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> cancerolo… Algorithme… INCa (septemb… 2023                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> cancerolo… Algorithme… INCa (décembr… 2023                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ abbreviated name: ¹​refpmsi_periode_version</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: refpmsi_article &lt;chr&gt;, refpmsi_article_lien &lt;chr&gt;</span></span></span></code></pre>
 <p>Pour ne charger que la liste des intitulés des référentiels.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># affichage uniquement des intitulés des référentiels</span></span>
@@ -164,28 +142,26 @@ référentiels.</p>
 <span><span class="co">#&gt; [3] "autorisation_smr"             "autorisation_ssr"            </span></span>
 <span><span class="co">#&gt; [5] "cancerologie_appareil_organe" "cancerologie_seuil"</span></span></code></pre>
 </div>
-  </main><aside class="col-md-3"><nav id="toc"><h2>Sur cette page</h2>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table des matières"><h2>Sur cette page</h2>
     </nav></aside>
 </div>
 
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p>
-<p>Développé par denis GUSTIN.</p>
+  <p>Développé par denis GUSTIN.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p>
-<p>Site créé avec <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+  <p>Site créé avec <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer>
 </div>
 
-  
 
-  
+
+
 
   </body>
 </html>

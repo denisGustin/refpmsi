@@ -23,9 +23,9 @@ library(dplyr)
 
 Intitulé du référentiel : **dmi_en_sus**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Version Avril 2024  
+Version mars 2025  
 
 Référentiel non annualisé   
 
@@ -45,9 +45,9 @@ refpmsi::refpmsi("dmi_en_sus") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **lpp_ameli**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Version 769 du 12 mars 2024  
+Version 828 du 15 avril 2025  
 
 Référentiel non annualisé   
 
@@ -90,8 +90,11 @@ refpmsi::refpmsi("lpp_ameli_hierarchie") %>% dplyr::glimpse()
 ### Référentiel des libellés des DMI en sus  
 
 ```{r referentiel_dmi_en_sus_libelle, eval = TRUE, echo = TRUE}
+# library(dplyr)
+
 # on retient pour chaque DMI en sus la version du libellé le plus récent par rapport au code du DMI
-dmi_en_sus <- refpmsi("dmi_en_sus")
+dmi_en_sus <- refpmsi::refpmsi("dmi_en_sus")
+
 dmi_en_sus_libelle <- dmi_en_sus %>% 
     dplyr::filter(dmi_en_sus_date_effet == max(dmi_en_sus_date_effet),
                   dplyr::row_number() == 1L,

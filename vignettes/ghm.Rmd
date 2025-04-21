@@ -25,9 +25,10 @@ library(tidyr)
 
 Intitulé du référentiel : **cmd**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel des libellés des CMD (Catégories Majeures de Diagnostics).    
+Référentiel des libellés des CMD (Catégories Majeures de Diagnostics)  
+
 Référentiel non annualisé.  
 
 ### Variables  
@@ -40,7 +41,7 @@ refpmsi::refpmsi("cmd") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **sous_cmd**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
 Référentiel des libellés des sous-CMD  
 
@@ -56,11 +57,11 @@ refpmsi::refpmsi("sous_cmd") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ghs_public**
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
 Référentiel des GHS et GHM du secteur public (ex-DGF).  
 
-Référentiel annualisé au sens du PMSI MCO (2018 à 2024).  
+Référentiel annualisé au sens du PMSI MCO (2019 à 2025).  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -84,11 +85,11 @@ refpmsi::refpmsi("ghs_public") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ghs_prive**
 
-Mise à jour : 25 mai 2024    
+Mise à jour : 18 avril 2025  
 
 Référentiel des GHS et GHM du secteur privé (ex-OQN).  
 
-Référentiel annualisé au sens du PMSI MCO (2018 à 2024).  
+Référentiel annualisé au sens du PMSI MCO (2019 à 2025).  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -112,11 +113,11 @@ refpmsi::refpmsi("ghs_prive") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ghm_intermediaire**
 
-Mise à jour : 25 mai 2024   
+Mise à jour : 18 avril 2025  
 
 Référentiel des GHM avec GHS intermédiaire  
 
-Référentiel annualisé au sens PMSI MCO (2020-2024)  
+Référentiel annualisé au sens PMSI MCO (2020-2025)  
 
 ### Variables  
 
@@ -128,9 +129,9 @@ refpmsi::refpmsi("ghm_intermediaire") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ghs_monouhcd**
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé au sens PMSI MCO (2021-2024)  
+Référentiel annualisé au sens PMSI MCO (2021-2025)  
 
 Pour chaque GHS UHCD et par année PMSI MCO, la liste des GHM associés  
 
@@ -144,12 +145,13 @@ refpmsi::refpmsi("ghs_monouhcd") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ghm_regroupement**
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
 Référentiel des regroupements des GHM en DA (Domaine d'Activité), GA (Groupe d'Activité) et GP (Groupe de Planification).  
-Référentiel annualisé au sens du PMSI MCO (2018-2024).  
 
-Pour l'année PMSI MCO 2024, dans l'attente de la publication de la version 2024 du référentiel par l'ATIH, on a projeté l'année 2023 en 2024.  
+Référentiel annualisé au sens du PMSI MCO (2019-2025).  
+
+Pour l'année PMSI MCO 2025, dans l'attente de la publication de la version 2025 du référentiel par l'ATIH, on a projeté l'année 2024.  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -176,13 +178,13 @@ refpmsi::refpmsi("ghm_regroupement") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **rghm_regroupement**
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
 Référentiel des regroupements des racines de GHM en DA (Domaine d'Activité), GA (Groupe d'Activité) et GP (Groupe de Planification).  
 
-Référentiel annualisé au sens du PMSI MCO (2018-2024)  
+Référentiel annualisé au sens du PMSI MCO (2019-2025)  
 
-Pour l'année PMSI MCO 2024, dans l'attente de la publication de la version 2024 du référentiel par l'ATIH, on a projeté l'année 2023 en 2024.  
+Pour l'année PMSI MCO 2025, dans l'attente de la publication de la version 2025 du référentiel par l'ATIH, on a projeté l'année 2024.  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
 
@@ -209,13 +211,15 @@ refpmsi::refpmsi("rghm_regroupement") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ovalide_ghminfo_dgf**
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
 Informations issues de la table OVALIDE `GHMINFO_exDGF`.  
 
 Les informations redondantes avec d'autres référentiels de `refpmsi::` (ex : cma, bb, bh, ...) ne sont pas reprises.  
 
-Référentiel annualisé au sens du PMSI MCO (2018-2024).  
+Référentiel annualisé au sens du PMSI MCO (2019-2025).  
+
+Pour l'année PMSI MCO 2025, dans l'attente de la publication de la version 2025 du référentiel par l'ATIH, on a projeté l'année 2024.  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -241,13 +245,15 @@ refpmsi::refpmsi("ovalide_ghminfo_dgf") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ovalide_ghminfo_oqn**
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
 Informations issues de la table OVALIDE `GHMINFO_exOQN`.  
 
 Les informations redondantes avec d'autres référentiels de `refpmsi::` (ex : cma, bb, bh, ...) ne sont pas reprises.  
 
-Référentiel annualisé au sens du PMSI MCO (2018-2024).  
+Référentiel annualisé au sens du PMSI MCO (2019-2025).  
+
+Pour l'année PMSI MCO 2025, dans l'attente de la publication de la version 2025 du référentiel par l'ATIH, on a projeté l'année 2024.  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -273,11 +279,13 @@ refpmsi::refpmsi("ovalide_ghminfo_oqn") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ovalide_racineinfo_dgf**
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
 Informations issues de la table OVALIDE `RacineINFO_exDGF`.  
 
-Référentiel annualisé au sens du PMSI MCO (2018-2024).  
+Référentiel annualisé au sens du PMSI MCO (2019-2025).  
+
+Pour l'année PMSI MCO 2025, dans l'attente de la publication de la version 2025 du référentiel par l'ATIH, on a projeté l'année 2024.  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -304,11 +312,13 @@ refpmsi::refpmsi("ovalide_racineinfo_dgf") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ovalide_racineinfo_oqn**
 
-Mise à jour : 25 mai 2024s  
+Mise à jour : 18 avril 2025  
 
 Informations issues de la table OVALIDE `RacineINFO_exOQN`. 
 
-Référentiel annualisé au sens du PMSI MCO (2018-2024).  
+Référentiel annualisé au sens du PMSI MCO (2019-2025).  
+
+Pour l'année PMSI MCO 2025, dans l'attente de la publication de la version 2025 du référentiel par l'ATIH, on a projeté l'année 2024.  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -337,7 +347,7 @@ Intitulé du référentiel : **liste_A_mco**
 
 Mise à jour : 10 septembre 2024  
 
-Dernière version (2024)  
+Version 2024  
 
 [Source](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/17904/3913)  
 
@@ -353,7 +363,7 @@ Intitulé du référentiel : **liste_D_mco**
 
 Mise à jour : 10 septembre 2024  
 
-Dernière version (2024)  
+Version 2024  
 
 [Source](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/telecharger/gratuit/17904/3913)  
 
@@ -369,7 +379,7 @@ Intitulé du référentiel : **denombrement_mco_ghm**
 
 Mise à jour : 10 septembre 2024  
 
-Dernière version (2023)  
+Version 2023  
 
 [Source](https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx)  
 
@@ -385,7 +395,7 @@ Intitulé du référentiel : **denombrement_mco_ghs**
 
 Mise à jour : 10 septembre 2024  
 
-Dernière version (2023)  
+Version 2023  
 
 [Source](https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx)  
 
@@ -398,30 +408,33 @@ refpmsi::refpmsi("denombrement_mco_ghs") %>% dplyr::glimpse()
 
 ## Exemples
 
-### Chargement du référentiel des GHS Public des années 2023 et 2024  
+### Chargement du référentiel des GHS Public des années 2024 et 2025  
 
 ```{r ghs_chargement_affichage, eval = TRUE, echo = TRUE}
-# Chargement du référentiel des GHS-GHM Public des années 2023 et 2024
-ghs_2023_2024 <- refpmsi::refpmsi("ghs_public",2023:2024)
-ghs_2023_2024
+# Chargement du référentiel des GHS-GHM Public des années 2024 et 2025
+ghs_2024_2025 <- refpmsi::refpmsi(ghs_public,2024:2025)
+ghs_2024_2025
 ```
 
-### Référentiel des libellés des GA  
+### Référentiel des libellés des GA (Groupe d'Activite)  
 
-On retient, pour chaque GA (Groupe d'Activité) le libellé correspondant à l'année PMSI MCO la plus récente  
+On retient, pour chaque GA (Groupe d'Activité), le libellé correspondant à l'année PMSI MCO la plus récente  
 
 ```{r ga_libelle, eval = TRUE, echo = TRUE}
-ghm_regroupement <- refpmsi(ghm_regroupement)
+# library(dplyr)
+
+ghm_regroupement <- refpmsi::refpmsi(ghm_regroupement)
+
 ga_libelle <- ghm_regroupement %>% 
     dplyr::distinct(ga,ga_libelle,annee_pmsi) %>% 
-    dplyr::group_by(ga) %>% 
-    dplyr::summarise(ga_libelle = ga_libelle[annee_pmsi == max(annee_pmsi)])
+    dplyr::summarise(.by = ga, 
+                     ga_libelle = ga_libelle[annee_pmsi == max(annee_pmsi)])
 head(ga_libelle)
 ```
 
 ### Rattachement du libellé GHM aux GHM des RUM   
 
-Soit un jeu de données `jeu_ghm` composé de 17 RUM correspondant à 14 séjours.  
+Soit un jeu de données `jeu_ghm` composé de 17 simili-RUM correspondant à 14 séjours.  
 
 ```{r ghm_jeu_libelle, echo = FALSE}
 jeu_ghm <- tibble::tibble(no_rum = c(rep(1L,10L),1,2,1,2,3,1,1),
@@ -445,15 +458,16 @@ jeu_ghm
 ```
 
 ```{r ghm_association_libelle_affichage, eval = TRUE, echo = TRUE}
+# library(dplyr)
+
 # chargement des GHM Public 2023 et 2024
-ghm_2023_2024 <- refpmsi::refpmsi("ghs_public", 2023:2024)
+ghm_2023_2024 <- refpmsi::refpmsi(ghs_public, 2023:2024)
 
 jeu_ghm_libelle <- jeu_ghm %>%
     # rattachement des libellés aux GHM via la jointure (ghs, annee_pmsi)
     dplyr::left_join(ghm_2023_2024 %>% dplyr::select(ghs,ghm_libelle,annee_pmsi),
                      join_by(ghs == ghs, annee_rss == annee_pmsi))
 jeu_ghm_libelle
-
 ```
 
 ### Rattachement DMS nationale aux séjours  
@@ -463,8 +477,10 @@ Dans un premier temps, on rattache les DMS nationales issues d'OVALIDE MCO à ch
 Puis on compare la DS des séjours avec ces DMS nationales pour les séjours pour lesquels cela a un sens (séjours avec une DS > 0).  
 
 ```{r ghm_dms_affichage, eval = TRUE, echo = TRUE}
+# library(dplyr)
+
 # Chargement des DMS OVALIDE des années PMSI 2023 et 2024
-dms_ovalide <- refpmsi::refpmsi("ovalide_ghminfo_dgf", 2023:2024) %>% dplyr::select(ghm,dms,annee_pmsi)
+dms_ovalide <- refpmsi::refpmsi(ovalide_ghminfo_dgf, 2023:2024) %>% dplyr::select(ghm,dms,annee_pmsi)
 dms_ovalide
 
 jeu_ghm_dms <- jeu_ghm %>%
@@ -477,7 +493,7 @@ jeu_ghm_dms <- jeu_ghm %>%
 jeu_ghm_dms %>% print(n = 15, width = Inf)
 ```
 
-Cas d'usage : filtrer les séjours qui ont une DS >= 2,5 x la DMS nationale de leur GHM pour repérer des séjours, à priori, particulièrement longs.  
+Un cas d'usage : filtrer les séjours qui ont une DS >= 2,5 x la DMS nationale de leur GHM pour repérer des séjours, à priori, particulièrement longs.  
 
 ```{r ghm_dms_2.5_affichage, eval = TRUE, echo = TRUE}
 sejour_more_2.5_dms <- jeu_ghm_dms %>% dplyr::filter(ratio_ecart_dms >= 2.5)
@@ -487,124 +503,70 @@ sejour_more_2.5_dms %>% print(width = Inf)
 ### Case mix en DA (Domaine d'Activité) des séjours  
 
 ```{r case_mix_da_affichage, eval = TRUE, echo = TRUE}
+# library(dplyr)
+
+ghm_regroupement_2023_2024 <- refpmsi::refpmsi("ghm_regroupement",2023:2024)
+
 case_mix_da <- jeu_ghm %>%
-    # rattachement des codes DA aux séjours
-    dplyr::left_join(refpmsi::refpmsi("ghm_regroupement",2023:2024) %>% dplyr::select(ghm,da,da_libelle,annee_pmsi),
+    # rattachement des codes DA aux séjourss
+    dplyr::left_join(ghm_regroupement_2023_2024 %>% dplyr::select(ghm,da,da_libelle,annee_pmsi),
                      join_by(ghm == ghm, annee_rss == annee_pmsi)) %>%
-    # regroupement en DA
-    group_by(da,da_libelle) %>%
-    # calcul du nombre de RUM et du nombre de séjours par DA
-    dplyr::summarise(nb_rum = dplyr::n(),
-                     nb_sejour = dplyr::n_distinct(no_rss),
-                     .groups = "drop")
+    # par DA, calcul du nombre de RUM et du nombre de séjours
+    dplyr::summarise(.by = c(da,da_libelle),
+                     nb_rum = dplyr::n(),
+                     nb_sejour = dplyr::n_distinct(no_rss)
+                     )
 case_mix_da
 ```
 
 ### Séjours et gradation des prises en charge ambulatoires 
 
-On repère les séjours concernés par la gradation des prises en charge ambulatoires et groupés avec le GHS intermédiaire.  
-
+On repère les séjours concernés par la gradation des prises en charge ambulatoires et groupés avec le GHS intermédiaire.   
 ```{r ghm_gradation_affichage, eval = TRUE, echo = TRUE}
+# library(dplyr)
+
+ghm_intermediaire <- refpmsi::refpmsi(ghm_intermediaire)
+
 sejour_ghs_intermediaire <- jeu_ghm %>%
-    # rattachement GHS plein et GHS intermédiaire pour les GHM concernés
-    dplyr::left_join(refpmsi::refpmsi(ghm_intermediaire),
+    # rattachement GHS plein et GHM intermédiaire pour les GHM concernés©s
+    dplyr::left_join(ghm_intermediaire,
                      join_by(ghm == ghm_intermediaire, annee_rss == annee_pmsi)) %>%
-    # filtre sur les séjours dont le GHS == le GHS intermédiaire associé au GHM
+    # filtre sur les séjours dont le GHS == le GHS intermédiaire associé au GHMGHM
     dplyr::filter(ghs == ghs_intermediaire)
 sejour_ghs_intermediaire
 ```
 
-### Liste des codes CIM-10 d'une liste D  
+### Référentiel des libellés GHM  
 
-```{r mco_fg_listes_chargement_affichage, eval = TRUE, echo = TRUE}
-# Chargement du référentiel des listes D et A de l'algorithme de groupage MCO
-mco_fg_listes <- refpmsi::refpmsi("mco_fg_listes", 2021)
-mco_fg_listes
+On fait le choix de retenir le libellé le plus récent pour un GHM  
+
+On part de tous les ghm depuis 2019, donc y compris ceux supprimés avant 2025  
+
+Exemples :  
+le GHM 09C042 Mastectomies totales pour tumeur maligne, niveau 2 supprimé en 2022  
+le GHM 01M213 a le libellé "Douleurs chroniques rebelles, niveau 3" en 2019 et "Douleurs chroniques irréductibles, niveau 3" depuis 2020 : le libellé retenu sera donc "Douleurs chroniques irréductibles, niveau 3"  
+le GHM 18M074 a le libellé "Sepsis, âge supérieur à 17 ans, niveau 4" depuis 2022 et "Septicémies, âge supérieur à 17 ans, niveau 4" avant  
+  
+```{r ghm_libelle, eval = TRUE, echo = TRUE}
+# library(dplyr)
+
+ghs_public <- refpmsi::refpmsi(ghs_public)
+
+ghm_libelle <- ghs_public %>% 
+    dplyr::group_by(ghm) %>% 
+    ## tri descendant par annee_pmsi par ghm
+    dplyr::arrange(desc(annee_pmsi), .by_group = TRUE) %>% 
+    ## filtre sur la ligne la plus récente pour chaque ghm
+    dplyr::slice_head(n = 1) %>% 
+    dplyr::ungroup() %>% 
+    dplyr::distinct(ghm,ghm_libelle)
+ghm_libelle
 ```
-
-On choisit d'extraire les codes CIM-10 de la liste D-0401 ""Bronchite ou asthme"  
-
-Le DP d'un séjour appartenant à cette liste amène le séjour concerné en racine 04M03 "Bronchites et asthme, âge supérieur à 17 ans" ou 04M02 "Bronchites et asthme, âge inférieur à 18 ans"  
-
-```{r d_0401_affichage, eval = TRUE, echo = TRUE}
-liste_D_0401 <- mco_fg_listes %>%
-  # on ne garde que des variables qui nous intéressent pour une liste en D
-  dplyr::select(mco_fg_liste_code, mco_fg_liste_lib, mco_fg_cmd, mco_fg_code) %>%
-  dplyr::filter(mco_fg_liste_code == "D-0401")
-liste_D_0401
-```
-
-Script similaire pour extraire les actes CCAM PMSI d'une liste A.  
-
-### Diagnostics d'entrée d'une CMD  
-
-On choisit d'extraire les diags d'entrée de la CMD 01  
-
-```{r cmd_01_affichage, eval = TRUE, echo = TRUE}
-# on a chargé le référentiel mco_fg_listes dans la variable mco_fg_listes
-diag_cmd_01 <- mco_fg_listes %>%
-  dplyr::filter(mco_fg_cmd == "01", mco_fg_liste_type == "D") %>%
-  # argument.keep_all = TRUE pour garder les colonnes
-  dplyr::distinct(mco_fg_code, .keep_all = TRUE) %>%
-  # colonnes qui nous intéressent + réordonnancement
-  dplyr::select(mco_fg_code, mco_fg_cmd, mco_fg_liste_code, mco_fg_liste_lib)
-diag_cmd_01
-```
-
-### Rattachement des libellés des listes D aux DP  
-
-Soit un mini-jeu de données de 12 séjours avec le DP, le GHM et l'année PMSI du séjour   
-```{r jeu_dp_ghm, echo = FALSE}
-jeu_dp_ghm <- tibble::tibble(no_rss = seq(1:12),
-                         dp_rss = c("I5010","S7220","H269","Z380",
-                                    "S7200","S0600","R074","J441",
-                                    "K358","R53+0","S7200","I5011"),
-                         ghm_rss = c("05M091","08M041","02C05J","15M05A",
-                                     "08C471","01M201","05M13T","04M202",
-                                     "06C091","23M20Z","08C471","05M092"),
-                         annee_rss = sample(c("2023","2024"),12,replace = TRUE))
-jeu_dp_ghm
-```
-
-1ere étape : construire le tibble des diagnostics d'entrée de toutes les CMD concernées par une introduction de groupage par le DP  
-```{r diag_cmd_affichage, eval = TRUE, echo = TRUE}
-# on a chargé le référentiel mco_fg_listes dans la variable mco_fg_listes
-diag_cmd <- mco_fg_listes %>%
-  dplyr::filter(mco_fg_liste_type == "D") %>%
-  # nest_by = group_by + summarise + rowwise (expérimental dplyr 1.0.7)
-  dplyr::nest_by(mco_fg_cmd, .key = "diag_entree") %>%
-  # dégroupage du rowwise généré par nest_by
-  dplyr::ungroup() %>%
-  # traitement de la list_column des diags d'entrée
-  dplyr::mutate(diag_entree = purrr::map(diag_entree, ~ dplyr::distinct(.x, mco_fg_code, .keep_all = TRUE) %>% dplyr::select(c("mco_fg_code", "mco_fg_liste_code", "mco_fg_liste_lib"))))
-diag_cmd
-```
-
-2eme étape : rattachement du libellé de la liste D correspondant au DP pour la CMD du séjour  
-
-```{r jeu_dp_ghm_liste_D_affichage, eval = TRUE, echo = TRUE}
-jeu_dp_ghm_liste_D <- jeu_dp_ghm %>%
-    # extraction de la CMD du séjour
-    dplyr::mutate(cmd_rss = stringr::str_sub(ghm_rss,1,2)) %>%
-    dplyr::left_join(diag_cmd %>% tidyr::unnest(diag_entree),
-                     # jonction via dp et cmd. Rappel : plusieurs listes D possibles pour un DP
-                     join_by(dp_rss == mco_fg_code, cmd_rss == mco_fg_cmd))
-jeu_dp_ghm_liste_D
-```
-
-Remarque : pas de libellé de liste D pour le DP Z380 "Enfant unique, né à l'hôpital" d'un séjour classé dans la CMD 15 "Nouveau-nés, prématurés et affections de la période périnatale" car, dans cette CMD, le groupage ne commence pas par le DP.  
 
 
 ## Sources  
 
-[Manuel de groupage GHM 2024 - Volume 1](https://www.atih.sante.fr/sites/default/files/public/content/4713/volume_1_14_02_2024.pdf) (ATIH)  
-[TArifs MCO 2018-2024](https://www.atih.sante.fr/tarifs-mco-et-had) (ATIH)    
-[Arrêté tarifaire MCO 2023](https://www.legifrance.gouv.fr/download/pdf?id=wbSfyB0QarBmS_OXWPwKuVZQxHw5YMz-RNeqeEq8Hqs=) (Ministère de la Santé - Arrêté 2023)    
-[Arrêté tarifaire MCO 2022](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045530951) (Ministère de la Santé - Arrêté 2022)    
-[Arrêté tarifaire MCO 2021](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043306334) (Ministère de la Santé - Arrêté 2021)    
-[Arrêté tarifaire MCO 2020](https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000041663256) (Ministère de la Santé - Arrêté 2020)  
-[Arrêté tarifaire MCO 2019](https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000038219729) (Ministère de la Santé - Arrêté 2019)  
-[Arrêté tarifaire MCO 2018](https://www.legifrance.gouv.fr/eli/arrete/2018/2/28/SSAH1805897A/jo/texte) (Ministère de la Santé - Arrêté 2018)  
-[Regroupements des GHM et RGHM 2023](https://www.atih.sante.fr/regroupement-des-ghm-en-2023) (ATIH)  
+[Manuel de groupage GHM 2025](https://www.atih.sante.fr/manuel-des-ghm-version-provisoire-2025) (ATIH)  
+[Tarifs MCO 2019-2025](https://www.atih.sante.fr/tarifs-mco-et-had) (ATIH)    
+[Regroupements des GHM et RGHM 2024](https://www.atih.sante.fr/regroupement-des-ghm-2024-0) (ATIH)  
 [OVALIDE MCO - Tables de référence 2024](https://www.atih.sante.fr/sites/default/files/public/content/4778/ovalide_0.zip) (ATIH)  
-[Données du volume 2 du manuel des GHS 2024](https://www.atih.sante.fr/plateformes-de-transmission-et-logiciels/logiciels-espace-de-telechargement/id_lot/3913) (ATIH)  

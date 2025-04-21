@@ -20,15 +20,15 @@ library(stringr)
 library(refpmsi)
 ```
 
-Le package `refpmsi` comprend 12 référentiels CSARR.  
+Le package `refpmsi` comprend 11 référentiels CSARR.  
 
 ## CSARR code    
 
 Intitulé du référentiel : **csarr_code**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé (2018 à 2024).  
+Référentiel annualisé (2019 à 2025).  
 
 ### Variables  
 
@@ -40,9 +40,9 @@ refpmsi::refpmsi("csarr_code") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_code_note**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé (2018 à 2024).  
+Référentiel annualisé (2019 à 2025).  
 
 ### Variables  
 
@@ -54,9 +54,9 @@ refpmsi::refpmsi("csarr_code_note") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_hierarchie**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé (2018 à 2024).  
+Référentiel annualisé (2019 à 2025).  
 
 ### Variables  
 
@@ -68,9 +68,9 @@ refpmsi::refpmsi("csarr_hierarchie") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_hierarchie_note**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé (2018 à 2024).  
+Référentiel annualisé (2019 à 2025).  
 
 ### Variables  
 
@@ -82,7 +82,7 @@ refpmsi::refpmsi("csarr_hierarchie_note") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_intervenant**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
 Référentiel non annualisé  
 
@@ -98,9 +98,9 @@ refpmsi::refpmsi("csarr_intervenant") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_type**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé (2018 à 2024).  
+Référentiel annualisé (2019 à 2025).  
 
 ### Variables  
 
@@ -112,9 +112,9 @@ refpmsi::refpmsi("csarr_type") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_modulateur**  
 
-Mise à jour : 31 janvier 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé (2018 à 2024).  
+Référentiel annualisé (2019 à 2025).  
 
 ### Variables  
 
@@ -126,9 +126,9 @@ refpmsi::refpmsi("csarr_modulateur") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_ponderation**  
 
-Mise à jour : 31 janvier 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé (2018 à 2024).  
+Référentiel annualisé (2019 à 2025).  
 
 Mise en format "tidy" du référentiel ATIH par nos soins  
 
@@ -142,9 +142,9 @@ refpmsi::refpmsi("csarr_ponderation") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_evaluation**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé (2018 à 2024).  
+Référentiel annualisé (2019 à 2025).  
 
 ### Variables  
 
@@ -156,9 +156,9 @@ refpmsi::refpmsi("csarr_evaluation") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_geste_complementaire**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel annualisé (2018 à 2024).  
+Référentiel annualisé (2019 à 2025).  
 
 ### Variables  
 
@@ -166,30 +166,13 @@ Référentiel annualisé (2018 à 2024).
 refpmsi::refpmsi("csarr_geste_complementaire") %>% dplyr::glimpse()
 ```
 
-## CSARR incompatibilité intervenant  
-
-Intitulé du référentiel : **csarr_incompatibilite_intervenant**  
-
-Mise à jour : 31 janvier 2024  
-
-Référentiel annualisé (2020 à 2024).  
-
-### Variables  
-
-**csarr_ci_21_autorise** = 1 si l'acte CSARR est compatible avec le type intervenant 21(Infirmier) et 0 si l'acte CSARR n'est pas compatible avec le type intervenant 21(Infirmier)  
-**csarr_ci_88_autorise** = 1 si l'acte CSARR est compatible avec le type intervenant 88(Autre intervenant) et 0 si l'acte CSARR n'est pas compatible avec le type intervenant 88(Autre intervenant)  
-
-```{r var csarr_incompatibilite_intervenant, echo = FALSE}
-refpmsi::refpmsi("csarr_incompatibilite_intervenant") %>% dplyr::glimpse()
-```
-
 ## CSARR topographie   
 
 Intitulé du référentiel : **csarr_topographie**  
 
-Mise à jour : 25 mai 2024  
+Mise à jour : 18 avril 2025  
 
-Référentiel non annualisé.  
+Référentiel annualisé (2019 à 2025).  
 
 ### Variables  
 
@@ -197,28 +180,9 @@ Référentiel non annualisé.
 refpmsi::refpmsi("csarr_topographie") %>% dplyr::glimpse()
 ```
 
-## Exemples
-
-### Nouveaux actes CSARR pluriprofessionnels en 2021  
-
-```{r csarr_pluriprofessionnel_new, eval = TRUE, echo = TRUE}
-# chargement du référentiel CSARR avec les actes pluriprofessionnels
-csarr_type <- refpmsi::refpmsi("csarr_type")
-
-# repérage des actes pluriprofessionnels en 2021 qui ne l'étaient pas en 2020
-csarr_pluriprofessionnel_new_2021 <- csarr_type %>% 
-    dplyr::filter(annee_pmsi == "2021", csarr_pluriprofessionnel) %>% 
-    dplyr::select(csarr_code,csarr_pluriprofessionnel) %>% 
-    dplyr::anti_join(csarr_type %>% 
-                         dplyr::filter(annee_pmsi == "2020", csarr_pluriprofessionnel) %>% 
-                         dplyr::select(csarr_code,csarr_pluriprofessionnel),
-                     join_by(csarr_code == csarr_code))
-csarr_pluriprofessionnel_new_2021
-```
-
 ## Sources  
 
-[CSARR nomenclature 2024](https://www.atih.sante.fr/sites/default/files/public/content/4707/csarr_liste_analytique_2024.xls) (ATIH)  
-[CSARR guide de lecture et de codage 2024](https://www.atih.sante.fr/sites/default/files/public/content/4707/csarr_2024_version_provisoire.pdf) (ATIH)  
-[OVALIDE SSR 2022](https://sap.atih.sante.fr/epmsi/doc/guides/lecture/guide_lecture_OVALIDE_SSR_DGF_2022.pdf) (ATIH)  
+[CSARR nomenclature 2025](https://www.atih.sante.fr/sites/default/files/public/content/4902/csarr_liste_analytique_2025_versioncorrigee.xls) (ATIH)  
+[CSARR guide de lecture et de codage 2025](https://www.atih.sante.fr/sites/default/files/public/content/4902/csarr_2025_version_provisoire.docx.pdf) (ATIH)  
+ 
 

@@ -14,10 +14,51 @@ knitr::opts_chunk$set(
 )
 ```
 
+## [18-04-2025]   
+### Référentiels mis à jour  
+**Tous champs : **  
+`ccam_pmsi` : V2 2025  
+`ccam_pmsi` : passage de la variable ccam_pmsi_classant en variable logique    
+`cim` : CIM-10 FR à usage PMSI 2025  
+`ucd_ap_ac_cpc` : version mars 2025  
+`ucd_en_sus` : version mars 2025  
+`ucd_indication` : version mars 2025  
+`ucd_libelle` : version mars 2025  
+
+**MCO : **  
+`autorisation_mco` : ajout des 4 autorisations (24C, 24D, 25C, 25D) pour les USIP et USIP dérogatoires autorisées dans le cadre de l’octroi des nouvelles autorisations.  
+`autorisation_mco` : passage des 3 variables autorisation_mco_rea, autorisation_mco_si et autorisation_mco_sc en variables logiques.  
+`ccam_ameli` : V78 du 1er février 2025  
+`ccam_icr` : V2 2025  
+`cma_mco` : ajout année PMSI 2025  
+`dmi_en_sus` : version mars 2025  
+`ghs_public` : ajout informations GHS-GHM de la campagne tarifaire publique 2025  
+`ghs_prive` : ajout informations GHS-GHM de la campagne tarifaire privée 2025  
+`lpp_ameli` : V828 du 15 avril 2025  
+`supplements_mco_public` : ajout tarifs publics 2025  
+`supplements_mco_prive` : ajout tarifs privés 2025  
+
+**SMR : **  
+`cma_smr` : ajout année PMSI 2025  
+`csarr_code` : ajout année PMSI 2025  
+`csarr_modulateur` : ajout année PMSI 2025 avec le nouveau modulateur L3 "Réalisation dans un autre établissement"  
+`gme_public` : ajout informations GMT-GME campagne tarifaire publique 2025  
+`gme_prive` : ajout informations GMT-GME campagne tarifaire privée 2025  
+`specialites_pharmaceutiques_smr` : version mars 2025  
+
+**PSY : **  
+`psy` : mise à jour 2025 du libellé de la Forme d'Activité L13  
+
+### Documentation mise à jour  
+Nouvel exemple d'usage de refpmsi : [Actes CSARR de préparations/suivi de dossier dans le nouveau CSAR "1R"](https://denisgustin.github.io/refpmsi/articles/csar.html)  
+
+Nouvel exemple d'usage de refpmsi : [Référentiel des libellés GHM](https://denisgustin.github.io/refpmsi/articles/ghm.html#exemples)
+
+
 ## [10-09-2024]   
 ### Référentiels mis à jour  
 **MCO : **  
-`ccam_pmsi` et `ccam_ice` : V4 2024.  
+`ccam_pmsi` et `ccam_icr` : V4 2024.  
 `denombrement_mco_ghs` : données 2023 issues de la base nationale MCO. [source](https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx).  
 `denombrement_mco_ghm` : données 2023 issues de la base nationale MCO. [source](https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx).  
 `denombrement_mco_diagnostic` : données 2023 issues de la base nationale MCO. [source](https://www.atih.sante.fr/sites/default/files/public/content/4807/denombrement_2023.xlsx).  
