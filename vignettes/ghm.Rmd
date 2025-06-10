@@ -211,15 +211,13 @@ refpmsi::refpmsi("rghm_regroupement") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ovalide_ghminfo_dgf**
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 10 juin 2025  
 
 Informations issues de la table OVALIDE `GHMINFO_exDGF`.  
 
 Les informations redondantes avec d'autres référentiels de `refpmsi::` (ex : cma, bb, bh, ...) ne sont pas reprises.  
 
 Référentiel annualisé au sens du PMSI MCO (2019-2025).  
-
-Pour l'année PMSI MCO 2025, dans l'attente de la publication de la version 2025 du référentiel par l'ATIH, on a projeté l'année 2024.  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -245,15 +243,13 @@ refpmsi::refpmsi("ovalide_ghminfo_dgf") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ovalide_ghminfo_oqn**
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 10 juin 2025  
 
 Informations issues de la table OVALIDE `GHMINFO_exOQN`.  
 
 Les informations redondantes avec d'autres référentiels de `refpmsi::` (ex : cma, bb, bh, ...) ne sont pas reprises.  
 
 Référentiel annualisé au sens du PMSI MCO (2019-2025).  
-
-Pour l'année PMSI MCO 2025, dans l'attente de la publication de la version 2025 du référentiel par l'ATIH, on a projeté l'année 2024.  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -279,13 +275,11 @@ refpmsi::refpmsi("ovalide_ghminfo_oqn") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ovalide_racineinfo_dgf**
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 10 juin 2025  
 
 Informations issues de la table OVALIDE `RacineINFO_exDGF`.  
 
 Référentiel annualisé au sens du PMSI MCO (2019-2025).  
-
-Pour l'année PMSI MCO 2025, dans l'attente de la publication de la version 2025 du référentiel par l'ATIH, on a projeté l'année 2024.  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -312,13 +306,11 @@ refpmsi::refpmsi("ovalide_racineinfo_dgf") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ovalide_racineinfo_oqn**
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 10 juin 2025  
 
 Informations issues de la table OVALIDE `RacineINFO_exOQN`. 
 
 Référentiel annualisé au sens du PMSI MCO (2019-2025).  
-
-Pour l'année PMSI MCO 2025, dans l'attente de la publication de la version 2025 du référentiel par l'ATIH, on a projeté l'année 2024.  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   

@@ -43,7 +43,7 @@
     <li><a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a></li>
     <li><a class="dropdown-item" href="../articles/ghm.html">GHM</a></li>
     <li><a class="dropdown-item" href="../articles/had.html">HAD</a></li>
-    <li><a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a></li>
+    <li><a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SMR</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../articles/changelog.html">Changelog</a></li>
@@ -159,16 +159,9 @@
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">csar_transcodage_is_P</span>, <span class="fu">join_by</span><span class="op">(</span><span class="va">csarr_code</span> <span class="op">==</span> <span class="va">csarr_code</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">is_acte_csar_P</span><span class="op">)</span></span>
 <span><span class="va">csarr_preparations_suivi_dossier_csar</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 7 × 5</span></span></span>
-<span><span class="co">#&gt;   csarr_code csarr_libelle                   annee_pmsi csar_code is_acte_csar_P</span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>         </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> ZGM+105    Préparation et suivi de l'avan… 2025       11P01     TRUE          </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> ZGM+247    Préparation et suivi de l'avan… 2025       11P01     TRUE          </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> ZZM+143    Préparation et/ou suivi de l'a… 2025       11P04     TRUE          </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> ZZM+066    Préparation et/ou suivi de l'a… 2025       11P02     TRUE          </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> ZZM+161    Préparation et suivi de l'avan… 2025       11P02     TRUE          </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> ZZM+159    Préparation et suivi de l'avan… 2025       11P03     TRUE          </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">7</span> ZZE+026    Déplacement hors de l'établiss… 2025       11P02     TRUE</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 0 × 5</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 5 variables: csarr_code &lt;chr&gt;, csarr_libelle &lt;chr&gt;, annee_pmsi &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   csar_code &lt;chr&gt;, is_acte_csar_P &lt;lgl&gt;</span></span></span>
 <span><span class="co"># on a repéré les 7 actes CSARR concernés</span></span></code></pre></div>
 </div>
 </div>

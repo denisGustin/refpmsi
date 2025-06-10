@@ -43,7 +43,7 @@
     <li><a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a></li>
     <li><a class="dropdown-item" href="../articles/ghm.html">GHM</a></li>
     <li><a class="dropdown-item" href="../articles/had.html">HAD</a></li>
-    <li><a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a></li>
+    <li><a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SMR</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../articles/changelog.html">Changelog</a></li>
@@ -90,13 +90,13 @@ soins, avec les libellés des UCD.</p>
 <p><strong>ucd_7</strong> = code UCD sur 7 positions<br><strong>ucd_13</strong> = code UCD sur 13 positions<br><strong>code_les</strong> = code LES (Liste En Sus)<br><strong>ucd_libelle</strong> = libellé de l’UCD<br><strong>denomination_commune_internationale</strong> = dénomination
 commune internationale<br><strong>date_debut</strong> = date de début de validité de la spécialité
 pharmaceutique SMR</p>
-<pre><code><span><span class="co">#&gt; Rows: 216</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 157</span></span>
 <span><span class="co">#&gt; Columns: 6</span></span>
-<span><span class="co">#&gt; $ code_les                            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "S000013", "S000026", "S000752", "…</span></span>
-<span><span class="co">#&gt; $ denomination_commune_internationale <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "alectinib", "alectinib", "vutrisi…</span></span>
-<span><span class="co">#&gt; $ ucd_7                               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "9426485", "9426485", "9002846", "…</span></span>
+<span><span class="co">#&gt; $ ucd_7                               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "9426485", "9426485", "9294486", "…</span></span>
 <span><span class="co">#&gt; $ ucd_13                              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "3400894264859", "3400894264859", …</span></span>
-<span><span class="co">#&gt; $ date_debut                          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023-07-01", "2023-07-01", "2025-…</span></span>
+<span><span class="co">#&gt; $ code_les                            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "S000013", "S000026", "S000039", "…</span></span>
+<span><span class="co">#&gt; $ denomination_commune_internationale <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "alectinib", "alectinib", "toxine …</span></span>
+<span><span class="co">#&gt; $ date_debut                          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023-07-01", "2023-07-01", "2023-…</span></span>
 <span><span class="co">#&gt; $ ucd_libelle                         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ALECENSA 150MG GELULE", "ALECENSA…</span></span></code></pre>
 </div>
 </div>
@@ -127,11 +127,11 @@ retrouver dans un FICHCOMP LES SMR</p>
 <span>                     <span class="fu">join_by</span><span class="op">(</span><span class="va">ucd</span> <span class="op">==</span> <span class="va">ucd_7</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">jeu_specialites_pharmaceutiques_smr_libelle</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 3 × 4</span></span></span>
-<span><span class="co">#&gt;     nas ucd     nb_administre ucd_libelle                       </span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                             </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>     1 9426485             3 ALECENSA 150MG GELULE             </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>     2 9289746             2 BOTOX 50U ALLERGAN PDR INJ        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span>     3 9360734             1 TEICOPLANINE VIATRIS 200MG PDR INJ</span></span></code></pre></div>
+<span><span class="co">#&gt;     nas ucd     nb_administre ucd_libelle                   </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>     1 9426485             3 ALECENSA 150MG GELULE         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>     2 9289746             2 BOTOX 50U ALLERGAN PDR INJ    </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span>     3 9360734             1 TEICOPLANINE MYL 200MG PDR INJ</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="case-mix-spécialités-pharmaceutiques-smr-en-dci">Case mix spécialités pharmaceutiques SMR en DCI<a class="anchor" aria-label="anchor" href="#case-mix-sp%C3%A9cialit%C3%A9s-pharmaceutiques-smr-en-dci"></a>

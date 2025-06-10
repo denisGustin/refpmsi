@@ -43,7 +43,7 @@
     <li><a class="dropdown-item" href="../articles/formats_pmsi.html">Formats PMSI</a></li>
     <li><a class="dropdown-item" href="../articles/ghm.html">GHM</a></li>
     <li><a class="dropdown-item" href="../articles/had.html">HAD</a></li>
-    <li><a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SSR</a></li>
+    <li><a class="dropdown-item" href="../articles/specialites_pharmaceutiques_ssr.html">Spécialités pharmaceutiques SMR</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../articles/changelog.html">Changelog</a></li>
@@ -111,11 +111,11 @@ digit 4 : code autorisé en DAS ? (O : oui, N : non)<br><strong>cim_code_actif</
 le code CIM-10<br><strong>cim_categorie</strong> = 3 premières positions du code
 CIM-10<br><strong>cim_precision</strong> = TRUE si pas de code fils plus précis,
 FALSE sinon<br><strong>annee_pmsi</strong> = année PMSI</p>
-<pre><code><span><span class="co">#&gt; Rows: 300,145</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 297,767</span></span>
 <span><span class="co">#&gt; Columns: 11</span></span>
 <span><span class="co">#&gt; $ cim_code       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A00", "A000", "A001", "A009", "A01", "A010", "A011", "…</span></span>
 <span><span class="co">#&gt; $ cim_tmco       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "3", "0", "0", "0", "3", "0", "0", "0", "0", "0", "3", …</span></span>
-<span><span class="co">#&gt; $ cim_pssr       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "NNN", "OOO", "OOO", "OOO", "NNN", "OOO", "OOO", "OOO",…</span></span>
+<span><span class="co">#&gt; $ cim_pssr       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "NNNN", "NOOO", "NOOO", "NOOO", "NNNN", "NOOO", "NOOO",…</span></span>
 <span><span class="co">#&gt; $ cim_tpsy       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "3", "0", "0", "0", "3", "0", "0", "0", "0", "0", "3", …</span></span>
 <span><span class="co">#&gt; $ cim_libelle    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Choléra", "Choléra à Vibrio cholerae 01, biovar choler…</span></span>
 <span><span class="co">#&gt; $ cim_code_actif <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…</span></span>
@@ -123,7 +123,7 @@ FALSE sinon<br><strong>annee_pmsi</strong> = année PMSI</p>
 <span><span class="co">#&gt; $ cim_chapitre   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", …</span></span>
 <span><span class="co">#&gt; $ cim_groupe     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A00-A09", "A00-A09", "A00-A09", "A00-A09", "A00-A09", …</span></span>
 <span><span class="co">#&gt; $ cim_precision  <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE,…</span></span>
-<span><span class="co">#&gt; $ annee_pmsi     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2025", "2025", "2025", "2025", "2025", "2025", "2025",…</span></span></code></pre>
+<span><span class="co">#&gt; $ annee_pmsi     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2024", "2024", "2024", "2024", "2024", "2024", "2024",…</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
@@ -158,7 +158,7 @@ CIM-10</p>
 <p><strong>cim_groupe</strong> = premier et dernier code CIM-10 de
 chaque groupe de la CIM-10<br><strong>cim_groupe_libelle</strong> =libellés des groupes de la
 CIM-10</p>
-<pre><code><span><span class="co">#&gt; Rows: 212</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 275</span></span>
 <span><span class="co">#&gt; Columns: 2</span></span>
 <span><span class="co">#&gt; $ cim_groupe         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A00-A09", "A15-A19", "A20-A28", "A30-A49", "A50-A6…</span></span>
 <span><span class="co">#&gt; $ cim_groupe_libelle <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Maladies intestinales infectieuses", "Tuberculose"…</span></span></code></pre>
@@ -180,7 +180,7 @@ CIM-10<br><strong>cim_categorie</strong> = catégorie CIM-10 dont dépend le gro
 de la CIM-10<br><strong>cim_groupe</strong> = groupe CIM-10 dont dépend le groupe de la
 CIM-10<br><strong>cim_chapitre</strong> = chapitre CIM-10 dont dépend le groupe de
 la CIM-10</p>
-<pre><code><span><span class="co">#&gt; Rows: 42,897</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 42,887</span></span>
 <span><span class="co">#&gt; Columns: 5</span></span>
 <span><span class="co">#&gt; $ cim_code      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A00", "A000", "A001", "A009", "A01", "A010", "A011", "A…</span></span>
 <span><span class="co">#&gt; $ cim_libelle   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Choléra", "Choléra à Vibrio cholerae 01, biovar cholera…</span></span>
@@ -245,12 +245,12 @@ polyhandicap lourd</p>
 CMA<br><strong>cma_mco_liste_exclusion_dp</strong> = numéro de la liste
 d’exclusions entre diagnostic principal (DP) et CMA<br><strong>cma_mco_liste_exclusion_racine</strong> = numéro de la liste
 d’exclusions entre racines de GHM et CMA<br><strong>annee_pmsi</strong> = année PMSI MCO</p>
-<pre><code><span><span class="co">#&gt; Rows: 33,591</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 33,555</span></span>
 <span><span class="co">#&gt; Columns: 5</span></span>
 <span><span class="co">#&gt; $ cma_mco_code                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A000", "A001", "A009", "A010", "A011",…</span></span>
 <span><span class="co">#&gt; $ cma_mco_severite               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2", "2", "2", "2", "2", "2", "2", "2",…</span></span>
-<span><span class="co">#&gt; $ cma_mco_liste_exclusion_dp     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "674", "674", "674", "674", "674", "674…</span></span>
-<span><span class="co">#&gt; $ annee_pmsi                     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2025", "2025", "2025", "2025", "2025",…</span></span>
+<span><span class="co">#&gt; $ cma_mco_liste_exclusion_dp     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "525", "525", "525", "525", "525", "525…</span></span>
+<span><span class="co">#&gt; $ annee_pmsi                     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2024", "2024", "2024", "2024", "2024",…</span></span>
 <span><span class="co">#&gt; $ cma_mco_liste_exclusion_racine <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</span></span></code></pre>
 </div>
 </div>
@@ -265,10 +265,10 @@ d’exclusions entre racines de GHM et CMA<br><strong>annee_pmsi</strong> = ann�
 <h3 id="variables-7">Variables<a class="anchor" aria-label="anchor" href="#variables-7"></a>
 </h3>
 <p><strong>cma_smr_code</strong> = code CIM-10 des CMA SMR<br><strong>annee_pmsi</strong> = année PMSI SMR</p>
-<pre><code><span><span class="co">#&gt; Rows: 5,530</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 5,514</span></span>
 <span><span class="co">#&gt; Columns: 2</span></span>
 <span><span class="co">#&gt; $ cma_smr_code <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A000", "A001", "A009", "A020", "A022", "A028", "A029", "…</span></span>
-<span><span class="co">#&gt; $ annee_pmsi   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2025", "2025", "2025", "2025", "2025", "2025", "2025", "…</span></span></code></pre>
+<span><span class="co">#&gt; $ annee_pmsi   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2024", "2024", "2024", "2024", "2024", "2024", "2024", "…</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
@@ -298,19 +298,19 @@ d’exclusions entre racines de GHM et CMA<br><strong>annee_pmsi</strong> = ann�
 <code class="sourceCode R"><span><span class="co"># Chargement de la CIM-10 de l'année 2025 dans la variable cim_2025</span></span>
 <span><span class="va">cim_2025</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/refpmsi.html">refpmsi</a></span><span class="op">(</span><span class="va">cim</span>,<span class="fl">2025</span><span class="op">)</span></span>
 <span><span class="fu">glimpse</span><span class="op">(</span><span class="va">cim_2025</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 42,897</span></span>
+<span><span class="co">#&gt; Rows: 0</span></span>
 <span><span class="co">#&gt; Columns: 11</span></span>
-<span><span class="co">#&gt; $ cim_code       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A00", "A000", "A001", "A009", "A01", "A010", "A011", "…</span></span>
-<span><span class="co">#&gt; $ cim_tmco       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "3", "0", "0", "0", "3", "0", "0", "0", "0", "0", "3", …</span></span>
-<span><span class="co">#&gt; $ cim_pssr       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "NNN", "OOO", "OOO", "OOO", "NNN", "OOO", "OOO", "OOO",…</span></span>
-<span><span class="co">#&gt; $ cim_tpsy       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "3", "0", "0", "0", "3", "0", "0", "0", "0", "0", "3", …</span></span>
-<span><span class="co">#&gt; $ cim_libelle    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Choléra", "Choléra à Vibrio cholerae 01, biovar choler…</span></span>
-<span><span class="co">#&gt; $ cim_code_actif <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…</span></span>
-<span><span class="co">#&gt; $ cim_categorie  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A00", "A00", "A00", "A00", "A01", "A01", "A01", "A01",…</span></span>
-<span><span class="co">#&gt; $ cim_chapitre   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", …</span></span>
-<span><span class="co">#&gt; $ cim_groupe     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A00-A09", "A00-A09", "A00-A09", "A00-A09", "A00-A09", …</span></span>
-<span><span class="co">#&gt; $ cim_precision  <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE,…</span></span>
-<span><span class="co">#&gt; $ annee_pmsi     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2025", "2025", "2025", "2025", "2025", "2025", "2025",…</span></span></code></pre></div>
+<span><span class="co">#&gt; $ cim_code       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span></span>
+<span><span class="co">#&gt; $ cim_tmco       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span></span>
+<span><span class="co">#&gt; $ cim_pssr       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span></span>
+<span><span class="co">#&gt; $ cim_tpsy       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span></span>
+<span><span class="co">#&gt; $ cim_libelle    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span></span>
+<span><span class="co">#&gt; $ cim_code_actif <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> </span></span>
+<span><span class="co">#&gt; $ cim_categorie  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span></span>
+<span><span class="co">#&gt; $ cim_chapitre   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span></span>
+<span><span class="co">#&gt; $ cim_groupe     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span></span>
+<span><span class="co">#&gt; $ cim_precision  <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> </span></span>
+<span><span class="co">#&gt; $ annee_pmsi     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="chargement-de-la-cim-10-des-années-2023-et-2024">Chargement de la CIM-10 des années 2023 et 2024<a class="anchor" aria-label="anchor" href="#chargement-de-la-cim-10-des-ann%C3%A9es-2023-et-2024"></a>
