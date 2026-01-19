@@ -23,11 +23,11 @@ library(refpmsi)
 
 Intitulé du référentiel : **specialites_pharmaceutiques_smr**
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
 Référentiel des spécialités pharmaceutiques SMR enrichi, par nos soins, avec les libellés des UCD.  
 
-Version mars 2025  
+Version décembre 2025  
 
 ### Variables  
 **ucd_7** = code UCD sur 7 positions  
@@ -93,4 +93,5 @@ casemix_specialites_pharmaceutiques_smr_dci
 ```
 
 ## Source  
-[Spécialités pharmaceutiques SMR version mars 2025](https://sante.gouv.fr/soins-et-maladies/medicaments/professionnels-de-sante/autorisation-de-mise-sur-le-marche/la-liste-en-sus/article/referentiel-des-indications-des-specialites-pharmaceutiques-inscrites-sur-la)  
+
+[Spécialités pharmaceutiques SMR 2025](https://www.atih.sante.fr/specialites-pharmaceutiques-en-smr-2025-0)  

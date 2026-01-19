@@ -125,12 +125,12 @@ référentiels.</p>
 <pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 7</span></span></span>
 <span><span class="co">#&gt;   refpmsi    refpmsi_lib refpmsi_source refpmsi_periode_vers…¹ refpmsi_annualise</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> anticance… Médicament… ATIH           2020                   non              </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> autorisat… Autorisati… ATIH           2025                   non              </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> autorisat… Autorisati… ATIH           2025                   non              </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> autorisat… Autorisati… ATIH           2023                   non              </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> cancerolo… Algorithme… INCa (septemb… 2023                   non              </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> cancerolo… Algorithme… INCa (décembr… 2023                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> autorisat… Autorisati… ATIH           2026                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> autorisat… Autorisati… ATIH           2026                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> autorisat… Autorisati… ATIH           2023                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> cancerolo… Algorithme… INCa (septemb… 2023                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> cancerolo… Algorithme… INCa (décembr… 2023                   non              </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> ccam_ameli Actes CCAM… AMELI&lt;br&gt;&lt;sma… 2026 (V81 - 1er janvi… oui              </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ abbreviated name: ¹​refpmsi_periode_version</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: refpmsi_article &lt;chr&gt;, refpmsi_article_lien &lt;chr&gt;</span></span></span></code></pre>
 <p>Pour ne charger que la liste des intitulés des référentiels.</p>
@@ -138,9 +138,9 @@ référentiels.</p>
 <code class="sourceCode R"><span><span class="co"># affichage uniquement des intitulés des référentiels</span></span>
 <span><span class="va">liste_ref</span> <span class="op">&lt;-</span> <span class="fu">refpmsi</span><span class="fu">::</span><span class="fu"><a href="../reference/liste_refpmsi.html">liste_refpmsi</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">refpmsi</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">liste_ref</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">#&gt; [1] "anticancereux_intraghs"       "autorisation_mco"            </span></span>
-<span><span class="co">#&gt; [3] "autorisation_smr"             "autorisation_ssr"            </span></span>
-<span><span class="co">#&gt; [5] "cancerologie_appareil_organe" "cancerologie_seuil"</span></span></code></pre>
+<pre><code><span><span class="co">#&gt; [1] "autorisation_mco"             "autorisation_smr"            </span></span>
+<span><span class="co">#&gt; [3] "autorisation_ssr"             "cancerologie_appareil_organe"</span></span>
+<span><span class="co">#&gt; [5] "cancerologie_seuil"           "ccam_ameli"</span></span></code></pre>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table des matières"><h2>Sur cette page</h2>
     </nav></aside>

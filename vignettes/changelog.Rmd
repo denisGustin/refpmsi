@@ -14,6 +14,28 @@ knitr::opts_chunk$set(
 )
 ```
 
+## [19-01-2026]   
+### Référentiels mis à jour  
+**Tous champs : **  
+`cim` : 2026  
+`ccam_pmsi` : V1 2026  
+`ccam_ameli` : V81 (1er janvier 2026)   
+`ucd_ap_ac_cpc`, `ucd_en_sus`, `ucd_indication` : novembre 2025  
+
+**MCO : **  
+`ghs_public`, `ghs_prive` : 2026  
+`supplements_mco_public`, `supplements_mco_prive` : 2026  
+`dmi_en_sus`, `lpp_ameli`, `lpp_ameli_hierarchie` : novembre 2025  
+
+**SMR : **  
+`gme_public`, `gme_prive` : 2026  
+tous les référentiels `csarr_...` : 2026  
+`csar_code` : 2026  
+`specialites_pharmaceutiques_smr` : décembre 2025  
+
+**PSY : **  
+`psy` : 2026 (mise à jour FA)  
+
 ## [10-06-2025]   
 ### Référentiels mis à jour  
 **Tous champs : **  

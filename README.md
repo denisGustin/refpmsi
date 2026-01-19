@@ -3,10 +3,10 @@
 
 # refpmsi
 
-Package de référentiels PMSI : [82 référentiels
+Package de référentiels PMSI : [81 référentiels
 disponibles](https://denisgustin.github.io/refpmsi/articles/liste_ref.html)
 
-Dernière mise à jour : **10 juin 2025**
+Dernière mise à jour : **19 janvier 2026**
 
 [Etre tenu au courant des mises à jour et ajouts de référentiels
 PMSI](http://www.lespmsi.com/r-et-pmsi/)

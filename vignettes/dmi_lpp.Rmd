@@ -23,9 +23,9 @@ library(dplyr)
 
 Intitulé du référentiel : **dmi_en_sus**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
-Version mars 2025  
+Version novembre 2025  
 
 Référentiel non annualisé   
 
@@ -45,9 +45,9 @@ refpmsi::refpmsi("dmi_en_sus") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **lpp_ameli**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
-Version 828 du 15 avril 2025  
+Version 867 du 13 janvier 2026  
 
 Référentiel non annualisé   
 
@@ -67,9 +67,9 @@ refpmsi::refpmsi("lpp_ameli") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **lpp_ameli_hierarchie**  
 
-Mise à jour : 11 avril 2023  
+Mise à jour : 19 janvier 2026  
 
-Hiérarchie LPP extraite de la base Open LPP (version 2021)  
+Hiérarchie LPP extraite de la base Open LPP (version 2024)  
 
 Référentiel non annualisé   
 

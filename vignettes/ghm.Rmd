@@ -16,16 +16,14 @@ knitr::opts_chunk$set(
 
 ```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
 library(dplyr)
-library(stringr)
 library(refpmsi)
-library(tidyr)
 ```
 
 ## CMD  
 
 Intitulé du référentiel : **cmd**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
 Référentiel des libellés des CMD (Catégories Majeures de Diagnostics)  
 
@@ -41,7 +39,7 @@ refpmsi::refpmsi("cmd") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **sous_cmd**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
 Référentiel des libellés des sous-CMD  
 
@@ -57,11 +55,11 @@ refpmsi::refpmsi("sous_cmd") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ghs_public**
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
 Référentiel des GHS et GHM du secteur public (ex-DGF).  
 
-Référentiel annualisé au sens du PMSI MCO (2019 à 2025).  
+Référentiel annualisé au sens du PMSI MCO (2020 à 2026).  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -85,11 +83,11 @@ refpmsi::refpmsi("ghs_public") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ghs_prive**
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
 Référentiel des GHS et GHM du secteur privé (ex-OQN).  
 
-Référentiel annualisé au sens du PMSI MCO (2019 à 2025).  
+Référentiel annualisé au sens du PMSI MCO (2020 à 2026).  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -145,13 +143,13 @@ refpmsi::refpmsi("ghs_monouhcd") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ghm_regroupement**
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
 Référentiel des regroupements des GHM en DA (Domaine d'Activité), GA (Groupe d'Activité) et GP (Groupe de Planification).  
 
-Référentiel annualisé au sens du PMSI MCO (2019-2025).  
+Référentiel annualisé au sens du PMSI MCO (2020 à 2026).  
 
-Pour l'année PMSI MCO 2025, dans l'attente de la publication de la version 2025 du référentiel par l'ATIH, on a projeté l'année 2024.  
+Pour l'année PMSI MCO 2026, dans l'attente de la publication de la version 2026 du référentiel par l'ATIH, on a projeté l'année 2025.  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -178,13 +176,13 @@ refpmsi::refpmsi("ghm_regroupement") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **rghm_regroupement**
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
 Référentiel des regroupements des racines de GHM en DA (Domaine d'Activité), GA (Groupe d'Activité) et GP (Groupe de Planification).  
 
-Référentiel annualisé au sens du PMSI MCO (2019-2025)  
+Référentiel annualisé au sens du PMSI MCO (2020 à 2026)  
 
-Pour l'année PMSI MCO 2025, dans l'attente de la publication de la version 2025 du référentiel par l'ATIH, on a projeté l'année 2024.  
+Pour l'année PMSI MCO 2026, dans l'attente de la publication de la version 2026 du référentiel par l'ATIH, on a projeté l'année 2025.  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
 
@@ -211,13 +209,13 @@ refpmsi::refpmsi("rghm_regroupement") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ovalide_ghminfo_dgf**
 
-Mise à jour : 10 juin 2025  
+Mise à jour : 19 janvier 2026  
 
 Informations issues de la table OVALIDE `GHMINFO_exDGF`.  
 
 Les informations redondantes avec d'autres référentiels de `refpmsi::` (ex : cma, bb, bh, ...) ne sont pas reprises.  
 
-Référentiel annualisé au sens du PMSI MCO (2019-2025).  
+Référentiel annualisé au sens du PMSI MCO (2020 à 2026).  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -243,13 +241,13 @@ refpmsi::refpmsi("ovalide_ghminfo_dgf") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ovalide_ghminfo_oqn**
 
-Mise à jour : 10 juin 2025  
+Mise à jour : 19 janvier 2026  
 
 Informations issues de la table OVALIDE `GHMINFO_exOQN`.  
 
 Les informations redondantes avec d'autres référentiels de `refpmsi::` (ex : cma, bb, bh, ...) ne sont pas reprises.  
 
-Référentiel annualisé au sens du PMSI MCO (2019-2025).  
+Référentiel annualisé au sens du PMSI MCO (2020 à 2026).  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -275,11 +273,11 @@ refpmsi::refpmsi("ovalide_ghminfo_oqn") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ovalide_racineinfo_dgf**
 
-Mise à jour : 10 juin 2025  
+Mise à jour : 19 janvier 2026  
 
 Informations issues de la table OVALIDE `RacineINFO_exDGF`.  
 
-Référentiel annualisé au sens du PMSI MCO (2019-2025).  
+Référentiel annualisé au sens du PMSI MCO (2020 à 2026).  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -306,11 +304,11 @@ refpmsi::refpmsi("ovalide_racineinfo_dgf") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **ovalide_racineinfo_oqn**
 
-Mise à jour : 10 juin 2025  
+Mise à jour : 19 janvier 2026  
 
 Informations issues de la table OVALIDE `RacineINFO_exOQN`. 
 
-Référentiel annualisé au sens du PMSI MCO (2019-2025).  
+Référentiel annualisé au sens du PMSI MCO (2020 à 2026).  
 
 Il est recommandé de ne charger que la ou les année(s) PMSI utile(s).  
   
@@ -559,6 +557,6 @@ ghm_libelle
 ## Sources  
 
 [Manuel de groupage GHM 2025](https://www.atih.sante.fr/manuel-des-ghm-version-provisoire-2025) (ATIH)  
-[Tarifs MCO 2019-2025](https://www.atih.sante.fr/tarifs-mco-et-had) (ATIH)    
-[Regroupements des GHM et RGHM 2024](https://www.atih.sante.fr/regroupement-des-ghm-2024-0) (ATIH)  
-[OVALIDE MCO - Tables de référence 2024](https://www.atih.sante.fr/sites/default/files/public/content/4778/ovalide_0.zip) (ATIH)  
+[Tarifs MCO 2020 à 2026](https://www.atih.sante.fr/tarifs-mco-et-had) (ATIH)    
+[Regroupements des GHM et RGHM 2025](https://www.atih.sante.fr/regroupement-des-ghm-2025) (ATIH)  
+[OVALIDE MCO - Tables de référence 2025](https://www.atih.sante.fr/sites/default/files/public/content/5022/ovalide_1.zip) (ATIH)  

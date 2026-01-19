@@ -16,7 +16,6 @@ knitr::opts_chunk$set(
 
 ```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
 library(dplyr)
-library(stringr)
 library(refpmsi)
 ```
 
@@ -26,9 +25,9 @@ Le package `refpmsi` comprend 11 référentiels CSARR.
 
 Intitulé du référentiel : **csarr_code**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
-Référentiel annualisé (2019 à 2025).  
+Référentiel annualisé (2020 à 2026).  
 
 ### Variables  
 
@@ -40,9 +39,9 @@ refpmsi::refpmsi("csarr_code") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_code_note**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
-Référentiel annualisé (2019 à 2025).  
+Référentiel annualisé (2020 à 2026).  
 
 ### Variables  
 
@@ -54,9 +53,9 @@ refpmsi::refpmsi("csarr_code_note") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_hierarchie**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
-Référentiel annualisé (2019 à 2025).  
+Référentiel annualisé (2020 à 2026).  
 
 ### Variables  
 
@@ -68,9 +67,9 @@ refpmsi::refpmsi("csarr_hierarchie") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_hierarchie_note**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
-Référentiel annualisé (2019 à 2025).  
+Référentiel annualisé (2020 à 2026).  
 
 ### Variables  
 
@@ -82,7 +81,7 @@ refpmsi::refpmsi("csarr_hierarchie_note") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_intervenant**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
 Référentiel non annualisé  
 
@@ -98,9 +97,9 @@ refpmsi::refpmsi("csarr_intervenant") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_type**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
-Référentiel annualisé (2019 à 2025).  
+Référentiel annualisé (2020 à 2026).  
 
 ### Variables  
 
@@ -112,9 +111,9 @@ refpmsi::refpmsi("csarr_type") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_modulateur**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
-Référentiel annualisé (2019 à 2025).  
+Référentiel annualisé (2020 à 2026).  
 
 ### Variables  
 
@@ -126,9 +125,9 @@ refpmsi::refpmsi("csarr_modulateur") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_ponderation**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
-Référentiel annualisé (2019 à 2025).  
+Référentiel annualisé (2020 à 2026).  
 
 Mise en format "tidy" du référentiel ATIH par nos soins  
 
@@ -142,9 +141,9 @@ refpmsi::refpmsi("csarr_ponderation") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_evaluation**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
-Référentiel annualisé (2019 à 2025).  
+Référentiel annualisé (2020 à 2026).  
 
 ### Variables  
 
@@ -156,9 +155,9 @@ refpmsi::refpmsi("csarr_evaluation") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_geste_complementaire**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
-Référentiel annualisé (2019 à 2025).  
+Référentiel annualisé (2020 à 2026).  
 
 ### Variables  
 
@@ -170,9 +169,9 @@ refpmsi::refpmsi("csarr_geste_complementaire") %>% dplyr::glimpse()
 
 Intitulé du référentiel : **csarr_topographie**  
 
-Mise à jour : 18 avril 2025  
+Mise à jour : 19 janvier 2026  
 
-Référentiel annualisé (2019 à 2025).  
+Référentiel annualisé (2020 à 2026).  
 
 ### Variables  
 
@@ -182,7 +181,7 @@ refpmsi::refpmsi("csarr_topographie") %>% dplyr::glimpse()
 
 ## Sources  
 
-[CSARR nomenclature 2025](https://www.atih.sante.fr/sites/default/files/public/content/4902/csarr_liste_analytique_2025_versioncorrigee.xls) (ATIH)  
-[CSARR guide de lecture et de codage 2025](https://www.atih.sante.fr/sites/default/files/public/content/4902/csarr_2025_version_provisoire.docx.pdf) (ATIH)  
+[CSARR guide de lecture et de codage 2026](https://www.atih.sante.fr/sites/default/files/public/content/5122/csarr_2026_version_provisoire.pdf) (ATIH)  
+[Fichiers complémentaires CSARR 2026](https://www.atih.sante.fr/sites/default/files/public/content/5122/fichier_complementaire_csarr_2026.xlsx) (ATIH)  
  
 

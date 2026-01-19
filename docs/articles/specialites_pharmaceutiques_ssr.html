@@ -80,23 +80,23 @@
 </h2>
 <p>Intitulé du référentiel :
 <strong>specialites_pharmaceutiques_smr</strong></p>
-<p>Mise à jour : 18 avril 2025</p>
+<p>Mise à jour : 19 janvier 2026</p>
 <p>Référentiel des spécialités pharmaceutiques SMR enrichi, par nos
 soins, avec les libellés des UCD.</p>
-<p>Version mars 2025</p>
+<p>Version décembre 2025</p>
 <div class="section level3">
 <h3 id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a>
 </h3>
 <p><strong>ucd_7</strong> = code UCD sur 7 positions<br><strong>ucd_13</strong> = code UCD sur 13 positions<br><strong>code_les</strong> = code LES (Liste En Sus)<br><strong>ucd_libelle</strong> = libellé de l’UCD<br><strong>denomination_commune_internationale</strong> = dénomination
 commune internationale<br><strong>date_debut</strong> = date de début de validité de la spécialité
 pharmaceutique SMR</p>
-<pre><code><span><span class="co">#&gt; Rows: 157</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 271</span></span>
 <span><span class="co">#&gt; Columns: 6</span></span>
-<span><span class="co">#&gt; $ ucd_7                               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "9426485", "9426485", "9294486", "…</span></span>
+<span><span class="co">#&gt; $ code_les                            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "S000013", "S001175", "S000026", "…</span></span>
+<span><span class="co">#&gt; $ denomination_commune_internationale <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "alectinib", "alectinib", "alectin…</span></span>
+<span><span class="co">#&gt; $ ucd_7                               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "9426485", "9426485", "9426485", "…</span></span>
 <span><span class="co">#&gt; $ ucd_13                              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "3400894264859", "3400894264859", …</span></span>
-<span><span class="co">#&gt; $ code_les                            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "S000013", "S000026", "S000039", "…</span></span>
-<span><span class="co">#&gt; $ denomination_commune_internationale <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "alectinib", "alectinib", "toxine …</span></span>
-<span><span class="co">#&gt; $ date_debut                          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023-07-01", "2023-07-01", "2023-…</span></span>
+<span><span class="co">#&gt; $ date_debut                          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2023-07-01", "2025-06-12", "2023-…</span></span>
 <span><span class="co">#&gt; $ ucd_libelle                         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ALECENSA 150MG GELULE", "ALECENSA…</span></span></code></pre>
 </div>
 </div>
@@ -127,11 +127,11 @@ retrouver dans un FICHCOMP LES SMR</p>
 <span>                     <span class="fu">join_by</span><span class="op">(</span><span class="va">ucd</span> <span class="op">==</span> <span class="va">ucd_7</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">jeu_specialites_pharmaceutiques_smr_libelle</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 3 × 4</span></span></span>
-<span><span class="co">#&gt;     nas ucd     nb_administre ucd_libelle                   </span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                         </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>     1 9426485             3 ALECENSA 150MG GELULE         </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>     2 9289746             2 BOTOX 50U ALLERGAN PDR INJ    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span>     3 9360734             1 TEICOPLANINE MYL 200MG PDR INJ</span></span></code></pre></div>
+<span><span class="co">#&gt;     nas ucd     nb_administre ucd_libelle                       </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                             </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>     1 9426485             3 ALECENSA 150MG GELULE             </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>     2 9289746             2 BOTOX 50U ALLERGAN PDR INJ        </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span>     3 9360734             1 TEICOPLANINE VIATRIS 200MG PDR INJ</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="case-mix-spécialités-pharmaceutiques-smr-en-dci">Case mix spécialités pharmaceutiques SMR en DCI<a class="anchor" aria-label="anchor" href="#case-mix-sp%C3%A9cialit%C3%A9s-pharmaceutiques-smr-en-dci"></a>
@@ -168,8 +168,8 @@ retrouver dans un FICHCOMP LES SMR</p>
 <div class="section level2">
 <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a>
 </h2>
-<p><a href="https://sante.gouv.fr/soins-et-maladies/medicaments/professionnels-de-sante/autorisation-de-mise-sur-le-marche/la-liste-en-sus/article/referentiel-des-indications-des-specialites-pharmaceutiques-inscrites-sur-la" class="external-link">Spécialités
-pharmaceutiques SMR version mars 2025</a></p>
+<p><a href="https://www.atih.sante.fr/specialites-pharmaceutiques-en-smr-2025-0" class="external-link">Spécialités
+pharmaceutiques SMR 2025</a></p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table des matières"><h2>Sur cette page</h2>
     </nav></aside>
