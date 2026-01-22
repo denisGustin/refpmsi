@@ -20,12 +20,12 @@ knitr::opts_chunk$set(
 `cim` : 2026  
 `ccam_pmsi` : V1 2026  
 `ccam_ameli` : V81 (1er janvier 2026)   
-`ucd_ap_ac_cpc`, `ucd_en_sus`, `ucd_indication` : novembre 2025  
+`ucd_ap_ac_cpc`, `ucd_en_sus`, `ucd_indication` : décembre 2025  
 
 **MCO : **  
 `ghs_public`, `ghs_prive` : 2026  
 `supplements_mco_public`, `supplements_mco_prive` : 2026  
-`dmi_en_sus`, `lpp_ameli`, `lpp_ameli_hierarchie` : novembre 2025  
+`dmi_en_sus`, `lpp_ameli`, `lpp_ameli_hierarchie` : décembre 2025  
 
 **SMR : **  
 `gme_public`, `gme_prive` : 2026  

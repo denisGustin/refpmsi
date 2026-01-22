@@ -91,13 +91,13 @@ de la liste des DMI en sus<br><strong>dmi_en_sus_date_publication</strong> = dat
 JO<br><strong>dmi_en_sus_date_effet</strong> = date d’entrée en vigueur du DMI
 en sus (note : les dates d’effet non affichées de la source ont été
 calculées par nos soins au lendemain de la date de publication)</p>
-<pre><code><span><span class="co">#&gt; Rows: 8,305</span></span>
+<pre><code><span><span class="co">#&gt; Rows: 8,520</span></span>
 <span><span class="co">#&gt; Columns: 5</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_date_publication <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2025-11-28", "2025-11-28", "2025-11-28", …</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_date_effet       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2025-12-11", "2025-12-11", "2025-12-11", …</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_libelle          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Stimulateurs cardiaques", "Système de sti…</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_code             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "3429873", "3439570", "3413814", "5271206"…</span></span>
-<span><span class="co">#&gt; $ dmi_en_sus_evenement        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "inscription", "inscription", "inscription…</span></span></code></pre>
+<span><span class="co">#&gt; $ dmi_en_sus_date_effet       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2026-01-01", "2026-01-01", "2026-01-01", …</span></span>
+<span><span class="co">#&gt; $ dmi_en_sus_libelle          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ENDOPROTHESE CORONAIRE DITE STENT METALLI…</span></span>
+<span><span class="co">#&gt; $ dmi_en_sus_code             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "8111160", "8112780", "8113146", "8115889"…</span></span>
+<span><span class="co">#&gt; $ dmi_en_sus_evenement        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "suppression", "suppression", "suppression…</span></span>
+<span><span class="co">#&gt; $ dmi_en_sus_date_publication <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "2…</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
@@ -168,20 +168,20 @@ sous-chapitres LPP. Correspond au 3eme niveau d’arborescence LPP<br><strong>so
 <span>                  .by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">dmi_en_sus_code</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html" class="external-link">distinct</a></span><span class="op">(</span><span class="va">dmi_en_sus_code</span>, <span class="va">dmi_en_sus_libelle</span><span class="op">)</span></span>
 <span><span class="va">dmi_en_sus_libelle</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6,315 × 2</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6,319 × 2</span></span></span>
 <span><span class="co">#&gt;    dmi_en_sus_code dmi_en_sus_libelle                                           </span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                                        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 3429873         Stimulateurs cardiaques                                      </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 3439570         Système de stimulation cérébrale profonde bilatérale ou unil…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 3413814         Système de stimulation cérébrale profonde bilatérale ou unil…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 5271206         Dispositifs d’assistance mécanique électrique percutanée     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 3455920         Pompes implantables                                          </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 5236664         Ballons actifs périphériques                                 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 3445270         Système de stimulation cérébrale profonde bilatérale ou unil…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 3442106         Système de stimulation cérébrale profonde bilatérale ou unil…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 3474655         Systèmes d'implants cochléaires et d'implants du tronc céréb…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 3482809         Systèmes d'implants cochléaires et d'implants du tronc céréb…</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 6,305 more rows</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 8111160         ENDOPROTHESE CORONAIRE DITE STENT METALLIQUE NU NON RESORBAB…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 8112780         ENDOPROTHESE CORONAIRE DITE STENT METALLIQUE NU NON RESORBAB…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 8113146         ENDOPROTHESE CORONAIRE DITE STENT METALLIQUE NU NON RESORBAB…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 8115889         ENDOPROTHESE CORONAIRE DITE STENT METALLIQUE NU NON RESORBAB…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 8126611         ENDOPROTHESE CORONAIRE DITE STENT METALLIQUE NU NON RESORBAB…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 8126628         ENDOPROTHESE CORONAIRE DITE STENT COUVERT DE PTFE,ABBOTT MED…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 8130995         ENDOPROTHESE CORONAIRE DITE STENT METALLIQUE NU NON RESORBAB…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 8171327         ENDOPROTHESE CORONAIRE DITE STENT COUVERT DE PTFE,BENTLEY IN…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 8182390         ENDOPROTHESE CORONAIRE DITE STENT METALLIQUE NU NON RESORBAB…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 8183833         ENDOPROTHESE CORONAIRE DITE STENT METALLIQUE NU NON RESORBAB…</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 6,309 more rows</span></span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
